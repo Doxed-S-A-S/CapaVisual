@@ -103,6 +103,16 @@ namespace CapaVisual.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mati {
+            get {
+                object obj = ResourceManager.GetObject("mati", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Post_by_iconSvg_co_1_ {
             get {
                 object obj = ResourceManager.GetObject("Post by iconSvg.co(1)", resourceCulture);

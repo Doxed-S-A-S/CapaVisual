@@ -151,5 +151,8 @@
   <ItemGroup>
     <None Include="Resources\Attach by iconSvg.co%281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mati.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
