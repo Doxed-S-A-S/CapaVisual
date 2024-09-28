@@ -77,3 +77,4 @@ C:\Users\Sebastián\Documents\GitHub\CapaVisual\bin\Debug\System.Text.Encodings.
 C:\Users\Sebastián\Documents\GitHub\CapaVisual\bin\Debug\System.Text.Json.xml
 C:\Users\Sebastián\Documents\GitHub\CapaVisual\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Sebastián\Documents\GitHub\CapaVisual\obj\Debug\CapaVisual.csproj.CopyComplete
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.LoginPage.resources
