@@ -30,9 +30,11 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnInicio = new MaterialSkin.Controls.MaterialButton();
             this.btnRegistrarse = new MaterialSkin.Controls.MaterialButton();
+            this.btnInicio = new MaterialSkin.Controls.MaterialButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtEmail = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -40,11 +42,13 @@ namespace CapaVisual
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.txtPassword);
+            this.materialCard1.Controls.Add(this.txtEmail);
             this.materialCard1.Controls.Add(this.btnRegistrarse);
             this.materialCard1.Controls.Add(this.btnInicio);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(432, 198);
+            this.materialCard1.Location = new System.Drawing.Point(484, 320);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
@@ -52,13 +56,24 @@ namespace CapaVisual
             this.materialCard1.Size = new System.Drawing.Size(502, 317);
             this.materialCard1.TabIndex = 0;
             // 
-            // pictureBox1
+            // btnRegistrarse
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(617, 118);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 73);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.btnRegistrarse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegistrarse.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnRegistrarse.Depth = 0;
+            this.btnRegistrarse.HighEmphasis = true;
+            this.btnRegistrarse.Icon = null;
+            this.btnRegistrarse.Location = new System.Drawing.Point(192, 252);
+            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRegistrarse.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnRegistrarse.Size = new System.Drawing.Size(116, 36);
+            this.btnRegistrarse.TabIndex = 1;
+            this.btnRegistrarse.Text = "registrarse";
+            this.btnRegistrarse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnRegistrarse.UseAccentColor = false;
+            this.btnRegistrarse.UseVisualStyleBackColor = true;
             // 
             // btnInicio
             // 
@@ -67,7 +82,7 @@ namespace CapaVisual
             this.btnInicio.Depth = 0;
             this.btnInicio.HighEmphasis = true;
             this.btnInicio.Icon = null;
-            this.btnInicio.Location = new System.Drawing.Point(209, 213);
+            this.btnInicio.Location = new System.Drawing.Point(212, 204);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnInicio.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnInicio.Name = "btnInicio";
@@ -79,24 +94,47 @@ namespace CapaVisual
             this.btnInicio.UseAccentColor = false;
             this.btnInicio.UseVisualStyleBackColor = true;
             // 
-            // btnRegistrarse
+            // pictureBox1
             // 
-            this.btnRegistrarse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRegistrarse.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnRegistrarse.Depth = 0;
-            this.btnRegistrarse.HighEmphasis = true;
-            this.btnRegistrarse.Icon = null;
-            this.btnRegistrarse.Location = new System.Drawing.Point(192, 261);
-            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnRegistrarse.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnRegistrarse.Size = new System.Drawing.Size(116, 36);
-            this.btnRegistrarse.TabIndex = 1;
-            this.btnRegistrarse.Text = "registrarse";
-            this.btnRegistrarse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnRegistrarse.UseAccentColor = false;
-            this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.pictureBox1.Location = new System.Drawing.Point(613, 118);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 164);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.AnimateReadOnly = false;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Depth = 0;
+            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.LeadingIcon = null;
+            this.txtEmail.Location = new System.Drawing.Point(62, 56);
+            this.txtEmail.MaxLength = 50;
+            this.txtEmail.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(388, 50);
+            this.txtEmail.TabIndex = 2;
+            this.txtEmail.Text = "";
+            this.txtEmail.TrailingIcon = null;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.AnimateReadOnly = false;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Depth = 0;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.LeadingIcon = null;
+            this.txtPassword.Location = new System.Drawing.Point(62, 112);
+            this.txtPassword.MaxLength = 50;
+            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPassword.Multiline = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(388, 50);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.Text = "";
+            this.txtPassword.TrailingIcon = null;
             // 
             // LoginPage
             // 
@@ -121,5 +159,7 @@ namespace CapaVisual
         private MaterialSkin.Controls.MaterialButton btnRegistrarse;
         private MaterialSkin.Controls.MaterialButton btnInicio;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialTextBox txtPassword;
+        private MaterialSkin.Controls.MaterialTextBox txtEmail;
     }
 }

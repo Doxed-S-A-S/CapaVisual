@@ -70,3 +70,4 @@ C:\Users\Sebastián\Documents\GitHub\CapaVisual\obj\Debug\CapaVisual.csproj.Copy
 C:\Users\Sebastián\Documents\GitHub\CapaVisual\obj\Debug\CapaVisual.exe
 C:\Users\Sebastián\Documents\GitHub\CapaVisual\obj\Debug\CapaVisual.pdb
 C:\Users\Sebastián\Documents\GitHub\CapaVisual\obj\Debug\CapaVisual.csproj.AssemblyReference.cache
+C:\Users\Sebastián\Documents\GitHub\CapaVisual\obj\Debug\CapaVisual.RegisterPage.resources
