@@ -30,11 +30,11 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtEmail = new MaterialSkin.Controls.MaterialTextBox();
             this.btnRegistrarse = new MaterialSkin.Controls.MaterialButton();
             this.btnInicio = new MaterialSkin.Controls.MaterialButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtEmail = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,43 @@ namespace CapaVisual
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(502, 317);
             this.materialCard1.TabIndex = 0;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.AnimateReadOnly = false;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Depth = 0;
+            this.txtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.LeadingIcon = null;
+            this.txtPassword.Location = new System.Drawing.Point(62, 112);
+            this.txtPassword.MaxLength = 50;
+            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPassword.Multiline = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(388, 50);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.Text = "";
+            this.txtPassword.TrailingIcon = null;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.AnimateReadOnly = false;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Depth = 0;
+            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.LeadingIcon = null;
+            this.txtEmail.Location = new System.Drawing.Point(62, 56);
+            this.txtEmail.MaxLength = 50;
+            this.txtEmail.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(388, 50);
+            this.txtEmail.TabIndex = 2;
+            this.txtEmail.Text = "";
+            this.txtEmail.TrailingIcon = null;
+            this.txtEmail.CursorChanged += new System.EventHandler(this.txtEmail_KeyUp);
+            this.txtEmail.MouseEnter += new System.EventHandler(this.txtEmail_Enter);
+            this.txtEmail.MouseLeave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // btnRegistrarse
             // 
@@ -102,45 +139,11 @@ namespace CapaVisual
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // txtEmail
-            // 
-            this.txtEmail.AnimateReadOnly = false;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Depth = 0;
-            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtEmail.LeadingIcon = null;
-            this.txtEmail.Location = new System.Drawing.Point(62, 56);
-            this.txtEmail.MaxLength = 50;
-            this.txtEmail.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(388, 50);
-            this.txtEmail.TabIndex = 2;
-            this.txtEmail.Text = "";
-            this.txtEmail.TrailingIcon = null;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.AnimateReadOnly = false;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Depth = 0;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(62, 112);
-            this.txtPassword.MaxLength = 50;
-            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtPassword.Multiline = false;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(388, 50);
-            this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "";
-            this.txtPassword.TrailingIcon = null;
-            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1483, 776);
+            this.ClientSize = new System.Drawing.Size(1386, 776);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialCard1);
             this.Name = "LoginPage";

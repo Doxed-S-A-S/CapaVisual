@@ -22,7 +22,7 @@ namespace CapaVisual
             InitializeComponent();
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(
                 MaterialSkin.Primary.Red600,
                 MaterialSkin.Primary.Red700,

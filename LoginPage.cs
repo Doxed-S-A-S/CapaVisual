@@ -22,19 +22,49 @@ namespace CapaVisual
             InitializeComponent();
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(
                 MaterialSkin.Primary.Red600,
                 MaterialSkin.Primary.Red700,
                 MaterialSkin.Primary.Red200,
                 MaterialSkin.Accent.Green400,
-                MaterialSkin.TextShade.WHITE
+                MaterialSkin.TextShade.BLACK
                 );
         }
-
         private void LoginPage_Load(object sender, EventArgs e)
         {
 
         }
+
+
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            
+            if (txtEmail.Text == "Correo")
+            {
+                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                txtEmail.Text = "Correo";
+                txtEmail.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtEmail_KeyUp(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.Black;
+            }
+        }
     }
+    
 }
