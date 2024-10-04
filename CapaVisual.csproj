@@ -163,5 +163,11 @@
   <ItemGroup>
     <None Include="Resources\mati.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiguaLinkWite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LinguaLinkDark.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

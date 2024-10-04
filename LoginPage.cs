@@ -32,14 +32,15 @@ namespace CapaVisual
                 );
         }
         private void LoginPage_Load(object sender, EventArgs e)
-        {
-
+        { 
+            txtEmail.Text = "Correo";
+            txtEmail.ForeColor = Color.Gray;
+            txtPassword.Text = "Contraseña";
+            txtPassword.ForeColor = Color.Gray;
         }
-
 
         private void txtEmail_Enter(object sender, EventArgs e)
         {
-            
             if (txtEmail.Text == "Correo")
             {
                 txtEmail.Text = "";
@@ -49,22 +50,75 @@ namespace CapaVisual
 
         private void txtEmail_Leave(object sender, EventArgs e)
         {
-
             if (string.IsNullOrWhiteSpace(txtEmail.Text))
             {
                 txtEmail.Text = "Correo";
                 txtEmail.ForeColor = Color.Gray;
             }
         }
-
-        private void txtEmail_KeyUp(object sender, EventArgs e)
+        private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "")
+            if (txtEmail.Text != "Correo" && txtEmail.ForeColor == Color.Gray)
             {
-                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.Black;
+            }
+
+            if (string.IsNullOrEmpty(txtEmail.Text) && txtEmail.Focused)
+            {
                 txtEmail.ForeColor = Color.Black;
             }
         }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Contraseña")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                txtPassword.Text = "Contraseña";
+                txtPassword.ForeColor = Color.Gray;
+            }
+        }
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != "Contraseña" && txtPassword.ForeColor == Color.Gray)
+            {
+                txtPassword.ForeColor = Color.Black;
+            }
+
+            if (string.IsNullOrEmpty(txtPassword.Text) && txtPassword.Focused)
+            {
+                txtPassword.ForeColor = Color.Black;
+            }
+        }
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            RegisterPage registerPage = new RegisterPage();
+            registerPage.Show();
+
+        }
+        private void btnIniciar_Clic(object sender, EventArgs e) 
+        {
+            if (txtEmail.Text == "Correo" || txtEmail.Text.Trim() == "")
+            {
+                MessageBox.Show("Por favor, ingrese un correo electrónico válido.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
+                return;
+            }
+
+            if (txtPassword.Text == "Contraseña" || txtPassword.Text.Trim() == "")
+            {
+                MessageBox.Show("Por favor, ingrese una contraseña.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPassword.Focus();
+                return;
+            }
+        }
     }
-    
 }

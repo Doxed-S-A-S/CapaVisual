@@ -61,7 +61,7 @@ namespace CapaVisual
             this.txtPassword.AnimateReadOnly = false;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Depth = 0;
-            this.txtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPassword.LeadingIcon = null;
             this.txtPassword.Location = new System.Drawing.Point(62, 112);
             this.txtPassword.MaxLength = 50;
@@ -72,13 +72,16 @@ namespace CapaVisual
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "";
             this.txtPassword.TrailingIcon = null;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // txtEmail
             // 
             this.txtEmail.AnimateReadOnly = false;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Depth = 0;
-            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmail.LeadingIcon = null;
             this.txtEmail.Location = new System.Drawing.Point(62, 56);
             this.txtEmail.MaxLength = 50;
@@ -89,9 +92,9 @@ namespace CapaVisual
             this.txtEmail.TabIndex = 2;
             this.txtEmail.Text = "";
             this.txtEmail.TrailingIcon = null;
-            this.txtEmail.CursorChanged += new System.EventHandler(this.txtEmail_KeyUp);
-            this.txtEmail.MouseEnter += new System.EventHandler(this.txtEmail_Enter);
-            this.txtEmail.MouseLeave += new System.EventHandler(this.txtEmail_Leave);
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // btnRegistrarse
             // 
@@ -111,6 +114,7 @@ namespace CapaVisual
             this.btnRegistrarse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnRegistrarse.UseAccentColor = false;
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnInicio
             // 
@@ -130,12 +134,15 @@ namespace CapaVisual
             this.btnInicio.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnInicio.UseAccentColor = false;
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnIniciar_Clic);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(613, 118);
+            this.pictureBox1.Image = global::CapaVisual.Properties.Resources.LiguaLinkWite;
+            this.pictureBox1.Location = new System.Drawing.Point(567, 107);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 164);
+            this.pictureBox1.Size = new System.Drawing.Size(326, 196);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
