@@ -49,7 +49,12 @@ namespace CapaVisual
             txtLinkCrearPost.Text = "Pegue el enlace aquí";
             txtLinkCrearPost.ForeColor = Color.Gray;
 
+            comBoxSeleccionarGrupo.ForeColor = Color.Gray;
+
         }
+
+
+
 
 
         private void pboxImagenVideo_DragEnter(object sender, DragEventArgs e)
@@ -296,6 +301,37 @@ namespace CapaVisual
         {
 
         }
+
+        private void comBoxSeleccionarGrupo_DropDown(object sender, EventArgs e)
+        {
+            comBoxSeleccionarGrupo.DropDownStyle = ComboBoxStyle.DropDownList;
+            comBoxSeleccionarGrupo.ForeColor = Color.Black;
+            if (comBoxSeleccionarGrupo.Text == "Seleccione el grupo")
+            {
+
+                comBoxSeleccionarGrupo.Text = "";
+            }
+        }
+
+        private void comBoxSeleccionarGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comBoxSeleccionarGrupo.SelectedIndex != -1)
+            {
+
+                comBoxSeleccionarGrupo.ForeColor = Color.Black;
+            }
+        }
+
+        private void comBoxSeleccionarGrupo_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comBoxSeleccionarGrupo.Text))
+            {
+                comBoxSeleccionarGrupo.Text = "Seleccione el grupo";
+                comBoxSeleccionarGrupo.ForeColor = Color.Gray;
+            }
+        }
+
+        
     }
 
 }
