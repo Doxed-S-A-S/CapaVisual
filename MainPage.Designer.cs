@@ -30,7 +30,6 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.panelCrearPost = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnActividades = new System.Windows.Forms.Button();
             this.btnEventos = new System.Windows.Forms.Button();
             this.btnGrupos = new System.Windows.Forms.Button();
@@ -40,7 +39,6 @@ namespace CapaVisual
             this.panelImagenVideo = new System.Windows.Forms.Panel();
             this.lblAñadirImagen = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.pboxImagenVideo = new System.Windows.Forms.PictureBox();
             this.materialCardCrearPost = new MaterialSkin.Controls.MaterialCard();
             this.comBoxSeleccionarGrupo = new System.Windows.Forms.ComboBox();
             this.panelTextoPost = new System.Windows.Forms.Panel();
@@ -59,14 +57,16 @@ namespace CapaVisual
             this.panelDerecho = new System.Windows.Forms.Panel();
             this.txtBarraBusqueda = new System.Windows.Forms.TextBox();
             this.flowLayoutCrearPosts = new System.Windows.Forms.FlowLayoutPanel();
+            this.pboxImagenVideo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelCrearPost.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelImagenVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).BeginInit();
             this.materialCardCrearPost.SuspendLayout();
             this.panelTextoPost.SuspendLayout();
             this.menuCrearPost.SuspendLayout();
             this.flowLayoutCrearPosts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCrearPost
@@ -81,15 +81,6 @@ namespace CapaVisual
             this.panelCrearPost.Name = "panelCrearPost";
             this.panelCrearPost.Size = new System.Drawing.Size(200, 742);
             this.panelCrearPost.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-            this.pictureBox1.Location = new System.Drawing.Point(72, 88);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 54);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // btnActividades
             // 
@@ -180,7 +171,7 @@ namespace CapaVisual
             this.lblAñadirImagen.AutoSize = true;
             this.lblAñadirImagen.Location = new System.Drawing.Point(36, 36);
             this.lblAñadirImagen.Name = "lblAñadirImagen";
-            this.lblAñadirImagen.Size = new System.Drawing.Size(212, 17);
+            this.lblAñadirImagen.Size = new System.Drawing.Size(157, 13);
             this.lblAñadirImagen.TabIndex = 1;
             this.lblAñadirImagen.Text = "Arrastra una imagen o sube una";
             // 
@@ -303,23 +294,24 @@ namespace CapaVisual
             this.btnLink,
             this.btnTipoContenido});
             this.menuCrearPost.Location = new System.Drawing.Point(14, 138);
+            this.menuCrearPost.Location = new System.Drawing.Point(14, 120);
             this.menuCrearPost.Name = "menuCrearPost";
             this.menuCrearPost.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuCrearPost.Size = new System.Drawing.Size(734, 28);
+            this.menuCrearPost.Size = new System.Drawing.Size(734, 24);
             this.menuCrearPost.TabIndex = 8;
             this.menuCrearPost.Text = "menuStrip1";
             // 
             // contenidoToolStripMenuItem
             // 
             this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
-            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
+            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.contenidoToolStripMenuItem.Text = "Contenido";
             this.contenidoToolStripMenuItem.Click += new System.EventHandler(this.contenidoToolStripMenuItem_Click);
             // 
             // btnImagenVideo
             // 
             this.btnImagenVideo.Name = "btnImagenVideo";
-            this.btnImagenVideo.Size = new System.Drawing.Size(120, 24);
+            this.btnImagenVideo.Size = new System.Drawing.Size(95, 20);
             this.btnImagenVideo.Text = "Imagen & Video";
             this.btnImagenVideo.Click += new System.EventHandler(this.imagenToolStripMenuItem_Click);
             // 
@@ -328,7 +320,7 @@ namespace CapaVisual
             this.btnLink.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.txtLinkCrearPost});
             this.btnLink.Name = "btnLink";
-            this.btnLink.Size = new System.Drawing.Size(49, 24);
+            this.btnLink.Size = new System.Drawing.Size(41, 20);
             this.btnLink.Text = "Link";
             // 
             // txtLinkCrearPost
@@ -336,6 +328,7 @@ namespace CapaVisual
             this.txtLinkCrearPost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLinkCrearPost.Name = "txtLinkCrearPost";
             this.txtLinkCrearPost.Size = new System.Drawing.Size(100, 27);
+            this.txtLinkCrearPost.Size = new System.Drawing.Size(100, 23);
             this.txtLinkCrearPost.Text = "inserte su link";
             this.txtLinkCrearPost.Enter += new System.EventHandler(this.txtLinkCrearPost_Click);
             this.txtLinkCrearPost.Click += new System.EventHandler(this.txtLinkCrearPost_Click);
@@ -349,7 +342,7 @@ namespace CapaVisual
             this.btnContenidoLenguaje,
             this.btnContenidoEducacion});
             this.btnTipoContenido.Name = "btnTipoContenido";
-            this.btnTipoContenido.Size = new System.Drawing.Size(124, 24);
+            this.btnTipoContenido.Size = new System.Drawing.Size(99, 20);
             this.btnTipoContenido.Text = "Tipo contenido";
             this.btnTipoContenido.Click += new System.EventHandler(this.asdasdToolStripMenuItem_Click);
             // 
@@ -357,21 +350,21 @@ namespace CapaVisual
             // 
             this.btnContenidoIntercambioCultural.CheckOnClick = true;
             this.btnContenidoIntercambioCultural.Name = "btnContenidoIntercambioCultural";
-            this.btnContenidoIntercambioCultural.Size = new System.Drawing.Size(227, 26);
+            this.btnContenidoIntercambioCultural.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoIntercambioCultural.Text = "Intercambio Cultural";
             // 
             // btnContenidoLenguaje
             // 
             this.btnContenidoLenguaje.CheckOnClick = true;
             this.btnContenidoLenguaje.Name = "btnContenidoLenguaje";
-            this.btnContenidoLenguaje.Size = new System.Drawing.Size(227, 26);
+            this.btnContenidoLenguaje.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoLenguaje.Text = "Lenguaje";
             // 
             // btnContenidoEducacion
             // 
             this.btnContenidoEducacion.CheckOnClick = true;
             this.btnContenidoEducacion.Name = "btnContenidoEducacion";
-            this.btnContenidoEducacion.Size = new System.Drawing.Size(227, 26);
+            this.btnContenidoEducacion.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoEducacion.Text = "Educacion";
             // 
             // panelDerecho
@@ -387,7 +380,7 @@ namespace CapaVisual
             this.txtBarraBusqueda.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBarraBusqueda.Location = new System.Drawing.Point(328, 32);
             this.txtBarraBusqueda.Name = "txtBarraBusqueda";
-            this.txtBarraBusqueda.Size = new System.Drawing.Size(936, 23);
+            this.txtBarraBusqueda.Size = new System.Drawing.Size(936, 20);
             this.txtBarraBusqueda.TabIndex = 7;
             // 
             // flowLayoutCrearPosts
@@ -401,9 +394,28 @@ namespace CapaVisual
             this.flowLayoutCrearPosts.Size = new System.Drawing.Size(1063, 188);
             this.flowLayoutCrearPosts.TabIndex = 4;
             // 
+            // pboxImagenVideo
+            // 
+            this.pboxImagenVideo.BackColor = System.Drawing.Color.Red;
+            this.pboxImagenVideo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxImagenVideo.Location = new System.Drawing.Point(3, 11);
+            this.pboxImagenVideo.Name = "pboxImagenVideo";
+            this.pboxImagenVideo.Size = new System.Drawing.Size(420, 67);
+            this.pboxImagenVideo.TabIndex = 0;
+            this.pboxImagenVideo.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
+            this.pictureBox1.Location = new System.Drawing.Point(72, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 54);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(175)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1499, 815);
@@ -419,16 +431,16 @@ namespace CapaVisual
             this.Name = "MainPage";
             this.Text = "LinguaLink";
             this.panelCrearPost.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelImagenVideo.ResumeLayout(false);
             this.panelImagenVideo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).EndInit();
             this.materialCardCrearPost.ResumeLayout(false);
             this.materialCardCrearPost.PerformLayout();
             this.panelTextoPost.ResumeLayout(false);
             this.menuCrearPost.ResumeLayout(false);
             this.menuCrearPost.PerformLayout();
             this.flowLayoutCrearPosts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
