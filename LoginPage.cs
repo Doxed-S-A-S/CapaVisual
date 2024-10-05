@@ -100,8 +100,10 @@ namespace CapaVisual
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            RegisterPage registerPage = new RegisterPage();
-            registerPage.Show();
+            this.Hide();
+                var RegisterPage = new RegisterPage();
+                RegisterPage.Closed += (s, args) => this.Close();
+                RegisterPage.Show();
 
         }
         private void btnIniciar_Clic(object sender, EventArgs e) 

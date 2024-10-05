@@ -251,6 +251,12 @@ namespace CapaVisual
                 return;
             }
 
+            this.Hide();
+            var LoginPage = new LoginPage();
+            LoginPage.Closed += (s, args) => this.Close();
+            LoginPage.Show();
+
+
         }
 
     }
