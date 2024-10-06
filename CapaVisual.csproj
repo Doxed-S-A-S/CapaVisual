@@ -169,5 +169,8 @@
   <ItemGroup>
     <None Include="Resources\LinguaLinkDark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
