@@ -56,10 +56,6 @@ namespace CapaVisual
 
         }
 
-
-
-
-
         private void pboxImagenVideo_DragEnter(object sender, DragEventArgs e)
         {
 
@@ -219,27 +215,28 @@ namespace CapaVisual
 
         private static void crearPost(string url_contenido, string tipo_contenido, string contenido, string url_imagen, int id_cuenta)
         {
+            
             RestClient client = new RestClient("http://localhost:44331/");
             RestRequest request = new RestRequest($"ApiPost/post/crear/", Method.Post);
             request.AddHeader("Content-Type", "application/json");
+            request.AddFile("imagencita", url_imagen);
 
-            // Crea un objeto anónimo para enviar los datos como JSON
+           
             var postData = new
             {
                 url_contenido = url_contenido,
                 tipo_contenido = tipo_contenido,
                 contenido = contenido,
-                url_imagen = url_imagen,
                 id_cuenta = "1"
             };
 
-            // Agrega el cuerpo de la solicitud con los datos serializados en formato JSON
+            
             request.AddJsonBody(postData);
 
-            // Ejecuta la solicitud y obtiene la respuesta
+            
             RestResponse response = client.Execute(request);
 
-            // Maneja la respuesta (por ejemplo, verifica el estado de la solicitud)
+            
             if (response.IsSuccessful)
             {
                 MessageBox.Show("Post creado exitosamente.");
@@ -304,10 +301,6 @@ namespace CapaVisual
             panelImagenVideo.Visible = true;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void contenidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -384,7 +377,7 @@ namespace CapaVisual
         }
         private void botonPostear_Click(object sender, EventArgs e)
         {
-            crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text,this.url_imagen,1);
+            crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text, pboxImagenVideo.ImageLocation,1);
         }
     }
 

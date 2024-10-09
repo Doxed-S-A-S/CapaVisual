@@ -80,3 +80,4 @@ C:\Users\sebis\Documents\GhitHub\CapaVisual\bin\Debug\System.Numerics.Vectors.dl
 C:\Users\sebis\Documents\GhitHub\CapaVisual\bin\Debug\System.ValueTuple.dll
 C:\Users\sebis\Documents\GhitHub\CapaVisual\obj\Debug\CapaVisual.csproj.CopyComplete
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.RegisterPage.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.UserControl1.resources
