@@ -113,17 +113,11 @@
     <Compile Include="RegisterPage.Designer.cs">
       <DependentUpon>RegisterPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="MainPage2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <Compile Include="MainPage2.Designer.cs">
+      <DependentUpon>MainPage2.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -144,11 +138,8 @@
     <EmbeddedResource Include="RegisterPage.resx">
       <DependentUpon>RegisterPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <EmbeddedResource Include="MainPage2.resx">
+      <DependentUpon>MainPage2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

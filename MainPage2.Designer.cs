@@ -1,7 +1,7 @@
 ﻿
 namespace CapaVisual
 {
-    partial class UserControl1
+    partial class MainPage2
     {
         /// <summary> 
         /// Required designer variable.
@@ -123,6 +123,9 @@ namespace CapaVisual
             this.comBoxSeleccionarGrupo.Size = new System.Drawing.Size(165, 24);
             this.comBoxSeleccionarGrupo.TabIndex = 0;
             this.comBoxSeleccionarGrupo.Text = "Seleccione un grupo";
+            this.comBoxSeleccionarGrupo.DropDown += new System.EventHandler(this.comBoxSeleccionarGrupo_DropDown);
+            this.comBoxSeleccionarGrupo.SelectedIndexChanged += new System.EventHandler(this.comBoxSeleccionarGrupo_SelectedIndexChanged);
+            this.comBoxSeleccionarGrupo.Leave += new System.EventHandler(this.comBoxSeleccionarGrupo_Leave);
             // 
             // panelTextoPost
             // 
@@ -167,6 +170,7 @@ namespace CapaVisual
             this.btnBrowse.TabIndex = 2;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // pboxImagenVideo
             // 
@@ -177,6 +181,8 @@ namespace CapaVisual
             this.pboxImagenVideo.Size = new System.Drawing.Size(420, 67);
             this.pboxImagenVideo.TabIndex = 0;
             this.pboxImagenVideo.TabStop = false;
+            this.pboxImagenVideo.DragDrop += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragDrop);
+            this.pboxImagenVideo.DragEnter += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragEnter);
             // 
             // botonPostear
             // 
@@ -197,6 +203,7 @@ namespace CapaVisual
             this.botonPostear.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.botonPostear.UseAccentColor = false;
             this.botonPostear.UseVisualStyleBackColor = true;
+            this.botonPostear.Click += new System.EventHandler(this.botonPostear_Click);
             // 
             // materialLabel1
             // 
@@ -219,10 +226,10 @@ namespace CapaVisual
             this.btnImagenVideo,
             this.btnLink,
             this.btnTipoContenido});
-            this.menuCrearPost.Location = new System.Drawing.Point(14, 138);
+            this.menuCrearPost.Location = new System.Drawing.Point(14, 136);
             this.menuCrearPost.Name = "menuCrearPost";
             this.menuCrearPost.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuCrearPost.Size = new System.Drawing.Size(734, 28);
+            this.menuCrearPost.Size = new System.Drawing.Size(734, 30);
             this.menuCrearPost.TabIndex = 8;
             this.menuCrearPost.Text = "menuStrip1";
             // 
@@ -231,12 +238,14 @@ namespace CapaVisual
             this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
             this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.contenidoToolStripMenuItem.Text = "Contenido";
+            this.contenidoToolStripMenuItem.Click += new System.EventHandler(this.contenidoToolStripMenuItem_Click);
             // 
             // btnImagenVideo
             // 
             this.btnImagenVideo.Name = "btnImagenVideo";
             this.btnImagenVideo.Size = new System.Drawing.Size(120, 24);
             this.btnImagenVideo.Text = "Imagen & Video";
+            this.btnImagenVideo.Click += new System.EventHandler(this.btnImagenVideo_Click);
             // 
             // btnLink
             // 
@@ -252,6 +261,8 @@ namespace CapaVisual
             this.txtLinkCrearPost.Name = "txtLinkCrearPost";
             this.txtLinkCrearPost.Size = new System.Drawing.Size(100, 27);
             this.txtLinkCrearPost.Text = "inserte su link";
+            this.txtLinkCrearPost.Enter += new System.EventHandler(this.txtLinkCrearPost_Enter);
+            this.txtLinkCrearPost.Leave += new System.EventHandler(this.txtLinkCrearPost_Leave);
             // 
             // btnTipoContenido
             // 
@@ -381,8 +392,9 @@ namespace CapaVisual
             this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(90, 0, 90, 0);
             this.flowLayoutPanelPosts.Size = new System.Drawing.Size(1063, 549);
             this.flowLayoutPanelPosts.TabIndex = 8;
+            this.flowLayoutPanelPosts.Scroll += new System.Windows.Forms.ScrollEventHandler(this.flowLayoutPanelPosts_Scroll);
             // 
-            // UserControl1
+            // MainPage2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -391,7 +403,7 @@ namespace CapaVisual
             this.Controls.Add(this.divisorDerecho);
             this.Controls.Add(this.panelCrearPost);
             this.Controls.Add(this.flowLayoutPanelPosts);
-            this.Name = "UserControl1";
+            this.Name = "MainPage2";
             this.Size = new System.Drawing.Size(1493, 752);
             this.flowLayoutCrearPosts.ResumeLayout(false);
             this.materialCardCrearPost.ResumeLayout(false);
