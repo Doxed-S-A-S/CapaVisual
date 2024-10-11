@@ -83,9 +83,59 @@ namespace CapaVisual.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Be_Like_by_iconSvg_co_1_ {
+            get {
+                object obj = ResourceManager.GetObject("Be Like by iconSvg.co(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Be_Like_by_iconSvg_co_2_ {
+            get {
+                object obj = ResourceManager.GetObject("Be Like by iconSvg.co(2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Chat_by_iconSvg_co_1_ {
             get {
                 object obj = ResourceManager.GetObject("Chat by iconSvg.co(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dislike_by_iconSvg_co {
+            get {
+                object obj = ResourceManager.GetObject("Dislike by iconSvg.co", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap downytfytload {
+            get {
+                object obj = ResourceManager.GetObject("downytfytload", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap favicon_by_iconSvg_co {
+            get {
+                object obj = ResourceManager.GetObject("favicon by iconSvg.co", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +183,16 @@ namespace CapaVisual.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Messaging_by_iconSvg_co {
+            get {
+                object obj = ResourceManager.GetObject("Messaging by iconSvg.co", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Post_by_iconSvg_co_1_ {
             get {
                 object obj = ResourceManager.GetObject("Post by iconSvg.co(1)", resourceCulture);
@@ -146,6 +206,26 @@ namespace CapaVisual.Properties {
         internal static System.Drawing.Bitmap Profile_Picture_by_iconSvg_co {
             get {
                 object obj = ResourceManager.GetObject("Profile Picture by iconSvg.co", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Share_by_iconSvg_co {
+            get {
+                object obj = ResourceManager.GetObject("Share by iconSvg.co", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Share_by_iconSvg_co_2_ {
+            get {
+                object obj = ResourceManager.GetObject("Share by iconSvg.co(2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
