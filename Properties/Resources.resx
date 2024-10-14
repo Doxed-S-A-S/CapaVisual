@@ -118,32 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="downytfytload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\downytfytload.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="favicon by iconSvg.co" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\favicon by iconSvg.co.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Share by iconSvg.co(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Share by iconSvg.co(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="6627adbbce5ee45e48d0b31d35a67932" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6627adbbce5ee45e48d0b31d35a67932.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Chat by iconSvg.co(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chat by iconSvg.co(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Be Like by iconSvg.co(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Be Like by iconSvg.co(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LiguaLinkWite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LiguaLinkWite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LinguaLinkDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LinguaLinkDark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LiguaLinkWite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LiguaLinkWite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Messaging by iconSvg.co" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Messaging by iconSvg.co.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Attach by iconSvg.co(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Attach by iconSvg.co(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Messaging by iconSvg.co" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Messaging by iconSvg.co.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Share by iconSvg.co(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Share by iconSvg.co(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mati" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mati.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Be Like by iconSvg.co(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Be Like by iconSvg.co(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Profile Picture by iconSvg.co" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Profile Picture by iconSvg.co.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +166,8 @@
   <data name="Dislike by iconSvg.co" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dislike by iconSvg.co.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Be Like by iconSvg.co(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Be Like by iconSvg.co(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Be Like by iconSvg.co(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Be Like by iconSvg.co(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Write Articles by iconSvg.co(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Write Articles by iconSvg.co(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,7 +175,7 @@
   <data name="Attach by iconSvg.co" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Attach by iconSvg.co.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="downytfytload" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\downytfytload.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="grupo3be" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grupo3be.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -63,6 +63,16 @@ namespace CapaVisual.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6627adbbce5ee45e48d0b31d35a67932 {
+            get {
+                object obj = ResourceManager.GetObject("6627adbbce5ee45e48d0b31d35a67932", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Attach_by_iconSvg_co {
             get {
                 object obj = ResourceManager.GetObject("Attach by iconSvg.co", resourceCulture);
@@ -136,6 +146,16 @@ namespace CapaVisual.Properties {
         internal static System.Drawing.Bitmap favicon_by_iconSvg_co {
             get {
                 object obj = ResourceManager.GetObject("favicon by iconSvg.co", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grupo3be {
+            get {
+                object obj = ResourceManager.GetObject("grupo3be", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

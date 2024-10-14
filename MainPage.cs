@@ -15,11 +15,11 @@ using Newtonsoft.Json;
 
 namespace CapaVisual
 {
-    public partial class MainPage : UserControl
+    public partial class mainPage1 : UserControl
     {
         private string url_imagen;
 
-        public MainPage()
+        public mainPage1()
         {
             InitializeComponent();
 
@@ -110,7 +110,7 @@ namespace CapaVisual
                 postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
                 postCard.PostContent = post.contenido;
                 postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-                postCard.PostImage = Image.FromFile(post.url_imagen) // faltan implementar cosas para que esto funcione
+                //postCard.PostImage = Image.FromFile(post.url_imagen) // faltan implementar cosas para que esto funcione
                 // Add the custom post card to the flow panel
                 flowLayoutPanelPosts.Controls.Add(postCard);
             }
@@ -297,6 +297,128 @@ namespace CapaVisual
             crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text, pboxImagenVideo.ImageLocation, 1);
         }
 
-       
+        private void btnGrupos_Click(object sender, EventArgs e)
+        {
+            var parentForm = this.Parent as AppWindow;
+            if (parentForm != null)
+            {
+                parentForm.ShowGroupPage(); // Call the method on the form to switch
+            }
+        }
+
+        private void panelDerecho_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutCrearPosts_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialCardCrearPost_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelTextoPost_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtContenidoPost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelImagenVideo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblAñadirImagen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuCrearPost_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btnLink_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLinkCrearPost_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTipoContenido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContenidoIntercambioCultural_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContenidoLenguaje_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContenidoEducacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void divisorDerecho_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelCrearPost_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnActividades_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEventos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanelPosts_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pboxImagenVideo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxImagenPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
