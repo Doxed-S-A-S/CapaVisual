@@ -1,14 +1,14 @@
 ﻿
 namespace CapaVisual
 {
-    partial class MainPage
+    partial class mainPage1
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -21,28 +21,23 @@ namespace CapaVisual
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelCrearPost = new System.Windows.Forms.Panel();
-            this.btnActividades = new System.Windows.Forms.Button();
-            this.btnEventos = new System.Windows.Forms.Button();
-            this.btnGrupos = new System.Windows.Forms.Button();
-            this.btnPrincipal = new System.Windows.Forms.Button();
-            this.divisorDerecho = new MaterialSkin.Controls.MaterialDivider();
-            this.flowLayoutPanelPosts = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelImagenVideo = new System.Windows.Forms.Panel();
-            this.lblAñadirImagen = new System.Windows.Forms.Label();
-            this.btnBrowse = new System.Windows.Forms.Button();
+            this.panelDerecho = new System.Windows.Forms.Panel();
+            this.flowLayoutCrearPosts = new System.Windows.Forms.FlowLayoutPanel();
             this.materialCardCrearPost = new MaterialSkin.Controls.MaterialCard();
             this.comBoxSeleccionarGrupo = new System.Windows.Forms.ComboBox();
             this.panelTextoPost = new System.Windows.Forms.Panel();
             this.txtContenidoPost = new System.Windows.Forms.RichTextBox();
+            this.panelImagenVideo = new System.Windows.Forms.Panel();
+            this.lblAñadirImagen = new System.Windows.Forms.Label();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.botonPostear = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.menuCrearPost = new System.Windows.Forms.MenuStrip();
@@ -54,146 +49,45 @@ namespace CapaVisual
             this.btnContenidoIntercambioCultural = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoLenguaje = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoEducacion = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelDerecho = new System.Windows.Forms.Panel();
-            this.txtBarraBusqueda = new System.Windows.Forms.TextBox();
-            this.flowLayoutCrearPosts = new System.Windows.Forms.FlowLayoutPanel();
+            this.divisorDerecho = new MaterialSkin.Controls.MaterialDivider();
+            this.panelCrearPost = new System.Windows.Forms.Panel();
+            this.btnActividades = new System.Windows.Forms.Button();
+            this.btnEventos = new System.Windows.Forms.Button();
+            this.btnGrupos = new System.Windows.Forms.Button();
+            this.btnPrincipal = new System.Windows.Forms.Button();
+            this.flowLayoutPanelPosts = new System.Windows.Forms.FlowLayoutPanel();
             this.pboxImagenVideo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelCrearPost.SuspendLayout();
-            this.panelImagenVideo.SuspendLayout();
+            this.pictureBoxImagenPerfil = new System.Windows.Forms.PictureBox();
+            this.flowLayoutCrearPosts.SuspendLayout();
             this.materialCardCrearPost.SuspendLayout();
             this.panelTextoPost.SuspendLayout();
+            this.panelImagenVideo.SuspendLayout();
             this.menuCrearPost.SuspendLayout();
-            this.flowLayoutCrearPosts.SuspendLayout();
+            this.panelCrearPost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelCrearPost
+            // panelDerecho
             // 
-            this.panelCrearPost.BackColor = System.Drawing.Color.LightGray;
-            this.panelCrearPost.Controls.Add(this.pictureBox1);
-            this.panelCrearPost.Controls.Add(this.btnActividades);
-            this.panelCrearPost.Controls.Add(this.btnEventos);
-            this.panelCrearPost.Controls.Add(this.btnGrupos);
-            this.panelCrearPost.Controls.Add(this.btnPrincipal);
-            this.panelCrearPost.Location = new System.Drawing.Point(6, 67);
-            this.panelCrearPost.Name = "panelCrearPost";
-            this.panelCrearPost.Size = new System.Drawing.Size(200, 742);
-            this.panelCrearPost.TabIndex = 0;
+            this.panelDerecho.BackColor = System.Drawing.Color.LightGray;
+            this.panelDerecho.Location = new System.Drawing.Point(1290, 1);
+            this.panelDerecho.Name = "panelDerecho";
+            this.panelDerecho.Size = new System.Drawing.Size(200, 745);
+            this.panelDerecho.TabIndex = 10;
+            this.panelDerecho.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDerecho_Paint);
             // 
-            // btnActividades
+            // flowLayoutCrearPosts
             // 
-            this.btnActividades.BackColor = System.Drawing.Color.LightGray;
-            this.btnActividades.FlatAppearance.BorderSize = 0;
-            this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActividades.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnActividades.Location = new System.Drawing.Point(4, 332);
-            this.btnActividades.Name = "btnActividades";
-            this.btnActividades.Size = new System.Drawing.Size(192, 40);
-            this.btnActividades.TabIndex = 3;
-            this.btnActividades.Text = "Actividades";
-            this.btnActividades.UseVisualStyleBackColor = false;
-            // 
-            // btnEventos
-            // 
-            this.btnEventos.BackColor = System.Drawing.Color.LightGray;
-            this.btnEventos.FlatAppearance.BorderSize = 0;
-            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEventos.Location = new System.Drawing.Point(4, 286);
-            this.btnEventos.Name = "btnEventos";
-            this.btnEventos.Size = new System.Drawing.Size(192, 40);
-            this.btnEventos.TabIndex = 2;
-            this.btnEventos.Text = "Eventos";
-            this.btnEventos.UseVisualStyleBackColor = false;
-            // 
-            // btnGrupos
-            // 
-            this.btnGrupos.BackColor = System.Drawing.Color.LightGray;
-            this.btnGrupos.FlatAppearance.BorderSize = 0;
-            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrupos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGrupos.Location = new System.Drawing.Point(4, 240);
-            this.btnGrupos.Name = "btnGrupos";
-            this.btnGrupos.Size = new System.Drawing.Size(192, 40);
-            this.btnGrupos.TabIndex = 1;
-            this.btnGrupos.Text = "Grupos";
-            this.btnGrupos.UseVisualStyleBackColor = false;
-            // 
-            // btnPrincipal
-            // 
-            this.btnPrincipal.BackColor = System.Drawing.Color.LightGray;
-            this.btnPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPrincipal.Location = new System.Drawing.Point(4, 194);
-            this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(192, 40);
-            this.btnPrincipal.TabIndex = 0;
-            this.btnPrincipal.Text = "Principal";
-            this.btnPrincipal.UseVisualStyleBackColor = false;
-            // 
-            // divisorDerecho
-            // 
-            this.divisorDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.divisorDerecho.Depth = 0;
-            this.divisorDerecho.Location = new System.Drawing.Point(208, 65);
-            this.divisorDerecho.MouseState = MaterialSkin.MouseState.HOVER;
-            this.divisorDerecho.Name = "divisorDerecho";
-            this.divisorDerecho.Size = new System.Drawing.Size(13, 745);
-            this.divisorDerecho.TabIndex = 1;
-            this.divisorDerecho.Text = "materialDivider1";
-            // 
-            // flowLayoutPanelPosts
-            // 
-            this.flowLayoutPanelPosts.AutoScroll = true;
-            this.flowLayoutPanelPosts.BackColor = System.Drawing.Color.LightGray;
-            this.flowLayoutPanelPosts.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutPanelPosts.Location = new System.Drawing.Point(224, 261);
-            this.flowLayoutPanelPosts.Name = "flowLayoutPanelPosts";
-            this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(90, 0, 90, 0);
-            this.flowLayoutPanelPosts.Size = new System.Drawing.Size(1063, 549);
-            this.flowLayoutPanelPosts.TabIndex = 2;
-            // 
-            // panelImagenVideo
-            // 
-            this.panelImagenVideo.Controls.Add(this.lblAñadirImagen);
-            this.panelImagenVideo.Controls.Add(this.btnBrowse);
-            this.panelImagenVideo.Controls.Add(this.pboxImagenVideo);
-            this.panelImagenVideo.Location = new System.Drawing.Point(14, 39);
-            this.panelImagenVideo.Name = "panelImagenVideo";
-            this.panelImagenVideo.Size = new System.Drawing.Size(431, 91);
-            this.panelImagenVideo.TabIndex = 13;
-            // 
-            // lblAñadirImagen
-            // 
-            this.lblAñadirImagen.AutoSize = true;
-            this.lblAñadirImagen.Location = new System.Drawing.Point(36, 36);
-            this.lblAñadirImagen.Name = "lblAñadirImagen";
-            this.lblAñadirImagen.Size = new System.Drawing.Size(157, 13);
-            this.lblAñadirImagen.TabIndex = 1;
-            this.lblAñadirImagen.Text = "Arrastra una imagen o sube una";
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Location = new System.Drawing.Point(264, 30);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowse.TabIndex = 2;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
-            // pboxImagenVideo
-            // 
-            this.pboxImagenVideo.BackColor = System.Drawing.Color.Red;
-            this.pboxImagenVideo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxImagenVideo.Location = new System.Drawing.Point(3, 11);
-            this.pboxImagenVideo.Name = "pboxImagenVideo";
-            this.pboxImagenVideo.Size = new System.Drawing.Size(420, 67);
-            this.pboxImagenVideo.TabIndex = 0;
-            this.pboxImagenVideo.TabStop = false;
+            this.flowLayoutCrearPosts.BackColor = System.Drawing.Color.LightGray;
+            this.flowLayoutCrearPosts.Controls.Add(this.materialCardCrearPost);
+            this.flowLayoutCrearPosts.ForeColor = System.Drawing.Color.Black;
+            this.flowLayoutCrearPosts.Location = new System.Drawing.Point(221, 3);
+            this.flowLayoutCrearPosts.Name = "flowLayoutCrearPosts";
+            this.flowLayoutCrearPosts.Padding = new System.Windows.Forms.Padding(90, 0, 90, 0);
+            this.flowLayoutCrearPosts.Size = new System.Drawing.Size(1063, 188);
+            this.flowLayoutCrearPosts.TabIndex = 9;
+            this.flowLayoutCrearPosts.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutCrearPosts_Paint);
             // 
             // materialCardCrearPost
             // 
@@ -213,6 +107,7 @@ namespace CapaVisual
             this.materialCardCrearPost.Padding = new System.Windows.Forms.Padding(14, 0, 14, 14);
             this.materialCardCrearPost.Size = new System.Drawing.Size(762, 180);
             this.materialCardCrearPost.TabIndex = 0;
+            this.materialCardCrearPost.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCardCrearPost_Paint);
             // 
             // comBoxSeleccionarGrupo
             // 
@@ -228,7 +123,7 @@ namespace CapaVisual
             "d"});
             this.comBoxSeleccionarGrupo.Location = new System.Drawing.Point(469, 105);
             this.comBoxSeleccionarGrupo.Name = "comBoxSeleccionarGrupo";
-            this.comBoxSeleccionarGrupo.Size = new System.Drawing.Size(165, 25);
+            this.comBoxSeleccionarGrupo.Size = new System.Drawing.Size(165, 24);
             this.comBoxSeleccionarGrupo.TabIndex = 0;
             this.comBoxSeleccionarGrupo.Text = "Seleccione un grupo";
             this.comBoxSeleccionarGrupo.DropDown += new System.EventHandler(this.comBoxSeleccionarGrupo_DropDown);
@@ -242,7 +137,7 @@ namespace CapaVisual
             this.panelTextoPost.Name = "panelTextoPost";
             this.panelTextoPost.Size = new System.Drawing.Size(431, 91);
             this.panelTextoPost.TabIndex = 12;
-            this.panelTextoPost.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panelTextoPost.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTextoPost_Paint);
             // 
             // txtContenidoPost
             // 
@@ -251,6 +146,38 @@ namespace CapaVisual
             this.txtContenidoPost.Size = new System.Drawing.Size(420, 67);
             this.txtContenidoPost.TabIndex = 0;
             this.txtContenidoPost.Text = "";
+            this.txtContenidoPost.TextChanged += new System.EventHandler(this.txtContenidoPost_TextChanged);
+            // 
+            // panelImagenVideo
+            // 
+            this.panelImagenVideo.Controls.Add(this.lblAñadirImagen);
+            this.panelImagenVideo.Controls.Add(this.btnBrowse);
+            this.panelImagenVideo.Controls.Add(this.pboxImagenVideo);
+            this.panelImagenVideo.Location = new System.Drawing.Point(14, 39);
+            this.panelImagenVideo.Name = "panelImagenVideo";
+            this.panelImagenVideo.Size = new System.Drawing.Size(431, 91);
+            this.panelImagenVideo.TabIndex = 13;
+            this.panelImagenVideo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelImagenVideo_Paint);
+            // 
+            // lblAñadirImagen
+            // 
+            this.lblAñadirImagen.AutoSize = true;
+            this.lblAñadirImagen.Location = new System.Drawing.Point(36, 36);
+            this.lblAñadirImagen.Name = "lblAñadirImagen";
+            this.lblAñadirImagen.Size = new System.Drawing.Size(212, 17);
+            this.lblAñadirImagen.TabIndex = 1;
+            this.lblAñadirImagen.Text = "Arrastra una imagen o sube una";
+            this.lblAñadirImagen.Click += new System.EventHandler(this.lblAñadirImagen_Click);
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(264, 30);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.TabIndex = 2;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // botonPostear
             // 
@@ -271,6 +198,7 @@ namespace CapaVisual
             this.botonPostear.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.botonPostear.UseAccentColor = false;
             this.botonPostear.UseVisualStyleBackColor = true;
+            this.botonPostear.Click += new System.EventHandler(this.botonPostear_Click);
             // 
             // materialLabel1
             // 
@@ -282,6 +210,7 @@ namespace CapaVisual
             this.materialLabel1.Size = new System.Drawing.Size(79, 17);
             this.materialLabel1.TabIndex = 7;
             this.materialLabel1.Text = "Crear Post";
+            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
             // 
             // menuCrearPost
             // 
@@ -293,106 +222,178 @@ namespace CapaVisual
             this.btnImagenVideo,
             this.btnLink,
             this.btnTipoContenido});
-            this.menuCrearPost.Location = new System.Drawing.Point(14, 138);
-            this.menuCrearPost.Location = new System.Drawing.Point(14, 120);
+            this.menuCrearPost.Location = new System.Drawing.Point(14, 136);
             this.menuCrearPost.Name = "menuCrearPost";
             this.menuCrearPost.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuCrearPost.Size = new System.Drawing.Size(734, 24);
+            this.menuCrearPost.Size = new System.Drawing.Size(734, 30);
             this.menuCrearPost.TabIndex = 8;
             this.menuCrearPost.Text = "menuStrip1";
+            this.menuCrearPost.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuCrearPost_ItemClicked);
             // 
             // contenidoToolStripMenuItem
             // 
             this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
-            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(92, 26);
             this.contenidoToolStripMenuItem.Text = "Contenido";
             this.contenidoToolStripMenuItem.Click += new System.EventHandler(this.contenidoToolStripMenuItem_Click);
             // 
             // btnImagenVideo
             // 
             this.btnImagenVideo.Name = "btnImagenVideo";
-            this.btnImagenVideo.Size = new System.Drawing.Size(95, 20);
+            this.btnImagenVideo.Size = new System.Drawing.Size(120, 26);
             this.btnImagenVideo.Text = "Imagen & Video";
-            this.btnImagenVideo.Click += new System.EventHandler(this.imagenToolStripMenuItem_Click);
+            this.btnImagenVideo.Click += new System.EventHandler(this.btnImagenVideo_Click);
             // 
             // btnLink
             // 
             this.btnLink.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.txtLinkCrearPost});
             this.btnLink.Name = "btnLink";
-            this.btnLink.Size = new System.Drawing.Size(41, 20);
+            this.btnLink.Size = new System.Drawing.Size(49, 26);
             this.btnLink.Text = "Link";
+            this.btnLink.Click += new System.EventHandler(this.btnLink_Click);
             // 
             // txtLinkCrearPost
             // 
             this.txtLinkCrearPost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLinkCrearPost.Name = "txtLinkCrearPost";
             this.txtLinkCrearPost.Size = new System.Drawing.Size(100, 27);
-            this.txtLinkCrearPost.Size = new System.Drawing.Size(100, 23);
             this.txtLinkCrearPost.Text = "inserte su link";
-            this.txtLinkCrearPost.Enter += new System.EventHandler(this.txtLinkCrearPost_Click);
+            this.txtLinkCrearPost.Enter += new System.EventHandler(this.txtLinkCrearPost_Enter);
+            this.txtLinkCrearPost.Leave += new System.EventHandler(this.txtLinkCrearPost_Leave);
             this.txtLinkCrearPost.Click += new System.EventHandler(this.txtLinkCrearPost_Click);
-            this.txtLinkCrearPost.MouseEnter += new System.EventHandler(this.txtLinkCrearPost_Enter);
-            this.txtLinkCrearPost.MouseLeave += new System.EventHandler(this.txtLinkCrearPost_Leave);
             // 
             // btnTipoContenido
             // 
+            this.btnTipoContenido.Checked = true;
+            this.btnTipoContenido.CheckState = System.Windows.Forms.CheckState.Checked;
             this.btnTipoContenido.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnContenidoIntercambioCultural,
             this.btnContenidoLenguaje,
             this.btnContenidoEducacion});
             this.btnTipoContenido.Name = "btnTipoContenido";
-            this.btnTipoContenido.Size = new System.Drawing.Size(99, 20);
+            this.btnTipoContenido.Size = new System.Drawing.Size(124, 26);
             this.btnTipoContenido.Text = "Tipo contenido";
-            this.btnTipoContenido.Click += new System.EventHandler(this.asdasdToolStripMenuItem_Click);
+            this.btnTipoContenido.Click += new System.EventHandler(this.btnTipoContenido_Click);
             // 
             // btnContenidoIntercambioCultural
             // 
             this.btnContenidoIntercambioCultural.CheckOnClick = true;
             this.btnContenidoIntercambioCultural.Name = "btnContenidoIntercambioCultural";
-            this.btnContenidoIntercambioCultural.Size = new System.Drawing.Size(183, 22);
+            this.btnContenidoIntercambioCultural.Size = new System.Drawing.Size(227, 26);
             this.btnContenidoIntercambioCultural.Text = "Intercambio Cultural";
+            this.btnContenidoIntercambioCultural.Click += new System.EventHandler(this.btnContenidoIntercambioCultural_Click);
             // 
             // btnContenidoLenguaje
             // 
             this.btnContenidoLenguaje.CheckOnClick = true;
             this.btnContenidoLenguaje.Name = "btnContenidoLenguaje";
-            this.btnContenidoLenguaje.Size = new System.Drawing.Size(183, 22);
+            this.btnContenidoLenguaje.Size = new System.Drawing.Size(227, 26);
             this.btnContenidoLenguaje.Text = "Lenguaje";
+            this.btnContenidoLenguaje.Click += new System.EventHandler(this.btnContenidoLenguaje_Click);
             // 
             // btnContenidoEducacion
             // 
             this.btnContenidoEducacion.CheckOnClick = true;
             this.btnContenidoEducacion.Name = "btnContenidoEducacion";
-            this.btnContenidoEducacion.Size = new System.Drawing.Size(183, 22);
+            this.btnContenidoEducacion.Size = new System.Drawing.Size(227, 26);
             this.btnContenidoEducacion.Text = "Educacion";
+            this.btnContenidoEducacion.Click += new System.EventHandler(this.btnContenidoEducacion_Click);
             // 
-            // panelDerecho
+            // divisorDerecho
             // 
-            this.panelDerecho.BackColor = System.Drawing.Color.LightGray;
-            this.panelDerecho.Location = new System.Drawing.Point(1293, 65);
-            this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(200, 742);
-            this.panelDerecho.TabIndex = 5;
+            this.divisorDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.divisorDerecho.Depth = 0;
+            this.divisorDerecho.Location = new System.Drawing.Point(205, 1);
+            this.divisorDerecho.MouseState = MaterialSkin.MouseState.HOVER;
+            this.divisorDerecho.Name = "divisorDerecho";
+            this.divisorDerecho.Size = new System.Drawing.Size(13, 745);
+            this.divisorDerecho.TabIndex = 7;
+            this.divisorDerecho.Text = "materialDivider1";
+            this.divisorDerecho.Click += new System.EventHandler(this.divisorDerecho_Click);
             // 
-            // txtBarraBusqueda
+            // panelCrearPost
             // 
-            this.txtBarraBusqueda.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBarraBusqueda.Location = new System.Drawing.Point(328, 32);
-            this.txtBarraBusqueda.Name = "txtBarraBusqueda";
-            this.txtBarraBusqueda.Size = new System.Drawing.Size(936, 20);
-            this.txtBarraBusqueda.TabIndex = 7;
+            this.panelCrearPost.BackColor = System.Drawing.Color.LightGray;
+            this.panelCrearPost.Controls.Add(this.pictureBoxImagenPerfil);
+            this.panelCrearPost.Controls.Add(this.btnActividades);
+            this.panelCrearPost.Controls.Add(this.btnEventos);
+            this.panelCrearPost.Controls.Add(this.btnGrupos);
+            this.panelCrearPost.Controls.Add(this.btnPrincipal);
+            this.panelCrearPost.Location = new System.Drawing.Point(3, 3);
+            this.panelCrearPost.Name = "panelCrearPost";
+            this.panelCrearPost.Size = new System.Drawing.Size(200, 742);
+            this.panelCrearPost.TabIndex = 6;
+            this.panelCrearPost.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCrearPost_Paint);
             // 
-            // flowLayoutCrearPosts
+            // btnActividades
             // 
-            this.flowLayoutCrearPosts.BackColor = System.Drawing.Color.LightGray;
-            this.flowLayoutCrearPosts.Controls.Add(this.materialCardCrearPost);
-            this.flowLayoutCrearPosts.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutCrearPosts.Location = new System.Drawing.Point(224, 67);
-            this.flowLayoutCrearPosts.Name = "flowLayoutCrearPosts";
-            this.flowLayoutCrearPosts.Padding = new System.Windows.Forms.Padding(90, 0, 90, 0);
-            this.flowLayoutCrearPosts.Size = new System.Drawing.Size(1063, 188);
-            this.flowLayoutCrearPosts.TabIndex = 4;
+            this.btnActividades.BackColor = System.Drawing.Color.LightGray;
+            this.btnActividades.FlatAppearance.BorderSize = 0;
+            this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActividades.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnActividades.Location = new System.Drawing.Point(4, 332);
+            this.btnActividades.Name = "btnActividades";
+            this.btnActividades.Size = new System.Drawing.Size(192, 40);
+            this.btnActividades.TabIndex = 3;
+            this.btnActividades.Text = "Actividades";
+            this.btnActividades.UseVisualStyleBackColor = false;
+            this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
+            // 
+            // btnEventos
+            // 
+            this.btnEventos.BackColor = System.Drawing.Color.LightGray;
+            this.btnEventos.FlatAppearance.BorderSize = 0;
+            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnEventos.Location = new System.Drawing.Point(4, 286);
+            this.btnEventos.Name = "btnEventos";
+            this.btnEventos.Size = new System.Drawing.Size(192, 40);
+            this.btnEventos.TabIndex = 2;
+            this.btnEventos.Text = "Eventos";
+            this.btnEventos.UseVisualStyleBackColor = false;
+            this.btnEventos.Click += new System.EventHandler(this.btnEventos_Click);
+            // 
+            // btnGrupos
+            // 
+            this.btnGrupos.BackColor = System.Drawing.Color.LightGray;
+            this.btnGrupos.FlatAppearance.BorderSize = 0;
+            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrupos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGrupos.Location = new System.Drawing.Point(4, 240);
+            this.btnGrupos.Name = "btnGrupos";
+            this.btnGrupos.Size = new System.Drawing.Size(192, 40);
+            this.btnGrupos.TabIndex = 1;
+            this.btnGrupos.Text = "Grupos";
+            this.btnGrupos.UseVisualStyleBackColor = false;
+            this.btnGrupos.Click += new System.EventHandler(this.btnGrupos_Click);
+            // 
+            // btnPrincipal
+            // 
+            this.btnPrincipal.BackColor = System.Drawing.Color.LightGray;
+            this.btnPrincipal.FlatAppearance.BorderSize = 0;
+            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrincipal.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPrincipal.Location = new System.Drawing.Point(4, 194);
+            this.btnPrincipal.Name = "btnPrincipal";
+            this.btnPrincipal.Size = new System.Drawing.Size(192, 40);
+            this.btnPrincipal.TabIndex = 0;
+            this.btnPrincipal.Text = "Principal";
+            this.btnPrincipal.UseVisualStyleBackColor = false;
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
+            // 
+            // flowLayoutPanelPosts
+            // 
+            this.flowLayoutPanelPosts.AutoScroll = true;
+            this.flowLayoutPanelPosts.BackColor = System.Drawing.Color.LightGray;
+            this.flowLayoutPanelPosts.ForeColor = System.Drawing.Color.Black;
+            this.flowLayoutPanelPosts.Location = new System.Drawing.Point(221, 197);
+            this.flowLayoutPanelPosts.Name = "flowLayoutPanelPosts";
+            this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(104, 0, 70, 0);
+            this.flowLayoutPanelPosts.Size = new System.Drawing.Size(1063, 549);
+            this.flowLayoutPanelPosts.TabIndex = 8;
+            this.flowLayoutPanelPosts.Scroll += new System.Windows.Forms.ScrollEventHandler(this.flowLayoutPanelPosts_Scroll);
+            this.flowLayoutPanelPosts.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelPosts_Paint);
             // 
             // pboxImagenVideo
             // 
@@ -403,81 +404,76 @@ namespace CapaVisual
             this.pboxImagenVideo.Size = new System.Drawing.Size(420, 67);
             this.pboxImagenVideo.TabIndex = 0;
             this.pboxImagenVideo.TabStop = false;
+            this.pboxImagenVideo.Click += new System.EventHandler(this.pboxImagenVideo_Click);
+            this.pboxImagenVideo.DragDrop += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragDrop);
+            this.pboxImagenVideo.DragEnter += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragEnter);
             // 
-            // pictureBox1
+            // pictureBoxImagenPerfil
             // 
-            this.pictureBox1.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-            this.pictureBox1.Location = new System.Drawing.Point(72, 88);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 54);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxImagenPerfil.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
+            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(72, 88);
+            this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
+            this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(54, 54);
+            this.pictureBoxImagenPerfil.TabIndex = 4;
+            this.pictureBoxImagenPerfil.TabStop = false;
+            this.pictureBoxImagenPerfil.Click += new System.EventHandler(this.pictureBoxImagenPerfil_Click);
             // 
-            // MainPage
+            // mainPage1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(175)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1499, 815);
-            this.Controls.Add(this.txtBarraBusqueda);
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.flowLayoutCrearPosts);
             this.Controls.Add(this.divisorDerecho);
             this.Controls.Add(this.panelCrearPost);
             this.Controls.Add(this.flowLayoutPanelPosts);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(114)))), ((int)(((byte)(255)))));
-            this.MainMenuStrip = this.menuCrearPost;
-            this.Name = "MainPage";
-            this.Text = "LinguaLink";
-            this.panelCrearPost.ResumeLayout(false);
-            this.panelImagenVideo.ResumeLayout(false);
-            this.panelImagenVideo.PerformLayout();
+            this.Name = "mainPage1";
+            this.Size = new System.Drawing.Size(1493, 752);
+            this.flowLayoutCrearPosts.ResumeLayout(false);
             this.materialCardCrearPost.ResumeLayout(false);
             this.materialCardCrearPost.PerformLayout();
             this.panelTextoPost.ResumeLayout(false);
+            this.panelImagenVideo.ResumeLayout(false);
+            this.panelImagenVideo.PerformLayout();
             this.menuCrearPost.ResumeLayout(false);
             this.menuCrearPost.PerformLayout();
-            this.flowLayoutCrearPosts.ResumeLayout(false);
+            this.panelCrearPost.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelCrearPost;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnActividades;
-        private System.Windows.Forms.Button btnEventos;
-        private System.Windows.Forms.Button btnGrupos;
-        private System.Windows.Forms.Button btnPrincipal;
-        private MaterialSkin.Controls.MaterialDivider divisorDerecho;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPosts;
-        private MaterialSkin.Controls.MaterialCard materialCardCrearPost;
-        private System.Windows.Forms.RichTextBox txtContenidoPost;
         private System.Windows.Forms.Panel panelDerecho;
-        private System.Windows.Forms.TextBox txtBarraBusqueda;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutCrearPosts;
+        private MaterialSkin.Controls.MaterialCard materialCardCrearPost;
+        private System.Windows.Forms.ComboBox comBoxSeleccionarGrupo;
+        private System.Windows.Forms.Panel panelTextoPost;
+        private System.Windows.Forms.RichTextBox txtContenidoPost;
+        private System.Windows.Forms.Panel panelImagenVideo;
+        private System.Windows.Forms.Label lblAñadirImagen;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.PictureBox pboxImagenVideo;
+        private MaterialSkin.Controls.MaterialButton botonPostear;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.MenuStrip menuCrearPost;
+        private System.Windows.Forms.ToolStripMenuItem contenidoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnImagenVideo;
+        private System.Windows.Forms.ToolStripMenuItem btnLink;
+        private System.Windows.Forms.ToolStripTextBox txtLinkCrearPost;
         private System.Windows.Forms.ToolStripMenuItem btnTipoContenido;
         private System.Windows.Forms.ToolStripMenuItem btnContenidoIntercambioCultural;
         private System.Windows.Forms.ToolStripMenuItem btnContenidoLenguaje;
         private System.Windows.Forms.ToolStripMenuItem btnContenidoEducacion;
-        private System.Windows.Forms.ToolStripMenuItem btnImagenVideo;
-        private MaterialSkin.Controls.MaterialButton botonPostear;
-        private System.Windows.Forms.ToolStripMenuItem contenidoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem btnLink;
-        private System.Windows.Forms.Panel panelTextoPost;
-        private System.Windows.Forms.Panel panelImagenVideo;
-        private System.Windows.Forms.PictureBox pboxImagenVideo;
-        private System.Windows.Forms.Label lblAñadirImagen;
-        private System.Windows.Forms.Button btnBrowse;
-        private System.Windows.Forms.ToolStripTextBox txtLinkCrearPost;
-        private System.Windows.Forms.ComboBox comBoxSeleccionarGrupo;
+        private MaterialSkin.Controls.MaterialDivider divisorDerecho;
+        private System.Windows.Forms.Panel panelCrearPost;
+        private System.Windows.Forms.PictureBox pictureBoxImagenPerfil;
+        private System.Windows.Forms.Button btnActividades;
+        private System.Windows.Forms.Button btnEventos;
+        private System.Windows.Forms.Button btnGrupos;
+        private System.Windows.Forms.Button btnPrincipal;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPosts;
     }
 }
-

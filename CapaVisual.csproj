@@ -85,6 +85,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>.cs</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DTO\PostDesdeAPI.cs" />
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -92,11 +99,11 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.cs">
+    <Compile Include="AppWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <Compile Include="AppWindow.Designer.cs">
+      <DependentUpon>AppWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,11 +113,32 @@
     <Compile Include="RegisterPage.Designer.cs">
       <DependentUpon>RegisterPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PostCard.Designer.cs">
+      <DependentUpon>PostCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupPage.Designer.cs">
+      <DependentUpon>GroupPage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.resx">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <EmbeddedResource Include="AppWindow.resx">
+      <DependentUpon>AppWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostCard.resx">
+      <DependentUpon>PostCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +152,12 @@
     </Compile>
     <EmbeddedResource Include="RegisterPage.resx">
       <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupPage.resx">
+      <DependentUpon>GroupPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -168,6 +202,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LinguaLinkDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Be Like by iconSvg.co%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Be Like by iconSvg.co%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dislike by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Messaging by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Share by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Share by iconSvg.co%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downytfytload.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6627adbbce5ee45e48d0b31d35a67932.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo3be.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
