@@ -82,3 +82,4 @@ C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.exe
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.pdb
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.GroupPage.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.mainPage1.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CrearPost.resources

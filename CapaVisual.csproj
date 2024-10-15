@@ -131,6 +131,12 @@
     <Compile Include="GroupPage.Designer.cs">
       <DependentUpon>GroupPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CrearPost.Designer.cs">
+      <DependentUpon>CrearPost.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GroupPage.resx">
       <DependentUpon>GroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearPost.resx">
+      <DependentUpon>CrearPost.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

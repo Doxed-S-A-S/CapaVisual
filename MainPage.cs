@@ -22,23 +22,10 @@ namespace CapaVisual
         public mainPage1()
         {
             InitializeComponent();
-
-            panelImagenVideo.Visible = false;
-
             mostrarPostsIniciales();
 
             flowLayoutPanelPosts.Scroll += new ScrollEventHandler(flowLayoutPanelPosts_Scroll);
             flowLayoutPanelPosts.MouseWheel += flowLayoutPanelPosts_MouseWheel;
-
-            pboxImagenVideo.AllowDrop = true;
-            pboxImagenVideo.SizeMode = PictureBoxSizeMode.Zoom;
-            pboxImagenVideo.DragEnter += new DragEventHandler(pboxImagenVideo_DragEnter);
-            pboxImagenVideo.DragDrop += new DragEventHandler(pboxImagenVideo_DragDrop);
-
-            txtLinkCrearPost.Text = "Pegue el enlace aquí";
-            txtLinkCrearPost.ForeColor = Color.Gray;
-
-            comBoxSeleccionarGrupo.ForeColor = Color.Gray;
         }
 
         private static List<PostDesdeAPI> obtenerPostDesdeAPI()
@@ -62,42 +49,6 @@ namespace CapaVisual
 
             string content = response.Content.Trim('"');
             return content;
-        }
-
-        private static void crearPost(string url_contenido, string tipo_contenido, string contenido, string url_imagen, int id_cuenta)
-        {
-            
-            RestClient client = new RestClient("http://localhost:44331/");
-
-            
-            RestRequest request = new RestRequest("ApiPost/post/crear/", Method.Post);
-
-            
-            request.AddFile("imagencita", url_imagen);
-
-            
-            request.AddParameter("url_contenido", url_contenido);
-            request.AddParameter("tipo_contenido", tipo_contenido);
-            request.AddParameter("contenido", contenido);
-            request.AddParameter("id_cuenta", id_cuenta.ToString());  
-
-            RestResponse response = client.Execute(request);
-
-            
-            if (response.IsSuccessful)
-            {
-                MessageBox.Show("Post creado exitosamente.");
-            }
-            else
-            {
-                
-                MessageBox.Show($"Error al crear el post: {response.StatusCode} - {response.ErrorMessage}");
-            }
-        }
-
-        private void botonPostear_Click(object sender, EventArgs e)
-        {
-            crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text, pboxImagenVideo.ImageLocation, 1);
         }
 
         private void mostrarPostsIniciales()
@@ -161,143 +112,6 @@ namespace CapaVisual
             }
         }
 
-        private void pboxImagenVideo_DragDrop(object sender, DragEventArgs e)
-        {
-            string[] archivos = (string[])e.Data.GetData(DataFormats.FileDrop);
-
-            if (archivos != null && archivos.Length > 0)
-            {
-                btnBrowse.Visible = false;
-                lblAñadirImagen.Visible = false;
-                pboxImagenVideo.Image = Image.FromFile(archivos[0]);
-                pboxImagenVideo.ImageLocation = archivos[0];
-
-                string sourceFilePath = archivos[0];
-
-                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-                string destFolderPath = Path.Combine(projectDirectory, "Uploads");
-                string destFilePath = Path.Combine(destFolderPath, Path.GetFileName(sourceFilePath));
-
-                File.Copy(sourceFilePath, destFilePath, true);
-                this.url_imagen = destFilePath;
-                MessageBox.Show("Imagen subida exitosamente y guardada en: " + destFilePath);
-            }
-        }
-
-        private void pboxImagenVideo_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-                e.Effect = DragDropEffects.Copy;
-            }
-            else
-            {
-                e.Effect = DragDropEffects.None;
-            }
-        }
-
-        private void btnBrowse_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-
-                pboxImagenVideo.Image = Image.FromFile(dialog.FileName);
-                pboxImagenVideo.ImageLocation = dialog.FileName;
-                lblAñadirImagen.Visible = false;
-                btnBrowse.Visible = false;
-
-                string sourceFilePath = dialog.FileName;
-
-                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-                string destFolderPath = Path.Combine(projectDirectory, "Uploads");
-                string destFilePath = Path.Combine(destFolderPath, Path.GetFileName(sourceFilePath));
-
-                File.Copy(sourceFilePath, destFilePath, true);
-                this.url_imagen = destFilePath;
-                MessageBox.Show("Imagen subida exitosamente y guardada en: " + destFilePath);
-
-            }
-        }
-
-        private void btnImagenVideo_Click(object sender, EventArgs e)
-        {
-            panelTextoPost.Visible = false;
-            panelImagenVideo.Visible = true;
-        }
-
-        private void contenidoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            pboxImagenVideo.BackColor = Color.LightGray;
-            panelTextoPost.Visible = true;
-            panelImagenVideo.Visible = false;
-        }
-
-        private void txtLinkCrearPost_Enter(object sender, EventArgs e)
-        {
-            if (txtLinkCrearPost.Text == "Pegue el enlace aquí")
-            {
-                txtLinkCrearPost.Text = "";
-                txtLinkCrearPost.ForeColor = Color.Black;
-            }
-        }
-
-        private void txtLinkCrearPost_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtLinkCrearPost.Text))
-            {
-                txtLinkCrearPost.Text = "Pegue el enlace aquí";
-                txtLinkCrearPost.ForeColor = Color.Gray;
-            }
-        }
-
-        private void comBoxSeleccionarGrupo_DropDown(object sender, EventArgs e)
-        {
-            comBoxSeleccionarGrupo.DropDownStyle = ComboBoxStyle.DropDownList;
-            comBoxSeleccionarGrupo.ForeColor = Color.Black;
-            if (comBoxSeleccionarGrupo.Text == "Seleccione el grupo")
-            {
-
-                comBoxSeleccionarGrupo.Text = "";
-            }
-        }
-
-        private void comBoxSeleccionarGrupo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comBoxSeleccionarGrupo.SelectedIndex != -1)
-            {
-
-                comBoxSeleccionarGrupo.ForeColor = Color.Black;
-            }
-        }
-
-        private void comBoxSeleccionarGrupo_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(comBoxSeleccionarGrupo.Text))
-            {
-                comBoxSeleccionarGrupo.Text = "Seleccione el grupo";
-                comBoxSeleccionarGrupo.ForeColor = Color.Gray;
-            }
-        }
-
-        private string ObtenerTipoContenidoSeleccionado(ToolStripMenuItem btnTipoContenido)
-        {
-
-            foreach (ToolStripItem item in btnTipoContenido.DropDownItems)
-            {
-
-                if (item is ToolStripMenuItem subItem && subItem.Checked)
-                {
-                    return subItem.Text;
-                }
-            }
-            return string.Empty;
-        }
-
-        
-
         private void btnGrupos_Click(object sender, EventArgs e)
         {
             var parentForm = this.Parent as AppWindow;
@@ -306,7 +120,5 @@ namespace CapaVisual
                 parentForm.ShowGroupPage(); // Call the method on the form to switch
             }
         }
-
-        
     }
 }
