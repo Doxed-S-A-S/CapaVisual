@@ -19,19 +19,14 @@ namespace CapaVisual
 {
     public partial class AppWindow : MaterialForm
     {
-        
 
 
         public AppWindow()
         {
             InitializeComponent();
 
-
-
-
-            // Set initial visibility
-            mainPage1.Show();  // Main page is visible
-            groupPage1.Hide(); // Group page is hidden
+            mainPage1.Show();  
+            groupPage1.Hide(); 
 
             mainPage1.Dock = DockStyle.Fill;
             groupPage1.Dock = DockStyle.Fill;

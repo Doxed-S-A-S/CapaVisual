@@ -66,36 +66,38 @@ namespace CapaVisual
 
         private static void crearPost(string url_contenido, string tipo_contenido, string contenido, string url_imagen, int id_cuenta)
         {
-
+            
             RestClient client = new RestClient("http://localhost:44331/");
-            RestRequest request = new RestRequest($"ApiPost/post/crear/", Method.Post);
-            request.AddHeader("Content-Type", "application/json");
+
+            
+            RestRequest request = new RestRequest("ApiPost/post/crear/", Method.Post);
+
+            
             request.AddFile("imagencita", url_imagen);
 
-
-            var postData = new
-            {
-                url_contenido = url_contenido,
-                tipo_contenido = tipo_contenido,
-                contenido = contenido,
-                id_cuenta = "1"
-            };
-
-
-            request.AddJsonBody(postData);
-
+            
+            request.AddParameter("url_contenido", url_contenido);
+            request.AddParameter("tipo_contenido", tipo_contenido);
+            request.AddParameter("contenido", contenido);
+            request.AddParameter("id_cuenta", id_cuenta.ToString());  
 
             RestResponse response = client.Execute(request);
 
-
+            
             if (response.IsSuccessful)
             {
                 MessageBox.Show("Post creado exitosamente.");
             }
             else
             {
-                MessageBox.Show("Error al crear el post: " + response.ErrorMessage);
+                
+                MessageBox.Show($"Error al crear el post: {response.StatusCode} - {response.ErrorMessage}");
             }
+        }
+
+        private void botonPostear_Click(object sender, EventArgs e)
+        {
+            crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text, pboxImagenVideo.ImageLocation, 1);
         }
 
         private void mostrarPostsIniciales()
@@ -168,6 +170,7 @@ namespace CapaVisual
                 btnBrowse.Visible = false;
                 lblAñadirImagen.Visible = false;
                 pboxImagenVideo.Image = Image.FromFile(archivos[0]);
+                pboxImagenVideo.ImageLocation = archivos[0];
 
                 string sourceFilePath = archivos[0];
 
@@ -202,6 +205,7 @@ namespace CapaVisual
             {
 
                 pboxImagenVideo.Image = Image.FromFile(dialog.FileName);
+                pboxImagenVideo.ImageLocation = dialog.FileName;
                 lblAñadirImagen.Visible = false;
                 btnBrowse.Visible = false;
 
@@ -292,10 +296,7 @@ namespace CapaVisual
             return string.Empty;
         }
 
-        private void botonPostear_Click(object sender, EventArgs e)
-        {
-            crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text, pboxImagenVideo.ImageLocation, 1);
-        }
+        
 
         private void btnGrupos_Click(object sender, EventArgs e)
         {
@@ -306,119 +307,6 @@ namespace CapaVisual
             }
         }
 
-        private void panelDerecho_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutCrearPosts_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void materialCardCrearPost_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelTextoPost_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtContenidoPost_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelImagenVideo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblAñadirImagen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuCrearPost_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void btnLink_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLinkCrearPost_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTipoContenido_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnContenidoIntercambioCultural_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnContenidoLenguaje_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnContenidoEducacion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void divisorDerecho_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelCrearPost_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnActividades_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEventos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanelPosts_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnPrincipal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pboxImagenVideo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxImagenPerfil_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
