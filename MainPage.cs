@@ -12,12 +12,12 @@ using System.Windows.Forms;
 using MaterialSkin.Controls;
 using RestSharp;
 using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace CapaVisual
 {
     public partial class mainPage1 : UserControl
     {
-        private string url_imagen;
 
         public mainPage1()
         {
@@ -27,7 +27,16 @@ namespace CapaVisual
             flowLayoutPanelPosts.Scroll += new ScrollEventHandler(flowLayoutPanelPosts_Scroll);
             flowLayoutPanelPosts.MouseWheel += flowLayoutPanelPosts_MouseWheel;
         }
+        public void EliminarCrearPost()
+        {
+            flowLayoutCrearPosts.Controls.Remove(crearPost1);
+        }
 
+        public void AgregarCrearPost()
+        {
+            CrearPost crearPost1 = new CrearPost();
+            flowLayoutCrearPosts.Controls.Add(crearPost1);
+        }
         private static List<PostDesdeAPI> obtenerPostDesdeAPI()
         {
             RestClient client = new RestClient("http://localhost:44331/");
@@ -63,11 +72,18 @@ namespace CapaVisual
                 postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
                 postCard.PostContent = post.contenido;
                 postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-                //postCard.PostImage = Image.FromFile(post.url_imagen) // faltan implementar cosas para que esto funcione
-                // Add the custom post card to the flow panel
+
+                HttpClient client = new HttpClient();
+                byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
+                MemoryStream stream = new MemoryStream(imageData);
+
+                postCard.PostImage = Image.FromStream(stream);
+
+                //postCard.PostImage = Image.FromFile(post.url_imagen); // faltan implementar cosas para que esto funcione y da problemas si la imagen es null
+                //Add the custom post card to the flow panel
                 flowLayoutPanelPosts.Controls.Add(postCard);
             }
-        
+
         }
 
         private void CrearMaterialCard(string contenido) // a cambiar
@@ -117,7 +133,7 @@ namespace CapaVisual
             var parentForm = this.Parent as AppWindow;
             if (parentForm != null)
             {
-                parentForm.ShowGroupPage(); // Call the method on the form to switch
+                parentForm.ShowGroupPage();
             }
         }
     }

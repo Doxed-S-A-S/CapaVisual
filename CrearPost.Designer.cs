@@ -43,11 +43,11 @@ namespace CapaVisual
             this.contenidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnImagenVideo = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLink = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtLinkCrearPost = new System.Windows.Forms.ToolStripTextBox();
             this.btnTipoContenido = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoIntercambioCultural = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoLenguaje = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoEducacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtLinkCrearPost = new System.Windows.Forms.ToolStripTextBox();
             this.materialCardCrearPost.SuspendLayout();
             this.panelTextoPost.SuspendLayout();
             this.panelImagenVideo.SuspendLayout();
@@ -67,11 +67,11 @@ namespace CapaVisual
             this.materialCardCrearPost.Depth = 0;
             this.materialCardCrearPost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCardCrearPost.Location = new System.Drawing.Point(0, 0);
-            this.materialCardCrearPost.Margin = new System.Windows.Forms.Padding(14, 5, 14, 14);
+            this.materialCardCrearPost.Margin = new System.Windows.Forms.Padding(10, 4, 10, 11);
             this.materialCardCrearPost.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCardCrearPost.Name = "materialCardCrearPost";
-            this.materialCardCrearPost.Padding = new System.Windows.Forms.Padding(14, 0, 14, 14);
-            this.materialCardCrearPost.Size = new System.Drawing.Size(762, 180);
+            this.materialCardCrearPost.Padding = new System.Windows.Forms.Padding(10, 0, 10, 11);
+            this.materialCardCrearPost.Size = new System.Drawing.Size(572, 146);
             this.materialCardCrearPost.TabIndex = 1;
             // 
             // comBoxSeleccionarGrupo
@@ -86,9 +86,10 @@ namespace CapaVisual
             "asd",
             "as",
             "d"});
-            this.comBoxSeleccionarGrupo.Location = new System.Drawing.Point(469, 105);
+            this.comBoxSeleccionarGrupo.Location = new System.Drawing.Point(352, 85);
+            this.comBoxSeleccionarGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comBoxSeleccionarGrupo.Name = "comBoxSeleccionarGrupo";
-            this.comBoxSeleccionarGrupo.Size = new System.Drawing.Size(165, 24);
+            this.comBoxSeleccionarGrupo.Size = new System.Drawing.Size(125, 21);
             this.comBoxSeleccionarGrupo.TabIndex = 0;
             this.comBoxSeleccionarGrupo.Text = "Seleccione un grupo";
             this.comBoxSeleccionarGrupo.DropDown += new System.EventHandler(this.comBoxSeleccionarGrupo_DropDown_1);
@@ -98,16 +99,18 @@ namespace CapaVisual
             // panelTextoPost
             // 
             this.panelTextoPost.Controls.Add(this.txtContenidoPost);
-            this.panelTextoPost.Location = new System.Drawing.Point(14, 39);
+            this.panelTextoPost.Location = new System.Drawing.Point(10, 32);
+            this.panelTextoPost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTextoPost.Name = "panelTextoPost";
-            this.panelTextoPost.Size = new System.Drawing.Size(431, 91);
+            this.panelTextoPost.Size = new System.Drawing.Size(323, 74);
             this.panelTextoPost.TabIndex = 12;
             // 
             // txtContenidoPost
             // 
-            this.txtContenidoPost.Location = new System.Drawing.Point(3, 11);
+            this.txtContenidoPost.Location = new System.Drawing.Point(2, 9);
+            this.txtContenidoPost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContenidoPost.Name = "txtContenidoPost";
-            this.txtContenidoPost.Size = new System.Drawing.Size(420, 67);
+            this.txtContenidoPost.Size = new System.Drawing.Size(316, 55);
             this.txtContenidoPost.TabIndex = 0;
             this.txtContenidoPost.Text = "";
             // 
@@ -116,25 +119,28 @@ namespace CapaVisual
             this.panelImagenVideo.Controls.Add(this.lblAñadirImagen);
             this.panelImagenVideo.Controls.Add(this.btnBrowse);
             this.panelImagenVideo.Controls.Add(this.pboxImagenVideo);
-            this.panelImagenVideo.Location = new System.Drawing.Point(14, 39);
+            this.panelImagenVideo.Location = new System.Drawing.Point(10, 32);
+            this.panelImagenVideo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelImagenVideo.Name = "panelImagenVideo";
-            this.panelImagenVideo.Size = new System.Drawing.Size(431, 91);
+            this.panelImagenVideo.Size = new System.Drawing.Size(323, 74);
             this.panelImagenVideo.TabIndex = 13;
             // 
             // lblAñadirImagen
             // 
             this.lblAñadirImagen.AutoSize = true;
-            this.lblAñadirImagen.Location = new System.Drawing.Point(36, 36);
+            this.lblAñadirImagen.Location = new System.Drawing.Point(27, 29);
+            this.lblAñadirImagen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAñadirImagen.Name = "lblAñadirImagen";
-            this.lblAñadirImagen.Size = new System.Drawing.Size(212, 17);
+            this.lblAñadirImagen.Size = new System.Drawing.Size(157, 13);
             this.lblAñadirImagen.TabIndex = 1;
             this.lblAñadirImagen.Text = "Arrastra una imagen o sube una";
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(264, 30);
+            this.btnBrowse.Location = new System.Drawing.Point(198, 24);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.Size = new System.Drawing.Size(56, 19);
             this.btnBrowse.TabIndex = 2;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
@@ -144,9 +150,10 @@ namespace CapaVisual
             // 
             this.pboxImagenVideo.BackColor = System.Drawing.Color.Red;
             this.pboxImagenVideo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxImagenVideo.Location = new System.Drawing.Point(3, 11);
+            this.pboxImagenVideo.Location = new System.Drawing.Point(2, 9);
+            this.pboxImagenVideo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pboxImagenVideo.Name = "pboxImagenVideo";
-            this.pboxImagenVideo.Size = new System.Drawing.Size(420, 67);
+            this.pboxImagenVideo.Size = new System.Drawing.Size(315, 54);
             this.pboxImagenVideo.TabIndex = 0;
             this.pboxImagenVideo.TabStop = false;
             this.pboxImagenVideo.DragDrop += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragDrop_1);
@@ -160,12 +167,12 @@ namespace CapaVisual
             this.botonPostear.Depth = 0;
             this.botonPostear.HighEmphasis = true;
             this.botonPostear.Icon = null;
-            this.botonPostear.Location = new System.Drawing.Point(469, 50);
-            this.botonPostear.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.botonPostear.Location = new System.Drawing.Point(352, 41);
+            this.botonPostear.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.botonPostear.MouseState = MaterialSkin.MouseState.HOVER;
             this.botonPostear.Name = "botonPostear";
             this.botonPostear.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.botonPostear.Size = new System.Drawing.Size(100, 36);
+            this.botonPostear.Size = new System.Drawing.Size(75, 29);
             this.botonPostear.TabIndex = 10;
             this.botonPostear.Text = "Postear";
             this.botonPostear.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -177,10 +184,11 @@ namespace CapaVisual
             // 
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(16, 15);
+            this.materialLabel1.Location = new System.Drawing.Point(12, 12);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(79, 17);
+            this.materialLabel1.Size = new System.Drawing.Size(59, 14);
             this.materialLabel1.TabIndex = 7;
             this.materialLabel1.Text = "Crear Post";
             // 
@@ -194,24 +202,25 @@ namespace CapaVisual
             this.btnImagenVideo,
             this.btnLink,
             this.btnTipoContenido});
-            this.menuCrearPost.Location = new System.Drawing.Point(14, 136);
+            this.menuCrearPost.Location = new System.Drawing.Point(10, 111);
             this.menuCrearPost.Name = "menuCrearPost";
+            this.menuCrearPost.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuCrearPost.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuCrearPost.Size = new System.Drawing.Size(734, 30);
+            this.menuCrearPost.Size = new System.Drawing.Size(552, 24);
             this.menuCrearPost.TabIndex = 8;
             this.menuCrearPost.Text = "menuStrip1";
             // 
             // contenidoToolStripMenuItem
             // 
             this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
-            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(92, 26);
+            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.contenidoToolStripMenuItem.Text = "Contenido";
             this.contenidoToolStripMenuItem.Click += new System.EventHandler(this.contenidoToolStripMenuItem_Click_1);
             // 
             // btnImagenVideo
             // 
             this.btnImagenVideo.Name = "btnImagenVideo";
-            this.btnImagenVideo.Size = new System.Drawing.Size(120, 26);
+            this.btnImagenVideo.Size = new System.Drawing.Size(95, 20);
             this.btnImagenVideo.Text = "Imagen & Video";
             this.btnImagenVideo.Click += new System.EventHandler(this.btnImagenVideo_Click_1);
             // 
@@ -220,17 +229,8 @@ namespace CapaVisual
             this.btnLink.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.txtLinkCrearPost});
             this.btnLink.Name = "btnLink";
-            this.btnLink.Size = new System.Drawing.Size(49, 26);
+            this.btnLink.Size = new System.Drawing.Size(41, 20);
             this.btnLink.Text = "Link";
-            // 
-            // txtLinkCrearPost
-            // 
-            this.txtLinkCrearPost.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtLinkCrearPost.Name = "txtLinkCrearPost";
-            this.txtLinkCrearPost.Size = new System.Drawing.Size(100, 27);
-            this.txtLinkCrearPost.Text = "inserte su link";
-            this.txtLinkCrearPost.Enter += new System.EventHandler(this.txtLinkCrearPost_Enter_1);
-            this.txtLinkCrearPost.Leave += new System.EventHandler(this.txtLinkCrearPost_Leave_1);
             // 
             // btnTipoContenido
             // 
@@ -241,37 +241,49 @@ namespace CapaVisual
             this.btnContenidoLenguaje,
             this.btnContenidoEducacion});
             this.btnTipoContenido.Name = "btnTipoContenido";
-            this.btnTipoContenido.Size = new System.Drawing.Size(124, 24);
+            this.btnTipoContenido.Size = new System.Drawing.Size(99, 20);
             this.btnTipoContenido.Text = "Tipo contenido";
             // 
             // btnContenidoIntercambioCultural
             // 
             this.btnContenidoIntercambioCultural.CheckOnClick = true;
             this.btnContenidoIntercambioCultural.Name = "btnContenidoIntercambioCultural";
-            this.btnContenidoIntercambioCultural.Size = new System.Drawing.Size(227, 26);
+            this.btnContenidoIntercambioCultural.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoIntercambioCultural.Text = "Intercambio Cultural";
             // 
             // btnContenidoLenguaje
             // 
             this.btnContenidoLenguaje.CheckOnClick = true;
             this.btnContenidoLenguaje.Name = "btnContenidoLenguaje";
-            this.btnContenidoLenguaje.Size = new System.Drawing.Size(227, 26);
+            this.btnContenidoLenguaje.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoLenguaje.Text = "Lenguaje";
             // 
             // btnContenidoEducacion
             // 
             this.btnContenidoEducacion.CheckOnClick = true;
             this.btnContenidoEducacion.Name = "btnContenidoEducacion";
-            this.btnContenidoEducacion.Size = new System.Drawing.Size(227, 26);
+            this.btnContenidoEducacion.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoEducacion.Text = "Educacion";
+            // 
+            // txtLinkCrearPost
+            // 
+            this.txtLinkCrearPost.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLinkCrearPost.Name = "txtLinkCrearPost";
+            this.txtLinkCrearPost.Size = new System.Drawing.Size(100, 23);
+            this.txtLinkCrearPost.Text = "inserte su link";
+            this.txtLinkCrearPost.Enter += new System.EventHandler(this.txtLinkCrearPost_Enter_1);
+            this.txtLinkCrearPost.Leave += new System.EventHandler(this.txtLinkCrearPost_Leave_1);
+            this.txtLinkCrearPost.MouseLeave += new System.EventHandler(this.txtLinkCrearPost_MouseLeave);
+            this.txtLinkCrearPost.MouseHover += new System.EventHandler(this.txtLinkCrearPost_MouseHover);
             // 
             // CrearPost
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.materialCardCrearPost);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CrearPost";
-            this.Size = new System.Drawing.Size(762, 180);
+            this.Size = new System.Drawing.Size(572, 146);
             this.materialCardCrearPost.ResumeLayout(false);
             this.materialCardCrearPost.PerformLayout();
             this.panelTextoPost.ResumeLayout(false);
@@ -300,10 +312,10 @@ namespace CapaVisual
         private System.Windows.Forms.ToolStripMenuItem contenidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnImagenVideo;
         private System.Windows.Forms.ToolStripMenuItem btnLink;
-        private System.Windows.Forms.ToolStripTextBox txtLinkCrearPost;
         private System.Windows.Forms.ToolStripMenuItem btnTipoContenido;
         private System.Windows.Forms.ToolStripMenuItem btnContenidoIntercambioCultural;
         private System.Windows.Forms.ToolStripMenuItem btnContenidoLenguaje;
         private System.Windows.Forms.ToolStripMenuItem btnContenidoEducacion;
+        private System.Windows.Forms.ToolStripTextBox txtLinkCrearPost;
     }
 }

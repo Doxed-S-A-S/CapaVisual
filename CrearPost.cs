@@ -36,13 +36,9 @@ namespace CapaVisual
         {
 
             RestClient client = new RestClient("http://localhost:44331/");
-
-
             RestRequest request = new RestRequest("ApiPost/post/crear/", Method.Post);
 
-
             request.AddFile("imagencita", url_imagen);
-
 
             request.AddParameter("url_contenido", url_contenido);
             request.AddParameter("tipo_contenido", tipo_contenido);
@@ -56,10 +52,10 @@ namespace CapaVisual
             {
                 MessageBox.Show("Post creado exitosamente.");
                 limpiarCreadorDePost();
+
             }
             else
             {
-
                 MessageBox.Show($"Error al crear el post: {response.StatusCode} - {response.ErrorMessage}");
             }
         }
@@ -67,18 +63,11 @@ namespace CapaVisual
 
         private void limpiarCreadorDePost()
         {
-            txtContenidoPost.Text = string.Empty;
-            pboxImagenVideo.Image = null;
-            txtLinkCrearPost.Text = string.Empty;
-            foreach (ToolStripItem item in btnTipoContenido.DropDownItems)
-            {
-                ((ToolStripMenuItem)item).Checked = false;
-            }
-            
+            mainPage1 mainPage = (mainPage1)this.Parent.Parent;
+            mainPage.EliminarCrearPost();
+            mainPage.AgregarCrearPost();
+
         }
-
-        
-
         private string ObtenerTipoContenidoSeleccionado(ToolStripMenuItem btnTipoContenido)
         {
 
@@ -92,12 +81,6 @@ namespace CapaVisual
             }
             return string.Empty;
         }
-
-
-
-        
-        
-
         private void pboxImagenVideo_DragDrop_1(object sender, DragEventArgs e)
         {
             string[] archivos = (string[])e.Data.GetData(DataFormats.FileDrop);
@@ -120,12 +103,10 @@ namespace CapaVisual
                 MessageBox.Show("Imagen subida exitosamente y guardada en: " + destFilePath);
             }
         }
-
         private void botonPostear_Click_1(object sender, EventArgs e)
         {
             crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text, pboxImagenVideo.ImageLocation, 1);
         }
-
         private void comBoxSeleccionarGrupo_Leave_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(comBoxSeleccionarGrupo.Text))
@@ -134,7 +115,6 @@ namespace CapaVisual
                 comBoxSeleccionarGrupo.ForeColor = Color.Gray;
             }
         }
-
         private void comBoxSeleccionarGrupo_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (comBoxSeleccionarGrupo.SelectedIndex != -1)
@@ -143,7 +123,6 @@ namespace CapaVisual
                 comBoxSeleccionarGrupo.ForeColor = Color.Black;
             }
         }
-
         private void comBoxSeleccionarGrupo_DropDown_1(object sender, EventArgs e)
         {
             comBoxSeleccionarGrupo.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -154,7 +133,6 @@ namespace CapaVisual
                 comBoxSeleccionarGrupo.Text = "";
             }
         }
-
         private void txtLinkCrearPost_Leave_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtLinkCrearPost.Text))
@@ -163,7 +141,6 @@ namespace CapaVisual
                 txtLinkCrearPost.ForeColor = Color.Gray;
             }
         }
-
         private void txtLinkCrearPost_Enter_1(object sender, EventArgs e)
         {
             if (txtLinkCrearPost.Text == "Pegue el enlace aquí")
@@ -173,19 +150,34 @@ namespace CapaVisual
             }
         }
 
+        private void txtLinkCrearPost_MouseHover(object sender, EventArgs e)
+        {
+            if (txtLinkCrearPost.Text == "Pegue el enlace aquí")
+            {
+                txtLinkCrearPost.Text = "";
+                txtLinkCrearPost.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtLinkCrearPost_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtLinkCrearPost.Text))
+            {
+                txtLinkCrearPost.Text = "Pegue el enlace aquí";
+                txtLinkCrearPost.ForeColor = Color.Gray;
+            }
+        }
         private void contenidoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             pboxImagenVideo.BackColor = Color.LightGray;
             panelTextoPost.Visible = true;
             panelImagenVideo.Visible = false;
         }
-
         private void btnImagenVideo_Click_1(object sender, EventArgs e)
         {
             panelTextoPost.Visible = false;
             panelImagenVideo.Visible = true;
         }
-
         private void btnBrowse_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -211,7 +203,6 @@ namespace CapaVisual
 
             }
         }
-
         private void pboxImagenVideo_DragEnter_1(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -223,5 +214,7 @@ namespace CapaVisual
                 e.Effect = DragDropEffects.None;
             }
         }
+
+        
     }
 }

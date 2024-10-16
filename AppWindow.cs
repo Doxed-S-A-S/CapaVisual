@@ -25,10 +25,10 @@ namespace CapaVisual
         {
             InitializeComponent();
 
-            mainPage1.Show();  
-            groupPage1.Hide(); 
+            CapaVisual.mainPage1.Show();  
+            groupPage1.Hide();
 
-            mainPage1.Dock = DockStyle.Fill;
+            CapaVisual.mainPage1.Dock = DockStyle.Fill;
             groupPage1.Dock = DockStyle.Fill;
 
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
@@ -46,14 +46,14 @@ namespace CapaVisual
         
         public void ShowGroupPage()
         {
-            mainPage1.Hide();
+            CapaVisual.mainPage1.Hide();
             groupPage1.Show();
         }
 
         
         public void ShowMainPage()
         {
-            mainPage1.Show();
+            CapaVisual.mainPage1.Show();
             groupPage1.Hide();
         }
 
