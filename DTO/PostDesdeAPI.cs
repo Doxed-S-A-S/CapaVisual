@@ -11,5 +11,6 @@ namespace CapaVisual.DTO
         public int id_post;
         public int id_cuenta;
         public string contenido;
+        public string url_imagen;
     }
 }

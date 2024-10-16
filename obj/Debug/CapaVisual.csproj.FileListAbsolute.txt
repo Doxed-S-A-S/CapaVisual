@@ -75,11 +75,11 @@ C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.AppWindow.resour
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.PostCard.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.Properties.Resources.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.RegisterPage.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.mainPage1.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.GroupPage.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CrearPost.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.GenerateResource.cache
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.CoreCompileInputs.cache
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.CopyComplete
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.exe
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.pdb
-C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.GroupPage.resources
-C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.mainPage1.resources
-C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CrearPost.resources

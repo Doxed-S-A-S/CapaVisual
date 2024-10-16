@@ -120,5 +120,16 @@ namespace CapaVisual
                 parentForm.ShowGroupPage(); // Call the method on the form to switch
             }
         }
+
+        public void EliminarCrearPost()
+        {
+            flowLayoutCrearPosts.Controls.Remove(crearPost1);
+        }
+
+        public void AgregarCrearPost()
+        {
+            CrearPost crearPost1 = new CrearPost();
+            flowLayoutCrearPosts.Controls.Add(crearPost1);
+        }
     }
 }

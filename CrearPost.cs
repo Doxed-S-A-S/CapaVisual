@@ -67,14 +67,10 @@ namespace CapaVisual
 
         private void limpiarCreadorDePost()
         {
-            txtContenidoPost.Text = string.Empty;
-            pboxImagenVideo.Image = null;
-            txtLinkCrearPost.Text = string.Empty;
-            foreach (ToolStripItem item in btnTipoContenido.DropDownItems)
-            {
-                ((ToolStripMenuItem)item).Checked = false;
-            }
-            
+            mainPage1 mainPage = (mainPage1)this.Parent.Parent;
+            mainPage.EliminarCrearPost();
+            mainPage.AgregarCrearPost();
+
         }
 
         
@@ -221,6 +217,24 @@ namespace CapaVisual
             else
             {
                 e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void txtLinkCrearPost_MouseHover(object sender, EventArgs e)
+        {
+            if (txtLinkCrearPost.Text == "Pegue el enlace aquí")
+            {
+                txtLinkCrearPost.Text = "";
+                txtLinkCrearPost.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtLinkCrearPost_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtLinkCrearPost.Text))
+            {
+                txtLinkCrearPost.Text = "Pegue el enlace aquí";
+                txtLinkCrearPost.ForeColor = Color.Gray;
             }
         }
     }
