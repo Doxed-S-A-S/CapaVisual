@@ -149,7 +149,8 @@ namespace CapaVisual
             // 
             // mainPage1
             // 
-            this.mainPage1.Location = new System.Drawing.Point(174, 64);
+            this.mainPage1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mainPage1.Location = new System.Drawing.Point(173, 64);
             this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
             this.mainPage1.Name = "mainPage1";
             this.mainPage1.Size = new System.Drawing.Size(1493, 752);

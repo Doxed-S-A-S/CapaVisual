@@ -23,12 +23,14 @@ namespace CapaVisual
         {
             InitializeComponent();
 
-            mainPage1.Show();  
+            mainPage1.Show();
             groupPage1.Hide();
 
             panelSubmenuGrupos.Hide();
             panelSubmenuEventos.Hide();
             panelSubmenuActividades.Hide();
+
+            cargarGruposEnPanelGrupos();
 
             mainPage1.Dock = DockStyle.Fill;
             groupPage1.Dock = DockStyle.Fill;
@@ -45,14 +47,14 @@ namespace CapaVisual
                 );
 
         }
-        
+
         public void ShowGroupPage()
         {
             mainPage1.Hide();
             groupPage1.Show();
         }
 
-        
+
         public void ShowMainPage()
         {
             mainPage1.Show();
@@ -61,7 +63,7 @@ namespace CapaVisual
 
         private void btnGrupos_Click(object sender, EventArgs e)
         {
-            if(panelSubmenuGrupos.Visible == true)
+            if (panelSubmenuGrupos.Visible == true)
             {
                 panelSubmenuGrupos.Visible = false;
             }
@@ -69,6 +71,7 @@ namespace CapaVisual
             {
                 panelSubmenuGrupos.Visible = true;
             }
+            
         }
 
         private void btnEventos_Click(object sender, EventArgs e)
@@ -94,6 +97,42 @@ namespace CapaVisual
                 panelSubmenuActividades.Visible = true;
             }
         }
-    }
 
+        private static List<GrupoDesdeAPI> obtenerGruposDesdeAPI()
+        {
+            RestClient client = new RestClient("http://localhost:57063/");
+            RestRequest request = new RestRequest("ApiGrupos/grupos", Method.Get);
+            request.AddHeader("Accept", "application/json");
+            RestResponse response = client.Execute(request);
+
+            List<GrupoDesdeAPI> grupos;
+            grupos = JsonConvert.DeserializeObject<List<GrupoDesdeAPI>>(response.Content);
+            return grupos;
+        }
+
+        private void generarBotonSubmenuGrupos(string nombreGrupo)
+        {
+            Button btn = new Button();
+            btn.Text = nombreGrupo;
+            btn.Size = new Size(164, 32);
+            btn.Dock = DockStyle.Top;
+            btn.Click += new EventHandler(Button_Click);
+
+            panelSubmenuGrupos.Controls.Add(btn);
+        }
+        public void cargarGruposEnPanelGrupos()
+        {
+            List<GrupoDesdeAPI> grupos = obtenerGruposDesdeAPI();
+            foreach (GrupoDesdeAPI grupo in grupos)
+            {
+                generarBotonSubmenuGrupos(grupo.nombre_grupo);
+               
+            }
+        }
+        private void Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("asdasd");
+        }
+
+    }
 }

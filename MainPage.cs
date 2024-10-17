@@ -39,17 +39,7 @@ namespace CapaVisual
             return posts;
         }
 
-        private static List<PostDesdeAPI> obtenerGruposDesdeAPI()
-        {
-            RestClient client = new RestClient("http://localhost:57063/");
-            RestRequest request = new RestRequest("ApiGrupos/grupos", Method.Get);
-            request.AddHeader("Accept", "application/json");
-            RestResponse response = client.Execute(request);
-
-            List<PostDesdeAPI> grupos;
-            grupos = JsonConvert.DeserializeObject<List<PostDesdeAPI>>(response.Content);
-            return grupos;
-        }
+        
 
         private static string obtenerCreadorDePost(int id_cuenta)
         {
@@ -87,12 +77,7 @@ namespace CapaVisual
 
         }
 
-        public void cargarGruposEnPanelGrupos()
-        {
-
-            List<PostDesdeAPI> grupos = obtenerGruposDesdeAPI();
-            
-        }
+        
 
         private void CrearMaterialCard(string contenido) // a cambiar
         {

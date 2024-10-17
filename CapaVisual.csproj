@@ -92,6 +92,7 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DTO\GrupoDesdeAPI.cs" />
     <Compile Include="DTO\PostDesdeAPI.cs" />
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
