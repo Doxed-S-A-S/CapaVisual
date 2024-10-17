@@ -19,14 +19,16 @@ namespace CapaVisual
 {
     public partial class AppWindow : MaterialForm
     {
-
-
         public AppWindow()
         {
             InitializeComponent();
 
             mainPage1.Show();  
-            groupPage1.Hide(); 
+            groupPage1.Hide();
+
+            panelSubmenuGrupos.Hide();
+            panelSubmenuEventos.Hide();
+            panelSubmenuActividades.Hide();
 
             mainPage1.Dock = DockStyle.Fill;
             groupPage1.Dock = DockStyle.Fill;
@@ -57,6 +59,41 @@ namespace CapaVisual
             groupPage1.Hide();
         }
 
+        private void btnGrupos_Click(object sender, EventArgs e)
+        {
+            if(panelSubmenuGrupos.Visible == true)
+            {
+                panelSubmenuGrupos.Visible = false;
+            }
+            else
+            {
+                panelSubmenuGrupos.Visible = true;
+            }
+        }
+
+        private void btnEventos_Click(object sender, EventArgs e)
+        {
+            if (panelSubmenuEventos.Visible == true)
+            {
+                panelSubmenuEventos.Visible = false;
+            }
+            else
+            {
+                panelSubmenuEventos.Visible = true;
+            }
+        }
+
+        private void btnActividades_Click(object sender, EventArgs e)
+        {
+            if (panelSubmenuActividades.Visible == true)
+            {
+                panelSubmenuActividades.Visible = false;
+            }
+            else
+            {
+                panelSubmenuActividades.Visible = true;
+            }
+        }
     }
 
 }

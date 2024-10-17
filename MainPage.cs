@@ -18,8 +18,6 @@ namespace CapaVisual
 {
     public partial class mainPage1 : UserControl
     {
-        private string url_imagen;
-
         public mainPage1()
         {
             InitializeComponent();
@@ -39,6 +37,18 @@ namespace CapaVisual
             List<PostDesdeAPI> posts;
             posts = JsonConvert.DeserializeObject<List<PostDesdeAPI>>(response.Content);
             return posts;
+        }
+
+        private static List<PostDesdeAPI> obtenerGruposDesdeAPI()
+        {
+            RestClient client = new RestClient("http://localhost:57063/");
+            RestRequest request = new RestRequest("ApiGrupos/grupos", Method.Get);
+            request.AddHeader("Accept", "application/json");
+            RestResponse response = client.Execute(request);
+
+            List<PostDesdeAPI> grupos;
+            grupos = JsonConvert.DeserializeObject<List<PostDesdeAPI>>(response.Content);
+            return grupos;
         }
 
         private static string obtenerCreadorDePost(int id_cuenta)
@@ -71,11 +81,17 @@ namespace CapaVisual
 
                 postCard.PostImage = Image.FromStream(stream);
 
-                //postCard.PostImage = Image.FromFile(post.url_imagen); // faltan implementar cosas para que esto funcione y da problemas si la imagen es null
-                //Add the custom post card to the flow panel
+                
                 flowLayoutPanelPosts.Controls.Add(postCard);
             }
 
+        }
+
+        public void cargarGruposEnPanelGrupos()
+        {
+
+            List<PostDesdeAPI> grupos = obtenerGruposDesdeAPI();
+            
         }
 
         private void CrearMaterialCard(string contenido) // a cambiar
