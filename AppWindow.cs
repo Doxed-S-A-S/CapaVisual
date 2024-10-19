@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -116,13 +117,55 @@ namespace CapaVisual
             return grupos;
         }
 
-        private void generarBotonSubmenuGrupos(string nombreGrupo)
+        private static GrupoDesdeAPI obtenerGrupoDesdeAPI(int id_grupo)
+        {
+            RestClient client = new RestClient("http://localhost:57063/");
+            // Corrige la URL para usar el id_grupo proporcionado
+            RestRequest request = new RestRequest($"ApiGrupos/grupo/{id_grupo}", Method.Get);
+            request.AddHeader("Accept", "application/json");
+
+            RestResponse response = client.Execute(request);
+
+            // Verifica si la respuesta fue exitosa
+            if (response.IsSuccessful)
+            {
+                Console.WriteLine(response.Content); // Muestra el contenido para depuración
+                                                     // Corrige la deserialización
+                GrupoDesdeAPI grupo = JsonConvert.DeserializeObject<GrupoDesdeAPI>(response.Content);
+                return grupo;
+            }
+            else
+            {
+                // Manejo de errores si la respuesta no fue exitosa
+                Console.WriteLine($"Error: {response.StatusCode} - {response.StatusDescription}");
+                return null; // O manejar el error según tu lógica
+            }
+        }
+
+        /*private static GrupoDesdeAPI obtenerGrupoDesdeAPI(int id_grupo)
+        {
+            RestClient client = new RestClient("http://localhost:57063/");
+            RestRequest request = new RestRequest("ApiGrupos/grupos", Method.Get);
+            request.AddHeader("Accept", "application/json");
+            RestResponse response = client.Execute(request);
+
+            List<GrupoDesdeAPI> grupos;
+            grupos = JsonConvert.DeserializeObject<List<GrupoDesdeAPI>>(response.Content);
+
+            GrupoDesdeAPI grupoEncontrado = grupos.FirstOrDefault(grupo => grupo.id_grupo == id_grupo);
+            return grupoEncontrado;
+            
+        }*/
+
+
+        private void generarBotonSubmenuGrupos(string nombreGrupo, int id_grupo)
         {
             Button btn = new Button();
             btn.Text = nombreGrupo;
             btn.Size = new Size(164, 32);
             btn.Dock = DockStyle.Top;
             btn.Click += new EventHandler(Button_Click);
+            btn.Tag = id_grupo;
 
             panelSubmenuGrupos2.Controls.Add(btn);
         }
@@ -131,13 +174,32 @@ namespace CapaVisual
             List<GrupoDesdeAPI> grupos = obtenerGruposDesdeAPI();
             foreach (GrupoDesdeAPI grupo in grupos)
             {
-                generarBotonSubmenuGrupos(grupo.nombre_grupo);
+                generarBotonSubmenuGrupos(grupo.nombre_grupo, grupo.id_grupo);
                
             }
         }
         private void Button_Click(object sender, EventArgs e)
         {
-            GroupPage grupo = new GroupPage();
+            
+
+            Button btn = sender as Button;
+            int id_grupo = (int)btn.Tag;
+            GrupoDesdeAPI g = obtenerGrupoDesdeAPI(id_grupo);
+
+            HttpClient client = new HttpClient();
+            byte[] imagenGrupo = client.GetByteArrayAsync(g.url_imagen).Result;
+            byte[] BannerGrupo = client.GetByteArrayAsync(g.imagen_banner).Result;
+            MemoryStream imagenGrupo_ms = new MemoryStream(imagenGrupo);
+            MemoryStream BannerGrupo_ms = new MemoryStream(BannerGrupo);
+
+            groupPage1.ImagenGrupo = Image.FromStream(imagenGrupo_ms); // Asumiendo que tienes un método para manejar imágenes
+            groupPage1.BannerGrupo = Image.FromStream(BannerGrupo_ms);
+            groupPage1.DescripcionGrupo = g.descripcion;
+
+            groupPage1.Visible = true;
+            mainPage1.Visible = false;
+            
+            
             
         }
 

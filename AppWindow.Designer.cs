@@ -36,8 +36,6 @@ namespace CapaVisual
             this.btnEventos = new System.Windows.Forms.Button();
             this.btnGrupos = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
-            this.groupPage1 = new CapaVisual.GroupPage();
-            this.mainPage1 = new CapaVisual.mainPage1();
             this.panelSubmenuGrupos2 = new System.Windows.Forms.Panel();
             this.panelSubmenuEventos2 = new System.Windows.Forms.Panel();
             this.panelSubmenuActividades = new System.Windows.Forms.Panel();
@@ -49,6 +47,8 @@ namespace CapaVisual
             this.btnEliminarMisEvento = new System.Windows.Forms.Button();
             this.btnVerMisEventos = new System.Windows.Forms.Button();
             this.btnCrearEvento = new System.Windows.Forms.Button();
+            this.groupPage1 = new CapaVisual.GroupPage();
+            this.mainPage1 = new CapaVisual.mainPage1();
             this.panelCrearPost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.panelSubmenuGrupos1.SuspendLayout();
@@ -65,6 +65,7 @@ namespace CapaVisual
             // 
             // panelCrearPost
             // 
+            this.panelCrearPost.AutoScroll = true;
             this.panelCrearPost.BackColor = System.Drawing.Color.LightGray;
             this.panelCrearPost.Controls.Add(this.pictureBoxImagenPerfil);
             this.panelCrearPost.Controls.Add(this.btnActividades);
@@ -147,24 +148,6 @@ namespace CapaVisual
             this.btnPrincipal.TabIndex = 0;
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.UseVisualStyleBackColor = false;
-            // 
-            // groupPage1
-            // 
-            this.groupPage1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupPage1.Location = new System.Drawing.Point(1666, 64);
-            this.groupPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupPage1.Name = "groupPage1";
-            this.groupPage1.Size = new System.Drawing.Size(967, 642);
-            this.groupPage1.TabIndex = 11;
-            // 
-            // mainPage1
-            // 
-            this.mainPage1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mainPage1.Location = new System.Drawing.Point(173, 64);
-            this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.mainPage1.Name = "mainPage1";
-            this.mainPage1.Size = new System.Drawing.Size(1493, 642);
-            this.mainPage1.TabIndex = 8;
             // 
             // panelSubmenuGrupos2
             // 
@@ -281,6 +264,24 @@ namespace CapaVisual
             this.btnCrearEvento.Text = "CrearEvento";
             this.btnCrearEvento.UseVisualStyleBackColor = true;
             this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
+            // 
+            // groupPage1
+            // 
+            this.groupPage1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupPage1.Location = new System.Drawing.Point(1666, 64);
+            this.groupPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupPage1.Name = "groupPage1";
+            this.groupPage1.Size = new System.Drawing.Size(967, 642);
+            this.groupPage1.TabIndex = 11;
+            // 
+            // mainPage1
+            // 
+            this.mainPage1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mainPage1.Location = new System.Drawing.Point(173, 64);
+            this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.mainPage1.Name = "mainPage1";
+            this.mainPage1.Size = new System.Drawing.Size(1493, 642);
+            this.mainPage1.TabIndex = 8;
             // 
             // AppWindow
             // 

@@ -16,25 +16,22 @@ namespace CapaVisual
         {
             InitializeComponent();
         }
-
         public Image ImagenGrupo
         {
-            get => pboxImagenGrupo.Image;
-            set => pboxImagenGrupo.Image = value;
+            get { return pboxImagenGrupo.Image; }
+            set { pboxImagenGrupo.Image = value; }
         }
-
         public Image BannerGrupo
         {
-            get => pboxBannerGrupo.Image;
-            set => pboxBannerGrupo.Image = value;
+            get { return pboxBannerGrupo.Image; }
+            set { pboxBannerGrupo.Image = value; }
         }
 
         public string DescripcionGrupo
         {
-            get => txtBoxDescripcionGrupo.Text;
-            set => txtBoxDescripcionGrupo.Text = value;
+            get { return txtBoxDescripcionGrupo.Text; }
+            set { txtBoxDescripcionGrupo.Text = value; }
         }
-
         public DataTable IntegrantesGrupo
         {
             get => (DataTable)dataGridIntegrantesGrupo.DataSource;
