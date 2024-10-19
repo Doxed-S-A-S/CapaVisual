@@ -30,7 +30,6 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.panelDerecho = new System.Windows.Forms.Panel();
-            this.flowLayoutCrearPosts = new System.Windows.Forms.FlowLayoutPanel();
             this.divisorDerecho = new MaterialSkin.Controls.MaterialDivider();
             this.flowLayoutPanelPosts = new System.Windows.Forms.FlowLayoutPanel();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
@@ -44,8 +43,9 @@ namespace CapaVisual
             this.btnContenidoEducacion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCrearPost = new System.Windows.Forms.MenuStrip();
             this.crearPost1 = new CapaVisual.CrearPost();
-            this.flowLayoutCrearPosts.SuspendLayout();
+            this.flowLayoutCrearPosts = new System.Windows.Forms.FlowLayoutPanel();
             this.menuCrearPost.SuspendLayout();
+            this.flowLayoutCrearPosts.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDerecho
@@ -56,18 +56,6 @@ namespace CapaVisual
             this.panelDerecho.Name = "panelDerecho";
             this.panelDerecho.Size = new System.Drawing.Size(150, 605);
             this.panelDerecho.TabIndex = 10;
-            // 
-            // flowLayoutCrearPosts
-            // 
-            this.flowLayoutCrearPosts.BackColor = System.Drawing.Color.LightGray;
-            this.flowLayoutCrearPosts.Controls.Add(this.crearPost1);
-            this.flowLayoutCrearPosts.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutCrearPosts.Location = new System.Drawing.Point(16, 2);
-            this.flowLayoutCrearPosts.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutCrearPosts.Name = "flowLayoutCrearPosts";
-            this.flowLayoutCrearPosts.Padding = new System.Windows.Forms.Padding(78, 0, 68, 0);
-            this.flowLayoutCrearPosts.Size = new System.Drawing.Size(797, 153);
-            this.flowLayoutCrearPosts.TabIndex = 9;
             // 
             // divisorDerecho
             // 
@@ -192,6 +180,18 @@ namespace CapaVisual
             this.crearPost1.Size = new System.Drawing.Size(572, 146);
             this.crearPost1.TabIndex = 0;
             // 
+            // flowLayoutCrearPosts
+            // 
+            this.flowLayoutCrearPosts.BackColor = System.Drawing.Color.LightGray;
+            this.flowLayoutCrearPosts.Controls.Add(this.crearPost1);
+            this.flowLayoutCrearPosts.ForeColor = System.Drawing.Color.Black;
+            this.flowLayoutCrearPosts.Location = new System.Drawing.Point(16, 2);
+            this.flowLayoutCrearPosts.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutCrearPosts.Name = "flowLayoutCrearPosts";
+            this.flowLayoutCrearPosts.Padding = new System.Windows.Forms.Padding(78, 0, 0, 0);
+            this.flowLayoutCrearPosts.Size = new System.Drawing.Size(797, 153);
+            this.flowLayoutCrearPosts.TabIndex = 9;
+            // 
             // mainPage1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,9 +203,9 @@ namespace CapaVisual
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "mainPage1";
             this.Size = new System.Drawing.Size(972, 611);
-            this.flowLayoutCrearPosts.ResumeLayout(false);
             this.menuCrearPost.ResumeLayout(false);
             this.menuCrearPost.PerformLayout();
+            this.flowLayoutCrearPosts.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -213,7 +213,6 @@ namespace CapaVisual
         #endregion
 
         private System.Windows.Forms.Panel panelDerecho;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutCrearPosts;
         private MaterialSkin.Controls.MaterialDivider divisorDerecho;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPosts;
         private System.Windows.Forms.MenuStrip miniToolStrip;
@@ -227,5 +226,6 @@ namespace CapaVisual
         private System.Windows.Forms.ToolStripMenuItem btnContenidoEducacion;
         private System.Windows.Forms.MenuStrip menuCrearPost;
         private CrearPost crearPost1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutCrearPosts;
     }
 }

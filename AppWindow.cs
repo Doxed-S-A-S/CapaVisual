@@ -137,7 +137,8 @@ namespace CapaVisual
         }
         private void Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("asdasd");
+            GroupPage grupo = new GroupPage();
+            
         }
 
         private void btnVerMisGrupos_Click(object sender, EventArgs e)
@@ -172,8 +173,16 @@ namespace CapaVisual
         {
             panelSubmenuEventos2.Visible = false;
             panelSubmenuEventos1.Visible = false;
-            mainPage1.EliminarCrearPost();
-            mainPage1.AgregarCrearEvento();
+            if (mainPage1.Visible) {
+                mainPage1.EliminarCrearPost();
+                mainPage1.AgregarCrearEvento();
+            }
+            if (groupPage1.Visible)
+            {
+                mainPage1.EliminarCrearPost();
+                mainPage1.AgregarCrearEvento();
+            }
+
         }
     }
 }

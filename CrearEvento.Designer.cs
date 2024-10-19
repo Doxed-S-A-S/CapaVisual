@@ -29,50 +29,53 @@ namespace CapaVisual
         /// </summary>
         private void InitializeComponent()
         {
-            this.pboxImagenVideo = new System.Windows.Forms.PictureBox();
+            this.components = new System.ComponentModel.Container();
+            this.pboxImagenVideoCrearEvento = new System.Windows.Forms.PictureBox();
             this.comBoxSeleccionarGrupo = new System.Windows.Forms.ComboBox();
-            this.panelTextoPost = new System.Windows.Forms.Panel();
+            this.panelContenidoEvento = new System.Windows.Forms.Panel();
+            this.txtContenidoEvento = new System.Windows.Forms.RichTextBox();
+            this.panelDescripcionEvento = new System.Windows.Forms.Panel();
             this.txtDescripcionEvento = new System.Windows.Forms.RichTextBox();
             this.btnContenidoLenguaje = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelImagenVideo = new System.Windows.Forms.Panel();
-            this.lblAñadirImagen = new System.Windows.Forms.Label();
-            this.btnBrowse = new System.Windows.Forms.Button();
+            this.panelImagenVideoCrearEvento = new System.Windows.Forms.Panel();
+            this.lblAñadirImagenCrearEvento = new System.Windows.Forms.Label();
+            this.btnBrowseCrearEvento = new System.Windows.Forms.Button();
             this.btnContenidoIntercambioCultural = new System.Windows.Forms.ToolStripMenuItem();
             this.btnTipoContenido = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoEducacion = new System.Windows.Forms.ToolStripMenuItem();
-            this.botonPostear = new MaterialSkin.Controls.MaterialButton();
+            this.botonPostearCrearEvento = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.menuCrearPost = new System.Windows.Forms.MenuStrip();
-            this.contenidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnImagenVideo = new System.Windows.Forms.ToolStripMenuItem();
-            this.materialCardCrearPost = new MaterialSkin.Controls.MaterialCard();
-            this.nombreEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.descripcionDeEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelDescripcionEvento = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnNombreEvento = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtNombreCrearEvento = new System.Windows.Forms.ToolStripTextBox();
+            this.btnDescripcionEvento = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnContenidoCrearEvento = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnImagenVideoCrearEvento = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLink = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtLinkCrearPost = new System.Windows.Forms.ToolStripTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).BeginInit();
-            this.panelTextoPost.SuspendLayout();
-            this.panelImagenVideo.SuspendLayout();
+            this.txtLinkCrearEvento = new System.Windows.Forms.ToolStripTextBox();
+            this.materialCardCrearPost = new MaterialSkin.Controls.MaterialCard();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideoCrearEvento)).BeginInit();
+            this.panelContenidoEvento.SuspendLayout();
+            this.panelDescripcionEvento.SuspendLayout();
+            this.panelImagenVideoCrearEvento.SuspendLayout();
             this.menuCrearPost.SuspendLayout();
             this.materialCardCrearPost.SuspendLayout();
-            this.panelDescripcionEvento.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pboxImagenVideo
+            // pboxImagenVideoCrearEvento
             // 
-            this.pboxImagenVideo.BackColor = System.Drawing.Color.Red;
-            this.pboxImagenVideo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxImagenVideo.Location = new System.Drawing.Point(2, 9);
-            this.pboxImagenVideo.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxImagenVideo.Name = "pboxImagenVideo";
-            this.pboxImagenVideo.Size = new System.Drawing.Size(315, 54);
-            this.pboxImagenVideo.TabIndex = 0;
-            this.pboxImagenVideo.TabStop = false;
-            this.pboxImagenVideo.DragDrop += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragDrop);
-            this.pboxImagenVideo.DragEnter += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragEnter);
+            this.pboxImagenVideoCrearEvento.BackColor = System.Drawing.Color.White;
+            this.pboxImagenVideoCrearEvento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxImagenVideoCrearEvento.Location = new System.Drawing.Point(2, 9);
+            this.pboxImagenVideoCrearEvento.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxImagenVideoCrearEvento.Name = "pboxImagenVideoCrearEvento";
+            this.pboxImagenVideoCrearEvento.Size = new System.Drawing.Size(315, 54);
+            this.pboxImagenVideoCrearEvento.TabIndex = 0;
+            this.pboxImagenVideoCrearEvento.TabStop = false;
+            this.pboxImagenVideoCrearEvento.DragDrop += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragDrop);
+            this.pboxImagenVideoCrearEvento.DragEnter += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragEnter);
             // 
             // comBoxSeleccionarGrupo
             // 
@@ -93,15 +96,34 @@ namespace CapaVisual
             this.comBoxSeleccionarGrupo.TabIndex = 0;
             this.comBoxSeleccionarGrupo.Text = "Seleccione un grupo";
             // 
-            // panelTextoPost
+            // panelContenidoEvento
             // 
-            this.panelTextoPost.Controls.Add(this.txtDescripcionEvento);
-            this.panelTextoPost.Controls.Add(this.panelDescripcionEvento);
-            this.panelTextoPost.Location = new System.Drawing.Point(10, 32);
-            this.panelTextoPost.Margin = new System.Windows.Forms.Padding(2);
-            this.panelTextoPost.Name = "panelTextoPost";
-            this.panelTextoPost.Size = new System.Drawing.Size(323, 74);
-            this.panelTextoPost.TabIndex = 12;
+            this.panelContenidoEvento.Controls.Add(this.txtContenidoEvento);
+            this.panelContenidoEvento.Location = new System.Drawing.Point(10, 30);
+            this.panelContenidoEvento.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContenidoEvento.Name = "panelContenidoEvento";
+            this.panelContenidoEvento.Size = new System.Drawing.Size(323, 74);
+            this.panelContenidoEvento.TabIndex = 12;
+            // 
+            // txtContenidoEvento
+            // 
+            this.txtContenidoEvento.Location = new System.Drawing.Point(2, 9);
+            this.txtContenidoEvento.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContenidoEvento.Name = "txtContenidoEvento";
+            this.txtContenidoEvento.Size = new System.Drawing.Size(316, 55);
+            this.txtContenidoEvento.TabIndex = 0;
+            this.txtContenidoEvento.Text = "";
+            this.txtContenidoEvento.MouseLeave += new System.EventHandler(this.txtContenidoEvento_MouseLeave);
+            this.txtContenidoEvento.MouseHover += new System.EventHandler(this.txtContenidoEvento_MouseHover);
+            // 
+            // panelDescripcionEvento
+            // 
+            this.panelDescripcionEvento.Controls.Add(this.txtDescripcionEvento);
+            this.panelDescripcionEvento.Location = new System.Drawing.Point(10, 30);
+            this.panelDescripcionEvento.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDescripcionEvento.Name = "panelDescripcionEvento";
+            this.panelDescripcionEvento.Size = new System.Drawing.Size(323, 74);
+            this.panelDescripcionEvento.TabIndex = 13;
             // 
             // txtDescripcionEvento
             // 
@@ -111,6 +133,8 @@ namespace CapaVisual
             this.txtDescripcionEvento.Size = new System.Drawing.Size(316, 55);
             this.txtDescripcionEvento.TabIndex = 0;
             this.txtDescripcionEvento.Text = "";
+            this.txtDescripcionEvento.MouseLeave += new System.EventHandler(this.txtDescripcionEvento_MouseLeave);
+            this.txtDescripcionEvento.MouseHover += new System.EventHandler(this.txtDescripcionEvento_MouseHover);
             // 
             // btnContenidoLenguaje
             // 
@@ -119,36 +143,37 @@ namespace CapaVisual
             this.btnContenidoLenguaje.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoLenguaje.Text = "Lenguaje";
             // 
-            // panelImagenVideo
+            // panelImagenVideoCrearEvento
             // 
-            this.panelImagenVideo.Controls.Add(this.lblAñadirImagen);
-            this.panelImagenVideo.Controls.Add(this.btnBrowse);
-            this.panelImagenVideo.Controls.Add(this.pboxImagenVideo);
-            this.panelImagenVideo.Location = new System.Drawing.Point(10, 32);
-            this.panelImagenVideo.Margin = new System.Windows.Forms.Padding(2);
-            this.panelImagenVideo.Name = "panelImagenVideo";
-            this.panelImagenVideo.Size = new System.Drawing.Size(323, 74);
-            this.panelImagenVideo.TabIndex = 13;
+            this.panelImagenVideoCrearEvento.Controls.Add(this.lblAñadirImagenCrearEvento);
+            this.panelImagenVideoCrearEvento.Controls.Add(this.btnBrowseCrearEvento);
+            this.panelImagenVideoCrearEvento.Controls.Add(this.pboxImagenVideoCrearEvento);
+            this.panelImagenVideoCrearEvento.Location = new System.Drawing.Point(10, 30);
+            this.panelImagenVideoCrearEvento.Margin = new System.Windows.Forms.Padding(2);
+            this.panelImagenVideoCrearEvento.Name = "panelImagenVideoCrearEvento";
+            this.panelImagenVideoCrearEvento.Size = new System.Drawing.Size(323, 74);
+            this.panelImagenVideoCrearEvento.TabIndex = 13;
             // 
-            // lblAñadirImagen
+            // lblAñadirImagenCrearEvento
             // 
-            this.lblAñadirImagen.AutoSize = true;
-            this.lblAñadirImagen.Location = new System.Drawing.Point(27, 29);
-            this.lblAñadirImagen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAñadirImagen.Name = "lblAñadirImagen";
-            this.lblAñadirImagen.Size = new System.Drawing.Size(157, 13);
-            this.lblAñadirImagen.TabIndex = 1;
-            this.lblAñadirImagen.Text = "Arrastra una imagen o sube una";
+            this.lblAñadirImagenCrearEvento.AutoSize = true;
+            this.lblAñadirImagenCrearEvento.Location = new System.Drawing.Point(27, 29);
+            this.lblAñadirImagenCrearEvento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAñadirImagenCrearEvento.Name = "lblAñadirImagenCrearEvento";
+            this.lblAñadirImagenCrearEvento.Size = new System.Drawing.Size(157, 13);
+            this.lblAñadirImagenCrearEvento.TabIndex = 1;
+            this.lblAñadirImagenCrearEvento.Text = "Arrastra una imagen o sube una";
             // 
-            // btnBrowse
+            // btnBrowseCrearEvento
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(198, 24);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(56, 19);
-            this.btnBrowse.TabIndex = 2;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowseCrearEvento.Location = new System.Drawing.Point(198, 24);
+            this.btnBrowseCrearEvento.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBrowseCrearEvento.Name = "btnBrowseCrearEvento";
+            this.btnBrowseCrearEvento.Size = new System.Drawing.Size(56, 19);
+            this.btnBrowseCrearEvento.TabIndex = 2;
+            this.btnBrowseCrearEvento.Text = "Browse";
+            this.btnBrowseCrearEvento.UseVisualStyleBackColor = true;
+            this.btnBrowseCrearEvento.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // btnContenidoIntercambioCultural
             // 
@@ -176,26 +201,26 @@ namespace CapaVisual
             this.btnContenidoEducacion.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoEducacion.Text = "Educacion";
             // 
-            // botonPostear
+            // botonPostearCrearEvento
             // 
-            this.botonPostear.AutoSize = false;
-            this.botonPostear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.botonPostear.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.botonPostear.Depth = 0;
-            this.botonPostear.HighEmphasis = true;
-            this.botonPostear.Icon = null;
-            this.botonPostear.Location = new System.Drawing.Point(352, 41);
-            this.botonPostear.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.botonPostear.MouseState = MaterialSkin.MouseState.HOVER;
-            this.botonPostear.Name = "botonPostear";
-            this.botonPostear.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.botonPostear.Size = new System.Drawing.Size(75, 29);
-            this.botonPostear.TabIndex = 10;
-            this.botonPostear.Text = "Postear";
-            this.botonPostear.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.botonPostear.UseAccentColor = false;
-            this.botonPostear.UseVisualStyleBackColor = true;
-            this.botonPostear.Click += new System.EventHandler(this.botonPostear_Click);
+            this.botonPostearCrearEvento.AutoSize = false;
+            this.botonPostearCrearEvento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.botonPostearCrearEvento.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.botonPostearCrearEvento.Depth = 0;
+            this.botonPostearCrearEvento.HighEmphasis = true;
+            this.botonPostearCrearEvento.Icon = null;
+            this.botonPostearCrearEvento.Location = new System.Drawing.Point(352, 41);
+            this.botonPostearCrearEvento.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.botonPostearCrearEvento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.botonPostearCrearEvento.Name = "botonPostearCrearEvento";
+            this.botonPostearCrearEvento.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.botonPostearCrearEvento.Size = new System.Drawing.Size(75, 29);
+            this.botonPostearCrearEvento.TabIndex = 10;
+            this.botonPostearCrearEvento.Text = "Postear";
+            this.botonPostearCrearEvento.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.botonPostearCrearEvento.UseAccentColor = false;
+            this.botonPostearCrearEvento.UseVisualStyleBackColor = true;
+            this.botonPostearCrearEvento.Click += new System.EventHandler(this.botonPostear_Click);
             // 
             // materialLabel1
             // 
@@ -215,10 +240,10 @@ namespace CapaVisual
             this.menuCrearPost.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuCrearPost.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuCrearPost.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nombreEventoToolStripMenuItem,
-            this.descripcionDeEventoToolStripMenuItem,
-            this.contenidoToolStripMenuItem,
-            this.btnImagenVideo,
+            this.btnNombreEvento,
+            this.btnDescripcionEvento,
+            this.btnContenidoCrearEvento,
+            this.btnImagenVideoCrearEvento,
             this.btnLink,
             this.btnTipoContenido});
             this.menuCrearPost.Location = new System.Drawing.Point(10, 111);
@@ -229,28 +254,71 @@ namespace CapaVisual
             this.menuCrearPost.TabIndex = 8;
             this.menuCrearPost.Text = "menuStrip1";
             // 
-            // contenidoToolStripMenuItem
+            // btnNombreEvento
             // 
-            this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
-            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.contenidoToolStripMenuItem.Text = "Contenido";
-            this.contenidoToolStripMenuItem.Click += new System.EventHandler(this.contenidoToolStripMenuItem_Click);
+            this.btnNombreEvento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtNombreCrearEvento});
+            this.btnNombreEvento.Name = "btnNombreEvento";
+            this.btnNombreEvento.Size = new System.Drawing.Size(102, 20);
+            this.btnNombreEvento.Text = "Nombre Evento";
             // 
-            // btnImagenVideo
+            // txtNombreCrearEvento
             // 
-            this.btnImagenVideo.Name = "btnImagenVideo";
-            this.btnImagenVideo.Size = new System.Drawing.Size(95, 20);
-            this.btnImagenVideo.Text = "Imagen & Video";
-            this.btnImagenVideo.Click += new System.EventHandler(this.btnImagenVideo_Click);
+            this.txtNombreCrearEvento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombreCrearEvento.Name = "txtNombreCrearEvento";
+            this.txtNombreCrearEvento.Size = new System.Drawing.Size(100, 23);
+            this.txtNombreCrearEvento.MouseLeave += new System.EventHandler(this.txtNombreCrearEvento_MouseLeave);
+            this.txtNombreCrearEvento.MouseHover += new System.EventHandler(this.txtNombreCrearEvento_MouseHover);
+            // 
+            // btnDescripcionEvento
+            // 
+            this.btnDescripcionEvento.Name = "btnDescripcionEvento";
+            this.btnDescripcionEvento.Size = new System.Drawing.Size(136, 20);
+            this.btnDescripcionEvento.Text = "Descripcion de evento";
+            this.btnDescripcionEvento.Click += new System.EventHandler(this.btnDescripcionEvento_Click);
+            // 
+            // btnContenidoCrearEvento
+            // 
+            this.btnContenidoCrearEvento.Name = "btnContenidoCrearEvento";
+            this.btnContenidoCrearEvento.Size = new System.Drawing.Size(75, 20);
+            this.btnContenidoCrearEvento.Text = "Contenido";
+            this.btnContenidoCrearEvento.Click += new System.EventHandler(this.contenidoToolStripMenuItem_Click);
+            // 
+            // btnImagenVideoCrearEvento
+            // 
+            this.btnImagenVideoCrearEvento.Name = "btnImagenVideoCrearEvento";
+            this.btnImagenVideoCrearEvento.Size = new System.Drawing.Size(95, 20);
+            this.btnImagenVideoCrearEvento.Text = "Imagen & Video";
+            this.btnImagenVideoCrearEvento.Click += new System.EventHandler(this.btnImagenVideo_Click);
+            // 
+            // btnLink
+            // 
+            this.btnLink.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtLinkCrearEvento});
+            this.btnLink.Name = "btnLink";
+            this.btnLink.Size = new System.Drawing.Size(41, 20);
+            this.btnLink.Text = "Link";
+            // 
+            // txtLinkCrearEvento
+            // 
+            this.txtLinkCrearEvento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLinkCrearEvento.Name = "txtLinkCrearEvento";
+            this.txtLinkCrearEvento.Size = new System.Drawing.Size(100, 23);
+            this.txtLinkCrearEvento.Text = "inserte su link";
+            this.txtLinkCrearEvento.Enter += new System.EventHandler(this.txtLinkCrearPost_Enter);
+            this.txtLinkCrearEvento.Leave += new System.EventHandler(this.txtLinkCrearPost_Leave);
+            this.txtLinkCrearEvento.MouseLeave += new System.EventHandler(this.txtLinkCrearEvento_MouseLeave);
+            this.txtLinkCrearEvento.MouseHover += new System.EventHandler(this.txtLinkCrearEvento_MouseHover);
             // 
             // materialCardCrearPost
             // 
             this.materialCardCrearPost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCardCrearPost.Controls.Add(this.dateTimePicker1);
             this.materialCardCrearPost.Controls.Add(this.comBoxSeleccionarGrupo);
-            this.materialCardCrearPost.Controls.Add(this.panelTextoPost);
-            this.materialCardCrearPost.Controls.Add(this.panelImagenVideo);
-            this.materialCardCrearPost.Controls.Add(this.botonPostear);
+            this.materialCardCrearPost.Controls.Add(this.panelDescripcionEvento);
+            this.materialCardCrearPost.Controls.Add(this.panelContenidoEvento);
+            this.materialCardCrearPost.Controls.Add(this.panelImagenVideoCrearEvento);
+            this.materialCardCrearPost.Controls.Add(this.botonPostearCrearEvento);
             this.materialCardCrearPost.Controls.Add(this.materialLabel1);
             this.materialCardCrearPost.Controls.Add(this.menuCrearPost);
             this.materialCardCrearPost.Depth = 0;
@@ -263,59 +331,12 @@ namespace CapaVisual
             this.materialCardCrearPost.Size = new System.Drawing.Size(693, 146);
             this.materialCardCrearPost.TabIndex = 2;
             // 
-            // nombreEventoToolStripMenuItem
-            // 
-            this.nombreEventoToolStripMenuItem.Name = "nombreEventoToolStripMenuItem";
-            this.nombreEventoToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.nombreEventoToolStripMenuItem.Text = "Nombre Evento";
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(483, 12);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 14;
-            // 
-            // descripcionDeEventoToolStripMenuItem
-            // 
-            this.descripcionDeEventoToolStripMenuItem.Name = "descripcionDeEventoToolStripMenuItem";
-            this.descripcionDeEventoToolStripMenuItem.Size = new System.Drawing.Size(136, 20);
-            this.descripcionDeEventoToolStripMenuItem.Text = "Descripcion de evento";
-            // 
-            // panelDescripcionEvento
-            // 
-            this.panelDescripcionEvento.Controls.Add(this.richTextBox1);
-            this.panelDescripcionEvento.Location = new System.Drawing.Point(0, 0);
-            this.panelDescripcionEvento.Margin = new System.Windows.Forms.Padding(2);
-            this.panelDescripcionEvento.Name = "panelDescripcionEvento";
-            this.panelDescripcionEvento.Size = new System.Drawing.Size(323, 74);
-            this.panelDescripcionEvento.TabIndex = 13;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(2, 9);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(316, 55);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            // 
-            // btnLink
-            // 
-            this.btnLink.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.txtLinkCrearPost});
-            this.btnLink.Name = "btnLink";
-            this.btnLink.Size = new System.Drawing.Size(41, 20);
-            this.btnLink.Text = "Link";
-            // 
-            // txtLinkCrearPost
-            // 
-            this.txtLinkCrearPost.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtLinkCrearPost.Name = "txtLinkCrearPost";
-            this.txtLinkCrearPost.Size = new System.Drawing.Size(100, 23);
-            this.txtLinkCrearPost.Text = "inserte su link";
-            this.txtLinkCrearPost.Enter += new System.EventHandler(this.txtLinkCrearPost_Enter);
-            this.txtLinkCrearPost.Leave += new System.EventHandler(this.txtLinkCrearPost_Leave);
             // 
             // CrearEvento
             // 
@@ -324,44 +345,46 @@ namespace CapaVisual
             this.Controls.Add(this.materialCardCrearPost);
             this.Name = "CrearEvento";
             this.Size = new System.Drawing.Size(694, 146);
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).EndInit();
-            this.panelTextoPost.ResumeLayout(false);
-            this.panelImagenVideo.ResumeLayout(false);
-            this.panelImagenVideo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideoCrearEvento)).EndInit();
+            this.panelContenidoEvento.ResumeLayout(false);
+            this.panelDescripcionEvento.ResumeLayout(false);
+            this.panelImagenVideoCrearEvento.ResumeLayout(false);
+            this.panelImagenVideoCrearEvento.PerformLayout();
             this.menuCrearPost.ResumeLayout(false);
             this.menuCrearPost.PerformLayout();
             this.materialCardCrearPost.ResumeLayout(false);
             this.materialCardCrearPost.PerformLayout();
-            this.panelDescripcionEvento.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pboxImagenVideo;
+        private System.Windows.Forms.PictureBox pboxImagenVideoCrearEvento;
         private System.Windows.Forms.ComboBox comBoxSeleccionarGrupo;
-        private System.Windows.Forms.Panel panelTextoPost;
-        private System.Windows.Forms.RichTextBox txtDescripcionEvento;
+        private System.Windows.Forms.Panel panelContenidoEvento;
+        private System.Windows.Forms.RichTextBox txtContenidoEvento;
         private System.Windows.Forms.ToolStripMenuItem btnContenidoLenguaje;
-        private System.Windows.Forms.Panel panelImagenVideo;
-        private System.Windows.Forms.Label lblAñadirImagen;
-        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.Panel panelImagenVideoCrearEvento;
+        private System.Windows.Forms.Label lblAñadirImagenCrearEvento;
+        private System.Windows.Forms.Button btnBrowseCrearEvento;
         private System.Windows.Forms.ToolStripMenuItem btnContenidoIntercambioCultural;
         private System.Windows.Forms.ToolStripMenuItem btnTipoContenido;
         private System.Windows.Forms.ToolStripMenuItem btnContenidoEducacion;
-        private MaterialSkin.Controls.MaterialButton botonPostear;
+        private MaterialSkin.Controls.MaterialButton botonPostearCrearEvento;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private System.Windows.Forms.MenuStrip menuCrearPost;
-        private System.Windows.Forms.ToolStripMenuItem contenidoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem btnImagenVideo;
+        private System.Windows.Forms.ToolStripMenuItem btnContenidoCrearEvento;
+        private System.Windows.Forms.ToolStripMenuItem btnImagenVideoCrearEvento;
         private MaterialSkin.Controls.MaterialCard materialCardCrearPost;
         private System.Windows.Forms.Panel panelDescripcionEvento;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ToolStripMenuItem nombreEventoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem descripcionDeEventoToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox txtDescripcionEvento;
+        private System.Windows.Forms.ToolStripMenuItem btnNombreEvento;
+        private System.Windows.Forms.ToolStripMenuItem btnDescripcionEvento;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ToolStripMenuItem btnLink;
-        private System.Windows.Forms.ToolStripTextBox txtLinkCrearPost;
+        private System.Windows.Forms.ToolStripTextBox txtLinkCrearEvento;
+        private System.Windows.Forms.ToolStripTextBox txtNombreCrearEvento;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

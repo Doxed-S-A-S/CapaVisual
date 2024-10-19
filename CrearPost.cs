@@ -90,10 +90,6 @@ namespace CapaVisual
         }
 
 
-
-        
-        
-
         private void pboxImagenVideo_DragDrop_1(object sender, DragEventArgs e)
         {
             string[] archivos = (string[])e.Data.GetData(DataFormats.FileDrop);

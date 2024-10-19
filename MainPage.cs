@@ -39,8 +39,6 @@ namespace CapaVisual
             return posts;
         }
 
-        
-
         private static string obtenerCreadorDePost(int id_cuenta)
         {
             RestClient client = new RestClient("http://localhost:44331/");
@@ -82,8 +80,6 @@ namespace CapaVisual
             }
 
         }
-
-        
 
         private void CrearMaterialCard(string contenido) // a cambiar
         {
