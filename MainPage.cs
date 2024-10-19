@@ -57,22 +57,28 @@ namespace CapaVisual
             List<PostDesdeAPI> posts = obtenerPostDesdeAPI();
 
             flowLayoutPanelPosts.Controls.Clear();
-
-            foreach (PostDesdeAPI post in posts)
+            try
             {
-                PostCard postCard = new PostCard();
-                postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
-                postCard.PostContent = post.contenido;
-                postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
+                foreach (PostDesdeAPI post in posts)
+                {
+                    PostCard postCard = new PostCard();
+                    postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
+                    postCard.PostContent = post.contenido;
+                    postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
 
-                HttpClient client = new HttpClient();
-                byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
-                MemoryStream stream = new MemoryStream(imageData);
+                    HttpClient client = new HttpClient();
+                    byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
+                    MemoryStream stream = new MemoryStream(imageData);
 
-                postCard.PostImage = Image.FromStream(stream);
+                    postCard.PostImage = Image.FromStream(stream);
 
-                
-                flowLayoutPanelPosts.Controls.Add(postCard);
+
+                    flowLayoutPanelPosts.Controls.Add(postCard);
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
 
         }
@@ -139,6 +145,11 @@ namespace CapaVisual
         {
             CrearPost crearPost1 = new CrearPost();
             flowLayoutCrearPosts.Controls.Add(crearPost1);
+        }
+        public void AgregarCrearEvento()
+        {
+            CrearEvento crearEvento = new CrearEvento();
+            flowLayoutCrearPosts.Controls.Add(crearEvento);
         }
     }
 }

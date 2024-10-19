@@ -38,11 +38,21 @@ namespace CapaVisual
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.groupPage1 = new CapaVisual.GroupPage();
             this.mainPage1 = new CapaVisual.mainPage1();
-            this.panelSubmenuGrupos = new System.Windows.Forms.Panel();
-            this.panelSubmenuEventos = new System.Windows.Forms.Panel();
+            this.panelSubmenuGrupos2 = new System.Windows.Forms.Panel();
+            this.panelSubmenuEventos2 = new System.Windows.Forms.Panel();
             this.panelSubmenuActividades = new System.Windows.Forms.Panel();
+            this.panelSubmenuGrupos1 = new System.Windows.Forms.Panel();
+            this.btnEliminarGrupo = new System.Windows.Forms.Button();
+            this.btnVerMisGrupos = new System.Windows.Forms.Button();
+            this.btnCrearGrupo = new System.Windows.Forms.Button();
+            this.panelSubmenuEventos1 = new System.Windows.Forms.Panel();
+            this.btnEliminarMisEvento = new System.Windows.Forms.Button();
+            this.btnVerMisEventos = new System.Windows.Forms.Button();
+            this.btnCrearEvento = new System.Windows.Forms.Button();
             this.panelCrearPost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
+            this.panelSubmenuGrupos1.SuspendLayout();
+            this.panelSubmenuEventos1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBarraBusqueda
@@ -141,7 +151,7 @@ namespace CapaVisual
             // groupPage1
             // 
             this.groupPage1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupPage1.Location = new System.Drawing.Point(173, 64);
+            this.groupPage1.Location = new System.Drawing.Point(1666, 64);
             this.groupPage1.Margin = new System.Windows.Forms.Padding(2);
             this.groupPage1.Name = "groupPage1";
             this.groupPage1.Size = new System.Drawing.Size(967, 642);
@@ -153,26 +163,26 @@ namespace CapaVisual
             this.mainPage1.Location = new System.Drawing.Point(173, 64);
             this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
             this.mainPage1.Name = "mainPage1";
-            this.mainPage1.Size = new System.Drawing.Size(1493, 752);
+            this.mainPage1.Size = new System.Drawing.Size(1493, 642);
             this.mainPage1.TabIndex = 8;
             // 
-            // panelSubmenuGrupos
+            // panelSubmenuGrupos2
             // 
-            this.panelSubmenuGrupos.AutoScroll = true;
-            this.panelSubmenuGrupos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSubmenuGrupos.Location = new System.Drawing.Point(191, 256);
-            this.panelSubmenuGrupos.Name = "panelSubmenuGrupos";
-            this.panelSubmenuGrupos.Size = new System.Drawing.Size(200, 281);
-            this.panelSubmenuGrupos.TabIndex = 12;
+            this.panelSubmenuGrupos2.AutoScroll = true;
+            this.panelSubmenuGrupos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSubmenuGrupos2.Location = new System.Drawing.Point(191, 256);
+            this.panelSubmenuGrupos2.Name = "panelSubmenuGrupos2";
+            this.panelSubmenuGrupos2.Size = new System.Drawing.Size(200, 281);
+            this.panelSubmenuGrupos2.TabIndex = 12;
             // 
-            // panelSubmenuEventos
+            // panelSubmenuEventos2
             // 
-            this.panelSubmenuEventos.AutoScroll = true;
-            this.panelSubmenuEventos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSubmenuEventos.Location = new System.Drawing.Point(191, 294);
-            this.panelSubmenuEventos.Name = "panelSubmenuEventos";
-            this.panelSubmenuEventos.Size = new System.Drawing.Size(200, 281);
-            this.panelSubmenuEventos.TabIndex = 13;
+            this.panelSubmenuEventos2.AutoScroll = true;
+            this.panelSubmenuEventos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSubmenuEventos2.Location = new System.Drawing.Point(191, 294);
+            this.panelSubmenuEventos2.Name = "panelSubmenuEventos2";
+            this.panelSubmenuEventos2.Size = new System.Drawing.Size(200, 281);
+            this.panelSubmenuEventos2.TabIndex = 13;
             // 
             // panelSubmenuActividades
             // 
@@ -183,15 +193,106 @@ namespace CapaVisual
             this.panelSubmenuActividades.Size = new System.Drawing.Size(200, 281);
             this.panelSubmenuActividades.TabIndex = 14;
             // 
+            // panelSubmenuGrupos1
+            // 
+            this.panelSubmenuGrupos1.AutoScroll = true;
+            this.panelSubmenuGrupos1.AutoSize = true;
+            this.panelSubmenuGrupos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSubmenuGrupos1.Controls.Add(this.btnEliminarGrupo);
+            this.panelSubmenuGrupos1.Controls.Add(this.btnVerMisGrupos);
+            this.panelSubmenuGrupos1.Controls.Add(this.btnCrearGrupo);
+            this.panelSubmenuGrupos1.Location = new System.Drawing.Point(192, 256);
+            this.panelSubmenuGrupos1.Name = "panelSubmenuGrupos1";
+            this.panelSubmenuGrupos1.Size = new System.Drawing.Size(170, 110);
+            this.panelSubmenuGrupos1.TabIndex = 13;
+            // 
+            // btnEliminarGrupo
+            // 
+            this.btnEliminarGrupo.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarGrupo.Location = new System.Drawing.Point(1, 73);
+            this.btnEliminarGrupo.Name = "btnEliminarGrupo";
+            this.btnEliminarGrupo.Size = new System.Drawing.Size(164, 32);
+            this.btnEliminarGrupo.TabIndex = 2;
+            this.btnEliminarGrupo.Text = "Eliminar Mis Grupos";
+            this.btnEliminarGrupo.UseVisualStyleBackColor = true;
+            // 
+            // btnVerMisGrupos
+            // 
+            this.btnVerMisGrupos.ForeColor = System.Drawing.Color.Black;
+            this.btnVerMisGrupos.Location = new System.Drawing.Point(1, 35);
+            this.btnVerMisGrupos.Name = "btnVerMisGrupos";
+            this.btnVerMisGrupos.Size = new System.Drawing.Size(164, 32);
+            this.btnVerMisGrupos.TabIndex = 1;
+            this.btnVerMisGrupos.Text = "Ver Mis Grupos";
+            this.btnVerMisGrupos.UseVisualStyleBackColor = true;
+            this.btnVerMisGrupos.Click += new System.EventHandler(this.btnVerMisGrupos_Click);
+            // 
+            // btnCrearGrupo
+            // 
+            this.btnCrearGrupo.ForeColor = System.Drawing.Color.Black;
+            this.btnCrearGrupo.Location = new System.Drawing.Point(1, -1);
+            this.btnCrearGrupo.Name = "btnCrearGrupo";
+            this.btnCrearGrupo.Size = new System.Drawing.Size(164, 32);
+            this.btnCrearGrupo.TabIndex = 0;
+            this.btnCrearGrupo.Text = "CrearGrupo";
+            this.btnCrearGrupo.UseVisualStyleBackColor = true;
+            // 
+            // panelSubmenuEventos1
+            // 
+            this.panelSubmenuEventos1.AutoScroll = true;
+            this.panelSubmenuEventos1.AutoSize = true;
+            this.panelSubmenuEventos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSubmenuEventos1.Controls.Add(this.btnEliminarMisEvento);
+            this.panelSubmenuEventos1.Controls.Add(this.btnVerMisEventos);
+            this.panelSubmenuEventos1.Controls.Add(this.btnCrearEvento);
+            this.panelSubmenuEventos1.Location = new System.Drawing.Point(192, 296);
+            this.panelSubmenuEventos1.Name = "panelSubmenuEventos1";
+            this.panelSubmenuEventos1.Size = new System.Drawing.Size(170, 110);
+            this.panelSubmenuEventos1.TabIndex = 15;
+            // 
+            // btnEliminarMisEvento
+            // 
+            this.btnEliminarMisEvento.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarMisEvento.Location = new System.Drawing.Point(1, 73);
+            this.btnEliminarMisEvento.Name = "btnEliminarMisEvento";
+            this.btnEliminarMisEvento.Size = new System.Drawing.Size(164, 32);
+            this.btnEliminarMisEvento.TabIndex = 2;
+            this.btnEliminarMisEvento.Text = "Eliminar Mis Eventos";
+            this.btnEliminarMisEvento.UseVisualStyleBackColor = true;
+            // 
+            // btnVerMisEventos
+            // 
+            this.btnVerMisEventos.ForeColor = System.Drawing.Color.Black;
+            this.btnVerMisEventos.Location = new System.Drawing.Point(1, 35);
+            this.btnVerMisEventos.Name = "btnVerMisEventos";
+            this.btnVerMisEventos.Size = new System.Drawing.Size(164, 32);
+            this.btnVerMisEventos.TabIndex = 1;
+            this.btnVerMisEventos.Text = "Ver Mis Eventos";
+            this.btnVerMisEventos.UseVisualStyleBackColor = true;
+            this.btnVerMisEventos.Click += new System.EventHandler(this.btnVerMisEventos_Click);
+            // 
+            // btnCrearEvento
+            // 
+            this.btnCrearEvento.ForeColor = System.Drawing.Color.Black;
+            this.btnCrearEvento.Location = new System.Drawing.Point(1, -1);
+            this.btnCrearEvento.Name = "btnCrearEvento";
+            this.btnCrearEvento.Size = new System.Drawing.Size(164, 32);
+            this.btnCrearEvento.TabIndex = 0;
+            this.btnCrearEvento.Text = "CrearEvento";
+            this.btnCrearEvento.UseVisualStyleBackColor = true;
+            this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
+            // 
             // AppWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(175)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1499, 709);
+            this.Controls.Add(this.panelSubmenuEventos1);
+            this.Controls.Add(this.panelSubmenuGrupos1);
             this.Controls.Add(this.panelSubmenuActividades);
-            this.Controls.Add(this.panelSubmenuEventos);
-            this.Controls.Add(this.panelSubmenuGrupos);
+            this.Controls.Add(this.panelSubmenuEventos2);
+            this.Controls.Add(this.panelSubmenuGrupos2);
             this.Controls.Add(this.groupPage1);
             this.Controls.Add(this.mainPage1);
             this.Controls.Add(this.txtBarraBusqueda);
@@ -202,6 +303,8 @@ namespace CapaVisual
             this.Text = "LinguaLink";
             this.panelCrearPost.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).EndInit();
+            this.panelSubmenuGrupos1.ResumeLayout(false);
+            this.panelSubmenuEventos1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,9 +321,17 @@ namespace CapaVisual
         private System.Windows.Forms.Button btnGrupos;
         private System.Windows.Forms.Button btnPrincipal;
         private GroupPage groupPage1;
-        private System.Windows.Forms.Panel panelSubmenuGrupos;
-        private System.Windows.Forms.Panel panelSubmenuEventos;
+        private System.Windows.Forms.Panel panelSubmenuGrupos2;
+        private System.Windows.Forms.Panel panelSubmenuEventos2;
         private System.Windows.Forms.Panel panelSubmenuActividades;
+        private System.Windows.Forms.Panel panelSubmenuGrupos1;
+        private System.Windows.Forms.Button btnCrearGrupo;
+        private System.Windows.Forms.Button btnEliminarGrupo;
+        private System.Windows.Forms.Button btnVerMisGrupos;
+        private System.Windows.Forms.Panel panelSubmenuEventos1;
+        private System.Windows.Forms.Button btnEliminarMisEvento;
+        private System.Windows.Forms.Button btnVerMisEventos;
+        private System.Windows.Forms.Button btnCrearEvento;
     }
 }
 

@@ -138,6 +138,15 @@
     <Compile Include="CrearPost.Designer.cs">
       <DependentUpon>CrearPost.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CrearEvento.Designer.cs">
+      <DependentUpon>CrearEvento.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrearEvento.resx">
+      <DependentUpon>CrearEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>

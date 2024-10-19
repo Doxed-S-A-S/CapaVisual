@@ -26,8 +26,10 @@ namespace CapaVisual
             mainPage1.Show();
             groupPage1.Hide();
 
-            panelSubmenuGrupos.Hide();
-            panelSubmenuEventos.Hide();
+            panelSubmenuGrupos1.Hide();
+            panelSubmenuGrupos2.Hide();
+            panelSubmenuEventos1.Hide();
+            panelSubmenuEventos2.Hide();
             panelSubmenuActividades.Hide();
 
             cargarGruposEnPanelGrupos();
@@ -63,26 +65,30 @@ namespace CapaVisual
 
         private void btnGrupos_Click(object sender, EventArgs e)
         {
-            if (panelSubmenuGrupos.Visible == true)
+            if (panelSubmenuGrupos1.Visible == true)
             {
-                panelSubmenuGrupos.Visible = false;
+                panelSubmenuGrupos1.Visible = false;
+                panelSubmenuGrupos2.Visible = false;
             }
             else
             {
-                panelSubmenuGrupos.Visible = true;
+                panelSubmenuGrupos1.Visible = true;
+                panelSubmenuGrupos2.Visible = false;
             }
             
         }
 
         private void btnEventos_Click(object sender, EventArgs e)
         {
-            if (panelSubmenuEventos.Visible == true)
+            if (panelSubmenuEventos1.Visible == true)
             {
-                panelSubmenuEventos.Visible = false;
+                panelSubmenuEventos1.Visible = false;
+                panelSubmenuEventos2.Visible = false;
             }
             else
             {
-                panelSubmenuEventos.Visible = true;
+                panelSubmenuEventos1.Visible = true;
+                panelSubmenuEventos2.Visible = false;
             }
         }
 
@@ -118,7 +124,7 @@ namespace CapaVisual
             btn.Dock = DockStyle.Top;
             btn.Click += new EventHandler(Button_Click);
 
-            panelSubmenuGrupos.Controls.Add(btn);
+            panelSubmenuGrupos2.Controls.Add(btn);
         }
         public void cargarGruposEnPanelGrupos()
         {
@@ -134,5 +140,40 @@ namespace CapaVisual
             MessageBox.Show("asdasd");
         }
 
+        private void btnVerMisGrupos_Click(object sender, EventArgs e)
+        {
+            if (panelSubmenuGrupos2.Visible == true)
+            {
+                panelSubmenuGrupos2.Visible = false;
+                panelSubmenuGrupos1.Visible = false;
+            }
+            else
+            {
+                panelSubmenuGrupos2.Visible = true;
+                panelSubmenuGrupos1.Visible = false;
+            }
+        }
+
+        private void btnVerMisEventos_Click(object sender, EventArgs e)
+        {
+            if (panelSubmenuEventos2.Visible == true)
+            {
+                panelSubmenuEventos2.Visible = false;
+                panelSubmenuEventos1.Visible = false;
+            }
+            else
+            {
+                panelSubmenuEventos2.Visible = true;
+                panelSubmenuEventos1.Visible = false;
+            }
+        }
+
+        private void btnCrearEvento_Click(object sender, EventArgs e)
+        {
+            panelSubmenuEventos2.Visible = false;
+            panelSubmenuEventos1.Visible = false;
+            mainPage1.EliminarCrearPost();
+            mainPage1.AgregarCrearEvento();
+        }
     }
 }

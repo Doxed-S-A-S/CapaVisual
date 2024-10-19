@@ -33,8 +33,10 @@ namespace CapaVisual
             this.panelDerecho = new System.Windows.Forms.Panel();
             this.flowLayoutPanelPostsGrupo = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.crearPost1 = new CapaVisual.CrearPost();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanelPostsGrupo.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,7 +47,7 @@ namespace CapaVisual
             this.divisorDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.divisorDerecho.Depth = 0;
             this.divisorDerecho.Location = new System.Drawing.Point(1, 0);
-            this.divisorDerecho.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.divisorDerecho.Margin = new System.Windows.Forms.Padding(2);
             this.divisorDerecho.MouseState = MaterialSkin.MouseState.HOVER;
             this.divisorDerecho.Name = "divisorDerecho";
             this.divisorDerecho.Size = new System.Drawing.Size(10, 605);
@@ -56,7 +58,7 @@ namespace CapaVisual
             // 
             this.panelDerecho.BackColor = System.Drawing.Color.LightGray;
             this.panelDerecho.Location = new System.Drawing.Point(815, 190);
-            this.panelDerecho.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDerecho.Margin = new System.Windows.Forms.Padding(2);
             this.panelDerecho.Name = "panelDerecho";
             this.panelDerecho.Size = new System.Drawing.Size(150, 416);
             this.panelDerecho.TabIndex = 15;
@@ -65,9 +67,10 @@ namespace CapaVisual
             // 
             this.flowLayoutPanelPostsGrupo.AutoScroll = true;
             this.flowLayoutPanelPostsGrupo.BackColor = System.Drawing.Color.LightGray;
+            this.flowLayoutPanelPostsGrupo.Controls.Add(this.crearPost1);
             this.flowLayoutPanelPostsGrupo.ForeColor = System.Drawing.Color.Black;
             this.flowLayoutPanelPostsGrupo.Location = new System.Drawing.Point(13, 190);
-            this.flowLayoutPanelPostsGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanelPostsGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelPostsGrupo.Name = "flowLayoutPanelPostsGrupo";
             this.flowLayoutPanelPostsGrupo.Padding = new System.Windows.Forms.Padding(78, 0, 52, 0);
             this.flowLayoutPanelPostsGrupo.Size = new System.Drawing.Size(797, 416);
@@ -79,10 +82,18 @@ namespace CapaVisual
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(13, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(952, 183);
             this.panel1.TabIndex = 16;
+            // 
+            // crearPost1
+            // 
+            this.crearPost1.Location = new System.Drawing.Point(80, 2);
+            this.crearPost1.Margin = new System.Windows.Forms.Padding(2);
+            this.crearPost1.Name = "crearPost1";
+            this.crearPost1.Size = new System.Drawing.Size(572, 146);
+            this.crearPost1.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -113,9 +124,10 @@ namespace CapaVisual
             this.Controls.Add(this.divisorDerecho);
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.flowLayoutPanelPostsGrupo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GroupPage";
             this.Size = new System.Drawing.Size(967, 611);
+            this.flowLayoutPanelPostsGrupo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -130,5 +142,6 @@ namespace CapaVisual
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private CrearPost crearPost1;
     }
 }

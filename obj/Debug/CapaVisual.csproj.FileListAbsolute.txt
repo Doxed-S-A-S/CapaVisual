@@ -84,3 +84,4 @@ C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.CopyCompl
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.exe
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.pdb
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.AssemblyReference.cache
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CrearEvento.resources
