@@ -18,8 +18,6 @@ namespace CapaVisual
 {
     public partial class mainPage1 : UserControl
     {
-        private string url_imagen;
-
         public mainPage1()
         {
             InitializeComponent();
@@ -57,23 +55,28 @@ namespace CapaVisual
             List<PostDesdeAPI> posts = obtenerPostDesdeAPI();
 
             flowLayoutPanelPosts.Controls.Clear();
-
-            foreach (PostDesdeAPI post in posts)
+            try
             {
-                PostCard postCard = new PostCard();
-                postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
-                postCard.PostContent = post.contenido;
-                postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
+                foreach (PostDesdeAPI post in posts)
+                {
+                    PostCard postCard = new PostCard();
+                    postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
+                    postCard.PostContent = post.contenido;
+                    postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
 
-                HttpClient client = new HttpClient();
-                byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
-                MemoryStream stream = new MemoryStream(imageData);
+                    HttpClient client = new HttpClient();
+                    byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
+                    MemoryStream stream = new MemoryStream(imageData);
 
-                postCard.PostImage = Image.FromStream(stream);
+                    postCard.PostImage = Image.FromStream(stream);
 
-                //postCard.PostImage = Image.FromFile(post.url_imagen); // faltan implementar cosas para que esto funcione y da problemas si la imagen es null
-                //Add the custom post card to the flow panel
-                flowLayoutPanelPosts.Controls.Add(postCard);
+
+                    flowLayoutPanelPosts.Controls.Add(postCard);
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
 
         }
@@ -138,6 +141,11 @@ namespace CapaVisual
         {
             CrearPost crearPost1 = new CrearPost();
             flowLayoutCrearPosts.Controls.Add(crearPost1);
+        }
+        public void AgregarCrearEvento()
+        {
+            CrearEvento crearEvento = new CrearEvento();
+            flowLayoutCrearPosts.Controls.Add(crearEvento);
         }
     }
 }

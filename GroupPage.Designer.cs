@@ -29,108 +29,46 @@ namespace CapaVisual
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnActividades = new System.Windows.Forms.Button();
-            this.btnEventos = new System.Windows.Forms.Button();
-            this.btnGrupos = new System.Windows.Forms.Button();
-            this.btnPrincipal = new System.Windows.Forms.Button();
             this.divisorDerecho = new MaterialSkin.Controls.MaterialDivider();
-            this.panelCrearPost = new System.Windows.Forms.Panel();
             this.panelDerecho = new System.Windows.Forms.Panel();
             this.flowLayoutPanelPostsGrupo = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImagenPerfil = new System.Windows.Forms.PictureBox();
-            this.panelCrearPost.SuspendLayout();
+            this.pboxImagenGrupo = new System.Windows.Forms.PictureBox();
+            this.pboxBannerGrupo = new System.Windows.Forms.PictureBox();
+            this.txtBoxDescripcionGrupo = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridIntegrantesGrupo = new System.Windows.Forms.DataGridView();
+            this.panelDerecho.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenGrupo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBannerGrupo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnActividades
-            // 
-            this.btnActividades.BackColor = System.Drawing.Color.LightGray;
-            this.btnActividades.FlatAppearance.BorderSize = 0;
-            this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActividades.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnActividades.Location = new System.Drawing.Point(4, 332);
-            this.btnActividades.Name = "btnActividades";
-            this.btnActividades.Size = new System.Drawing.Size(192, 40);
-            this.btnActividades.TabIndex = 3;
-            this.btnActividades.Text = "Actividades";
-            this.btnActividades.UseVisualStyleBackColor = false;
-            // 
-            // btnEventos
-            // 
-            this.btnEventos.BackColor = System.Drawing.Color.LightGray;
-            this.btnEventos.FlatAppearance.BorderSize = 0;
-            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEventos.Location = new System.Drawing.Point(4, 286);
-            this.btnEventos.Name = "btnEventos";
-            this.btnEventos.Size = new System.Drawing.Size(192, 40);
-            this.btnEventos.TabIndex = 2;
-            this.btnEventos.Text = "Eventos";
-            this.btnEventos.UseVisualStyleBackColor = false;
-            // 
-            // btnGrupos
-            // 
-            this.btnGrupos.BackColor = System.Drawing.Color.LightGray;
-            this.btnGrupos.FlatAppearance.BorderSize = 0;
-            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrupos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGrupos.Location = new System.Drawing.Point(4, 240);
-            this.btnGrupos.Name = "btnGrupos";
-            this.btnGrupos.Size = new System.Drawing.Size(192, 40);
-            this.btnGrupos.TabIndex = 1;
-            this.btnGrupos.Text = "Grupos";
-            this.btnGrupos.UseVisualStyleBackColor = false;
-            // 
-            // btnPrincipal
-            // 
-            this.btnPrincipal.BackColor = System.Drawing.Color.LightGray;
-            this.btnPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPrincipal.Location = new System.Drawing.Point(4, 194);
-            this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(192, 40);
-            this.btnPrincipal.TabIndex = 0;
-            this.btnPrincipal.Text = "Principal";
-            this.btnPrincipal.UseVisualStyleBackColor = false;
-            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
             // divisorDerecho
             // 
             this.divisorDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.divisorDerecho.Depth = 0;
-            this.divisorDerecho.Location = new System.Drawing.Point(205, 4);
+            this.divisorDerecho.Location = new System.Drawing.Point(1, 0);
+            this.divisorDerecho.Margin = new System.Windows.Forms.Padding(2);
             this.divisorDerecho.MouseState = MaterialSkin.MouseState.HOVER;
             this.divisorDerecho.Name = "divisorDerecho";
-            this.divisorDerecho.Size = new System.Drawing.Size(13, 745);
+            this.divisorDerecho.Size = new System.Drawing.Size(10, 605);
             this.divisorDerecho.TabIndex = 12;
             this.divisorDerecho.Text = "materialDivider1";
-            // 
-            // panelCrearPost
-            // 
-            this.panelCrearPost.BackColor = System.Drawing.Color.LightGray;
-            this.panelCrearPost.Controls.Add(this.pictureBoxImagenPerfil);
-            this.panelCrearPost.Controls.Add(this.btnActividades);
-            this.panelCrearPost.Controls.Add(this.btnEventos);
-            this.panelCrearPost.Controls.Add(this.btnGrupos);
-            this.panelCrearPost.Controls.Add(this.btnPrincipal);
-            this.panelCrearPost.Location = new System.Drawing.Point(3, 6);
-            this.panelCrearPost.Name = "panelCrearPost";
-            this.panelCrearPost.Size = new System.Drawing.Size(200, 742);
-            this.panelCrearPost.TabIndex = 11;
             // 
             // panelDerecho
             // 
             this.panelDerecho.BackColor = System.Drawing.Color.LightGray;
-            this.panelDerecho.Location = new System.Drawing.Point(1290, 237);
+            this.panelDerecho.Controls.Add(this.dataGridIntegrantesGrupo);
+            this.panelDerecho.Controls.Add(this.label2);
+            this.panelDerecho.Controls.Add(this.label1);
+            this.panelDerecho.Controls.Add(this.txtBoxDescripcionGrupo);
+            this.panelDerecho.Location = new System.Drawing.Point(815, 190);
+            this.panelDerecho.Margin = new System.Windows.Forms.Padding(2);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(200, 512);
+            this.panelDerecho.Size = new System.Drawing.Size(150, 416);
             this.panelDerecho.TabIndex = 15;
             // 
             // flowLayoutPanelPostsGrupo
@@ -138,83 +76,109 @@ namespace CapaVisual
             this.flowLayoutPanelPostsGrupo.AutoScroll = true;
             this.flowLayoutPanelPostsGrupo.BackColor = System.Drawing.Color.LightGray;
             this.flowLayoutPanelPostsGrupo.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutPanelPostsGrupo.Location = new System.Drawing.Point(221, 237);
+            this.flowLayoutPanelPostsGrupo.Location = new System.Drawing.Point(13, 190);
+            this.flowLayoutPanelPostsGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelPostsGrupo.Name = "flowLayoutPanelPostsGrupo";
-            this.flowLayoutPanelPostsGrupo.Padding = new System.Windows.Forms.Padding(104, 0, 70, 0);
-            this.flowLayoutPanelPostsGrupo.Size = new System.Drawing.Size(1063, 512);
+            this.flowLayoutPanelPostsGrupo.Padding = new System.Windows.Forms.Padding(78, 0, 52, 0);
+            this.flowLayoutPanelPostsGrupo.Size = new System.Drawing.Size(797, 416);
             this.flowLayoutPanelPostsGrupo.TabIndex = 13;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(221, 6);
+            this.panel1.Controls.Add(this.pboxImagenGrupo);
+            this.panel1.Controls.Add(this.pboxBannerGrupo);
+            this.panel1.Location = new System.Drawing.Point(13, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1269, 225);
+            this.panel1.Size = new System.Drawing.Size(952, 183);
             this.panel1.TabIndex = 16;
             // 
-            // pictureBox2
+            // pboxImagenGrupo
             // 
-            this.pictureBox2.Image = global::CapaVisual.Properties.Resources.grupo3be;
-            this.pictureBox2.Location = new System.Drawing.Point(478, 61);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.pboxImagenGrupo.Location = new System.Drawing.Point(358, 50);
+            this.pboxImagenGrupo.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxImagenGrupo.Name = "pboxImagenGrupo";
+            this.pboxImagenGrupo.Size = new System.Drawing.Size(75, 81);
+            this.pboxImagenGrupo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxImagenGrupo.TabIndex = 1;
+            this.pboxImagenGrupo.TabStop = false;
             // 
-            // pictureBox1
+            // pboxBannerGrupo
             // 
-            this.pictureBox1.Image = global::CapaVisual.Properties.Resources._6627adbbce5ee45e48d0b31d35a67932;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1268, 224);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pboxBannerGrupo.Location = new System.Drawing.Point(2, 2);
+            this.pboxBannerGrupo.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxBannerGrupo.Name = "pboxBannerGrupo";
+            this.pboxBannerGrupo.Size = new System.Drawing.Size(951, 182);
+            this.pboxBannerGrupo.TabIndex = 0;
+            this.pboxBannerGrupo.TabStop = false;
             // 
-            // pictureBoxImagenPerfil
+            // txtBoxDescripcionGrupo
             // 
-            this.pictureBoxImagenPerfil.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(72, 88);
-            this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
-            this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(54, 54);
-            this.pictureBoxImagenPerfil.TabIndex = 4;
-            this.pictureBoxImagenPerfil.TabStop = false;
+            this.txtBoxDescripcionGrupo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtBoxDescripcionGrupo.Location = new System.Drawing.Point(3, 28);
+            this.txtBoxDescripcionGrupo.Name = "txtBoxDescripcionGrupo";
+            this.txtBoxDescripcionGrupo.Size = new System.Drawing.Size(144, 72);
+            this.txtBoxDescripcionGrupo.TabIndex = 0;
+            this.txtBoxDescripcionGrupo.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Descripcion Grupo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Integrantes grupo";
+            // 
+            // dataGridIntegrantesGrupo
+            // 
+            this.dataGridIntegrantesGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridIntegrantesGrupo.Location = new System.Drawing.Point(4, 150);
+            this.dataGridIntegrantesGrupo.Name = "dataGridIntegrantesGrupo";
+            this.dataGridIntegrantesGrupo.Size = new System.Drawing.Size(143, 150);
+            this.dataGridIntegrantesGrupo.TabIndex = 3;
             // 
             // GroupPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.divisorDerecho);
-            this.Controls.Add(this.panelCrearPost);
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.flowLayoutPanelPostsGrupo);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GroupPage";
-            this.Size = new System.Drawing.Size(1493, 752);
-            this.panelCrearPost.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(967, 611);
+            this.panelDerecho.ResumeLayout(false);
+            this.panelDerecho.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenGrupo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxBannerGrupo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBoxImagenPerfil;
-        private System.Windows.Forms.Button btnActividades;
-        private System.Windows.Forms.Button btnEventos;
-        private System.Windows.Forms.Button btnGrupos;
-        private System.Windows.Forms.Button btnPrincipal;
         private MaterialSkin.Controls.MaterialDivider divisorDerecho;
-        private System.Windows.Forms.Panel panelCrearPost;
         private System.Windows.Forms.Panel panelDerecho;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPostsGrupo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pboxImagenGrupo;
+        private System.Windows.Forms.PictureBox pboxBannerGrupo;
+        private System.Windows.Forms.DataGridView dataGridIntegrantesGrupo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox txtBoxDescripcionGrupo;
     }
 }

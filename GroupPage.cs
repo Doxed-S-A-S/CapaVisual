@@ -16,15 +16,26 @@ namespace CapaVisual
         {
             InitializeComponent();
         }
-
-        private void btnPrincipal_Click(object sender, EventArgs e)
+        public Image ImagenGrupo
         {
-            var parentForm = this.Parent as AppWindow;
-            if (parentForm != null)
-            {
-                parentForm.ShowMainPage(); // Call the method on the form to switch
-            }
+            get { return pboxImagenGrupo.Image; }
+            set { pboxImagenGrupo.Image = value; }
+        }
+        public Image BannerGrupo
+        {
+            get { return pboxBannerGrupo.Image; }
+            set { pboxBannerGrupo.Image = value; }
+        }
 
+        public string DescripcionGrupo
+        {
+            get { return txtBoxDescripcionGrupo.Text; }
+            set { txtBoxDescripcionGrupo.Text = value; }
+        }
+        public DataTable IntegrantesGrupo
+        {
+            get => (DataTable)dataGridIntegrantesGrupo.DataSource;
+            set => dataGridIntegrantesGrupo.DataSource = value;
         }
     }
 }

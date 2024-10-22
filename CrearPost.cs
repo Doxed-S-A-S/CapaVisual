@@ -29,7 +29,7 @@ namespace CapaVisual
             txtLinkCrearPost.Text = "Pegue el enlace aquí";
             txtLinkCrearPost.ForeColor = Color.Gray;
 
-            comBoxSeleccionarGrupo.ForeColor = Color.Gray;
+            
         }
 
         private void crearPost(string url_contenido, string tipo_contenido, string contenido, string url_imagen, int id_cuenta)
@@ -90,10 +90,6 @@ namespace CapaVisual
         }
 
 
-
-        
-        
-
         private void pboxImagenVideo_DragDrop_1(object sender, DragEventArgs e)
         {
             string[] archivos = (string[])e.Data.GetData(DataFormats.FileDrop);
@@ -122,35 +118,6 @@ namespace CapaVisual
             crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text, pboxImagenVideo.ImageLocation, 1);
         }
 
-        private void comBoxSeleccionarGrupo_Leave_1(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(comBoxSeleccionarGrupo.Text))
-            {
-                comBoxSeleccionarGrupo.Text = "Seleccione el grupo";
-                comBoxSeleccionarGrupo.ForeColor = Color.Gray;
-            }
-        }
-
-        private void comBoxSeleccionarGrupo_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (comBoxSeleccionarGrupo.SelectedIndex != -1)
-            {
-
-                comBoxSeleccionarGrupo.ForeColor = Color.Black;
-            }
-        }
-
-        private void comBoxSeleccionarGrupo_DropDown_1(object sender, EventArgs e)
-        {
-            comBoxSeleccionarGrupo.DropDownStyle = ComboBoxStyle.DropDownList;
-            comBoxSeleccionarGrupo.ForeColor = Color.Black;
-            if (comBoxSeleccionarGrupo.Text == "Seleccione el grupo")
-            {
-
-                comBoxSeleccionarGrupo.Text = "";
-            }
-        }
-
         private void txtLinkCrearPost_Leave_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtLinkCrearPost.Text))
@@ -171,7 +138,6 @@ namespace CapaVisual
 
         private void contenidoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            pboxImagenVideo.BackColor = Color.LightGray;
             panelTextoPost.Visible = true;
             panelImagenVideo.Visible = false;
         }
@@ -237,5 +203,7 @@ namespace CapaVisual
                 txtLinkCrearPost.ForeColor = Color.Gray;
             }
         }
+
+        
     }
 }

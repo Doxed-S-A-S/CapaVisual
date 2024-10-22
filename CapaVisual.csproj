@@ -92,6 +92,7 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DTO\GrupoDesdeAPI.cs" />
     <Compile Include="DTO\PostDesdeAPI.cs" />
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -137,11 +138,35 @@
     <Compile Include="CrearPost.Designer.cs">
       <DependentUpon>CrearPost.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CrearEvento.Designer.cs">
+      <DependentUpon>CrearEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuroUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MuroUsuario.Designer.cs">
+      <DependentUpon>MuroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginPage2.Designer.cs">
+      <DependentUpon>LoginPage2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrearEvento.resx">
+      <DependentUpon>CrearEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppWindow.resx">
       <DependentUpon>AppWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuroUsuario.resx">
+      <DependentUpon>MuroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PostCard.resx">
       <DependentUpon>PostCard.cs</DependentUpon>
@@ -167,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearPost.resx">
       <DependentUpon>CrearPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage2.resx">
+      <DependentUpon>LoginPage2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

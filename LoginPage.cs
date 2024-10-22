@@ -106,6 +106,7 @@ namespace CapaVisual
         }
         private void btnIniciar_Clic(object sender, EventArgs e) 
         {
+            
             if (txtEmail.Text == "Correo" || txtEmail.Text.Trim() == "")
             {
                 MessageBox.Show("Por favor, ingrese un correo electrónico válido.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -119,6 +120,7 @@ namespace CapaVisual
                 txtPassword.Focus();
                 return;
             }
+            this.Hide();
         }
     }
 }

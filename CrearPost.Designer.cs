@@ -30,13 +30,11 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.materialCardCrearPost = new MaterialSkin.Controls.MaterialCard();
-            this.comBoxSeleccionarGrupo = new System.Windows.Forms.ComboBox();
             this.panelTextoPost = new System.Windows.Forms.Panel();
             this.txtContenidoPost = new System.Windows.Forms.RichTextBox();
             this.panelImagenVideo = new System.Windows.Forms.Panel();
             this.lblAñadirImagen = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.pboxImagenVideo = new System.Windows.Forms.PictureBox();
             this.botonPostear = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.menuCrearPost = new System.Windows.Forms.MenuStrip();
@@ -48,17 +46,17 @@ namespace CapaVisual
             this.btnContenidoIntercambioCultural = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoLenguaje = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoEducacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.pboxImagenVideo = new System.Windows.Forms.PictureBox();
             this.materialCardCrearPost.SuspendLayout();
             this.panelTextoPost.SuspendLayout();
             this.panelImagenVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).BeginInit();
             this.menuCrearPost.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).BeginInit();
             this.SuspendLayout();
             // 
             // materialCardCrearPost
             // 
             this.materialCardCrearPost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCardCrearPost.Controls.Add(this.comBoxSeleccionarGrupo);
             this.materialCardCrearPost.Controls.Add(this.panelTextoPost);
             this.materialCardCrearPost.Controls.Add(this.panelImagenVideo);
             this.materialCardCrearPost.Controls.Add(this.botonPostear);
@@ -71,36 +69,14 @@ namespace CapaVisual
             this.materialCardCrearPost.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCardCrearPost.Name = "materialCardCrearPost";
             this.materialCardCrearPost.Padding = new System.Windows.Forms.Padding(10, 0, 10, 11);
-            this.materialCardCrearPost.Size = new System.Drawing.Size(572, 146);
+            this.materialCardCrearPost.Size = new System.Drawing.Size(440, 146);
             this.materialCardCrearPost.TabIndex = 1;
-            // 
-            // comBoxSeleccionarGrupo
-            // 
-            this.comBoxSeleccionarGrupo.FormattingEnabled = true;
-            this.comBoxSeleccionarGrupo.Items.AddRange(new object[] {
-            "asd",
-            "asd",
-            "asd",
-            "asd",
-            "asd",
-            "asd",
-            "as",
-            "d"});
-            this.comBoxSeleccionarGrupo.Location = new System.Drawing.Point(352, 85);
-            this.comBoxSeleccionarGrupo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comBoxSeleccionarGrupo.Name = "comBoxSeleccionarGrupo";
-            this.comBoxSeleccionarGrupo.Size = new System.Drawing.Size(125, 21);
-            this.comBoxSeleccionarGrupo.TabIndex = 0;
-            this.comBoxSeleccionarGrupo.Text = "Seleccione un grupo";
-            this.comBoxSeleccionarGrupo.DropDown += new System.EventHandler(this.comBoxSeleccionarGrupo_DropDown_1);
-            this.comBoxSeleccionarGrupo.SelectedIndexChanged += new System.EventHandler(this.comBoxSeleccionarGrupo_SelectedIndexChanged_1);
-            this.comBoxSeleccionarGrupo.Leave += new System.EventHandler(this.comBoxSeleccionarGrupo_Leave_1);
             // 
             // panelTextoPost
             // 
             this.panelTextoPost.Controls.Add(this.txtContenidoPost);
             this.panelTextoPost.Location = new System.Drawing.Point(10, 32);
-            this.panelTextoPost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTextoPost.Margin = new System.Windows.Forms.Padding(2);
             this.panelTextoPost.Name = "panelTextoPost";
             this.panelTextoPost.Size = new System.Drawing.Size(323, 74);
             this.panelTextoPost.TabIndex = 12;
@@ -108,7 +84,7 @@ namespace CapaVisual
             // txtContenidoPost
             // 
             this.txtContenidoPost.Location = new System.Drawing.Point(2, 9);
-            this.txtContenidoPost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContenidoPost.Margin = new System.Windows.Forms.Padding(2);
             this.txtContenidoPost.Name = "txtContenidoPost";
             this.txtContenidoPost.Size = new System.Drawing.Size(316, 55);
             this.txtContenidoPost.TabIndex = 0;
@@ -120,7 +96,7 @@ namespace CapaVisual
             this.panelImagenVideo.Controls.Add(this.btnBrowse);
             this.panelImagenVideo.Controls.Add(this.pboxImagenVideo);
             this.panelImagenVideo.Location = new System.Drawing.Point(10, 32);
-            this.panelImagenVideo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelImagenVideo.Margin = new System.Windows.Forms.Padding(2);
             this.panelImagenVideo.Name = "panelImagenVideo";
             this.panelImagenVideo.Size = new System.Drawing.Size(323, 74);
             this.panelImagenVideo.TabIndex = 13;
@@ -138,26 +114,13 @@ namespace CapaVisual
             // btnBrowse
             // 
             this.btnBrowse.Location = new System.Drawing.Point(198, 24);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(56, 19);
             this.btnBrowse.TabIndex = 2;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click_1);
-            // 
-            // pboxImagenVideo
-            // 
-            this.pboxImagenVideo.BackColor = System.Drawing.Color.Red;
-            this.pboxImagenVideo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxImagenVideo.Location = new System.Drawing.Point(2, 9);
-            this.pboxImagenVideo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pboxImagenVideo.Name = "pboxImagenVideo";
-            this.pboxImagenVideo.Size = new System.Drawing.Size(315, 54);
-            this.pboxImagenVideo.TabIndex = 0;
-            this.pboxImagenVideo.TabStop = false;
-            this.pboxImagenVideo.DragDrop += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragDrop_1);
-            this.pboxImagenVideo.DragEnter += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragEnter_1);
             // 
             // botonPostear
             // 
@@ -188,7 +151,7 @@ namespace CapaVisual
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(59, 14);
+            this.materialLabel1.Size = new System.Drawing.Size(80, 18);
             this.materialLabel1.TabIndex = 7;
             this.materialLabel1.Text = "Crear Post";
             // 
@@ -206,7 +169,7 @@ namespace CapaVisual
             this.menuCrearPost.Name = "menuCrearPost";
             this.menuCrearPost.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuCrearPost.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuCrearPost.Size = new System.Drawing.Size(552, 24);
+            this.menuCrearPost.Size = new System.Drawing.Size(420, 24);
             this.menuCrearPost.TabIndex = 8;
             this.menuCrearPost.Text = "menuStrip1";
             // 
@@ -276,22 +239,35 @@ namespace CapaVisual
             this.btnContenidoEducacion.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoEducacion.Text = "Educacion";
             // 
+            // pboxImagenVideo
+            // 
+            this.pboxImagenVideo.BackColor = System.Drawing.Color.White;
+            this.pboxImagenVideo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxImagenVideo.Location = new System.Drawing.Point(2, 9);
+            this.pboxImagenVideo.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxImagenVideo.Name = "pboxImagenVideo";
+            this.pboxImagenVideo.Size = new System.Drawing.Size(315, 54);
+            this.pboxImagenVideo.TabIndex = 0;
+            this.pboxImagenVideo.TabStop = false;
+            this.pboxImagenVideo.DragDrop += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragDrop_1);
+            this.pboxImagenVideo.DragEnter += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragEnter_1);
+            // 
             // CrearPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.materialCardCrearPost);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearPost";
-            this.Size = new System.Drawing.Size(572, 146);
+            this.Size = new System.Drawing.Size(441, 146);
             this.materialCardCrearPost.ResumeLayout(false);
             this.materialCardCrearPost.PerformLayout();
             this.panelTextoPost.ResumeLayout(false);
             this.panelImagenVideo.ResumeLayout(false);
             this.panelImagenVideo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).EndInit();
             this.menuCrearPost.ResumeLayout(false);
             this.menuCrearPost.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,7 +275,6 @@ namespace CapaVisual
         #endregion
 
         private MaterialSkin.Controls.MaterialCard materialCardCrearPost;
-        private System.Windows.Forms.ComboBox comBoxSeleccionarGrupo;
         private System.Windows.Forms.Panel panelTextoPost;
         private System.Windows.Forms.RichTextBox txtContenidoPost;
         private System.Windows.Forms.Panel panelImagenVideo;
