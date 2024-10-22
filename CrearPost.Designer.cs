@@ -35,7 +35,6 @@ namespace CapaVisual
             this.panelImagenVideo = new System.Windows.Forms.Panel();
             this.lblAñadirImagen = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.pboxImagenVideo = new System.Windows.Forms.PictureBox();
             this.botonPostear = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.menuCrearPost = new System.Windows.Forms.MenuStrip();
@@ -47,11 +46,12 @@ namespace CapaVisual
             this.btnContenidoIntercambioCultural = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoLenguaje = new System.Windows.Forms.ToolStripMenuItem();
             this.btnContenidoEducacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.pboxImagenVideo = new System.Windows.Forms.PictureBox();
             this.materialCardCrearPost.SuspendLayout();
             this.panelTextoPost.SuspendLayout();
             this.panelImagenVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).BeginInit();
             this.menuCrearPost.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).BeginInit();
             this.SuspendLayout();
             // 
             // materialCardCrearPost
@@ -121,19 +121,6 @@ namespace CapaVisual
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click_1);
-            // 
-            // pboxImagenVideo
-            // 
-            this.pboxImagenVideo.BackColor = System.Drawing.Color.Red;
-            this.pboxImagenVideo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pboxImagenVideo.Location = new System.Drawing.Point(2, 9);
-            this.pboxImagenVideo.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxImagenVideo.Name = "pboxImagenVideo";
-            this.pboxImagenVideo.Size = new System.Drawing.Size(315, 54);
-            this.pboxImagenVideo.TabIndex = 0;
-            this.pboxImagenVideo.TabStop = false;
-            this.pboxImagenVideo.DragDrop += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragDrop_1);
-            this.pboxImagenVideo.DragEnter += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragEnter_1);
             // 
             // botonPostear
             // 
@@ -210,6 +197,7 @@ namespace CapaVisual
             // 
             // txtLinkCrearPost
             // 
+            this.txtLinkCrearPost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLinkCrearPost.Name = "txtLinkCrearPost";
             this.txtLinkCrearPost.Size = new System.Drawing.Size(100, 23);
             this.txtLinkCrearPost.Text = "inserte su link";
@@ -251,6 +239,19 @@ namespace CapaVisual
             this.btnContenidoEducacion.Size = new System.Drawing.Size(183, 22);
             this.btnContenidoEducacion.Text = "Educacion";
             // 
+            // pboxImagenVideo
+            // 
+            this.pboxImagenVideo.BackColor = System.Drawing.Color.White;
+            this.pboxImagenVideo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pboxImagenVideo.Location = new System.Drawing.Point(2, 9);
+            this.pboxImagenVideo.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxImagenVideo.Name = "pboxImagenVideo";
+            this.pboxImagenVideo.Size = new System.Drawing.Size(315, 54);
+            this.pboxImagenVideo.TabIndex = 0;
+            this.pboxImagenVideo.TabStop = false;
+            this.pboxImagenVideo.DragDrop += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragDrop_1);
+            this.pboxImagenVideo.DragEnter += new System.Windows.Forms.DragEventHandler(this.pboxImagenVideo_DragEnter_1);
+            // 
             // CrearPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,9 +265,9 @@ namespace CapaVisual
             this.panelTextoPost.ResumeLayout(false);
             this.panelImagenVideo.ResumeLayout(false);
             this.panelImagenVideo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).EndInit();
             this.menuCrearPost.ResumeLayout(false);
             this.menuCrearPost.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenVideo)).EndInit();
             this.ResumeLayout(false);
 
         }

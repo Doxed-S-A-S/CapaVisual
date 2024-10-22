@@ -24,8 +24,9 @@ namespace CapaVisual
         {
             InitializeComponent();
 
-            mainPage1.Show();
-            groupPage1.Hide();
+            loginPage21.Show();
+            
+            hideAllUsercontrols();
 
             panelSubmenuGrupos1.Hide();
             panelSubmenuGrupos2.Hide();
@@ -64,7 +65,23 @@ namespace CapaVisual
             groupPage1.Hide();
         }
 
-        private void btnGrupos_Click(object sender, EventArgs e)
+
+        private void hideAllSubpanels()
+        {
+            panelSubmenuGrupos1.Visible = false;
+            panelSubmenuGrupos2.Visible = false;
+            panelSubmenuEventos1.Visible = false;
+            panelSubmenuEventos2.Visible = false;
+            panelSubmenuActividades.Visible = false;
+        }
+
+        private void hideAllUsercontrols()
+        {
+            mainPage1.Visible = false;
+            groupPage1.Visible = false;
+            muroUsuario1.Visible = false;
+        }
+            private void btnGrupos_Click(object sender, EventArgs e)
         {
             if (panelSubmenuGrupos1.Visible == true)
             {
@@ -73,8 +90,10 @@ namespace CapaVisual
             }
             else
             {
+                hideAllSubpanels();
                 panelSubmenuGrupos1.Visible = true;
-                panelSubmenuGrupos2.Visible = false;
+                panelSubmenuGrupos1.BringToFront();
+                
             }
             
         }
@@ -88,8 +107,10 @@ namespace CapaVisual
             }
             else
             {
+                hideAllSubpanels();
                 panelSubmenuEventos1.Visible = true;
-                panelSubmenuEventos2.Visible = false;
+                panelSubmenuEventos1.BringToFront();
+                
             }
         }
 
@@ -101,7 +122,9 @@ namespace CapaVisual
             }
             else
             {
+                hideAllSubpanels();
                 panelSubmenuActividades.Visible = true;
+                panelSubmenuGrupos1.BringToFront();
             }
         }
 
@@ -196,8 +219,9 @@ namespace CapaVisual
             groupPage1.BannerGrupo = Image.FromStream(BannerGrupo_ms);
             groupPage1.DescripcionGrupo = g.descripcion;
 
+            hideAllUsercontrols();
             groupPage1.Visible = true;
-            mainPage1.Visible = false;
+            hideAllSubpanels();
             
             
             
@@ -212,8 +236,9 @@ namespace CapaVisual
             }
             else
             {
+                hideAllSubpanels();
                 panelSubmenuGrupos2.Visible = true;
-                panelSubmenuGrupos1.Visible = false;
+                
             }
         }
 
@@ -226,8 +251,9 @@ namespace CapaVisual
             }
             else
             {
+                hideAllSubpanels();
                 panelSubmenuEventos2.Visible = true;
-                panelSubmenuEventos1.Visible = false;
+                
             }
         }
 
@@ -245,6 +271,20 @@ namespace CapaVisual
                 mainPage1.AgregarCrearEvento();
             }
 
+        }
+
+        private void pictureBoxImagenPerfil_Click(object sender, EventArgs e)
+        {
+            hideAllUsercontrols();
+            hideAllSubpanels();
+            muroUsuario1.Visible = true;
+        }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            hideAllUsercontrols();
+            hideAllSubpanels();
+            mainPage1.Visible = true;
         }
     }
 }

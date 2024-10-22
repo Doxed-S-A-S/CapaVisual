@@ -138,7 +138,6 @@ namespace CapaVisual
 
         private void contenidoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            pboxImagenVideo.BackColor = Color.LightGray;
             panelTextoPost.Visible = true;
             panelImagenVideo.Visible = false;
         }
