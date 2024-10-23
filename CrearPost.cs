@@ -43,7 +43,6 @@ namespace CapaVisual
 
             request.AddFile("imagencita", url_imagen);
 
-
             request.AddParameter("url_contenido", url_contenido);
             request.AddParameter("tipo_contenido", tipo_contenido);
             request.AddParameter("contenido", contenido);
@@ -204,6 +203,7 @@ namespace CapaVisual
             }
         }
 
+        
         
     }
 }

@@ -41,7 +41,12 @@ namespace CapaVisual
             set { pictureBoxImagenPost.Image = value; }
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
 
-        // You can add more properties for icons (like, comment, share), etc.
+        }
+
+
+        
     }
 }

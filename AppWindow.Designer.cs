@@ -50,7 +50,6 @@ namespace CapaVisual
             this.muroUsuario1 = new CapaVisual.MuroUsuario();
             this.groupPage1 = new CapaVisual.GroupPage();
             this.mainPage1 = new CapaVisual.mainPage1();
-            this.loginPage21 = new CapaVisual.LoginPage2();
             this.panelCrearPost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.panelSubmenuGrupos1.SuspendLayout();
@@ -301,20 +300,12 @@ namespace CapaVisual
             this.mainPage1.Size = new System.Drawing.Size(1493, 642);
             this.mainPage1.TabIndex = 8;
             // 
-            // loginPage21
-            // 
-            this.loginPage21.Location = new System.Drawing.Point(0, 66);
-            this.loginPage21.Name = "loginPage21";
-            this.loginPage21.Size = new System.Drawing.Size(1493, 776);
-            this.loginPage21.TabIndex = 17;
-            // 
             // AppWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(175)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1499, 709);
-            this.Controls.Add(this.loginPage21);
             this.Controls.Add(this.muroUsuario1);
             this.Controls.Add(this.panelSubmenuEventos1);
             this.Controls.Add(this.panelSubmenuGrupos1);
@@ -361,7 +352,6 @@ namespace CapaVisual
         private System.Windows.Forms.Button btnVerMisEventos;
         private System.Windows.Forms.Button btnCrearEvento;
         private MuroUsuario muroUsuario1;
-        private LoginPage2 loginPage21;
     }
 }
 
