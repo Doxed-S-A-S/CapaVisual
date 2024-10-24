@@ -23,8 +23,9 @@ namespace CapaVisual
         public AppWindow()
         {
             InitializeComponent();
-            
             hideAllUsercontrols();
+
+            mainPage1.Visible = true;
 
             panelSubmenuGrupos1.Hide();
             panelSubmenuGrupos2.Hide();

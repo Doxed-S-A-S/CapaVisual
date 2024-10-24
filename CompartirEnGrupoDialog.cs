@@ -63,4 +63,5 @@ namespace CapaVisual
             int id_grupo = (int)btn.Tag;
             int id_post = 
         }*/
+    }
 }
