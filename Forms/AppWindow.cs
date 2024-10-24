@@ -267,5 +267,10 @@ namespace CapaVisual
             hideAllSubpanels();
             mainPage1.Visible = true;
         }
+
+        private void AppWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

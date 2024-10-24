@@ -37,9 +37,9 @@ namespace CapaVisual
             this.txtBoxDescripcionGrupo = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanelPostsGrupo = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNombreGrupo = new MaterialSkin.Controls.MaterialLabel();
             this.pboxImagenGrupo = new System.Windows.Forms.PictureBox();
             this.pboxBannerGrupo = new System.Windows.Forms.PictureBox();
-            this.lblNombreGrupo = new MaterialSkin.Controls.MaterialLabel();
             this.panelDerecho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -134,6 +134,17 @@ namespace CapaVisual
             this.panel1.Size = new System.Drawing.Size(952, 183);
             this.panel1.TabIndex = 16;
             // 
+            // lblNombreGrupo
+            // 
+            this.lblNombreGrupo.AutoSize = true;
+            this.lblNombreGrupo.Depth = 0;
+            this.lblNombreGrupo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblNombreGrupo.Location = new System.Drawing.Point(29, 147);
+            this.lblNombreGrupo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblNombreGrupo.Name = "lblNombreGrupo";
+            this.lblNombreGrupo.Size = new System.Drawing.Size(1, 0);
+            this.lblNombreGrupo.TabIndex = 2;
+            // 
             // pboxImagenGrupo
             // 
             this.pboxImagenGrupo.Location = new System.Drawing.Point(358, 50);
@@ -154,17 +165,6 @@ namespace CapaVisual
             this.pboxBannerGrupo.TabIndex = 0;
             this.pboxBannerGrupo.TabStop = false;
             // 
-            // lblNombreGrupo
-            // 
-            this.lblNombreGrupo.AutoSize = true;
-            this.lblNombreGrupo.Depth = 0;
-            this.lblNombreGrupo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNombreGrupo.Location = new System.Drawing.Point(29, 147);
-            this.lblNombreGrupo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblNombreGrupo.Name = "lblNombreGrupo";
-            this.lblNombreGrupo.Size = new System.Drawing.Size(1, 0);
-            this.lblNombreGrupo.TabIndex = 2;
-            // 
             // GroupPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,7 +175,7 @@ namespace CapaVisual
             this.Controls.Add(this.flowLayoutPanelPostsGrupo);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GroupPage";
-            this.Size = new System.Drawing.Size(967, 611);
+            this.Size = new System.Drawing.Size(1920, 823);
             this.panelDerecho.ResumeLayout(false);
             this.panelDerecho.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).EndInit();

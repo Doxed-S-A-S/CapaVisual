@@ -70,6 +70,7 @@ C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\CapaVisual.pdb
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\System.Buffers.dll
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\System.ValueTuple.dll
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CompartirEnGrupoDialog.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CrearEvento.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.LoginPage.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.AppWindow.resources
@@ -86,4 +87,3 @@ C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.CoreCompi
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.CopyComplete
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.exe
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.pdb
-C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CompartirEnGrupoDialog.resources

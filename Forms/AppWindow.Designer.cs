@@ -78,7 +78,7 @@ namespace CapaVisual
             this.panelCrearPost.Location = new System.Drawing.Point(3, 64);
             this.panelCrearPost.Margin = new System.Windows.Forms.Padding(2);
             this.panelCrearPost.Name = "panelCrearPost";
-            this.panelCrearPost.Size = new System.Drawing.Size(170, 642);
+            this.panelCrearPost.Size = new System.Drawing.Size(170, 817);
             this.panelCrearPost.TabIndex = 10;
             // 
             // pictureBoxImagenPerfil
@@ -274,6 +274,7 @@ namespace CapaVisual
             // 
             this.muroUsuario1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.muroUsuario1.Location = new System.Drawing.Point(173, 64);
+            this.muroUsuario1.Margin = new System.Windows.Forms.Padding(4);
             this.muroUsuario1.Name = "muroUsuario1";
             this.muroUsuario1.Size = new System.Drawing.Size(972, 611);
             this.muroUsuario1.TabIndex = 16;
@@ -283,12 +284,14 @@ namespace CapaVisual
             this.groupPage1.BannerGrupo = null;
             this.groupPage1.DescripcionGrupo = "";
             this.groupPage1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupPage1.IdGrupo = 0;
             this.groupPage1.ImagenGrupo = null;
             this.groupPage1.IntegrantesGrupo = null;
             this.groupPage1.Location = new System.Drawing.Point(1666, 64);
             this.groupPage1.Margin = new System.Windows.Forms.Padding(2);
             this.groupPage1.Name = "groupPage1";
-            this.groupPage1.Size = new System.Drawing.Size(967, 642);
+            this.groupPage1.NombreGrupo = "";
+            this.groupPage1.Size = new System.Drawing.Size(967, 817);
             this.groupPage1.TabIndex = 11;
             // 
             // mainPage1
@@ -297,7 +300,7 @@ namespace CapaVisual
             this.mainPage1.Location = new System.Drawing.Point(173, 64);
             this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
             this.mainPage1.Name = "mainPage1";
-            this.mainPage1.Size = new System.Drawing.Size(1493, 642);
+            this.mainPage1.Size = new System.Drawing.Size(1493, 817);
             this.mainPage1.TabIndex = 8;
             // 
             // AppWindow
@@ -305,7 +308,7 @@ namespace CapaVisual
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(175)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1499, 709);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.muroUsuario1);
             this.Controls.Add(this.panelSubmenuEventos1);
             this.Controls.Add(this.panelSubmenuGrupos1);
@@ -319,7 +322,10 @@ namespace CapaVisual
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(114)))), ((int)(((byte)(255)))));
             this.Name = "AppWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LinguaLink";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppWindow_FormClosed);
             this.panelCrearPost.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).EndInit();
             this.panelSubmenuGrupos1.ResumeLayout(false);
