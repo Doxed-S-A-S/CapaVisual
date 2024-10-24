@@ -25,24 +25,17 @@ namespace CapaVisual
             pboxImagenVideo.AllowDrop = true;
             pboxImagenVideo.SizeMode = PictureBoxSizeMode.Zoom;
 
-
             txtLinkCrearPost.Text = "Pegue el enlace aquí";
             txtLinkCrearPost.ForeColor = Color.Gray;
-
-            
         }
 
         private void crearPost(string url_contenido, string tipo_contenido, string contenido, string url_imagen, int id_cuenta)
         {
 
             RestClient client = new RestClient("http://localhost:44331/");
-
-
             RestRequest request = new RestRequest("ApiPost/post/crear/", Method.Post);
 
-
             request.AddFile("imagencita", url_imagen);
-
 
             request.AddParameter("url_contenido", url_contenido);
             request.AddParameter("tipo_contenido", tipo_contenido);
@@ -72,8 +65,6 @@ namespace CapaVisual
             mainPage.AgregarCrearPost();
 
         }
-
-        
 
         private string ObtenerTipoContenidoSeleccionado(ToolStripMenuItem btnTipoContenido)
         {
@@ -204,6 +195,7 @@ namespace CapaVisual
             }
         }
 
+        
         
     }
 }

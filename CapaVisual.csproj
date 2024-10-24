@@ -92,6 +92,12 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CompartirEnGrupoDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompartirEnGrupoDialog.Designer.cs">
+      <DependentUpon>CompartirEnGrupoDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="DTO\GrupoDesdeAPI.cs" />
     <Compile Include="DTO\PostDesdeAPI.cs" />
     <Compile Include="LoginPage.cs">
@@ -156,6 +162,9 @@
     <Compile Include="LoginPage2.Designer.cs">
       <DependentUpon>LoginPage2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CompartirEnGrupoDialog.resx">
+      <DependentUpon>CompartirEnGrupoDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearEvento.resx">
       <DependentUpon>CrearEvento.cs</DependentUpon>
     </EmbeddedResource>

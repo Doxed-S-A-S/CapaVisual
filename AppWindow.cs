@@ -23,10 +23,9 @@ namespace CapaVisual
         public AppWindow()
         {
             InitializeComponent();
-
-            loginPage21.Show();
-            
             hideAllUsercontrols();
+
+            mainPage1.Visible = true;
 
             panelSubmenuGrupos1.Hide();
             panelSubmenuGrupos2.Hide();
@@ -81,7 +80,7 @@ namespace CapaVisual
             groupPage1.Visible = false;
             muroUsuario1.Visible = false;
         }
-            private void btnGrupos_Click(object sender, EventArgs e)
+        private void btnGrupos_Click(object sender, EventArgs e)
         {
             if (panelSubmenuGrupos1.Visible == true)
             {
@@ -143,43 +142,24 @@ namespace CapaVisual
         private static GrupoDesdeAPI obtenerGrupoDesdeAPI(int id_grupo)
         {
             RestClient client = new RestClient("http://localhost:57063/");
-            // Corrige la URL para usar el id_grupo proporcionado
             RestRequest request = new RestRequest($"ApiGrupos/grupo/{id_grupo}", Method.Get);
             request.AddHeader("Accept", "application/json");
 
             RestResponse response = client.Execute(request);
 
-            // Verifica si la respuesta fue exitosa
             if (response.IsSuccessful)
             {
-                Console.WriteLine(response.Content); // Muestra el contenido para depuración
-                                                     // Corrige la deserialización
+                Console.WriteLine(response.Content); 
+                                                     
                 GrupoDesdeAPI grupo = JsonConvert.DeserializeObject<GrupoDesdeAPI>(response.Content);
                 return grupo;
             }
             else
             {
-                // Manejo de errores si la respuesta no fue exitosa
                 Console.WriteLine($"Error: {response.StatusCode} - {response.StatusDescription}");
-                return null; // O manejar el error según tu lógica
+                return null; 
             }
         }
-
-        /*private static GrupoDesdeAPI obtenerGrupoDesdeAPI(int id_grupo)
-        {
-            RestClient client = new RestClient("http://localhost:57063/");
-            RestRequest request = new RestRequest("ApiGrupos/grupos", Method.Get);
-            request.AddHeader("Accept", "application/json");
-            RestResponse response = client.Execute(request);
-
-            List<GrupoDesdeAPI> grupos;
-            grupos = JsonConvert.DeserializeObject<List<GrupoDesdeAPI>>(response.Content);
-
-            GrupoDesdeAPI grupoEncontrado = grupos.FirstOrDefault(grupo => grupo.id_grupo == id_grupo);
-            return grupoEncontrado;
-            
-        }*/
-
 
         private void generarBotonSubmenuGrupos(string nombreGrupo, int id_grupo)
         {
@@ -201,12 +181,12 @@ namespace CapaVisual
                
             }
         }
+        
         private void Button_Click(object sender, EventArgs e)
         {
-            
-
             Button btn = sender as Button;
             int id_grupo = (int)btn.Tag;
+
             GrupoDesdeAPI g = obtenerGrupoDesdeAPI(id_grupo);
 
             HttpClient client = new HttpClient();
@@ -215,15 +195,16 @@ namespace CapaVisual
             MemoryStream imagenGrupo_ms = new MemoryStream(imagenGrupo);
             MemoryStream BannerGrupo_ms = new MemoryStream(BannerGrupo);
 
+            groupPage1.NombreGrupo = g.nombre_grupo;
             groupPage1.ImagenGrupo = Image.FromStream(imagenGrupo_ms); // Asumiendo que tienes un método para manejar imágenes
             groupPage1.BannerGrupo = Image.FromStream(BannerGrupo_ms);
             groupPage1.DescripcionGrupo = g.descripcion;
+            groupPage1.IdGrupo = id_grupo;
 
             hideAllUsercontrols();
             groupPage1.Visible = true;
+            groupPage1.mostrarPostsDelGrupo();
             hideAllSubpanels();
-            
-            
             
         }
 

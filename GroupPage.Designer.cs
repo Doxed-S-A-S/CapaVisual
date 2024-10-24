@@ -31,19 +31,20 @@ namespace CapaVisual
         {
             this.divisorDerecho = new MaterialSkin.Controls.MaterialDivider();
             this.panelDerecho = new System.Windows.Forms.Panel();
+            this.dataGridIntegrantesGrupo = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxDescripcionGrupo = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanelPostsGrupo = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pboxImagenGrupo = new System.Windows.Forms.PictureBox();
             this.pboxBannerGrupo = new System.Windows.Forms.PictureBox();
-            this.txtBoxDescripcionGrupo = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridIntegrantesGrupo = new System.Windows.Forms.DataGridView();
+            this.lblNombreGrupo = new MaterialSkin.Controls.MaterialLabel();
             this.panelDerecho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenGrupo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBannerGrupo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).BeginInit();
             this.SuspendLayout();
             // 
             // divisorDerecho
@@ -61,6 +62,7 @@ namespace CapaVisual
             // panelDerecho
             // 
             this.panelDerecho.BackColor = System.Drawing.Color.LightGray;
+            this.panelDerecho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelDerecho.Controls.Add(this.dataGridIntegrantesGrupo);
             this.panelDerecho.Controls.Add(this.label2);
             this.panelDerecho.Controls.Add(this.label1);
@@ -71,10 +73,46 @@ namespace CapaVisual
             this.panelDerecho.Size = new System.Drawing.Size(150, 416);
             this.panelDerecho.TabIndex = 15;
             // 
+            // dataGridIntegrantesGrupo
+            // 
+            this.dataGridIntegrantesGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridIntegrantesGrupo.Location = new System.Drawing.Point(4, 150);
+            this.dataGridIntegrantesGrupo.Name = "dataGridIntegrantesGrupo";
+            this.dataGridIntegrantesGrupo.Size = new System.Drawing.Size(143, 150);
+            this.dataGridIntegrantesGrupo.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Integrantes grupo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Descripcion Grupo";
+            // 
+            // txtBoxDescripcionGrupo
+            // 
+            this.txtBoxDescripcionGrupo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtBoxDescripcionGrupo.Location = new System.Drawing.Point(3, 28);
+            this.txtBoxDescripcionGrupo.Name = "txtBoxDescripcionGrupo";
+            this.txtBoxDescripcionGrupo.Size = new System.Drawing.Size(144, 72);
+            this.txtBoxDescripcionGrupo.TabIndex = 0;
+            this.txtBoxDescripcionGrupo.Text = "";
+            // 
             // flowLayoutPanelPostsGrupo
             // 
             this.flowLayoutPanelPostsGrupo.AutoScroll = true;
             this.flowLayoutPanelPostsGrupo.BackColor = System.Drawing.Color.LightGray;
+            this.flowLayoutPanelPostsGrupo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanelPostsGrupo.ForeColor = System.Drawing.Color.Black;
             this.flowLayoutPanelPostsGrupo.Location = new System.Drawing.Point(13, 190);
             this.flowLayoutPanelPostsGrupo.Margin = new System.Windows.Forms.Padding(2);
@@ -86,6 +124,8 @@ namespace CapaVisual
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblNombreGrupo);
             this.panel1.Controls.Add(this.pboxImagenGrupo);
             this.panel1.Controls.Add(this.pboxBannerGrupo);
             this.panel1.Location = new System.Drawing.Point(13, 2);
@@ -100,7 +140,7 @@ namespace CapaVisual
             this.pboxImagenGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.pboxImagenGrupo.Name = "pboxImagenGrupo";
             this.pboxImagenGrupo.Size = new System.Drawing.Size(75, 81);
-            this.pboxImagenGrupo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxImagenGrupo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pboxImagenGrupo.TabIndex = 1;
             this.pboxImagenGrupo.TabStop = false;
             // 
@@ -110,43 +150,20 @@ namespace CapaVisual
             this.pboxBannerGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.pboxBannerGrupo.Name = "pboxBannerGrupo";
             this.pboxBannerGrupo.Size = new System.Drawing.Size(951, 182);
+            this.pboxBannerGrupo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxBannerGrupo.TabIndex = 0;
             this.pboxBannerGrupo.TabStop = false;
             // 
-            // txtBoxDescripcionGrupo
+            // lblNombreGrupo
             // 
-            this.txtBoxDescripcionGrupo.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtBoxDescripcionGrupo.Location = new System.Drawing.Point(3, 28);
-            this.txtBoxDescripcionGrupo.Name = "txtBoxDescripcionGrupo";
-            this.txtBoxDescripcionGrupo.Size = new System.Drawing.Size(144, 72);
-            this.txtBoxDescripcionGrupo.TabIndex = 0;
-            this.txtBoxDescripcionGrupo.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Descripcion Grupo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Integrantes grupo";
-            // 
-            // dataGridIntegrantesGrupo
-            // 
-            this.dataGridIntegrantesGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridIntegrantesGrupo.Location = new System.Drawing.Point(4, 150);
-            this.dataGridIntegrantesGrupo.Name = "dataGridIntegrantesGrupo";
-            this.dataGridIntegrantesGrupo.Size = new System.Drawing.Size(143, 150);
-            this.dataGridIntegrantesGrupo.TabIndex = 3;
+            this.lblNombreGrupo.AutoSize = true;
+            this.lblNombreGrupo.Depth = 0;
+            this.lblNombreGrupo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblNombreGrupo.Location = new System.Drawing.Point(29, 147);
+            this.lblNombreGrupo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblNombreGrupo.Name = "lblNombreGrupo";
+            this.lblNombreGrupo.Size = new System.Drawing.Size(1, 0);
+            this.lblNombreGrupo.TabIndex = 2;
             // 
             // GroupPage
             // 
@@ -161,10 +178,11 @@ namespace CapaVisual
             this.Size = new System.Drawing.Size(967, 611);
             this.panelDerecho.ResumeLayout(false);
             this.panelDerecho.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenGrupo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBannerGrupo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +198,6 @@ namespace CapaVisual
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox txtBoxDescripcionGrupo;
+        private MaterialSkin.Controls.MaterialLabel lblNombreGrupo;
     }
 }

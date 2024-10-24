@@ -134,7 +134,7 @@ namespace CapaVisual
 
         public void EliminarCrearPost()
         {
-            flowLayoutCrearPosts.Controls.Remove(crearPost1);
+            flowLayoutCrearPosts.Controls.Clear();
         }
 
         public void AgregarCrearPost()
