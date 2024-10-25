@@ -35,9 +35,6 @@ namespace CapaVisual
 
             cargarGruposEnPanelGrupos();
 
-            mainPage1.Dock = DockStyle.Fill;
-            groupPage1.Dock = DockStyle.Fill;
-
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;

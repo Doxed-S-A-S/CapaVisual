@@ -41,10 +41,10 @@ namespace CapaVisual
             // 
             this.panelDerecho.BackColor = System.Drawing.Color.LightGray;
             this.panelDerecho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDerecho.Location = new System.Drawing.Point(1433, 0);
+            this.panelDerecho.Location = new System.Drawing.Point(1037, 2);
             this.panelDerecho.Margin = new System.Windows.Forms.Padding(2);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(240, 1013);
+            this.panelDerecho.Size = new System.Drawing.Size(214, 1009);
             this.panelDerecho.TabIndex = 10;
             // 
             // divisorDerecho
@@ -55,7 +55,7 @@ namespace CapaVisual
             this.divisorDerecho.Margin = new System.Windows.Forms.Padding(2);
             this.divisorDerecho.MouseState = MaterialSkin.MouseState.HOVER;
             this.divisorDerecho.Name = "divisorDerecho";
-            this.divisorDerecho.Size = new System.Drawing.Size(10, 605);
+            this.divisorDerecho.Size = new System.Drawing.Size(10, 1011);
             this.divisorDerecho.TabIndex = 7;
             this.divisorDerecho.Text = "materialDivider1";
             // 
@@ -65,16 +65,17 @@ namespace CapaVisual
             this.flowLayoutPanelPosts.BackColor = System.Drawing.Color.LightGray;
             this.flowLayoutPanelPosts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanelPosts.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutPanelPosts.Location = new System.Drawing.Point(16, 160);
+            this.flowLayoutPanelPosts.Location = new System.Drawing.Point(16, 159);
             this.flowLayoutPanelPosts.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelPosts.Name = "flowLayoutPanelPosts";
-            this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(235, 0, 250, 0);
-            this.flowLayoutPanelPosts.Size = new System.Drawing.Size(1413, 1013);
+            this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(235, 0, 50, 0);
+            this.flowLayoutPanelPosts.Size = new System.Drawing.Size(1017, 852);
             this.flowLayoutPanelPosts.TabIndex = 8;
             this.flowLayoutPanelPosts.Scroll += new System.Windows.Forms.ScrollEventHandler(this.flowLayoutPanelPosts_Scroll);
             // 
             // flowLayoutCrearPosts
             // 
+            this.flowLayoutCrearPosts.AutoSize = true;
             this.flowLayoutCrearPosts.BackColor = System.Drawing.Color.LightGray;
             this.flowLayoutCrearPosts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutCrearPosts.Controls.Add(this.crearPost1);
@@ -83,8 +84,9 @@ namespace CapaVisual
             this.flowLayoutCrearPosts.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutCrearPosts.Name = "flowLayoutCrearPosts";
             this.flowLayoutCrearPosts.Padding = new System.Windows.Forms.Padding(250, 0, 0, 0);
-            this.flowLayoutCrearPosts.Size = new System.Drawing.Size(1413, 153);
+            this.flowLayoutCrearPosts.Size = new System.Drawing.Size(1017, 153);
             this.flowLayoutCrearPosts.TabIndex = 9;
+            this.flowLayoutCrearPosts.WrapContents = false;
             // 
             // crearPost1
             // 
@@ -104,9 +106,10 @@ namespace CapaVisual
             this.Controls.Add(this.flowLayoutPanelPosts);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "mainPage1";
-            this.Size = new System.Drawing.Size(1674, 1013);
+            this.Size = new System.Drawing.Size(1254, 1013);
             this.flowLayoutCrearPosts.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

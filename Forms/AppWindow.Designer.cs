@@ -47,9 +47,9 @@ namespace CapaVisual
             this.btnEliminarMisEvento = new System.Windows.Forms.Button();
             this.btnVerMisEventos = new System.Windows.Forms.Button();
             this.btnCrearEvento = new System.Windows.Forms.Button();
-            this.muroUsuario1 = new CapaVisual.MuroUsuario();
             this.groupPage1 = new CapaVisual.GroupPage();
             this.mainPage1 = new CapaVisual.mainPage1();
+            this.muroUsuario1 = new CapaVisual.MuroUsuario();
             this.panelCrearPost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.panelSubmenuGrupos1.SuspendLayout();
@@ -270,38 +270,36 @@ namespace CapaVisual
             this.btnCrearEvento.UseVisualStyleBackColor = true;
             this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
             // 
-            // muroUsuario1
-            // 
-            this.muroUsuario1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.muroUsuario1.Location = new System.Drawing.Point(257, 64);
-            this.muroUsuario1.Margin = new System.Windows.Forms.Padding(4);
-            this.muroUsuario1.Name = "muroUsuario1";
-            this.muroUsuario1.Size = new System.Drawing.Size(972, 611);
-            this.muroUsuario1.TabIndex = 16;
-            // 
             // groupPage1
             // 
             this.groupPage1.BannerGrupo = null;
             this.groupPage1.DescripcionGrupo = "";
-            this.groupPage1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupPage1.IdGrupo = 0;
             this.groupPage1.ImagenGrupo = null;
             this.groupPage1.IntegrantesGrupo = null;
-            this.groupPage1.Location = new System.Drawing.Point(1736, 64);
+            this.groupPage1.Location = new System.Drawing.Point(243, 64);
             this.groupPage1.Margin = new System.Windows.Forms.Padding(2);
             this.groupPage1.Name = "groupPage1";
             this.groupPage1.NombreGrupo = "";
-            this.groupPage1.Size = new System.Drawing.Size(967, 1013);
+            this.groupPage1.Size = new System.Drawing.Size(1672, 1013);
             this.groupPage1.TabIndex = 11;
             // 
             // mainPage1
             // 
-            this.mainPage1.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPage1.Location = new System.Drawing.Point(243, 64);
             this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
             this.mainPage1.Name = "mainPage1";
-            this.mainPage1.Size = new System.Drawing.Size(1493, 1013);
+            this.mainPage1.Size = new System.Drawing.Size(1672, 1013);
             this.mainPage1.TabIndex = 8;
+            // 
+            // muroUsuario1
+            // 
+            this.muroUsuario1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.muroUsuario1.Location = new System.Drawing.Point(243, 64);
+            this.muroUsuario1.Margin = new System.Windows.Forms.Padding(4);
+            this.muroUsuario1.Name = "muroUsuario1";
+            this.muroUsuario1.Size = new System.Drawing.Size(1672, 1009);
+            this.muroUsuario1.TabIndex = 16;
             // 
             // AppWindow
             // 
@@ -309,14 +307,14 @@ namespace CapaVisual
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(175)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.muroUsuario1);
             this.Controls.Add(this.panelSubmenuEventos1);
             this.Controls.Add(this.panelSubmenuGrupos1);
             this.Controls.Add(this.panelSubmenuActividades);
             this.Controls.Add(this.panelSubmenuEventos2);
             this.Controls.Add(this.panelSubmenuGrupos2);
-            this.Controls.Add(this.groupPage1);
+            this.Controls.Add(this.muroUsuario1);
             this.Controls.Add(this.mainPage1);
+            this.Controls.Add(this.groupPage1);
             this.Controls.Add(this.txtBarraBusqueda);
             this.Controls.Add(this.panelCrearPost);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);

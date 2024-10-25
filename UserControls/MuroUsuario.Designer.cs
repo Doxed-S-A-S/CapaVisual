@@ -29,7 +29,6 @@ namespace CapaVisual
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanelPosts = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -53,19 +52,6 @@ namespace CapaVisual
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanelPosts
-            // 
-            this.flowLayoutPanelPosts.AutoScroll = true;
-            this.flowLayoutPanelPosts.BackColor = System.Drawing.Color.LightGray;
-            this.flowLayoutPanelPosts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelPosts.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutPanelPosts.Location = new System.Drawing.Point(236, 211);
-            this.flowLayoutPanelPosts.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanelPosts.Name = "flowLayoutPanelPosts";
-            this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(78, 0, 52, 0);
-            this.flowLayoutPanelPosts.Size = new System.Drawing.Size(734, 398);
-            this.flowLayoutPanelPosts.TabIndex = 9;
             // 
             // panel1
             // 
@@ -91,9 +77,9 @@ namespace CapaVisual
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CapaVisual.Properties.Resources.mati;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1659, 178);
+            this.pictureBox3.Size = new System.Drawing.Size(1248, 178);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -105,7 +91,7 @@ namespace CapaVisual
             this.tabControl1.Location = new System.Drawing.Point(249, 188);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1425, 825);
+            this.tabControl1.Size = new System.Drawing.Size(1005, 825);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -114,7 +100,7 @@ namespace CapaVisual
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1417, 799);
+            this.tabPage1.Size = new System.Drawing.Size(997, 799);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -123,9 +109,9 @@ namespace CapaVisual
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1417, 774);
+            this.panel2.Size = new System.Drawing.Size(994, 797);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox2
@@ -143,7 +129,7 @@ namespace CapaVisual
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(724, 374);
+            this.tabPage2.Size = new System.Drawing.Size(1417, 799);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -201,9 +187,8 @@ namespace CapaVisual
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanelPosts);
             this.Name = "MuroUsuario";
-            this.Size = new System.Drawing.Size(1674, 1013);
+            this.Size = new System.Drawing.Size(1254, 1013);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -219,8 +204,6 @@ namespace CapaVisual
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPosts;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
