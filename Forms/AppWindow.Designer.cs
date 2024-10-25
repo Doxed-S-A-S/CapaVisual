@@ -78,14 +78,14 @@ namespace CapaVisual
             this.panelCrearPost.Location = new System.Drawing.Point(3, 64);
             this.panelCrearPost.Margin = new System.Windows.Forms.Padding(2);
             this.panelCrearPost.Name = "panelCrearPost";
-            this.panelCrearPost.Size = new System.Drawing.Size(170, 817);
+            this.panelCrearPost.Size = new System.Drawing.Size(240, 1013);
             this.panelCrearPost.TabIndex = 10;
             // 
             // pictureBoxImagenPerfil
             // 
             this.pictureBoxImagenPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxImagenPerfil.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(65, 72);
+            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(97, 74);
             this.pictureBoxImagenPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
             this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(40, 44);
@@ -103,7 +103,7 @@ namespace CapaVisual
             this.btnActividades.Location = new System.Drawing.Point(3, 270);
             this.btnActividades.Margin = new System.Windows.Forms.Padding(2);
             this.btnActividades.Name = "btnActividades";
-            this.btnActividades.Size = new System.Drawing.Size(162, 32);
+            this.btnActividades.Size = new System.Drawing.Size(232, 32);
             this.btnActividades.TabIndex = 3;
             this.btnActividades.Text = "Actividades";
             this.btnActividades.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@ namespace CapaVisual
             this.btnEventos.Location = new System.Drawing.Point(3, 232);
             this.btnEventos.Margin = new System.Windows.Forms.Padding(2);
             this.btnEventos.Name = "btnEventos";
-            this.btnEventos.Size = new System.Drawing.Size(162, 32);
+            this.btnEventos.Size = new System.Drawing.Size(232, 32);
             this.btnEventos.TabIndex = 2;
             this.btnEventos.Text = "Eventos";
             this.btnEventos.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@ namespace CapaVisual
             this.btnGrupos.Location = new System.Drawing.Point(3, 195);
             this.btnGrupos.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrupos.Name = "btnGrupos";
-            this.btnGrupos.Size = new System.Drawing.Size(162, 32);
+            this.btnGrupos.Size = new System.Drawing.Size(232, 32);
             this.btnGrupos.TabIndex = 1;
             this.btnGrupos.Text = "Grupos";
             this.btnGrupos.UseVisualStyleBackColor = false;
@@ -148,7 +148,7 @@ namespace CapaVisual
             this.btnPrincipal.Location = new System.Drawing.Point(3, 158);
             this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(162, 32);
+            this.btnPrincipal.Size = new System.Drawing.Size(232, 32);
             this.btnPrincipal.TabIndex = 0;
             this.btnPrincipal.Text = "Principal";
             this.btnPrincipal.UseVisualStyleBackColor = false;
@@ -158,7 +158,7 @@ namespace CapaVisual
             // 
             this.panelSubmenuGrupos2.AutoScroll = true;
             this.panelSubmenuGrupos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSubmenuGrupos2.Location = new System.Drawing.Point(191, 256);
+            this.panelSubmenuGrupos2.Location = new System.Drawing.Point(257, 256);
             this.panelSubmenuGrupos2.Name = "panelSubmenuGrupos2";
             this.panelSubmenuGrupos2.Size = new System.Drawing.Size(200, 281);
             this.panelSubmenuGrupos2.TabIndex = 12;
@@ -167,7 +167,7 @@ namespace CapaVisual
             // 
             this.panelSubmenuEventos2.AutoScroll = true;
             this.panelSubmenuEventos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSubmenuEventos2.Location = new System.Drawing.Point(191, 294);
+            this.panelSubmenuEventos2.Location = new System.Drawing.Point(257, 294);
             this.panelSubmenuEventos2.Name = "panelSubmenuEventos2";
             this.panelSubmenuEventos2.Size = new System.Drawing.Size(200, 281);
             this.panelSubmenuEventos2.TabIndex = 13;
@@ -176,7 +176,7 @@ namespace CapaVisual
             // 
             this.panelSubmenuActividades.AutoScroll = true;
             this.panelSubmenuActividades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSubmenuActividades.Location = new System.Drawing.Point(191, 334);
+            this.panelSubmenuActividades.Location = new System.Drawing.Point(257, 334);
             this.panelSubmenuActividades.Name = "panelSubmenuActividades";
             this.panelSubmenuActividades.Size = new System.Drawing.Size(200, 281);
             this.panelSubmenuActividades.TabIndex = 14;
@@ -189,7 +189,7 @@ namespace CapaVisual
             this.panelSubmenuGrupos1.Controls.Add(this.btnEliminarGrupo);
             this.panelSubmenuGrupos1.Controls.Add(this.btnVerMisGrupos);
             this.panelSubmenuGrupos1.Controls.Add(this.btnCrearGrupo);
-            this.panelSubmenuGrupos1.Location = new System.Drawing.Point(192, 256);
+            this.panelSubmenuGrupos1.Location = new System.Drawing.Point(257, 256);
             this.panelSubmenuGrupos1.Name = "panelSubmenuGrupos1";
             this.panelSubmenuGrupos1.Size = new System.Drawing.Size(170, 110);
             this.panelSubmenuGrupos1.TabIndex = 13;
@@ -233,7 +233,7 @@ namespace CapaVisual
             this.panelSubmenuEventos1.Controls.Add(this.btnEliminarMisEvento);
             this.panelSubmenuEventos1.Controls.Add(this.btnVerMisEventos);
             this.panelSubmenuEventos1.Controls.Add(this.btnCrearEvento);
-            this.panelSubmenuEventos1.Location = new System.Drawing.Point(192, 296);
+            this.panelSubmenuEventos1.Location = new System.Drawing.Point(257, 296);
             this.panelSubmenuEventos1.Name = "panelSubmenuEventos1";
             this.panelSubmenuEventos1.Size = new System.Drawing.Size(170, 110);
             this.panelSubmenuEventos1.TabIndex = 15;
@@ -273,7 +273,7 @@ namespace CapaVisual
             // muroUsuario1
             // 
             this.muroUsuario1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.muroUsuario1.Location = new System.Drawing.Point(173, 64);
+            this.muroUsuario1.Location = new System.Drawing.Point(257, 64);
             this.muroUsuario1.Margin = new System.Windows.Forms.Padding(4);
             this.muroUsuario1.Name = "muroUsuario1";
             this.muroUsuario1.Size = new System.Drawing.Size(972, 611);
@@ -287,20 +287,20 @@ namespace CapaVisual
             this.groupPage1.IdGrupo = 0;
             this.groupPage1.ImagenGrupo = null;
             this.groupPage1.IntegrantesGrupo = null;
-            this.groupPage1.Location = new System.Drawing.Point(1666, 64);
+            this.groupPage1.Location = new System.Drawing.Point(1736, 64);
             this.groupPage1.Margin = new System.Windows.Forms.Padding(2);
             this.groupPage1.Name = "groupPage1";
             this.groupPage1.NombreGrupo = "";
-            this.groupPage1.Size = new System.Drawing.Size(967, 817);
+            this.groupPage1.Size = new System.Drawing.Size(967, 1013);
             this.groupPage1.TabIndex = 11;
             // 
             // mainPage1
             // 
             this.mainPage1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mainPage1.Location = new System.Drawing.Point(173, 64);
+            this.mainPage1.Location = new System.Drawing.Point(243, 64);
             this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
             this.mainPage1.Name = "mainPage1";
-            this.mainPage1.Size = new System.Drawing.Size(1493, 817);
+            this.mainPage1.Size = new System.Drawing.Size(1493, 1013);
             this.mainPage1.TabIndex = 8;
             // 
             // AppWindow
@@ -308,7 +308,7 @@ namespace CapaVisual
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(175)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.muroUsuario1);
             this.Controls.Add(this.panelSubmenuEventos1);
             this.Controls.Add(this.panelSubmenuGrupos1);

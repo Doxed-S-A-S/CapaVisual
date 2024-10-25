@@ -84,6 +84,7 @@ namespace CapaVisual
         {
             if (panelSubmenuGrupos1.Visible == true)
             {
+                panelSubmenuGrupos1.BringToFront();
                 panelSubmenuGrupos1.Visible = false;
                 panelSubmenuGrupos2.Visible = false;
             }
@@ -101,6 +102,7 @@ namespace CapaVisual
         {
             if (panelSubmenuEventos1.Visible == true)
             {
+                panelSubmenuEventos1.BringToFront();
                 panelSubmenuEventos1.Visible = false;
                 panelSubmenuEventos2.Visible = false;
             }
@@ -117,6 +119,7 @@ namespace CapaVisual
         {
             if (panelSubmenuActividades.Visible == true)
             {
+                panelSubmenuActividades.BringToFront(); 
                 panelSubmenuActividades.Visible = false;
             }
             else

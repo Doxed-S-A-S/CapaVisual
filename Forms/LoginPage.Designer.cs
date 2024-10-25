@@ -48,11 +48,11 @@ namespace CapaVisual
             this.materialCard1.Controls.Add(this.btnInicio);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(484, 320);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard1.Location = new System.Drawing.Point(716, 452);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(502, 317);
             this.materialCard1.TabIndex = 0;
             // 
@@ -139,7 +139,7 @@ namespace CapaVisual
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaVisual.Properties.Resources.LiguaLinkWite;
-            this.pictureBox1.Location = new System.Drawing.Point(567, 107);
+            this.pictureBox1.Location = new System.Drawing.Point(799, 239);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(326, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -151,7 +151,7 @@ namespace CapaVisual
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialCard1);
             this.Name = "LoginPage";
