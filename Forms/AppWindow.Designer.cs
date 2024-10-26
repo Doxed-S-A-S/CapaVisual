@@ -161,7 +161,7 @@ namespace CapaVisual
             this.panelSubmenuGrupos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSubmenuGrupos2.Location = new System.Drawing.Point(257, 256);
             this.panelSubmenuGrupos2.Name = "panelSubmenuGrupos2";
-            this.panelSubmenuGrupos2.Size = new System.Drawing.Size(200, 281);
+            this.panelSubmenuGrupos2.Size = new System.Drawing.Size(170, 281);
             this.panelSubmenuGrupos2.TabIndex = 12;
             // 
             // panelSubmenuEventos2
@@ -170,7 +170,7 @@ namespace CapaVisual
             this.panelSubmenuEventos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSubmenuEventos2.Location = new System.Drawing.Point(257, 294);
             this.panelSubmenuEventos2.Name = "panelSubmenuEventos2";
-            this.panelSubmenuEventos2.Size = new System.Drawing.Size(200, 281);
+            this.panelSubmenuEventos2.Size = new System.Drawing.Size(170, 281);
             this.panelSubmenuEventos2.TabIndex = 13;
             // 
             // panelSubmenuActividades
@@ -179,7 +179,7 @@ namespace CapaVisual
             this.panelSubmenuActividades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSubmenuActividades.Location = new System.Drawing.Point(257, 334);
             this.panelSubmenuActividades.Name = "panelSubmenuActividades";
-            this.panelSubmenuActividades.Size = new System.Drawing.Size(200, 281);
+            this.panelSubmenuActividades.Size = new System.Drawing.Size(170, 281);
             this.panelSubmenuActividades.TabIndex = 14;
             // 
             // panelSubmenuGrupos1
@@ -192,7 +192,7 @@ namespace CapaVisual
             this.panelSubmenuGrupos1.Controls.Add(this.btnCrearGrupo);
             this.panelSubmenuGrupos1.Location = new System.Drawing.Point(257, 256);
             this.panelSubmenuGrupos1.Name = "panelSubmenuGrupos1";
-            this.panelSubmenuGrupos1.Size = new System.Drawing.Size(170, 110);
+            this.panelSubmenuGrupos1.Size = new System.Drawing.Size(170, 296);
             this.panelSubmenuGrupos1.TabIndex = 13;
             // 
             // btnEliminarGrupo
@@ -305,7 +305,7 @@ namespace CapaVisual
             // 
             // interfazCrearGrupo1
             // 
-            this.interfazCrearGrupo1.Location = new System.Drawing.Point(463, 256);
+            this.interfazCrearGrupo1.Location = new System.Drawing.Point(257, 256);
             this.interfazCrearGrupo1.Name = "interfazCrearGrupo1";
             this.interfazCrearGrupo1.Size = new System.Drawing.Size(661, 696);
             this.interfazCrearGrupo1.TabIndex = 17;

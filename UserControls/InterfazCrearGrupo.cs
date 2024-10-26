@@ -19,8 +19,9 @@ namespace CapaVisual
             InitializeComponent();
         }
 
-        public static void crearGrupo(int id_cuenta, string nombre_grupo, string descripcion, Boolean privacidad, string url_imagen,string imagen_banner)
+        public static void crearGrupo(int id_cuenta, string nombre_grupo, string descripcion, Boolean privacidad, string url_imagen, string imagen_banner)
         {
+
             RestClient client = new RestClient("http://localhost:57063/");
             RestRequest request = new RestRequest($"/ApiGrupos/grupo/crear/{id_cuenta}", Method.Post);
 
@@ -38,17 +39,43 @@ namespace CapaVisual
             }
             else
             {
-
                 MessageBox.Show($"Error al crear el Grupo: {response.StatusCode} - {response.ErrorMessage}");
                 Console.Write(response.ErrorMessage);
-                
             }
-        }
-        private void btnCrearGrupo_Click(object sender, EventArgs e)
-        {
-            crearGrupo(1, txtNombreGrupo.Text, txtDescripcionGrupo.Text, chkBoxPrivacidadGrupoNO.Checked, pboxImagenPerfilGrupo.ImageLocation, pboxImagenBannerGrupo.ImageLocation);
+
+
         }
 
+        private bool ValidarCamposGrupo()
+        {
+            return !string.IsNullOrWhiteSpace(txtNombreGrupo.Text) &&
+                   !string.IsNullOrWhiteSpace(txtDescripcionGrupo.Text) &&
+                   pboxImagenPerfilGrupo.ImageLocation != null &&
+                   pboxImagenBannerGrupo.ImageLocation != null;
+        }
+
+        private void btnCrearGrupo_Click(object sender, EventArgs e)
+        {
+            if (ValidarCamposGrupo())
+            {
+                crearGrupo(1, txtNombreGrupo.Text, txtDescripcionGrupo.Text, chkBoxPrivacidadGrupoNO.Checked, pboxImagenPerfilGrupo.ImageLocation, pboxImagenBannerGrupo.ImageLocation);
+                this.Hide();
+                limpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, completa todos los campos obligatorios.");
+            }
+        }
+        public void limpiarCampos()
+        {
+            txtDescripcionGrupo.Clear();
+            txtNombreGrupo.Clear();
+            pboxImagenPerfilGrupo.Image = null;
+            pboxImagenBannerGrupo.Image = null;
+            chkBoxPrivacidadGrupoNO.Checked = false;
+            chkBoxPrivacidadGrupoSI.Checked = false;
+        }
         private void btnImagenPerfilGrupo_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -65,6 +92,12 @@ namespace CapaVisual
             dialog.ShowDialog();
             pboxImagenBannerGrupo.Image = Image.FromFile(dialog.FileName);
             pboxImagenBannerGrupo.ImageLocation = dialog.FileName;
+        }
+
+        private void btnVolverCrearGrupo_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+            this.Hide();
         }
     }
 }

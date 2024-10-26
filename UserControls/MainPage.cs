@@ -49,7 +49,7 @@ namespace CapaVisual
             string content = response.Content.Trim('"');
             return content;
         }
-
+        
         private void mostrarPostsIniciales()
         {
             List<PostDesdeAPI> posts = obtenerPostDesdeAPI();

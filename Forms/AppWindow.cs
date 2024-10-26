@@ -49,21 +49,16 @@ namespace CapaVisual
                 );
 
         }
-
         public void ShowGroupPage()
         {
             mainPage1.Hide();
             groupPage1.Show();
         }
-
-
         public void ShowMainPage()
         {
             mainPage1.Show();
             groupPage1.Hide();
         }
-
-
         private void hideAllSubpanels()
         {
             panelSubmenuGrupos1.Visible = false;
@@ -72,7 +67,6 @@ namespace CapaVisual
             panelSubmenuEventos2.Visible = false;
             panelSubmenuActividades.Visible = false;
         }
-
         private void hideAllUsercontrols()
         {
             mainPage1.Visible = false;
@@ -110,7 +104,6 @@ namespace CapaVisual
                 
             }
         }
-
         private void btnActividades_Click(object sender, EventArgs e)
         {
             if (panelSubmenuActividades.Visible == true)
@@ -124,6 +117,72 @@ namespace CapaVisual
                 panelSubmenuActividades.Visible = true;
                 panelSubmenuGrupos1.BringToFront();
             }
+        }
+        private void btnVerMisGrupos_Click(object sender, EventArgs e)
+        {
+            if (panelSubmenuGrupos2.Visible == true)
+            {
+                panelSubmenuGrupos2.Visible = false;
+                panelSubmenuGrupos1.Visible = false;
+            }
+            else
+            {
+                hideAllSubpanels();
+                panelSubmenuGrupos2.Visible = true;
+
+            }
+        }
+        private void btnVerMisEventos_Click(object sender, EventArgs e)
+        {
+            if (panelSubmenuEventos2.Visible == true)
+            {
+                panelSubmenuEventos2.Visible = false;
+                panelSubmenuEventos1.Visible = false;
+            }
+            else
+            {
+                hideAllSubpanels();
+                panelSubmenuEventos2.Visible = true;
+
+            }
+        }
+        private void btnCrearEvento_Click(object sender, EventArgs e)
+        {
+            panelSubmenuEventos2.Visible = false;
+            panelSubmenuEventos1.Visible = false;
+            if (mainPage1.Visible)
+            {
+                mainPage1.EliminarCrearPost();
+                mainPage1.AgregarCrearEvento();
+            }
+            if (groupPage1.Visible)
+            {
+                mainPage1.EliminarCrearPost();
+                mainPage1.AgregarCrearEvento();
+            }
+
+        }
+        private void pictureBoxImagenPerfil_Click(object sender, EventArgs e)
+        {
+            hideAllUsercontrols();
+            hideAllSubpanels();
+            muroUsuario1.Visible = true;
+        }
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            hideAllUsercontrols();
+            hideAllSubpanels();
+            mainPage1.Visible = true;
+        }
+        private void AppWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+        private void btnCrearGrupo_Click(object sender, EventArgs e)
+        {
+            hideAllSubpanels();
+            interfazCrearGrupo1.Show();
+            interfazCrearGrupo1.BringToFront();
         }
 
         private static List<GrupoDesdeAPI> obtenerGruposDesdeAPI()
@@ -207,75 +266,6 @@ namespace CapaVisual
             
         }
 
-        private void btnVerMisGrupos_Click(object sender, EventArgs e)
-        {
-            if (panelSubmenuGrupos2.Visible == true)
-            {
-                panelSubmenuGrupos2.Visible = false;
-                panelSubmenuGrupos1.Visible = false;
-            }
-            else
-            {
-                hideAllSubpanels();
-                panelSubmenuGrupos2.Visible = true;
-                
-            }
-        }
-
-        private void btnVerMisEventos_Click(object sender, EventArgs e)
-        {
-            if (panelSubmenuEventos2.Visible == true)
-            {
-                panelSubmenuEventos2.Visible = false;
-                panelSubmenuEventos1.Visible = false;
-            }
-            else
-            {
-                hideAllSubpanels();
-                panelSubmenuEventos2.Visible = true;
-                
-            }
-        }
-
-        private void btnCrearEvento_Click(object sender, EventArgs e)
-        {
-            panelSubmenuEventos2.Visible = false;
-            panelSubmenuEventos1.Visible = false;
-            if (mainPage1.Visible) {
-                mainPage1.EliminarCrearPost();
-                mainPage1.AgregarCrearEvento();
-            }
-            if (groupPage1.Visible)
-            {
-                mainPage1.EliminarCrearPost();
-                mainPage1.AgregarCrearEvento();
-            }
-
-        }
-
-        private void pictureBoxImagenPerfil_Click(object sender, EventArgs e)
-        {
-            hideAllUsercontrols();
-            hideAllSubpanels();
-            muroUsuario1.Visible = true;
-        }
-
-        private void btnPrincipal_Click(object sender, EventArgs e)
-        {
-            hideAllUsercontrols();
-            hideAllSubpanels();
-            mainPage1.Visible = true;
-        }
-
-        private void AppWindow_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnCrearGrupo_Click(object sender, EventArgs e)
-        {
-            interfazCrearGrupo1.Show();
-            interfazCrearGrupo1.BringToFront();
-        }
+        
     }
 }
