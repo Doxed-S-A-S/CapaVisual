@@ -32,11 +32,10 @@ namespace CapaVisual
             panelSubmenuEventos1.Hide();
             panelSubmenuEventos2.Hide();
             panelSubmenuActividades.Hide();
+            interfazCrearGrupo1.Hide();
+
 
             cargarGruposEnPanelGrupos();
-
-            mainPage1.Dock = DockStyle.Fill;
-            groupPage1.Dock = DockStyle.Fill;
 
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
@@ -84,6 +83,7 @@ namespace CapaVisual
         {
             if (panelSubmenuGrupos1.Visible == true)
             {
+                panelSubmenuGrupos1.BringToFront();
                 panelSubmenuGrupos1.Visible = false;
                 panelSubmenuGrupos2.Visible = false;
             }
@@ -92,15 +92,13 @@ namespace CapaVisual
                 hideAllSubpanels();
                 panelSubmenuGrupos1.Visible = true;
                 panelSubmenuGrupos1.BringToFront();
-                
             }
-            
         }
-
         private void btnEventos_Click(object sender, EventArgs e)
         {
             if (panelSubmenuEventos1.Visible == true)
             {
+                panelSubmenuEventos1.BringToFront();
                 panelSubmenuEventos1.Visible = false;
                 panelSubmenuEventos2.Visible = false;
             }
@@ -117,6 +115,7 @@ namespace CapaVisual
         {
             if (panelSubmenuActividades.Visible == true)
             {
+                panelSubmenuActividades.BringToFront(); 
                 panelSubmenuActividades.Visible = false;
             }
             else
@@ -266,6 +265,17 @@ namespace CapaVisual
             hideAllUsercontrols();
             hideAllSubpanels();
             mainPage1.Visible = true;
+        }
+
+        private void AppWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCrearGrupo_Click(object sender, EventArgs e)
+        {
+            interfazCrearGrupo1.Show();
+            interfazCrearGrupo1.BringToFront();
         }
     }
 }

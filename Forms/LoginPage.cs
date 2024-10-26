@@ -20,6 +20,7 @@ namespace CapaVisual
         public LoginPage()
         {
             InitializeComponent();
+            this.Size = new Size(1600, 900);
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
@@ -120,7 +121,14 @@ namespace CapaVisual
                 txtPassword.Focus();
                 return;
             }
-            this.Hide();
+
+            if(txtEmail.Text == "admin" && txtPassword.Text == "admin")
+            {
+                this.Hide();
+                AppWindow app = new AppWindow();
+                app.Show();
+            }
+            
         }
     }
 }

@@ -48,7 +48,7 @@ namespace CapaVisual
             this.materialCard1.Controls.Add(this.btnInicio);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(484, 320);
+            this.materialCard1.Location = new System.Drawing.Point(716, 452);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
@@ -61,7 +61,7 @@ namespace CapaVisual
             this.txtPassword.AnimateReadOnly = false;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Depth = 0;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPassword.LeadingIcon = null;
             this.txtPassword.Location = new System.Drawing.Point(62, 112);
             this.txtPassword.MaxLength = 50;
@@ -81,7 +81,7 @@ namespace CapaVisual
             this.txtEmail.AnimateReadOnly = false;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Depth = 0;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmail.LeadingIcon = null;
             this.txtEmail.Location = new System.Drawing.Point(62, 56);
             this.txtEmail.MaxLength = 50;
@@ -139,7 +139,7 @@ namespace CapaVisual
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaVisual.Properties.Resources.LiguaLinkWite;
-            this.pictureBox1.Location = new System.Drawing.Point(567, 107);
+            this.pictureBox1.Location = new System.Drawing.Point(799, 239);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(326, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -150,11 +150,15 @@ namespace CapaVisual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 776);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialCard1);
             this.Name = "LoginPage";
+            this.Padding = new System.Windows.Forms.Padding(0);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LinguaLink";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.LoginPage_Load);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();

@@ -92,92 +92,101 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CompartirEnGrupoDialog.cs">
+    <Compile Include="UserControls\InterfazCrearGrupo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CompartirEnGrupoDialog.Designer.cs">
+    <Compile Include="UserControls\InterfazCrearGrupo.Designer.cs">
+      <DependentUpon>InterfazCrearGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CompartirEnGrupoDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CompartirEnGrupoDialog.Designer.cs">
       <DependentUpon>CompartirEnGrupoDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\GrupoDesdeAPI.cs" />
     <Compile Include="DTO\PostDesdeAPI.cs" />
-    <Compile Include="LoginPage.cs">
+    <Compile Include="Forms\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPage.Designer.cs">
+    <Compile Include="Forms\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppWindow.cs">
+    <Compile Include="Forms\AppWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppWindow.Designer.cs">
+    <Compile Include="Forms\AppWindow.Designer.cs">
       <DependentUpon>AppWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterPage.cs">
+    <Compile Include="Forms\RegisterPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterPage.Designer.cs">
+    <Compile Include="Forms\RegisterPage.Designer.cs">
       <DependentUpon>RegisterPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.cs">
+    <Compile Include="UserControls\MainPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
+    <Compile Include="UserControls\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="PostCard.cs">
+    <Compile Include="UserControls\PostCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PostCard.Designer.cs">
+    <Compile Include="UserControls\PostCard.Designer.cs">
       <DependentUpon>PostCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="GroupPage.cs">
+    <Compile Include="UserControls\GroupPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GroupPage.Designer.cs">
+    <Compile Include="UserControls\GroupPage.Designer.cs">
       <DependentUpon>GroupPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrearPost.cs">
+    <Compile Include="UserControls\CrearPost.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CrearPost.Designer.cs">
+    <Compile Include="UserControls\CrearPost.Designer.cs">
       <DependentUpon>CrearPost.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrearEvento.cs">
+    <Compile Include="UserControls\CrearEvento.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CrearEvento.Designer.cs">
+    <Compile Include="UserControls\CrearEvento.Designer.cs">
       <DependentUpon>CrearEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="MuroUsuario.cs">
+    <Compile Include="UserControls\MuroUsuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MuroUsuario.Designer.cs">
+    <Compile Include="UserControls\MuroUsuario.Designer.cs">
       <DependentUpon>MuroUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage2.cs">
+    <Compile Include="UserControls\LoginPage2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LoginPage2.Designer.cs">
+    <Compile Include="UserControls\LoginPage2.Designer.cs">
       <DependentUpon>LoginPage2.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CompartirEnGrupoDialog.resx">
+    <EmbeddedResource Include="UserControls\CompartirEnGrupoDialog.resx">
       <DependentUpon>CompartirEnGrupoDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrearEvento.resx">
+    <EmbeddedResource Include="UserControls\CrearEvento.resx">
       <DependentUpon>CrearEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPage.resx">
+    <EmbeddedResource Include="Forms\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppWindow.resx">
+    <EmbeddedResource Include="Forms\AppWindow.resx">
       <DependentUpon>AppWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MuroUsuario.resx">
+    <EmbeddedResource Include="UserControls\InterfazCrearGrupo.resx">
+      <DependentUpon>InterfazCrearGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MuroUsuario.resx">
       <DependentUpon>MuroUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PostCard.resx">
+    <EmbeddedResource Include="UserControls\PostCard.resx">
       <DependentUpon>PostCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -190,19 +199,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegisterPage.resx">
+    <EmbeddedResource Include="Forms\RegisterPage.resx">
       <DependentUpon>RegisterPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.resx">
+    <EmbeddedResource Include="UserControls\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GroupPage.resx">
+    <EmbeddedResource Include="UserControls\GroupPage.resx">
       <DependentUpon>GroupPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrearPost.resx">
+    <EmbeddedResource Include="UserControls\CrearPost.resx">
       <DependentUpon>CrearPost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPage2.resx">
+    <EmbeddedResource Include="UserControls\LoginPage2.resx">
       <DependentUpon>LoginPage2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
