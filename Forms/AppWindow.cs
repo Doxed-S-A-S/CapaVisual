@@ -32,6 +32,8 @@ namespace CapaVisual
             panelSubmenuEventos1.Hide();
             panelSubmenuEventos2.Hide();
             panelSubmenuActividades.Hide();
+            interfazCrearGrupo1.Hide();
+
 
             cargarGruposEnPanelGrupos();
 
@@ -90,11 +92,8 @@ namespace CapaVisual
                 hideAllSubpanels();
                 panelSubmenuGrupos1.Visible = true;
                 panelSubmenuGrupos1.BringToFront();
-                
             }
-            
         }
-
         private void btnEventos_Click(object sender, EventArgs e)
         {
             if (panelSubmenuEventos1.Visible == true)
@@ -271,6 +270,12 @@ namespace CapaVisual
         private void AppWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnCrearGrupo_Click(object sender, EventArgs e)
+        {
+            interfazCrearGrupo1.Show();
+            interfazCrearGrupo1.BringToFront();
         }
     }
 }

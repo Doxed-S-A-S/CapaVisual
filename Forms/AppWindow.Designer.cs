@@ -47,9 +47,10 @@ namespace CapaVisual
             this.btnEliminarMisEvento = new System.Windows.Forms.Button();
             this.btnVerMisEventos = new System.Windows.Forms.Button();
             this.btnCrearEvento = new System.Windows.Forms.Button();
-            this.groupPage1 = new CapaVisual.GroupPage();
-            this.mainPage1 = new CapaVisual.mainPage1();
             this.muroUsuario1 = new CapaVisual.MuroUsuario();
+            this.mainPage1 = new CapaVisual.mainPage1();
+            this.groupPage1 = new CapaVisual.GroupPage();
+            this.interfazCrearGrupo1 = new CapaVisual.InterfazCrearGrupo();
             this.panelCrearPost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.panelSubmenuGrupos1.SuspendLayout();
@@ -224,6 +225,7 @@ namespace CapaVisual
             this.btnCrearGrupo.TabIndex = 0;
             this.btnCrearGrupo.Text = "CrearGrupo";
             this.btnCrearGrupo.UseVisualStyleBackColor = true;
+            this.btnCrearGrupo.Click += new System.EventHandler(this.btnCrearGrupo_Click);
             // 
             // panelSubmenuEventos1
             // 
@@ -270,6 +272,23 @@ namespace CapaVisual
             this.btnCrearEvento.UseVisualStyleBackColor = true;
             this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
             // 
+            // muroUsuario1
+            // 
+            this.muroUsuario1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.muroUsuario1.Location = new System.Drawing.Point(243, 64);
+            this.muroUsuario1.Margin = new System.Windows.Forms.Padding(4);
+            this.muroUsuario1.Name = "muroUsuario1";
+            this.muroUsuario1.Size = new System.Drawing.Size(1672, 1009);
+            this.muroUsuario1.TabIndex = 16;
+            // 
+            // mainPage1
+            // 
+            this.mainPage1.Location = new System.Drawing.Point(243, 64);
+            this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.mainPage1.Name = "mainPage1";
+            this.mainPage1.Size = new System.Drawing.Size(1672, 1013);
+            this.mainPage1.TabIndex = 8;
+            // 
             // groupPage1
             // 
             this.groupPage1.BannerGrupo = null;
@@ -284,22 +303,12 @@ namespace CapaVisual
             this.groupPage1.Size = new System.Drawing.Size(1672, 1013);
             this.groupPage1.TabIndex = 11;
             // 
-            // mainPage1
+            // interfazCrearGrupo1
             // 
-            this.mainPage1.Location = new System.Drawing.Point(243, 64);
-            this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.mainPage1.Name = "mainPage1";
-            this.mainPage1.Size = new System.Drawing.Size(1672, 1013);
-            this.mainPage1.TabIndex = 8;
-            // 
-            // muroUsuario1
-            // 
-            this.muroUsuario1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.muroUsuario1.Location = new System.Drawing.Point(243, 64);
-            this.muroUsuario1.Margin = new System.Windows.Forms.Padding(4);
-            this.muroUsuario1.Name = "muroUsuario1";
-            this.muroUsuario1.Size = new System.Drawing.Size(1672, 1009);
-            this.muroUsuario1.TabIndex = 16;
+            this.interfazCrearGrupo1.Location = new System.Drawing.Point(463, 256);
+            this.interfazCrearGrupo1.Name = "interfazCrearGrupo1";
+            this.interfazCrearGrupo1.Size = new System.Drawing.Size(661, 696);
+            this.interfazCrearGrupo1.TabIndex = 17;
             // 
             // AppWindow
             // 
@@ -317,6 +326,7 @@ namespace CapaVisual
             this.Controls.Add(this.groupPage1);
             this.Controls.Add(this.txtBarraBusqueda);
             this.Controls.Add(this.panelCrearPost);
+            this.Controls.Add(this.interfazCrearGrupo1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(114)))), ((int)(((byte)(255)))));
             this.Name = "AppWindow";
@@ -356,6 +366,7 @@ namespace CapaVisual
         private System.Windows.Forms.Button btnVerMisEventos;
         private System.Windows.Forms.Button btnCrearEvento;
         private MuroUsuario muroUsuario1;
+        private InterfazCrearGrupo interfazCrearGrupo1;
     }
 }
 

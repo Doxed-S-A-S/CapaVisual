@@ -92,6 +92,12 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\InterfazCrearGrupo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\InterfazCrearGrupo.Designer.cs">
+      <DependentUpon>InterfazCrearGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CompartirEnGrupoDialog.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AppWindow.resx">
       <DependentUpon>AppWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\InterfazCrearGrupo.resx">
+      <DependentUpon>InterfazCrearGrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MuroUsuario.resx">
       <DependentUpon>MuroUsuario.cs</DependentUpon>
