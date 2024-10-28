@@ -30,27 +30,31 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVolverCrearGrupo = new MaterialSkin.Controls.MaterialButton();
             this.btnCrearGrupo = new MaterialSkin.Controls.MaterialButton();
-            this.pboxImagenBannerGrupo = new System.Windows.Forms.PictureBox();
             this.btnBannerGrupo = new MaterialSkin.Controls.MaterialButton();
             this.chkBoxPrivacidadGrupoNO = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.txtDescripcionGrupo = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.txtNombreGrupo = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.chkBoxPrivacidadGrupoSI = new MaterialSkin.Controls.MaterialCheckbox();
             this.btnImagenPerfilGrupo = new MaterialSkin.Controls.MaterialButton();
+            this.pboxImagenBannerGrupo = new System.Windows.Forms.PictureBox();
             this.pboxImagenPerfilGrupo = new System.Windows.Forms.PictureBox();
-            this.btnVolverCrearGrupo = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.panelSuperior = new MaterialSkin.Controls.MaterialCard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenBannerGrupo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenPerfilGrupo)).BeginInit();
+            this.panelSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panelSuperior);
             this.panel1.Controls.Add(this.btnVolverCrearGrupo);
             this.panel1.Controls.Add(this.btnCrearGrupo);
             this.panel1.Controls.Add(this.pboxImagenBannerGrupo);
@@ -60,7 +64,6 @@ namespace CapaVisual
             this.panel1.Controls.Add(this.materialLabel3);
             this.panel1.Controls.Add(this.txtDescripcionGrupo);
             this.panel1.Controls.Add(this.materialLabel2);
-            this.panel1.Controls.Add(this.materialLabel1);
             this.panel1.Controls.Add(this.txtNombreGrupo);
             this.panel1.Controls.Add(this.chkBoxPrivacidadGrupoSI);
             this.panel1.Controls.Add(this.btnImagenPerfilGrupo);
@@ -69,6 +72,27 @@ namespace CapaVisual
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(497, 502);
             this.panel1.TabIndex = 0;
+            // 
+            // btnVolverCrearGrupo
+            // 
+            this.btnVolverCrearGrupo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnVolverCrearGrupo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolverCrearGrupo.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnVolverCrearGrupo.Depth = 0;
+            this.btnVolverCrearGrupo.HighEmphasis = true;
+            this.btnVolverCrearGrupo.Icon = null;
+            this.btnVolverCrearGrupo.Location = new System.Drawing.Point(323, 447);
+            this.btnVolverCrearGrupo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnVolverCrearGrupo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnVolverCrearGrupo.Name = "btnVolverCrearGrupo";
+            this.btnVolverCrearGrupo.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnVolverCrearGrupo.Size = new System.Drawing.Size(76, 36);
+            this.btnVolverCrearGrupo.TabIndex = 13;
+            this.btnVolverCrearGrupo.Text = "Volver";
+            this.btnVolverCrearGrupo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnVolverCrearGrupo.UseAccentColor = false;
+            this.btnVolverCrearGrupo.UseVisualStyleBackColor = true;
+            this.btnVolverCrearGrupo.Click += new System.EventHandler(this.btnVolverCrearGrupo_Click);
             // 
             // btnCrearGrupo
             // 
@@ -90,16 +114,6 @@ namespace CapaVisual
             this.btnCrearGrupo.UseAccentColor = false;
             this.btnCrearGrupo.UseVisualStyleBackColor = true;
             this.btnCrearGrupo.Click += new System.EventHandler(this.btnCrearGrupo_Click);
-            // 
-            // pboxImagenBannerGrupo
-            // 
-            this.pboxImagenBannerGrupo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pboxImagenBannerGrupo.Location = new System.Drawing.Point(236, 342);
-            this.pboxImagenBannerGrupo.Name = "pboxImagenBannerGrupo";
-            this.pboxImagenBannerGrupo.Size = new System.Drawing.Size(242, 69);
-            this.pboxImagenBannerGrupo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxImagenBannerGrupo.TabIndex = 11;
-            this.pboxImagenBannerGrupo.TabStop = false;
             // 
             // btnBannerGrupo
             // 
@@ -189,18 +203,6 @@ namespace CapaVisual
             this.materialLabel2.TabIndex = 5;
             this.materialLabel2.Text = "Nombre grupo:";
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(214, 14);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(85, 19);
-            this.materialLabel1.TabIndex = 4;
-            this.materialLabel1.Text = "Crear Grupo";
-            // 
             // txtNombreGrupo
             // 
             this.txtNombreGrupo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -253,6 +255,16 @@ namespace CapaVisual
             this.btnImagenPerfilGrupo.UseVisualStyleBackColor = true;
             this.btnImagenPerfilGrupo.Click += new System.EventHandler(this.btnImagenPerfilGrupo_Click);
             // 
+            // pboxImagenBannerGrupo
+            // 
+            this.pboxImagenBannerGrupo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pboxImagenBannerGrupo.Location = new System.Drawing.Point(236, 342);
+            this.pboxImagenBannerGrupo.Name = "pboxImagenBannerGrupo";
+            this.pboxImagenBannerGrupo.Size = new System.Drawing.Size(242, 69);
+            this.pboxImagenBannerGrupo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxImagenBannerGrupo.TabIndex = 11;
+            this.pboxImagenBannerGrupo.TabStop = false;
+            // 
             // pboxImagenPerfilGrupo
             // 
             this.pboxImagenPerfilGrupo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -263,26 +275,32 @@ namespace CapaVisual
             this.pboxImagenPerfilGrupo.TabIndex = 0;
             this.pboxImagenPerfilGrupo.TabStop = false;
             // 
-            // btnVolverCrearGrupo
+            // materialLabel5
             // 
-            this.btnVolverCrearGrupo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnVolverCrearGrupo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVolverCrearGrupo.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnVolverCrearGrupo.Depth = 0;
-            this.btnVolverCrearGrupo.HighEmphasis = true;
-            this.btnVolverCrearGrupo.Icon = null;
-            this.btnVolverCrearGrupo.Location = new System.Drawing.Point(323, 447);
-            this.btnVolverCrearGrupo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnVolverCrearGrupo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnVolverCrearGrupo.Name = "btnVolverCrearGrupo";
-            this.btnVolverCrearGrupo.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnVolverCrearGrupo.Size = new System.Drawing.Size(67, 36);
-            this.btnVolverCrearGrupo.TabIndex = 13;
-            this.btnVolverCrearGrupo.Text = "Volver";
-            this.btnVolverCrearGrupo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnVolverCrearGrupo.UseAccentColor = false;
-            this.btnVolverCrearGrupo.UseVisualStyleBackColor = true;
-            this.btnVolverCrearGrupo.Click += new System.EventHandler(this.btnVolverCrearGrupo_Click);
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.ForeColor = System.Drawing.Color.White;
+            this.materialLabel5.Location = new System.Drawing.Point(212, 4);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(85, 19);
+            this.materialLabel5.TabIndex = 4;
+            this.materialLabel5.Text = "Crear Grupo";
+            // 
+            // panelSuperior
+            // 
+            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelSuperior.Controls.Add(this.materialLabel5);
+            this.panelSuperior.Depth = 0;
+            this.panelSuperior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelSuperior.Location = new System.Drawing.Point(-1, -1);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(14);
+            this.panelSuperior.MouseState = MaterialSkin.MouseState.HOVER;
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Padding = new System.Windows.Forms.Padding(14);
+            this.panelSuperior.Size = new System.Drawing.Size(497, 25);
+            this.panelSuperior.TabIndex = 14;
             // 
             // InterfazCrearGrupo
             // 
@@ -295,6 +313,8 @@ namespace CapaVisual
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenBannerGrupo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenPerfilGrupo)).EndInit();
+            this.panelSuperior.ResumeLayout(false);
+            this.panelSuperior.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -311,10 +331,11 @@ namespace CapaVisual
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialMultiLineTextBox txtDescripcionGrupo;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialMultiLineTextBox txtNombreGrupo;
         private MaterialSkin.Controls.MaterialCheckbox chkBoxPrivacidadGrupoSI;
         private MaterialSkin.Controls.MaterialButton btnImagenPerfilGrupo;
         private MaterialSkin.Controls.MaterialButton btnVolverCrearGrupo;
+        private MaterialSkin.Controls.MaterialCard panelSuperior;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
     }
 }

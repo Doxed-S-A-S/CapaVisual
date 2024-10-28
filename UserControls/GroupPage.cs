@@ -20,10 +20,9 @@ namespace CapaVisual
         public GroupPage()
         {
             InitializeComponent();
-            
-
         }
         private int _idGrupo;
+        private bool postsMostrados = false;
         public string NombreGrupo
         {
             get { return lblNombreGrupo.Text; }
@@ -83,32 +82,32 @@ namespace CapaVisual
         public void mostrarPostsDelGrupo()
         {
             List<PostDesdeAPI> posts = obtenerPostDesdeAPI(_idGrupo);
-
-            flowLayoutPanelPostsGrupo.Controls.Clear();
-            try
+            if (postsMostrados == false)
             {
-                foreach (PostDesdeAPI post in posts)
+                try
                 {
-                    PostCard postCard = new PostCard();
-                    postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
-                    postCard.PostContent = post.contenido;
-                    postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
+                    foreach (PostDesdeAPI post in posts)
+                    {
+                        PostCard postCard = new PostCard();
+                        postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
+                        postCard.PostContent = post.contenido;
+                        postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
 
-                    HttpClient client = new HttpClient();
-                    byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
-                    MemoryStream stream = new MemoryStream(imageData);
+                        HttpClient client = new HttpClient();
+                        byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
+                        MemoryStream stream = new MemoryStream(imageData);
 
-                    postCard.PostImage = Image.FromStream(stream);
-
-
-                    flowLayoutPanelPostsGrupo.Controls.Add(postCard);
+                        postCard.PostImage = Image.FromStream(stream);
+                        flowLayoutPanelPostsGrupo.Controls.Add(postCard);
+                    }
+                    postsMostrados = true;
                 }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
 
+            }
         }
     }
 }

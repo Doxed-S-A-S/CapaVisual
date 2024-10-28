@@ -40,11 +40,20 @@ namespace CapaVisual
             this.lblNombreGrupo = new MaterialSkin.Controls.MaterialLabel();
             this.pboxImagenGrupo = new System.Windows.Forms.PictureBox();
             this.pboxBannerGrupo = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.crearEvento1 = new CapaVisual.CrearEvento();
             this.panelDerecho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenGrupo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBannerGrupo)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // divisorDerecho
@@ -114,7 +123,7 @@ namespace CapaVisual
             this.flowLayoutPanelPostsGrupo.BackColor = System.Drawing.Color.LightGray;
             this.flowLayoutPanelPostsGrupo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanelPostsGrupo.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutPanelPostsGrupo.Location = new System.Drawing.Point(13, 188);
+            this.flowLayoutPanelPostsGrupo.Location = new System.Drawing.Point(2, 2);
             this.flowLayoutPanelPostsGrupo.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelPostsGrupo.Name = "flowLayoutPanelPostsGrupo";
             this.flowLayoutPanelPostsGrupo.Padding = new System.Windows.Forms.Padding(78, 0, 52, 0);
@@ -165,14 +174,62 @@ namespace CapaVisual
             this.pboxBannerGrupo.TabIndex = 0;
             this.pboxBannerGrupo.TabStop = false;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(13, 189);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1028, 824);
+            this.tabControl1.TabIndex = 17;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.flowLayoutPanelPostsGrupo);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1020, 798);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Posts Del Grupo";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1020, 798);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "CrearEvento";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.crearEvento1);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(250, 0, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(1017, 795);
+            this.panel2.TabIndex = 0;
+            // 
+            // crearEvento1
+            // 
+            this.crearEvento1.Location = new System.Drawing.Point(3, 3);
+            this.crearEvento1.Name = "crearEvento1";
+            this.crearEvento1.Size = new System.Drawing.Size(694, 146);
+            this.crearEvento1.TabIndex = 0;
+            // 
             // GroupPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.divisorDerecho);
             this.Controls.Add(this.panelDerecho);
-            this.Controls.Add(this.flowLayoutPanelPostsGrupo);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GroupPage";
             this.Size = new System.Drawing.Size(1254, 1013);
@@ -183,6 +240,10 @@ namespace CapaVisual
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagenGrupo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxBannerGrupo)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -199,5 +260,10 @@ namespace CapaVisual
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox txtBoxDescripcionGrupo;
         private MaterialSkin.Controls.MaterialLabel lblNombreGrupo;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Panel panel2;
+        private CrearEvento crearEvento1;
     }
 }

@@ -33,8 +33,7 @@ namespace CapaVisual
             panelSubmenuEventos2.Hide();
             panelSubmenuActividades.Hide();
             interfazCrearGrupo1.Hide();
-
-
+            
             cargarGruposEnPanelGrupos();
 
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
@@ -45,7 +44,7 @@ namespace CapaVisual
                 MaterialSkin.Primary.Red700,
                 MaterialSkin.Primary.Red200,
                 MaterialSkin.Accent.Green400,
-                MaterialSkin.TextShade.BLACK
+                MaterialSkin.TextShade.WHITE
                 );
 
         }
@@ -245,25 +244,31 @@ namespace CapaVisual
             Button btn = sender as Button;
             int id_grupo = (int)btn.Tag;
 
-            GrupoDesdeAPI g = obtenerGrupoDesdeAPI(id_grupo);
+            try
+            {
+                GrupoDesdeAPI g = obtenerGrupoDesdeAPI(id_grupo);
 
-            HttpClient client = new HttpClient();
-            byte[] imagenGrupo = client.GetByteArrayAsync(g.url_imagen).Result;
-            byte[] BannerGrupo = client.GetByteArrayAsync(g.imagen_banner).Result;
-            MemoryStream imagenGrupo_ms = new MemoryStream(imagenGrupo);
-            MemoryStream BannerGrupo_ms = new MemoryStream(BannerGrupo);
+                HttpClient client = new HttpClient();
+                byte[] imagenGrupo = client.GetByteArrayAsync(g.url_imagen).Result;
+                byte[] BannerGrupo = client.GetByteArrayAsync(g.imagen_banner).Result;
+                MemoryStream imagenGrupo_ms = new MemoryStream(imagenGrupo);
+                MemoryStream BannerGrupo_ms = new MemoryStream(BannerGrupo);
 
-            groupPage1.NombreGrupo = g.nombre_grupo;
-            groupPage1.ImagenGrupo = Image.FromStream(imagenGrupo_ms); // Asumiendo que tienes un método para manejar imágenes
-            groupPage1.BannerGrupo = Image.FromStream(BannerGrupo_ms);
-            groupPage1.DescripcionGrupo = g.descripcion;
-            groupPage1.IdGrupo = id_grupo;
+                groupPage1.NombreGrupo = g.nombre_grupo;
+                groupPage1.ImagenGrupo = Image.FromStream(imagenGrupo_ms); // Asumiendo que tienes un método para manejar imágenes
+                groupPage1.BannerGrupo = Image.FromStream(BannerGrupo_ms);
+                groupPage1.DescripcionGrupo = g.descripcion;
+                groupPage1.IdGrupo = id_grupo;
 
-            hideAllUsercontrols();
-            groupPage1.Visible = true;
-            groupPage1.mostrarPostsDelGrupo();
-            hideAllSubpanels();
-            
+                hideAllUsercontrols();
+                groupPage1.Visible = true;
+                hideAllSubpanels();
+                groupPage1.mostrarPostsDelGrupo();
+            }
+            catch(Exception xe)
+            {
+                MessageBox.Show("Error" + xe.Message);
+            }
         }
 
         

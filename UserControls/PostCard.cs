@@ -41,10 +41,7 @@ namespace CapaVisual
             set { pictureBoxImagenPost.Image = value; }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
 
         

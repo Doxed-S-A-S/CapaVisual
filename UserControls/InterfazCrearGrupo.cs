@@ -17,6 +17,7 @@ namespace CapaVisual
         public InterfazCrearGrupo()
         {
             InitializeComponent();
+            panelSuperior.ForeColor = Color.Red;
         }
 
         public static void crearGrupo(int id_cuenta, string nombre_grupo, string descripcion, Boolean privacidad, string url_imagen, string imagen_banner)
@@ -99,5 +100,7 @@ namespace CapaVisual
             limpiarCampos();
             this.Hide();
         }
+
+        
     }
 }

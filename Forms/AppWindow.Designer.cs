@@ -47,10 +47,10 @@ namespace CapaVisual
             this.btnEliminarMisEvento = new System.Windows.Forms.Button();
             this.btnVerMisEventos = new System.Windows.Forms.Button();
             this.btnCrearEvento = new System.Windows.Forms.Button();
+            this.interfazCrearGrupo1 = new CapaVisual.InterfazCrearGrupo();
             this.muroUsuario1 = new CapaVisual.MuroUsuario();
             this.mainPage1 = new CapaVisual.mainPage1();
             this.groupPage1 = new CapaVisual.GroupPage();
-            this.interfazCrearGrupo1 = new CapaVisual.InterfazCrearGrupo();
             this.panelCrearPost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.panelSubmenuGrupos1.SuspendLayout();
@@ -272,6 +272,13 @@ namespace CapaVisual
             this.btnCrearEvento.UseVisualStyleBackColor = true;
             this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
             // 
+            // interfazCrearGrupo1
+            // 
+            this.interfazCrearGrupo1.Location = new System.Drawing.Point(260, 256);
+            this.interfazCrearGrupo1.Name = "interfazCrearGrupo1";
+            this.interfazCrearGrupo1.Size = new System.Drawing.Size(671, 664);
+            this.interfazCrearGrupo1.TabIndex = 17;
+            // 
             // muroUsuario1
             // 
             this.muroUsuario1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -303,19 +310,13 @@ namespace CapaVisual
             this.groupPage1.Size = new System.Drawing.Size(1672, 1013);
             this.groupPage1.TabIndex = 11;
             // 
-            // interfazCrearGrupo1
-            // 
-            this.interfazCrearGrupo1.Location = new System.Drawing.Point(257, 256);
-            this.interfazCrearGrupo1.Name = "interfazCrearGrupo1";
-            this.interfazCrearGrupo1.Size = new System.Drawing.Size(661, 696);
-            this.interfazCrearGrupo1.TabIndex = 17;
-            // 
             // AppWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(175)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.interfazCrearGrupo1);
             this.Controls.Add(this.panelSubmenuEventos1);
             this.Controls.Add(this.panelSubmenuGrupos1);
             this.Controls.Add(this.panelSubmenuActividades);
@@ -326,7 +327,6 @@ namespace CapaVisual
             this.Controls.Add(this.groupPage1);
             this.Controls.Add(this.txtBarraBusqueda);
             this.Controls.Add(this.panelCrearPost);
-            this.Controls.Add(this.interfazCrearGrupo1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(114)))), ((int)(((byte)(255)))));
             this.Name = "AppWindow";

@@ -92,6 +92,12 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\InterfazCrearGrupo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,12 +168,15 @@
     <Compile Include="UserControls\MuroUsuario.Designer.cs">
       <DependentUpon>MuroUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\LoginPage2.cs">
+    <Compile Include="UserControls\UserControl2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\LoginPage2.Designer.cs">
-      <DependentUpon>LoginPage2.cs</DependentUpon>
+    <Compile Include="UserControls\UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CompartirEnGrupoDialog.resx">
       <DependentUpon>CompartirEnGrupoDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,8 +220,8 @@
     <EmbeddedResource Include="UserControls\CrearPost.resx">
       <DependentUpon>CrearPost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\LoginPage2.resx">
-      <DependentUpon>LoginPage2.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
