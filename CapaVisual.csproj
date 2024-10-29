@@ -92,11 +92,17 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl1.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\SeleccionDeCompartida.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Forms\SeleccionDeCompartida.Designer.cs">
+      <DependentUpon>SeleccionDeCompartida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CompartirPostDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CompartirPostDialog.Designer.cs">
+      <DependentUpon>CompartirPostDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\InterfazCrearGrupo.cs">
       <SubType>UserControl</SubType>
@@ -168,14 +174,17 @@
     <Compile Include="UserControls\MuroUsuario.Designer.cs">
       <DependentUpon>MuroUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControl2.cs">
+    <Compile Include="UserControls\DondeCompartir.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <Compile Include="UserControls\DondeCompartir.Designer.cs">
+      <DependentUpon>DondeCompartir.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControls\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SeleccionDeCompartida.resx">
+      <DependentUpon>SeleccionDeCompartida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CompartirPostDialog.resx">
+      <DependentUpon>CompartirPostDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CompartirEnGrupoDialog.resx">
       <DependentUpon>CompartirEnGrupoDialog.cs</DependentUpon>
@@ -220,8 +229,8 @@
     <EmbeddedResource Include="UserControls\CrearPost.resx">
       <DependentUpon>CrearPost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\DondeCompartir.resx">
+      <DependentUpon>DondeCompartir.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

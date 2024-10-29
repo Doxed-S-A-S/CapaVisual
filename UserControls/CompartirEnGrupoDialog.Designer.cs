@@ -30,30 +30,23 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelSeleccionarGrupo = new System.Windows.Forms.Panel();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.panelSuperior = new MaterialSkin.Controls.MaterialCard();
+            this.panelSeleccionarGrupo = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.panelSeleccionarGrupo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panelSuperior);
             this.panel1.Controls.Add(this.materialButton1);
             this.panel1.Controls.Add(this.panelSeleccionarGrupo);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 282);
             this.panel1.TabIndex = 0;
-            // 
-            // panelSeleccionarGrupo
-            // 
-            this.panelSeleccionarGrupo.BackColor = System.Drawing.Color.LightGray;
-            this.panelSeleccionarGrupo.Location = new System.Drawing.Point(22, 59);
-            this.panelSeleccionarGrupo.Name = "panelSeleccionarGrupo";
-            this.panelSeleccionarGrupo.Size = new System.Drawing.Size(235, 164);
-            this.panelSeleccionarGrupo.TabIndex = 0;
             // 
             // materialButton1
             // 
@@ -74,18 +67,22 @@ namespace CapaVisual
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
             // 
-            // panelSuperior
+            // panelSeleccionarGrupo
             // 
-            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelSuperior.Depth = 0;
-            this.panelSuperior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panelSuperior.Location = new System.Drawing.Point(0, 0);
-            this.panelSuperior.Margin = new System.Windows.Forms.Padding(14);
-            this.panelSuperior.MouseState = MaterialSkin.MouseState.HOVER;
-            this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Padding = new System.Windows.Forms.Padding(14);
-            this.panelSuperior.Size = new System.Drawing.Size(279, 27);
-            this.panelSuperior.TabIndex = 2;
+            this.panelSeleccionarGrupo.BackColor = System.Drawing.Color.LightGray;
+            this.panelSeleccionarGrupo.Controls.Add(this.dataGridView2);
+            this.panelSeleccionarGrupo.Location = new System.Drawing.Point(22, 59);
+            this.panelSeleccionarGrupo.Name = "panelSeleccionarGrupo";
+            this.panelSeleccionarGrupo.Size = new System.Drawing.Size(235, 164);
+            this.panelSeleccionarGrupo.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(235, 164);
+            this.dataGridView2.TabIndex = 1;
             // 
             // CompartirEnGrupoDialog
             // 
@@ -96,6 +93,8 @@ namespace CapaVisual
             this.Size = new System.Drawing.Size(279, 285);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelSeleccionarGrupo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -104,7 +103,7 @@ namespace CapaVisual
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelSeleccionarGrupo;
-        private MaterialSkin.Controls.MaterialCard panelSuperior;
         private MaterialSkin.Controls.MaterialButton materialButton1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

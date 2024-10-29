@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace CapaVisual.UserControls
 {
-    public partial class UserControl2 : UserControl
+    public partial class DondeCompartir : UserControl
     {
-        public UserControl2()
+        public DondeCompartir()
         {
             InitializeComponent();
+        }
+
+        private void btnCompartirGrupo_Click(object sender, EventArgs e)
+        {
+            this.Parent.Hide();
+            CompartirPostDialog dialog = new CompartirPostDialog();
+            dialog.Show();
         }
     }
 }

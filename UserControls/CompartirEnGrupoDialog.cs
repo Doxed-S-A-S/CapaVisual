@@ -18,7 +18,7 @@ namespace CapaVisual
         public CompartirEnGrupoDialog()
         {
             InitializeComponent();
-            panelSuperior.BackColor = Color.FromArgb(128, 240, 240, 240);
+            
         }
         /*
         private static List<GrupoDesdeAPI> obtenerGruposDesdeAPI()
