@@ -22,7 +22,7 @@ namespace CapaVisual
         {
             InitializeComponent();
             mostrarPostsIniciales();
-
+            
             flowLayoutPanelPosts.Scroll += new ScrollEventHandler(flowLayoutPanelPosts_Scroll);
             flowLayoutPanelPosts.MouseWheel += flowLayoutPanelPosts_MouseWheel;
         }

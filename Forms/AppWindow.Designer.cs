@@ -86,10 +86,10 @@ namespace CapaVisual
             // 
             this.pictureBoxImagenPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxImagenPerfil.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(97, 74);
+            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(58, 34);
             this.pictureBoxImagenPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
-            this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(40, 44);
+            this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(120, 120);
             this.pictureBoxImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxImagenPerfil.TabIndex = 4;
             this.pictureBoxImagenPerfil.TabStop = false;

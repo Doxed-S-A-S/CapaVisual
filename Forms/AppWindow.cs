@@ -21,6 +21,12 @@ namespace CapaVisual
     public partial class AppWindow : MaterialForm
     {
         public int id_cuenta;
+        private int id_muro;
+        private int id_preferencia;
+        private string nombre_usuario;
+        private string imagen_perfil;
+        private string rol_cuenta;
+
         public AppWindow()
         {
             InitializeComponent();
@@ -29,7 +35,6 @@ namespace CapaVisual
             pboxCircular pbox = new pboxCircular();
 
             pbox.MakeCircularPictureBox(pictureBoxImagenPerfil);
-
             mainPage1.Visible = true;
 
             panelSubmenuGrupos1.Hide();
@@ -49,9 +54,15 @@ namespace CapaVisual
                 MaterialSkin.Primary.Red700,
                 MaterialSkin.Primary.Red200,
                 MaterialSkin.Accent.Green400,
-                MaterialSkin.TextShade.WHITE
+                MaterialSkin.TextShade.BLACK
                 );
+            
+        }
 
+        public void appWindowLoad()
+        {
+            obtenerInfoCuentaDesdeApi(id_cuenta);
+            pictureBoxImagenPerfil.Load(imagen_perfil);
         }
         public void ShowGroupPage()
         {
@@ -219,7 +230,32 @@ namespace CapaVisual
             else
             {
                 Console.WriteLine($"Error: {response.StatusCode} - {response.StatusDescription}");
-                return null; 
+                return null;
+            }
+        }
+
+        public void obtenerInfoCuentaDesdeApi(int id_cuenta)
+        {
+            RestClient client = new RestClient("http://localhost:57065/");
+            RestRequest request = new RestRequest($"ApiUsuarios/cuenta/ObtenerInformacion/{id_cuenta}", Method.Get);
+            request.AddHeader("Accept", "application/json");
+            
+            RestResponse response = client.Execute(request);
+            
+            if (response.IsSuccessful)
+            {
+                Console.WriteLine(response.Content);
+
+                CuentaDesdeAPI cuenta = JsonConvert.DeserializeObject<CuentaDesdeAPI>(response.Content);
+                this.nombre_usuario = cuenta.nombre_usuario;
+                this.id_preferencia = cuenta.id_preferencia;
+                this.id_muro = cuenta.id_muro;
+                this.rol_cuenta = cuenta.rol_cuenta;
+                this.imagen_perfil = cuenta.imagen_perfil;
+            }
+            else
+            {
+                Console.WriteLine($"Error: {response.StatusCode} - {response.StatusDescription}");
             }
         }
 
