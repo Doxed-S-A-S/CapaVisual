@@ -20,10 +20,15 @@ namespace CapaVisual
 {
     public partial class AppWindow : MaterialForm
     {
+        public int id_cuenta;
         public AppWindow()
         {
             InitializeComponent();
             hideAllUsercontrols();
+
+            pboxCircular pbox = new pboxCircular();
+
+            pbox.MakeCircularPictureBox(pictureBoxImagenPerfil);
 
             mainPage1.Visible = true;
 

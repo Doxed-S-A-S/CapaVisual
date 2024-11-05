@@ -134,7 +134,7 @@ namespace CapaVisual
         private void loginUsuario()
         {
             RestClient client = new RestClient("http://localhost:44395/");
-            RestRequest request = new RestRequest("ApiAut/login", Method.Post);
+            RestRequest request = new RestRequest("ApiAut/login", Method.Post); http://localhost:44395/ApiAut/login
             RestResponse response;
 
             try
@@ -145,11 +145,15 @@ namespace CapaVisual
                     contraseña = txtPassword.Text
                 });
                 response = client.Execute(request);
+                
+                var resultado = JsonConvert.DeserializeObject<dynamic>(response.Content);
+                string idCuenta = resultado.ID;
 
                 if (response.IsSuccessful)
                 {
                     this.Hide();
                     AppWindow app = new AppWindow();
+                    app.id_cuenta = Int32.Parse(idCuenta);
                     app.Show();
                     app.Activate();
                 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -21,6 +22,12 @@ namespace CapaVisual
         public RegisterPage()
         {
             InitializeComponent();
+
+            panelCargarImagenRegistro.Hide();
+
+            pboxCircular pbox = new pboxCircular();
+            pbox.MakeCircularPictureBox(pboxImagenPerfilRegistro);
+
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
@@ -32,6 +39,9 @@ namespace CapaVisual
                 MaterialSkin.TextShade.BLACK
                 );
         }
+
+        
+
         private string crearUsername()
         {
             string username;
@@ -51,41 +61,39 @@ namespace CapaVisual
             }
             return username;
         }
-        private void btnRegister_Click(Object sender, EventArgs e)
+        
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-            chequeoIngresoEnCampos();
             RestClient client = new RestClient("http://localhost:57065/");
             RestRequest request = new RestRequest("ApiUsuarios/CrearCuenta/", Method.Post);
             string username = crearUsername();
+            request.AddFile("imagen_perfil", pboxImagenPerfilRegistro.ImageLocation);
+            string idiomaHablado = idiomasHablados();
             try
             {
                 if (!string.IsNullOrWhiteSpace(txtSegundoApellido.Text))
                 {
-                    request.AddJsonBody(new
-                    {
-                        nombre_usuario = username,
-                        nombre = txtNombre.Text,
-                        apellido = txtApellido.Text,
-                        apellido2 = txtSegundoApellido.Text,
-                        pais = ObtenerCodigoICAO(comboBoxPaises.SelectedItem.ToString()),
-                        idiomas_hablados = idiomasHablados(),
-                        email = txtEmail.Text,
-                        contraseña = txtPassword.Text
-                    });
+
+                    request.AddParameter("nombre_usuario", username);
+                    request.AddParameter("nombre", txtNombre.Text);
+                    request.AddParameter("apellido", txtApellido.Text);
+                    request.AddParameter("apellido2", txtSegundoApellido.Text);
+                    request.AddParameter("pais", ObtenerCodigoICAO(comboBoxPaises.SelectedItem.ToString()));
+                    request.AddParameter("idiomaHablado", idiomaHablado);
+                    request.AddParameter("email", txtEmail.Text);
+                    request.AddParameter("contrasena", txtPassword.Text);
                 }
                 else
                 {
-                    request.AddJsonBody(new
-                    {
-                        nombre_usuario = username,
-                        nombre = txtNombre.Text,
-                        apellido = txtApellido.Text,
-                        apellido2 = "",
-                        pais = ObtenerCodigoICAO(comboBoxPaises.SelectedItem.ToString()),
-                        idiomas_hablados = idiomasHablados(),
-                        email = txtEmail.Text,
-                        contraseña = txtPassword.Text
-                    });
+                    request.AddParameter("nombre_usuario", username);
+                    request.AddParameter("nombre", txtNombre.Text);
+                    request.AddParameter("apellido", txtApellido.Text);
+                    request.AddParameter("apellido2", "");
+                    request.AddParameter("pais", ObtenerCodigoICAO(comboBoxPaises.SelectedItem.ToString()));
+                    request.AddParameter("idiomas_hablados", idiomasHablados());
+                    request.AddParameter("email", txtEmail.Text);
+                    request.AddParameter("contraseña", txtPassword.Text);
                 }
                 RestResponse response = client.Execute(request);
 
@@ -116,11 +124,18 @@ namespace CapaVisual
             if (chBoxIngles.Checked == true)
             {
                 idiomaHablado = "eng";
+                return idiomaHablado;
             }
 
             return idiomaHablado;
         }
-
+        private void btnAgregarImagenPerfil_Click(object sender, EventArgs e)
+        {
+            FileDialog dialog = new OpenFileDialog();
+            dialog.ShowDialog();
+            pboxImagenPerfilRegistro.Image = Image.FromFile(dialog.FileName);
+            pboxImagenPerfilRegistro.ImageLocation = dialog.FileName;
+        }
         private void RegisterPage_Load(object sender, EventArgs e)
         {
             txtNombre.Text = "Nombre";
@@ -431,6 +446,13 @@ namespace CapaVisual
             }
         }
 
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            chequeoIngresoEnCampos();
+            panelDatosRegistro.Hide();
+            panelCargarImagenRegistro.Show();
+            panelCargarImagenRegistro.BringToFront();
+        }
     }
 
 }

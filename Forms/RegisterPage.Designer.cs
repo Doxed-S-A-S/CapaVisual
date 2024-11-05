@@ -29,7 +29,12 @@ namespace CapaVisual
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.panelDatosRegistro = new MaterialSkin.Controls.MaterialCard();
+            this.panelCargarImagenRegistro = new MaterialSkin.Controls.MaterialCard();
+            this.btnRegistrarse = new MaterialSkin.Controls.MaterialButton();
+            this.btnAgregarImagenPerfil = new MaterialSkin.Controls.MaterialButton();
+            this.pboxImagenPerfilRegistro = new System.Windows.Forms.PictureBox();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.comboBoxPaises = new MaterialSkin.Controls.MaterialComboBox();
@@ -42,37 +47,116 @@ namespace CapaVisual
             this.txtSegundoApellido = new MaterialSkin.Controls.MaterialTextBox();
             this.txtApellido = new MaterialSkin.Controls.MaterialTextBox();
             this.txtNombre = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnRegister = new MaterialSkin.Controls.MaterialButton();
+            this.btnSiguiente = new MaterialSkin.Controls.MaterialButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.materialCard1.SuspendLayout();
+            this.panelDatosRegistro.SuspendLayout();
+            this.panelCargarImagenRegistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenPerfilRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // materialCard1
+            // panelDatosRegistro
             // 
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.materialDivider1);
-            this.materialCard1.Controls.Add(this.materialLabel2);
-            this.materialCard1.Controls.Add(this.comboBoxPaises);
-            this.materialCard1.Controls.Add(this.materialLabel1);
-            this.materialCard1.Controls.Add(this.chBoxIngles);
-            this.materialCard1.Controls.Add(this.chBoxEspañol);
-            this.materialCard1.Controls.Add(this.txtConfirmPssword);
-            this.materialCard1.Controls.Add(this.txtPassword);
-            this.materialCard1.Controls.Add(this.txtEmail);
-            this.materialCard1.Controls.Add(this.txtSegundoApellido);
-            this.materialCard1.Controls.Add(this.txtApellido);
-            this.materialCard1.Controls.Add(this.txtNombre);
-            this.materialCard1.Controls.Add(this.btnRegister);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(716, 372);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(502, 591);
-            this.materialCard1.TabIndex = 1;
+            this.panelDatosRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelDatosRegistro.Controls.Add(this.materialDivider1);
+            this.panelDatosRegistro.Controls.Add(this.materialLabel2);
+            this.panelDatosRegistro.Controls.Add(this.comboBoxPaises);
+            this.panelDatosRegistro.Controls.Add(this.materialLabel1);
+            this.panelDatosRegistro.Controls.Add(this.chBoxIngles);
+            this.panelDatosRegistro.Controls.Add(this.chBoxEspañol);
+            this.panelDatosRegistro.Controls.Add(this.txtConfirmPssword);
+            this.panelDatosRegistro.Controls.Add(this.txtPassword);
+            this.panelDatosRegistro.Controls.Add(this.txtEmail);
+            this.panelDatosRegistro.Controls.Add(this.txtSegundoApellido);
+            this.panelDatosRegistro.Controls.Add(this.txtApellido);
+            this.panelDatosRegistro.Controls.Add(this.txtNombre);
+            this.panelDatosRegistro.Controls.Add(this.btnSiguiente);
+            this.panelDatosRegistro.Depth = 0;
+            this.panelDatosRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelDatosRegistro.Location = new System.Drawing.Point(716, 372);
+            this.panelDatosRegistro.Margin = new System.Windows.Forms.Padding(14);
+            this.panelDatosRegistro.MouseState = MaterialSkin.MouseState.HOVER;
+            this.panelDatosRegistro.Name = "panelDatosRegistro";
+            this.panelDatosRegistro.Padding = new System.Windows.Forms.Padding(14);
+            this.panelDatosRegistro.Size = new System.Drawing.Size(502, 591);
+            this.panelDatosRegistro.TabIndex = 1;
+            // 
+            // panelCargarImagenRegistro
+            // 
+            this.panelCargarImagenRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelCargarImagenRegistro.Controls.Add(this.btnRegistrarse);
+            this.panelCargarImagenRegistro.Controls.Add(this.btnAgregarImagenPerfil);
+            this.panelCargarImagenRegistro.Controls.Add(this.pboxImagenPerfilRegistro);
+            this.panelCargarImagenRegistro.Controls.Add(this.materialLabel3);
+            this.panelCargarImagenRegistro.Depth = 0;
+            this.panelCargarImagenRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelCargarImagenRegistro.Location = new System.Drawing.Point(716, 372);
+            this.panelCargarImagenRegistro.Margin = new System.Windows.Forms.Padding(14);
+            this.panelCargarImagenRegistro.MouseState = MaterialSkin.MouseState.HOVER;
+            this.panelCargarImagenRegistro.Name = "panelCargarImagenRegistro";
+            this.panelCargarImagenRegistro.Padding = new System.Windows.Forms.Padding(14);
+            this.panelCargarImagenRegistro.Size = new System.Drawing.Size(502, 355);
+            this.panelCargarImagenRegistro.TabIndex = 4;
+            // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegistrarse.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnRegistrarse.Depth = 0;
+            this.btnRegistrarse.HighEmphasis = true;
+            this.btnRegistrarse.Icon = null;
+            this.btnRegistrarse.Location = new System.Drawing.Point(163, 289);
+            this.btnRegistrarse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRegistrarse.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnRegistrarse.Size = new System.Drawing.Size(180, 36);
+            this.btnRegistrarse.TabIndex = 3;
+            this.btnRegistrarse.Text = "Completar Registro";
+            this.btnRegistrarse.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnRegistrarse.UseAccentColor = false;
+            this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
+            // 
+            // btnAgregarImagenPerfil
+            // 
+            this.btnAgregarImagenPerfil.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAgregarImagenPerfil.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAgregarImagenPerfil.Depth = 0;
+            this.btnAgregarImagenPerfil.HighEmphasis = true;
+            this.btnAgregarImagenPerfil.Icon = null;
+            this.btnAgregarImagenPerfil.Location = new System.Drawing.Point(202, 213);
+            this.btnAgregarImagenPerfil.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAgregarImagenPerfil.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAgregarImagenPerfil.Name = "btnAgregarImagenPerfil";
+            this.btnAgregarImagenPerfil.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAgregarImagenPerfil.Size = new System.Drawing.Size(103, 36);
+            this.btnAgregarImagenPerfil.TabIndex = 2;
+            this.btnAgregarImagenPerfil.Text = "Subir foto";
+            this.btnAgregarImagenPerfil.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAgregarImagenPerfil.UseAccentColor = false;
+            this.btnAgregarImagenPerfil.UseVisualStyleBackColor = true;
+            this.btnAgregarImagenPerfil.Click += new System.EventHandler(this.btnAgregarImagenPerfil_Click);
+            // 
+            // pboxImagenPerfilRegistro
+            // 
+            this.pboxImagenPerfilRegistro.Location = new System.Drawing.Point(198, 73);
+            this.pboxImagenPerfilRegistro.Name = "pboxImagenPerfilRegistro";
+            this.pboxImagenPerfilRegistro.Size = new System.Drawing.Size(114, 114);
+            this.pboxImagenPerfilRegistro.TabIndex = 1;
+            this.pboxImagenPerfilRegistro.TabStop = false;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Location = new System.Drawing.Point(169, 19);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(174, 19);
+            this.materialLabel3.TabIndex = 0;
+            this.materialLabel3.Text = "Agregar imagen de perfil";
             // 
             // materialDivider1
             // 
@@ -284,25 +368,25 @@ namespace CapaVisual
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
-            // btnRegister
+            // btnSiguiente
             // 
-            this.btnRegister.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRegister.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnRegister.Depth = 0;
-            this.btnRegister.HighEmphasis = true;
-            this.btnRegister.Icon = null;
-            this.btnRegister.Location = new System.Drawing.Point(199, 535);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnRegister.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnRegister.Size = new System.Drawing.Size(95, 36);
-            this.btnRegister.TabIndex = 1;
-            this.btnRegister.Text = "Siguiente";
-            this.btnRegister.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnRegister.UseAccentColor = false;
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btnSiguiente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSiguiente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSiguiente.Depth = 0;
+            this.btnSiguiente.HighEmphasis = true;
+            this.btnSiguiente.Icon = null;
+            this.btnSiguiente.Location = new System.Drawing.Point(199, 535);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSiguiente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSiguiente.Size = new System.Drawing.Size(95, 36);
+            this.btnSiguiente.TabIndex = 1;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSiguiente.UseAccentColor = false;
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // pictureBox2
             // 
@@ -319,15 +403,19 @@ namespace CapaVisual
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panelCargarImagenRegistro);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.materialCard1);
+            this.Controls.Add(this.panelDatosRegistro);
             this.Name = "RegisterPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LinguaLink";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RegisterPage_Load);
-            this.materialCard1.ResumeLayout(false);
-            this.materialCard1.PerformLayout();
+            this.panelDatosRegistro.ResumeLayout(false);
+            this.panelDatosRegistro.PerformLayout();
+            this.panelCargarImagenRegistro.ResumeLayout(false);
+            this.panelCargarImagenRegistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenPerfilRegistro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -335,13 +423,13 @@ namespace CapaVisual
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialCard panelDatosRegistro;
         private MaterialSkin.Controls.MaterialTextBox txtPassword;
         private MaterialSkin.Controls.MaterialTextBox txtEmail;
         private MaterialSkin.Controls.MaterialTextBox txtSegundoApellido;
         private MaterialSkin.Controls.MaterialTextBox txtApellido;
         private MaterialSkin.Controls.MaterialTextBox txtNombre;
-        private MaterialSkin.Controls.MaterialButton btnRegister;
+        private MaterialSkin.Controls.MaterialButton btnSiguiente;
         private MaterialSkin.Controls.MaterialTextBox txtConfirmPssword;
         private System.Windows.Forms.PictureBox pictureBox2;
         private MaterialSkin.Controls.MaterialCheckbox chBoxIngles;
@@ -350,5 +438,10 @@ namespace CapaVisual
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialComboBox comboBoxPaises;
+        private MaterialSkin.Controls.MaterialCard panelCargarImagenRegistro;
+        private MaterialSkin.Controls.MaterialButton btnRegistrarse;
+        private MaterialSkin.Controls.MaterialButton btnAgregarImagenPerfil;
+        private System.Windows.Forms.PictureBox pboxImagenPerfilRegistro;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
     }
 }

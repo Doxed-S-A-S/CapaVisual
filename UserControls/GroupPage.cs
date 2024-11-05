@@ -20,6 +20,10 @@ namespace CapaVisual
         public GroupPage()
         {
             InitializeComponent();
+            pboxCircular pbox = new pboxCircular();
+
+            pbox.MakeCircularPictureBox(pboxImagenGrupo);
+
         }
         private int _idGrupo;
         private bool postsMostrados = false;
