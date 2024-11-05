@@ -33,40 +33,40 @@ namespace CapaVisual
                 );
         }
         private void LoginPage_Load(object sender, EventArgs e)
-        { 
-            txtEmail.Text = "Correo";
-            txtEmail.ForeColor = Color.Gray;
+        {
+            txtUsername.Text = "Correo";
+            txtUsername.ForeColor = Color.Gray;
             txtPassword.Text = "Contraseña";
             txtPassword.ForeColor = Color.Gray;
         }
 
         private void txtEmail_Enter(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "Correo")
+            if (txtUsername.Text == "Correo")
             {
-                txtEmail.Text = "";
-                txtEmail.ForeColor = Color.Black;
+                txtUsername.Text = "";
+                txtUsername.ForeColor = Color.Black;
             }
         }
 
         private void txtEmail_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
             {
-                txtEmail.Text = "Correo";
-                txtEmail.ForeColor = Color.Gray;
+                txtUsername.Text = "Correo";
+                txtUsername.ForeColor = Color.Gray;
             }
         }
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            if (txtEmail.Text != "Correo" && txtEmail.ForeColor == Color.Gray)
+            if (txtUsername.Text != "Correo" && txtUsername.ForeColor == Color.Gray)
             {
-                txtEmail.ForeColor = Color.Black;
+                txtUsername.ForeColor = Color.Black;
             }
 
-            if (string.IsNullOrEmpty(txtEmail.Text) && txtEmail.Focused)
+            if (string.IsNullOrEmpty(txtUsername.Text) && txtUsername.Focused)
             {
-                txtEmail.ForeColor = Color.Black;
+                txtUsername.ForeColor = Color.Black;
             }
         }
 
@@ -105,13 +105,13 @@ namespace CapaVisual
             registerPage.Show();
 
         }
-        private void btnIniciar_Clic(object sender, EventArgs e) 
+        private void btnIniciar_Clic(object sender, EventArgs e)
         {
-            
-            if (txtEmail.Text == "Correo" || txtEmail.Text.Trim() == "")
+            loginUsuario();
+            if (txtUsername.Text == "Correo" || txtUsername.Text.Trim() == "")
             {
                 MessageBox.Show("Por favor, ingrese un correo electrónico válido.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEmail.Focus();
+                txtUsername.Focus();
                 return;
             }
 
@@ -122,13 +122,46 @@ namespace CapaVisual
                 return;
             }
 
-            if(txtEmail.Text == "admin" && txtPassword.Text == "admin")
+            if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
             {
                 this.Hide();
                 AppWindow app = new AppWindow();
                 app.Show();
             }
-            
+
+        }
+
+        private void loginUsuario()
+        {
+            RestClient client = new RestClient("http://localhost:44395/");
+            RestRequest request = new RestRequest("ApiAut/login", Method.Post);
+            RestResponse response;
+
+            try
+            {
+                request.AddJsonBody(new
+                {
+                    nombre_usuario = txtUsername.Text,
+                    contraseña = txtPassword.Text
+                });
+                response = client.Execute(request);
+
+                if (response.IsSuccessful)
+                {
+                    this.Hide();
+                    AppWindow app = new AppWindow();
+                    app.Show();
+                    app.Activate();
+                }
+                else
+                {
+                    throw new Exception($"Error: {response.ErrorException.Message} - {response.Content}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

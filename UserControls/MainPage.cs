@@ -32,11 +32,18 @@ namespace CapaVisual
             RestClient client = new RestClient("http://localhost:44331/");
             RestRequest request = new RestRequest("ApiPost/post/obtener-posts", Method.Get);
             request.AddHeader("Accept", "application/json");
-            RestResponse response = client.Execute(request);
-
-            List<PostDesdeAPI> posts;
-            posts = JsonConvert.DeserializeObject<List<PostDesdeAPI>>(response.Content);
-            return posts;
+            try
+            {
+                RestResponse response = client.Execute(request);
+                List<PostDesdeAPI> posts;
+                posts = JsonConvert.DeserializeObject<List<PostDesdeAPI>>(response.Content);
+                return posts;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
 
         private static string obtenerCreadorDePost(int id_cuenta)
@@ -70,7 +77,6 @@ namespace CapaVisual
 
                     postCard.PostImage = Image.FromStream(stream);
 
-
                     flowLayoutPanelPosts.Controls.Add(postCard);
                 }
             }
@@ -78,19 +84,16 @@ namespace CapaVisual
             {
                 MessageBox.Show(e.Message);
             }
-
         }
 
         private void CrearMaterialCard(string contenido) // a cambiar
         {
-
             MaterialSkin.Controls.MaterialCard materialCard = new MaterialSkin.Controls.MaterialCard
             {
                 Width = 697,
                 Height = 225,
                 BackColor = Color.White
             };
-
 
             Label lblContenido = new Label
             {
@@ -99,9 +102,7 @@ namespace CapaVisual
                 AutoSize = true
             };
 
-
             materialCard.Controls.Add(lblContenido);
-
 
             flowLayoutPanelPosts.Controls.Add(materialCard);
         }
@@ -109,7 +110,6 @@ namespace CapaVisual
         {
             if (flowLayoutPanelPosts.VerticalScroll.Value + flowLayoutPanelPosts.ClientSize.Height >= flowLayoutPanelPosts.VerticalScroll.Maximum)
             {
-
                 CrearMaterialCard("Nuevo post al llegar al fondo usando MouseWheel");
             }
         }
@@ -118,7 +118,6 @@ namespace CapaVisual
         {
             if (flowLayoutPanelPosts.VerticalScroll.Value + flowLayoutPanelPosts.ClientSize.Height >= flowLayoutPanelPosts.VerticalScroll.Maximum)
             {
-
                 CrearMaterialCard("Nuevo post al llegar al fondo");
             }
         }

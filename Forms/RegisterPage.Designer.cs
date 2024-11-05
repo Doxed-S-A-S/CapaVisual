@@ -30,6 +30,12 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.comboBoxPaises = new MaterialSkin.Controls.MaterialComboBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.chBoxIngles = new MaterialSkin.Controls.MaterialCheckbox();
+            this.chBoxEspañol = new MaterialSkin.Controls.MaterialCheckbox();
             this.txtConfirmPssword = new MaterialSkin.Controls.MaterialTextBox();
             this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.txtEmail = new MaterialSkin.Controls.MaterialTextBox();
@@ -45,6 +51,12 @@ namespace CapaVisual
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.materialDivider1);
+            this.materialCard1.Controls.Add(this.materialLabel2);
+            this.materialCard1.Controls.Add(this.comboBoxPaises);
+            this.materialCard1.Controls.Add(this.materialLabel1);
+            this.materialCard1.Controls.Add(this.chBoxIngles);
+            this.materialCard1.Controls.Add(this.chBoxEspañol);
             this.materialCard1.Controls.Add(this.txtConfirmPssword);
             this.materialCard1.Controls.Add(this.txtPassword);
             this.materialCard1.Controls.Add(this.txtEmail);
@@ -54,20 +66,110 @@ namespace CapaVisual
             this.materialCard1.Controls.Add(this.btnRegister);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(485, 324);
+            this.materialCard1.Location = new System.Drawing.Point(716, 372);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(502, 407);
+            this.materialCard1.Size = new System.Drawing.Size(502, 591);
             this.materialCard1.TabIndex = 1;
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(63, 402);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(388, 10);
+            this.materialDivider1.TabIndex = 4;
+            this.materialDivider1.Text = "materialDivider1";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(60, 368);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(182, 19);
+            this.materialLabel2.TabIndex = 14;
+            this.materialLabel2.Text = "Cual es tu pais de origen?";
+            // 
+            // comboBoxPaises
+            // 
+            this.comboBoxPaises.AutoResize = false;
+            this.comboBoxPaises.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboBoxPaises.Depth = 0;
+            this.comboBoxPaises.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBoxPaises.DropDownHeight = 174;
+            this.comboBoxPaises.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPaises.DropDownWidth = 121;
+            this.comboBoxPaises.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.comboBoxPaises.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.comboBoxPaises.FormattingEnabled = true;
+            this.comboBoxPaises.IntegralHeight = false;
+            this.comboBoxPaises.ItemHeight = 43;
+            this.comboBoxPaises.Location = new System.Drawing.Point(284, 352);
+            this.comboBoxPaises.MaxDropDownItems = 4;
+            this.comboBoxPaises.MouseState = MaterialSkin.MouseState.OUT;
+            this.comboBoxPaises.Name = "comboBoxPaises";
+            this.comboBoxPaises.Size = new System.Drawing.Size(167, 49);
+            this.comboBoxPaises.StartIndex = 0;
+            this.comboBoxPaises.TabIndex = 13;
+            this.comboBoxPaises.DropDown += new System.EventHandler(this.comboBoxPaises_DropDown);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(133, 420);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(233, 19);
+            this.materialLabel1.TabIndex = 12;
+            this.materialLabel1.Text = "Cuales de estos idiomas hablas?";
+            // 
+            // chBoxIngles
+            // 
+            this.chBoxIngles.AutoSize = true;
+            this.chBoxIngles.Depth = 0;
+            this.chBoxIngles.Location = new System.Drawing.Point(63, 469);
+            this.chBoxIngles.Margin = new System.Windows.Forms.Padding(0);
+            this.chBoxIngles.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chBoxIngles.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chBoxIngles.Name = "chBoxIngles";
+            this.chBoxIngles.ReadOnly = false;
+            this.chBoxIngles.Ripple = true;
+            this.chBoxIngles.Size = new System.Drawing.Size(77, 37);
+            this.chBoxIngles.TabIndex = 9;
+            this.chBoxIngles.Text = "Ingles";
+            this.chBoxIngles.UseVisualStyleBackColor = true;
+            // 
+            // chBoxEspañol
+            // 
+            this.chBoxEspañol.AutoSize = true;
+            this.chBoxEspañol.Depth = 0;
+            this.chBoxEspañol.Location = new System.Drawing.Point(63, 441);
+            this.chBoxEspañol.Margin = new System.Windows.Forms.Padding(0);
+            this.chBoxEspañol.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chBoxEspañol.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chBoxEspañol.Name = "chBoxEspañol";
+            this.chBoxEspañol.ReadOnly = false;
+            this.chBoxEspañol.Ripple = true;
+            this.chBoxEspañol.Size = new System.Drawing.Size(92, 37);
+            this.chBoxEspañol.TabIndex = 8;
+            this.chBoxEspañol.Text = "Español";
+            this.chBoxEspañol.UseVisualStyleBackColor = true;
             // 
             // txtConfirmPssword
             // 
             this.txtConfirmPssword.AnimateReadOnly = false;
             this.txtConfirmPssword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfirmPssword.Depth = 0;
-            this.txtConfirmPssword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtConfirmPssword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConfirmPssword.LeadingIcon = null;
             this.txtConfirmPssword.Location = new System.Drawing.Point(63, 297);
             this.txtConfirmPssword.MaxLength = 50;
@@ -87,7 +189,7 @@ namespace CapaVisual
             this.txtPassword.AnimateReadOnly = false;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Depth = 0;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPassword.LeadingIcon = null;
             this.txtPassword.Location = new System.Drawing.Point(63, 241);
             this.txtPassword.MaxLength = 50;
@@ -107,7 +209,7 @@ namespace CapaVisual
             this.txtEmail.AnimateReadOnly = false;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Depth = 0;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmail.LeadingIcon = null;
             this.txtEmail.Location = new System.Drawing.Point(63, 185);
             this.txtEmail.MaxLength = 50;
@@ -127,7 +229,7 @@ namespace CapaVisual
             this.txtSegundoApellido.AnimateReadOnly = false;
             this.txtSegundoApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSegundoApellido.Depth = 0;
-            this.txtSegundoApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtSegundoApellido.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtSegundoApellido.LeadingIcon = null;
             this.txtSegundoApellido.Location = new System.Drawing.Point(63, 129);
             this.txtSegundoApellido.MaxLength = 50;
@@ -147,7 +249,7 @@ namespace CapaVisual
             this.txtApellido.AnimateReadOnly = false;
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellido.Depth = 0;
-            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtApellido.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtApellido.LeadingIcon = null;
             this.txtApellido.Location = new System.Drawing.Point(63, 73);
             this.txtApellido.MaxLength = 50;
@@ -167,7 +269,7 @@ namespace CapaVisual
             this.txtNombre.AnimateReadOnly = false;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Depth = 0;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombre.LeadingIcon = null;
             this.txtNombre.Location = new System.Drawing.Point(63, 17);
             this.txtNombre.MaxLength = 50;
@@ -189,14 +291,14 @@ namespace CapaVisual
             this.btnRegister.Depth = 0;
             this.btnRegister.HighEmphasis = true;
             this.btnRegister.Icon = null;
-            this.btnRegister.Location = new System.Drawing.Point(184, 356);
+            this.btnRegister.Location = new System.Drawing.Point(199, 535);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegister.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnRegister.Size = new System.Drawing.Size(116, 36);
+            this.btnRegister.Size = new System.Drawing.Size(95, 36);
             this.btnRegister.TabIndex = 1;
-            this.btnRegister.Text = "registrarse";
+            this.btnRegister.Text = "Siguiente";
             this.btnRegister.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnRegister.UseAccentColor = false;
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -205,7 +307,7 @@ namespace CapaVisual
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaVisual.Properties.Resources.LiguaLinkWite;
-            this.pictureBox2.Location = new System.Drawing.Point(576, 95);
+            this.pictureBox2.Location = new System.Drawing.Point(799, 159);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(326, 196);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -216,11 +318,13 @@ namespace CapaVisual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1499, 815);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.materialCard1);
             this.Name = "RegisterPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LinguaLink";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RegisterPage_Load);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
@@ -240,5 +344,11 @@ namespace CapaVisual
         private MaterialSkin.Controls.MaterialButton btnRegister;
         private MaterialSkin.Controls.MaterialTextBox txtConfirmPssword;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialCheckbox chBoxIngles;
+        private MaterialSkin.Controls.MaterialCheckbox chBoxEspañol;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialComboBox comboBoxPaises;
     }
 }
