@@ -19,9 +19,8 @@ namespace CapaVisual
         public CompartirPostDialog()
         {
             InitializeComponent();
-            
+            obtenerGruposQueConformaElUsuario();
         }
-
         public void obtenerGruposQueConformaElUsuario()
         {
             AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
@@ -29,23 +28,59 @@ namespace CapaVisual
             RestClient client = new RestClient("http://localhost:57063/");
             RestRequest request = new RestRequest($"ApiGrupos/conforma_grupos/{app.id_cuenta}", Method.Get);
             request.AddHeader("Accept", "application/json");
+
             try
             {
                 RestResponse response = client.Execute(request);
-                List<GrupoDesdeAPI> grupos;
-                grupos = JsonConvert.DeserializeObject<List<GrupoDesdeAPI>>(response.Content);
+                List<GrupoConformadoDesdeAPI> grupos = JsonConvert.DeserializeObject<List<GrupoConformadoDesdeAPI>>(response.Content);
 
                 dataGridView2.Rows.Clear();
 
-                foreach (var grupo in grupos)
+                dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView2.AutoGenerateColumns = false;
+
+                if (dataGridView2.Columns.Count == 0)
                 {
-                    dataGridView2.Rows.Add(grupo.id_grupo, grupo.nombre_grupo);
+                    dataGridView2.Columns.Add("nombre_grupo", "Nombre Grupo");
                 }
-                
+
+                int indice = 0;
+                foreach (GrupoConformadoDesdeAPI grupo in grupos)
+                {
+                    dataGridView2.Rows.Add(grupo.nombre_grupo);
+                    dataGridView2.Rows[indice].Tag = grupo.id_grupo;
+                    indice += 1;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private void dataGridView2_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int idGrupo = (int)dataGridView2.Rows[e.RowIndex].Tag;
+                try
+                {
+                    SeleccionDeCompartida selec = Application.OpenForms.OfType<SeleccionDeCompartida>().FirstOrDefault();
+
+                    RestClient client = new RestClient("http://localhost:44331/");
+                    RestRequest request = new RestRequest($"ApiPost/post/compartir-en-grupo/{selec.id_post}/{idGrupo}", Method.Post);
+                    
+                    RestResponse response = client.Execute(request);
+                    if (response.IsSuccessful)
+                    {
+                        MessageBox.Show("Se compartio todo bien parcero");
+                        this.Close();
+                        selec.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("no se compartio bien mi rey");
+                }
             }
         }
     }

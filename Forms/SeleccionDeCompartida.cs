@@ -44,7 +44,7 @@ namespace CapaVisual
         }
         private void btnCompartirGrupo_Click_1(object sender, EventArgs e)
         {
-            this.Parent.Hide();
+            //this.Hide();
             CompartirPostDialog dialog = new CompartirPostDialog();
             dialog.Show();
         }

@@ -29,22 +29,15 @@ namespace CapaVisual
         /// </summary>
         private void InitializeComponent()
         {
-            this.compartirEnGrupoDialog1 = new CapaVisual.CompartirEnGrupoDialog();
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.panelSeleccionarGrupo = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.compartirEnGrupoDialog1 = new CapaVisual.CompartirEnGrupoDialog();
             this.panel1.SuspendLayout();
             this.panelSeleccionarGrupo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // compartirEnGrupoDialog1
-            // 
-            this.compartirEnGrupoDialog1.Location = new System.Drawing.Point(1, 0);
-            this.compartirEnGrupoDialog1.Name = "compartirEnGrupoDialog1";
-            this.compartirEnGrupoDialog1.Size = new System.Drawing.Size(279, 285);
-            this.compartirEnGrupoDialog1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -91,6 +84,14 @@ namespace CapaVisual
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(235, 164);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick_1);
+            // 
+            // compartirEnGrupoDialog1
+            // 
+            this.compartirEnGrupoDialog1.Location = new System.Drawing.Point(1, 0);
+            this.compartirEnGrupoDialog1.Name = "compartirEnGrupoDialog1";
+            this.compartirEnGrupoDialog1.Size = new System.Drawing.Size(279, 285);
+            this.compartirEnGrupoDialog1.TabIndex = 0;
             // 
             // CompartirPostDialog
             // 
