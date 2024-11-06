@@ -31,6 +31,8 @@ namespace CapaVisual
                 MaterialSkin.Accent.Green400,
                 MaterialSkin.TextShade.BLACK
                 );
+
+            
         }
         private void LoginPage_Load(object sender, EventArgs e)
         {
@@ -76,6 +78,7 @@ namespace CapaVisual
             {
                 txtPassword.Text = "";
                 txtPassword.ForeColor = Color.Black;
+                txtPassword.Password = true;
             }
         }
 
@@ -83,6 +86,7 @@ namespace CapaVisual
         {
             if (string.IsNullOrWhiteSpace(txtPassword.Text))
             {
+                txtPassword.Password = false;
                 txtPassword.Text = "Contraseña";
                 txtPassword.ForeColor = Color.Gray;
             }
@@ -92,11 +96,13 @@ namespace CapaVisual
             if (txtPassword.Text != "Contraseña" && txtPassword.ForeColor == Color.Gray)
             {
                 txtPassword.ForeColor = Color.Black;
+                txtPassword.Password = true;
             }
 
             if (string.IsNullOrEmpty(txtPassword.Text) && txtPassword.Focused)
             {
                 txtPassword.ForeColor = Color.Black;
+                txtPassword.Password = true;
             }
         }
         private void btnRegistrar_Click(object sender, EventArgs e)

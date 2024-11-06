@@ -39,7 +39,7 @@ namespace CapaVisual
             // 
             // panelDerecho
             // 
-            this.panelDerecho.BackColor = System.Drawing.Color.LightGray;
+            this.panelDerecho.BackColor = System.Drawing.Color.Silver;
             this.panelDerecho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelDerecho.Location = new System.Drawing.Point(1037, 2);
             this.panelDerecho.Margin = new System.Windows.Forms.Padding(2);
@@ -62,7 +62,7 @@ namespace CapaVisual
             // flowLayoutPanelPosts
             // 
             this.flowLayoutPanelPosts.AutoScroll = true;
-            this.flowLayoutPanelPosts.BackColor = System.Drawing.Color.LightGray;
+            this.flowLayoutPanelPosts.BackColor = System.Drawing.Color.Silver;
             this.flowLayoutPanelPosts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanelPosts.ForeColor = System.Drawing.Color.Black;
             this.flowLayoutPanelPosts.Location = new System.Drawing.Point(16, 159);
@@ -71,12 +71,12 @@ namespace CapaVisual
             this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(235, 0, 50, 0);
             this.flowLayoutPanelPosts.Size = new System.Drawing.Size(1017, 852);
             this.flowLayoutPanelPosts.TabIndex = 8;
-            this.flowLayoutPanelPosts.Scroll += new System.Windows.Forms.ScrollEventHandler(this.flowLayoutPanelPosts_Scroll);
+            
             // 
             // flowLayoutCrearPosts
             // 
             this.flowLayoutCrearPosts.AutoSize = true;
-            this.flowLayoutCrearPosts.BackColor = System.Drawing.Color.LightGray;
+            this.flowLayoutCrearPosts.BackColor = System.Drawing.Color.Silver;
             this.flowLayoutCrearPosts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutCrearPosts.Controls.Add(this.crearPost1);
             this.flowLayoutCrearPosts.ForeColor = System.Drawing.Color.Black;

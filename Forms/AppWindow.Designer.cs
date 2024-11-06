@@ -30,7 +30,8 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.txtBarraBusqueda = new System.Windows.Forms.TextBox();
-            this.panelCrearPost = new System.Windows.Forms.Panel();
+            this.panelIzquierdoMain = new System.Windows.Forms.Panel();
+            this.txtUsernamePanelIzquierdo = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBoxImagenPerfil = new System.Windows.Forms.PictureBox();
             this.btnActividades = new System.Windows.Forms.Button();
             this.btnEventos = new System.Windows.Forms.Button();
@@ -47,11 +48,11 @@ namespace CapaVisual
             this.btnEliminarMisEvento = new System.Windows.Forms.Button();
             this.btnVerMisEventos = new System.Windows.Forms.Button();
             this.btnCrearEvento = new System.Windows.Forms.Button();
+            this.mainPage1 = new CapaVisual.mainPage1();
             this.interfazCrearGrupo1 = new CapaVisual.InterfazCrearGrupo();
             this.muroUsuario1 = new CapaVisual.MuroUsuario();
-            this.mainPage1 = new CapaVisual.mainPage1();
             this.groupPage1 = new CapaVisual.GroupPage();
-            this.panelCrearPost.SuspendLayout();
+            this.panelIzquierdoMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.panelSubmenuGrupos1.SuspendLayout();
             this.panelSubmenuEventos1.SuspendLayout();
@@ -65,28 +66,40 @@ namespace CapaVisual
             this.txtBarraBusqueda.Size = new System.Drawing.Size(459, 20);
             this.txtBarraBusqueda.TabIndex = 7;
             // 
-            // panelCrearPost
+            // panelIzquierdoMain
             // 
-            this.panelCrearPost.AutoScroll = true;
-            this.panelCrearPost.BackColor = System.Drawing.Color.LightGray;
-            this.panelCrearPost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCrearPost.Controls.Add(this.pictureBoxImagenPerfil);
-            this.panelCrearPost.Controls.Add(this.btnActividades);
-            this.panelCrearPost.Controls.Add(this.btnEventos);
-            this.panelCrearPost.Controls.Add(this.btnGrupos);
-            this.panelCrearPost.Controls.Add(this.btnPrincipal);
-            this.panelCrearPost.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelCrearPost.Location = new System.Drawing.Point(3, 64);
-            this.panelCrearPost.Margin = new System.Windows.Forms.Padding(2);
-            this.panelCrearPost.Name = "panelCrearPost";
-            this.panelCrearPost.Size = new System.Drawing.Size(240, 1013);
-            this.panelCrearPost.TabIndex = 10;
+            this.panelIzquierdoMain.AutoScroll = true;
+            this.panelIzquierdoMain.BackColor = System.Drawing.Color.LightGray;
+            this.panelIzquierdoMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelIzquierdoMain.Controls.Add(this.txtUsernamePanelIzquierdo);
+            this.panelIzquierdoMain.Controls.Add(this.pictureBoxImagenPerfil);
+            this.panelIzquierdoMain.Controls.Add(this.btnActividades);
+            this.panelIzquierdoMain.Controls.Add(this.btnEventos);
+            this.panelIzquierdoMain.Controls.Add(this.btnGrupos);
+            this.panelIzquierdoMain.Controls.Add(this.btnPrincipal);
+            this.panelIzquierdoMain.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelIzquierdoMain.Location = new System.Drawing.Point(3, 64);
+            this.panelIzquierdoMain.Margin = new System.Windows.Forms.Padding(2);
+            this.panelIzquierdoMain.Name = "panelIzquierdoMain";
+            this.panelIzquierdoMain.Size = new System.Drawing.Size(240, 1013);
+            this.panelIzquierdoMain.TabIndex = 10;
+            // 
+            // txtUsernamePanelIzquierdo
+            // 
+            this.txtUsernamePanelIzquierdo.AutoSize = true;
+            this.txtUsernamePanelIzquierdo.Depth = 0;
+            this.txtUsernamePanelIzquierdo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsernamePanelIzquierdo.Location = new System.Drawing.Point(67, 169);
+            this.txtUsernamePanelIzquierdo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsernamePanelIzquierdo.Name = "txtUsernamePanelIzquierdo";
+            this.txtUsernamePanelIzquierdo.Size = new System.Drawing.Size(1, 0);
+            this.txtUsernamePanelIzquierdo.TabIndex = 5;
             // 
             // pictureBoxImagenPerfil
             // 
             this.pictureBoxImagenPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxImagenPerfil.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(58, 34);
+            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(62, 33);
             this.pictureBoxImagenPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
             this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(120, 120);
@@ -97,11 +110,12 @@ namespace CapaVisual
             // 
             // btnActividades
             // 
-            this.btnActividades.BackColor = System.Drawing.Color.LightGray;
+            this.btnActividades.BackColor = System.Drawing.Color.Silver;
             this.btnActividades.FlatAppearance.BorderSize = 0;
-            this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActividades.Font = new System.Drawing.Font("Alef", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActividades.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnActividades.Location = new System.Drawing.Point(3, 270);
+            this.btnActividades.Location = new System.Drawing.Point(2, 339);
             this.btnActividades.Margin = new System.Windows.Forms.Padding(2);
             this.btnActividades.Name = "btnActividades";
             this.btnActividades.Size = new System.Drawing.Size(232, 32);
@@ -112,11 +126,12 @@ namespace CapaVisual
             // 
             // btnEventos
             // 
-            this.btnEventos.BackColor = System.Drawing.Color.LightGray;
+            this.btnEventos.BackColor = System.Drawing.Color.Silver;
             this.btnEventos.FlatAppearance.BorderSize = 0;
-            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEventos.Font = new System.Drawing.Font("Alef", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEventos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEventos.Location = new System.Drawing.Point(3, 232);
+            this.btnEventos.Location = new System.Drawing.Point(2, 301);
             this.btnEventos.Margin = new System.Windows.Forms.Padding(2);
             this.btnEventos.Name = "btnEventos";
             this.btnEventos.Size = new System.Drawing.Size(232, 32);
@@ -127,11 +142,13 @@ namespace CapaVisual
             // 
             // btnGrupos
             // 
-            this.btnGrupos.BackColor = System.Drawing.Color.LightGray;
+            this.btnGrupos.BackColor = System.Drawing.Color.Silver;
+            this.btnGrupos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGrupos.FlatAppearance.BorderSize = 0;
-            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGrupos.Font = new System.Drawing.Font("Alef", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrupos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGrupos.Location = new System.Drawing.Point(3, 195);
+            this.btnGrupos.Location = new System.Drawing.Point(2, 264);
             this.btnGrupos.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrupos.Name = "btnGrupos";
             this.btnGrupos.Size = new System.Drawing.Size(232, 32);
@@ -142,11 +159,13 @@ namespace CapaVisual
             // 
             // btnPrincipal
             // 
-            this.btnPrincipal.BackColor = System.Drawing.Color.LightGray;
+            this.btnPrincipal.BackColor = System.Drawing.Color.Silver;
+            this.btnPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrincipal.Font = new System.Drawing.Font("Alef", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrincipal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPrincipal.Location = new System.Drawing.Point(3, 158);
+            this.btnPrincipal.Location = new System.Drawing.Point(2, 227);
             this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(232, 32);
@@ -159,7 +178,7 @@ namespace CapaVisual
             // 
             this.panelSubmenuGrupos2.AutoScroll = true;
             this.panelSubmenuGrupos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSubmenuGrupos2.Location = new System.Drawing.Point(257, 256);
+            this.panelSubmenuGrupos2.Location = new System.Drawing.Point(264, 329);
             this.panelSubmenuGrupos2.Name = "panelSubmenuGrupos2";
             this.panelSubmenuGrupos2.Size = new System.Drawing.Size(170, 281);
             this.panelSubmenuGrupos2.TabIndex = 12;
@@ -168,7 +187,7 @@ namespace CapaVisual
             // 
             this.panelSubmenuEventos2.AutoScroll = true;
             this.panelSubmenuEventos2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSubmenuEventos2.Location = new System.Drawing.Point(257, 294);
+            this.panelSubmenuEventos2.Location = new System.Drawing.Point(264, 366);
             this.panelSubmenuEventos2.Name = "panelSubmenuEventos2";
             this.panelSubmenuEventos2.Size = new System.Drawing.Size(170, 281);
             this.panelSubmenuEventos2.TabIndex = 13;
@@ -177,7 +196,7 @@ namespace CapaVisual
             // 
             this.panelSubmenuActividades.AutoScroll = true;
             this.panelSubmenuActividades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSubmenuActividades.Location = new System.Drawing.Point(257, 334);
+            this.panelSubmenuActividades.Location = new System.Drawing.Point(264, 334);
             this.panelSubmenuActividades.Name = "panelSubmenuActividades";
             this.panelSubmenuActividades.Size = new System.Drawing.Size(170, 281);
             this.panelSubmenuActividades.TabIndex = 14;
@@ -190,7 +209,7 @@ namespace CapaVisual
             this.panelSubmenuGrupos1.Controls.Add(this.btnEliminarGrupo);
             this.panelSubmenuGrupos1.Controls.Add(this.btnVerMisGrupos);
             this.panelSubmenuGrupos1.Controls.Add(this.btnCrearGrupo);
-            this.panelSubmenuGrupos1.Location = new System.Drawing.Point(257, 256);
+            this.panelSubmenuGrupos1.Location = new System.Drawing.Point(264, 329);
             this.panelSubmenuGrupos1.Name = "panelSubmenuGrupos1";
             this.panelSubmenuGrupos1.Size = new System.Drawing.Size(170, 296);
             this.panelSubmenuGrupos1.TabIndex = 13;
@@ -235,7 +254,7 @@ namespace CapaVisual
             this.panelSubmenuEventos1.Controls.Add(this.btnEliminarMisEvento);
             this.panelSubmenuEventos1.Controls.Add(this.btnVerMisEventos);
             this.panelSubmenuEventos1.Controls.Add(this.btnCrearEvento);
-            this.panelSubmenuEventos1.Location = new System.Drawing.Point(257, 296);
+            this.panelSubmenuEventos1.Location = new System.Drawing.Point(264, 366);
             this.panelSubmenuEventos1.Name = "panelSubmenuEventos1";
             this.panelSubmenuEventos1.Size = new System.Drawing.Size(170, 110);
             this.panelSubmenuEventos1.TabIndex = 15;
@@ -272,6 +291,14 @@ namespace CapaVisual
             this.btnCrearEvento.UseVisualStyleBackColor = true;
             this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
             // 
+            // mainPage1
+            // 
+            this.mainPage1.Location = new System.Drawing.Point(243, 64);
+            this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.mainPage1.Name = "mainPage1";
+            this.mainPage1.Size = new System.Drawing.Size(1672, 1013);
+            this.mainPage1.TabIndex = 18;
+            // 
             // interfazCrearGrupo1
             // 
             this.interfazCrearGrupo1.Location = new System.Drawing.Point(260, 256);
@@ -287,14 +314,6 @@ namespace CapaVisual
             this.muroUsuario1.Name = "muroUsuario1";
             this.muroUsuario1.Size = new System.Drawing.Size(1672, 1009);
             this.muroUsuario1.TabIndex = 16;
-            // 
-            // mainPage1
-            // 
-            this.mainPage1.Location = new System.Drawing.Point(243, 64);
-            this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.mainPage1.Name = "mainPage1";
-            this.mainPage1.Size = new System.Drawing.Size(1672, 1013);
-            this.mainPage1.TabIndex = 8;
             // 
             // groupPage1
             // 
@@ -316,6 +335,7 @@ namespace CapaVisual
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.mainPage1);
             this.Controls.Add(this.interfazCrearGrupo1);
             this.Controls.Add(this.panelSubmenuEventos1);
             this.Controls.Add(this.panelSubmenuGrupos1);
@@ -323,10 +343,9 @@ namespace CapaVisual
             this.Controls.Add(this.panelSubmenuEventos2);
             this.Controls.Add(this.panelSubmenuGrupos2);
             this.Controls.Add(this.muroUsuario1);
-            this.Controls.Add(this.mainPage1);
             this.Controls.Add(this.groupPage1);
             this.Controls.Add(this.txtBarraBusqueda);
-            this.Controls.Add(this.panelCrearPost);
+            this.Controls.Add(this.panelIzquierdoMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(114)))), ((int)(((byte)(255)))));
             this.Name = "AppWindow";
@@ -334,7 +353,8 @@ namespace CapaVisual
             this.Text = "LinguaLink";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppWindow_FormClosed);
-            this.panelCrearPost.ResumeLayout(false);
+            this.panelIzquierdoMain.ResumeLayout(false);
+            this.panelIzquierdoMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).EndInit();
             this.panelSubmenuGrupos1.ResumeLayout(false);
             this.panelSubmenuEventos1.ResumeLayout(false);
@@ -345,9 +365,7 @@ namespace CapaVisual
 
         #endregion
         private System.Windows.Forms.TextBox txtBarraBusqueda;
-        
-        private mainPage1 mainPage1;
-        private System.Windows.Forms.Panel panelCrearPost;
+        private System.Windows.Forms.Panel panelIzquierdoMain;
         private System.Windows.Forms.PictureBox pictureBoxImagenPerfil;
         private System.Windows.Forms.Button btnActividades;
         private System.Windows.Forms.Button btnEventos;
@@ -367,6 +385,8 @@ namespace CapaVisual
         private System.Windows.Forms.Button btnCrearEvento;
         private MuroUsuario muroUsuario1;
         private InterfazCrearGrupo interfazCrearGrupo1;
+        private MaterialSkin.Controls.MaterialLabel txtUsernamePanelIzquierdo;
+        public mainPage1 mainPage1;
     }
 }
 

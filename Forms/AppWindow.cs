@@ -21,7 +21,7 @@ namespace CapaVisual
     public partial class AppWindow : MaterialForm
     {
         public int id_cuenta;
-        private int id_muro;
+        public int id_muro { get; set; }
         private int id_preferencia;
         private string nombre_usuario;
         private string imagen_perfil;
@@ -31,12 +31,11 @@ namespace CapaVisual
         {
             InitializeComponent();
             hideAllUsercontrols();
-
             pboxCircular pbox = new pboxCircular();
 
             pbox.MakeCircularPictureBox(pictureBoxImagenPerfil);
             mainPage1.Visible = true;
-
+            
             panelSubmenuGrupos1.Hide();
             panelSubmenuGrupos2.Hide();
             panelSubmenuEventos1.Hide();
@@ -58,11 +57,13 @@ namespace CapaVisual
                 );
             
         }
-
         public void appWindowLoad()
         {
+            panelIzquierdoMain.BackColor = Color.LightGray;
             obtenerInfoCuentaDesdeApi(id_cuenta);
             pictureBoxImagenPerfil.Load(imagen_perfil);
+            txtUsernamePanelIzquierdo.Text = this.nombre_usuario;
+            mainPage1.mainpageLoad();
         }
         public void ShowGroupPage()
         {
@@ -137,6 +138,7 @@ namespace CapaVisual
         {
             if (panelSubmenuGrupos2.Visible == true)
             {
+                panelSubmenuGrupos2.BringToFront();
                 panelSubmenuGrupos2.Visible = false;
                 panelSubmenuGrupos1.Visible = false;
             }
@@ -144,6 +146,7 @@ namespace CapaVisual
             {
                 hideAllSubpanels();
                 panelSubmenuGrupos2.Visible = true;
+                panelSubmenuGrupos2.BringToFront();
 
             }
         }

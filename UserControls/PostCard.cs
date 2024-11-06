@@ -41,13 +41,14 @@ namespace CapaVisual
             set { pictureBoxImagenPost.Image = value; }
         }
 
+        public int id_post { get; set; }
+
         private void btnCompartir_Click(object sender, EventArgs e)
         {
             SeleccionDeCompartida seleccion = new SeleccionDeCompartida();
+            seleccion.id_post = this.id_post;
             seleccion.StartPosition = FormStartPosition.CenterScreen;
             seleccion.Show();
-            /*CompartirPost compartirDialog = new CompartirPost();
-            compartirDialog.Show();*/
         }
     }
 }

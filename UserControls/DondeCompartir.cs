@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,6 @@ namespace CapaVisual.UserControls
             InitializeComponent();
         }
 
-        private void btnCompartirGrupo_Click(object sender, EventArgs e)
-        {
-            this.Parent.Hide();
-            CompartirPostDialog dialog = new CompartirPostDialog();
-            dialog.Show();
-        }
+        
     }
 }

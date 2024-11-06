@@ -22,11 +22,14 @@ namespace CapaVisual
         {
             InitializeComponent();
             mostrarPostsIniciales();
-            
-            flowLayoutPanelPosts.Scroll += new ScrollEventHandler(flowLayoutPanelPosts_Scroll);
-            flowLayoutPanelPosts.MouseWheel += flowLayoutPanelPosts_MouseWheel;
         }
-
+        
+        public void mainpageLoad()
+        {
+            flowLayoutCrearPosts.BackColor = Color.LightGray;
+            flowLayoutPanelPosts.BackColor = Color.LightGray;
+            panelDerecho.BackColor = Color.LightGray;
+        }
         private static List<PostDesdeAPI> obtenerPostDesdeAPI()
         {
             RestClient client = new RestClient("http://localhost:44331/");
@@ -45,7 +48,6 @@ namespace CapaVisual
                 return null;
             }
         }
-
         private static string obtenerCreadorDePost(int id_cuenta)
         {
             RestClient client = new RestClient("http://localhost:44331/");
@@ -70,6 +72,7 @@ namespace CapaVisual
                     postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
                     postCard.PostContent = post.contenido;
                     postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
+                    postCard.id_post = post.id_post;
 
                     HttpClient client = new HttpClient();
                     byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
@@ -85,43 +88,6 @@ namespace CapaVisual
                 MessageBox.Show(e.Message);
             }
         }
-
-        private void CrearMaterialCard(string contenido) // a cambiar
-        {
-            MaterialSkin.Controls.MaterialCard materialCard = new MaterialSkin.Controls.MaterialCard
-            {
-                Width = 697,
-                Height = 225,
-                BackColor = Color.White
-            };
-
-            Label lblContenido = new Label
-            {
-                Text = contenido,
-                Location = new Point(10, 10),
-                AutoSize = true
-            };
-
-            materialCard.Controls.Add(lblContenido);
-
-            flowLayoutPanelPosts.Controls.Add(materialCard);
-        }
-        private void flowLayoutPanelPosts_MouseWheel(object sender, MouseEventArgs e)
-        {
-            if (flowLayoutPanelPosts.VerticalScroll.Value + flowLayoutPanelPosts.ClientSize.Height >= flowLayoutPanelPosts.VerticalScroll.Maximum)
-            {
-                CrearMaterialCard("Nuevo post al llegar al fondo usando MouseWheel");
-            }
-        }
-
-        private void flowLayoutPanelPosts_Scroll(object sender, ScrollEventArgs e)
-        {
-            if (flowLayoutPanelPosts.VerticalScroll.Value + flowLayoutPanelPosts.ClientSize.Height >= flowLayoutPanelPosts.VerticalScroll.Maximum)
-            {
-                CrearMaterialCard("Nuevo post al llegar al fondo");
-            }
-        }
-
         private void btnGrupos_Click(object sender, EventArgs e)
         {
             var parentForm = this.Parent as AppWindow;
@@ -134,6 +100,7 @@ namespace CapaVisual
         public void EliminarCrearPost()
         {
             flowLayoutCrearPosts.Controls.Clear();
+            mostrarPostsIniciales();
         }
 
         public void AgregarCrearPost()
