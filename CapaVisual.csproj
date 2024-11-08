@@ -94,6 +94,12 @@
     </Compile>
     <Compile Include="DTO\CuentaDesdeAPI.cs" />
     <Compile Include="DTO\GrupoConformadoDesdeAPI.cs" />
+    <Compile Include="Forms\ComentarioDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ComentarioDialog.Designer.cs">
+      <DependentUpon>ComentarioDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="pboxCircular.cs" />
     <Compile Include="Forms\SeleccionDeCompartida.cs">
       <SubType>Form</SubType>
@@ -112,12 +118,6 @@
     </Compile>
     <Compile Include="UserControls\InterfazCrearGrupo.Designer.cs">
       <DependentUpon>InterfazCrearGrupo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\CompartirEnGrupoDialog.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\CompartirEnGrupoDialog.Designer.cs">
-      <DependentUpon>CompartirEnGrupoDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\GrupoDesdeAPI.cs" />
     <Compile Include="DTO\PostDesdeAPI.cs" />
@@ -177,20 +177,14 @@
     <Compile Include="UserControls\MuroUsuario.Designer.cs">
       <DependentUpon>MuroUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DondeCompartir.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\DondeCompartir.Designer.cs">
-      <DependentUpon>DondeCompartir.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Forms\ComentarioDialog.resx">
+      <DependentUpon>ComentarioDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SeleccionDeCompartida.resx">
       <DependentUpon>SeleccionDeCompartida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CompartirPostEnGrupo.resx">
       <DependentUpon>CompartirPostEnGrupo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CompartirEnGrupoDialog.resx">
-      <DependentUpon>CompartirEnGrupoDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CrearEvento.resx">
       <DependentUpon>CrearEvento.cs</DependentUpon>
@@ -231,9 +225,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CrearPost.resx">
       <DependentUpon>CrearPost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DondeCompartir.resx">
-      <DependentUpon>DondeCompartir.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

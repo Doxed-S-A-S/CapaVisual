@@ -1,5 +1,4 @@
-﻿using RestSharp;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVisual.UserControls
+namespace CapaVisual
 {
-    public partial class DondeCompartir : UserControl
+    public partial class ComentarioDialog : Form
     {
-        public DondeCompartir()
+        public ComentarioDialog()
         {
             InitializeComponent();
         }
 
-        
+        public Panel PanelContendorDePost
+        {
+            get { return panelContendorDePost; }
+        }
     }
 }

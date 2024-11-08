@@ -42,13 +42,44 @@ namespace CapaVisual
         }
 
         public int id_post { get; set; }
+        public PostCard Clone()
+        {
+            PostCard clone = new PostCard();
+            clone.UserName = this.UserName;
+            clone.PostContent = this.PostContent;
+            clone.ProfileImage = this.ProfileImage;
+            clone.PostImage = this.PostImage;
+            clone.id_post = this.id_post;
 
+            clone.Size = this.Size;
+            clone.Height = 276;
+            clone.Font = this.Font;
+            clone.BackColor = this.BackColor;
+
+            return clone;
+        }
         private void btnCompartir_Click(object sender, EventArgs e)
         {
             SeleccionDeCompartida seleccion = new SeleccionDeCompartida();
             seleccion.id_post = this.id_post;
             seleccion.StartPosition = FormStartPosition.CenterScreen;
             seleccion.Show();
+        }
+
+        private void btnComentarios_Click(object sender, EventArgs e)
+        {
+            ComentarioDialog comentarios = new ComentarioDialog();
+
+            PostCard postAComentar = new PostCard();
+            postAComentar = this.Clone();
+
+            comentarios.StartPosition = FormStartPosition.CenterScreen;
+            comentarios.Show();
+            comentarios.Activate();
+            comentarios.BringToFront();
+            comentarios.PanelContendorDePost.Controls.Add(postAComentar);
+
+
         }
     }
 }

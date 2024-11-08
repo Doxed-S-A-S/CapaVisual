@@ -267,6 +267,7 @@ namespace CapaVisual
             {
                 txtPassword.Text = "";
                 txtPassword.ForeColor = Color.Black;
+                txtPassword.Password = true;
             }
         }
 
@@ -276,6 +277,7 @@ namespace CapaVisual
             {
                 txtPassword.Text = "Contraseña";
                 txtPassword.ForeColor = Color.Gray;
+                txtPassword.Password = false;
             }
         }
 
@@ -284,6 +286,7 @@ namespace CapaVisual
             if (txtPassword.Text != "Contraseña" && txtPassword.ForeColor == Color.Gray)
             {
                 txtPassword.ForeColor = Color.Black;
+                txtPassword.Password = true;
             }
         }
         private void txtConfirmPssword_Enter(object sender, EventArgs e)
@@ -292,6 +295,7 @@ namespace CapaVisual
             {
                 txtConfirmPssword.Text = "";
                 txtConfirmPssword.ForeColor = Color.Black;
+                txtConfirmPssword.Password = true;
             }
         }
 
@@ -301,6 +305,7 @@ namespace CapaVisual
             {
                 txtConfirmPssword.Text = "Confirmar Contraseña";
                 txtConfirmPssword.ForeColor = Color.Gray;
+                txtConfirmPssword.Password = false;
             }
         }
 
@@ -309,6 +314,7 @@ namespace CapaVisual
             if (txtConfirmPssword.Text != "Confirmar Contraseña" && txtConfirmPssword.ForeColor == Color.Gray)
             {
                 txtConfirmPssword.ForeColor = Color.Black;
+                txtConfirmPssword.Password = true;
             }
         }
         public void chequeoIngresoEnCampos()

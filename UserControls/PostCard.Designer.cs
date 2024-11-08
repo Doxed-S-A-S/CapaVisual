@@ -32,7 +32,7 @@ namespace CapaVisual
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.btnCompartir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnComentarios = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pictureBoxFotoPerfilPost = new System.Windows.Forms.PictureBox();
             this.pictureBoxImagenPost = new System.Windows.Forms.PictureBox();
@@ -47,7 +47,7 @@ namespace CapaVisual
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard1.Controls.Add(this.btnCompartir);
             this.materialCard1.Controls.Add(this.button2);
-            this.materialCard1.Controls.Add(this.button1);
+            this.materialCard1.Controls.Add(this.btnComentarios);
             this.materialCard1.Controls.Add(this.lblUsername);
             this.materialCard1.Controls.Add(this.pictureBoxFotoPerfilPost);
             this.materialCard1.Controls.Add(this.pictureBoxImagenPost);
@@ -84,15 +84,16 @@ namespace CapaVisual
             this.button2.TabIndex = 5;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnComentarios
             // 
-            this.button1.Image = global::CapaVisual.Properties.Resources.Messaging_by_iconSvg_co;
-            this.button1.Location = new System.Drawing.Point(136, 232);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 28);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnComentarios.Image = global::CapaVisual.Properties.Resources.Messaging_by_iconSvg_co;
+            this.btnComentarios.Location = new System.Drawing.Point(136, 232);
+            this.btnComentarios.Margin = new System.Windows.Forms.Padding(2);
+            this.btnComentarios.Name = "btnComentarios";
+            this.btnComentarios.Size = new System.Drawing.Size(32, 28);
+            this.btnComentarios.TabIndex = 4;
+            this.btnComentarios.UseVisualStyleBackColor = true;
+            this.btnComentarios.Click += new System.EventHandler(this.btnComentarios_Click);
             // 
             // lblUsername
             // 
@@ -160,7 +161,7 @@ namespace CapaVisual
         #endregion
 
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnComentarios;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.PictureBox pictureBoxFotoPerfilPost;
         private System.Windows.Forms.PictureBox pictureBoxImagenPost;

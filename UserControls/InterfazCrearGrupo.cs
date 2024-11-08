@@ -18,6 +18,13 @@ namespace CapaVisual
         {
             InitializeComponent();
             panelSuperior.ForeColor = Color.Red;
+            
+        }
+
+        public void InterfazCrearGrupoLoad()
+        {
+            btnCrearGrupo.BackColor = Color.Silver;
+            btnVolverCrearGrupo.BackColor = Color.Silver;
         }
 
         public static void crearGrupo(int id_cuenta, string nombre_grupo, string descripcion, Boolean privacidad, string url_imagen, string imagen_banner)

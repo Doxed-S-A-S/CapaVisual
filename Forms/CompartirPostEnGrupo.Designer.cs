@@ -30,10 +30,9 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.btnCompartir = new MaterialSkin.Controls.MaterialButton();
             this.panelSeleccionarGrupo = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.compartirEnGrupoDialog1 = new CapaVisual.CompartirEnGrupoDialog();
             this.panel1.SuspendLayout();
             this.panelSeleccionarGrupo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -42,31 +41,31 @@ namespace CapaVisual
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.materialButton1);
+            this.panel1.Controls.Add(this.btnCompartir);
             this.panel1.Controls.Add(this.panelSeleccionarGrupo);
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 282);
             this.panel1.TabIndex = 1;
             // 
-            // materialButton1
+            // btnCompartir
             // 
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(83, 232);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(104, 36);
-            this.materialButton1.TabIndex = 1;
-            this.materialButton1.Text = "Compartir";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
+            this.btnCompartir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCompartir.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCompartir.Depth = 0;
+            this.btnCompartir.HighEmphasis = true;
+            this.btnCompartir.Icon = null;
+            this.btnCompartir.Location = new System.Drawing.Point(83, 232);
+            this.btnCompartir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCompartir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCompartir.Name = "btnCompartir";
+            this.btnCompartir.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnCompartir.Size = new System.Drawing.Size(104, 36);
+            this.btnCompartir.TabIndex = 1;
+            this.btnCompartir.Text = "Compartir";
+            this.btnCompartir.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCompartir.UseAccentColor = false;
+            this.btnCompartir.UseVisualStyleBackColor = true;
             // 
             // panelSeleccionarGrupo
             // 
@@ -85,13 +84,6 @@ namespace CapaVisual
             this.dataGridView2.Size = new System.Drawing.Size(235, 164);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick_1);
-            // 
-            // compartirEnGrupoDialog1
-            // 
-            this.compartirEnGrupoDialog1.Location = new System.Drawing.Point(1, 0);
-            this.compartirEnGrupoDialog1.Name = "compartirEnGrupoDialog1";
-            this.compartirEnGrupoDialog1.Size = new System.Drawing.Size(279, 285);
-            this.compartirEnGrupoDialog1.TabIndex = 0;
             // 
             // CompartirPostDialog
             // 
@@ -112,9 +104,9 @@ namespace CapaVisual
 
         #endregion
 
-        private CompartirEnGrupoDialog compartirEnGrupoDialog1;
+        
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton btnCompartir;
         private System.Windows.Forms.Panel panelSeleccionarGrupo;
         private System.Windows.Forms.DataGridView dataGridView2;
     }

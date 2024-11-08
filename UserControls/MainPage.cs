@@ -73,6 +73,7 @@ namespace CapaVisual
                     postCard.PostContent = post.contenido;
                     postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
                     postCard.id_post = post.id_post;
+                    postCard.Height = 276;
 
                     HttpClient client = new HttpClient();
                     byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;

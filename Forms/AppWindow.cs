@@ -49,11 +49,11 @@ namespace CapaVisual
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(
+                MaterialSkin.Primary.Grey400,
                 MaterialSkin.Primary.Red600,
-                MaterialSkin.Primary.Red700,
-                MaterialSkin.Primary.Red200,
+                MaterialSkin.Primary.Grey400,
                 MaterialSkin.Accent.Green400,
-                MaterialSkin.TextShade.BLACK
+                MaterialSkin.TextShade.WHITE
                 );
             
         }
@@ -201,6 +201,7 @@ namespace CapaVisual
             hideAllSubpanels();
             interfazCrearGrupo1.Show();
             interfazCrearGrupo1.BringToFront();
+            interfazCrearGrupo1.InterfazCrearGrupoLoad();
         }
 
         private static List<GrupoDesdeAPI> obtenerGruposDesdeAPI()

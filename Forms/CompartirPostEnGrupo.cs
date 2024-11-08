@@ -76,6 +76,10 @@ namespace CapaVisual
                         this.Close();
                         selec.Close();
                     }
+                    else
+                    {
+                        MessageBox.Show("no se compartio bien mi rey");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -83,5 +87,7 @@ namespace CapaVisual
                 }
             }
         }
+
+        
     }
 }
