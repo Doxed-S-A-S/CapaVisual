@@ -25,8 +25,8 @@ namespace CapaVisual
             try
             {
                 RestClient client = new RestClient("http://localhost:44331/");
-                RestRequest request = new RestRequest($"ApiPost/post/compartir-en-muro/{this.id_post}/{app.id_muro}", Method.Post);
-                Console.Write(app.id_muro);
+                RestRequest request = new RestRequest($"ApiPost/post/compartir-en-muro/{this.id_post}/{app.IdMuro}", Method.Post);
+                Console.Write(app.IdMuro);
 
                 RestResponse response = client.Execute(request);
                 if (response.IsSuccessful)

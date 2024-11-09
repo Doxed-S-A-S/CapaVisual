@@ -20,48 +20,88 @@ namespace CapaVisual
 {
     public partial class AppWindow : MaterialForm
     {
-        public int id_cuenta;
-        public int id_muro { get; set; }
+        private int id_cuenta;
+        private int id_muro;
         private int id_preferencia;
         private string nombre_usuario;
         private string imagen_perfil;
         private string rol_cuenta;
 
+        public int IdCuenta
+        {
+            get { return id_cuenta; }
+            private set { id_cuenta = value; } 
+        }
+        public int IdMuro
+        {
+            get { return id_muro; }
+            set { id_muro = value; } 
+        }
+        public int IdPreferencia
+        {
+            get { return id_preferencia; }
+            private set { id_preferencia = value; }
+        }
+        public string NombreUsuario
+        {
+            get { return nombre_usuario; }
+            set { nombre_usuario = value; }
+        }
+        public string ImagenPerfil
+        {
+            get { return imagen_perfil; }
+            set { imagen_perfil = value; }
+        }
+        public string RolCuenta
+        {
+            get { return rol_cuenta; }
+            set { rol_cuenta = value; }
+        }
+        public AppWindow(int idCuenta)
+        {
+            IdCuenta = idCuenta;
+
+            InitializeComponent();
+            ConfigurarInterfaz();
+        }
         public AppWindow()
         {
             InitializeComponent();
+            ConfigurarInterfaz();
+        }
+
+        private void ConfigurarInterfaz()
+        {
             hideAllUsercontrols();
             pboxCircular pbox = new pboxCircular();
-
             pbox.MakeCircularPictureBox(pictureBoxImagenPerfil);
             mainPage1.Visible = true;
-            
+
             panelSubmenuGrupos1.Hide();
             panelSubmenuGrupos2.Hide();
             panelSubmenuEventos1.Hide();
             panelSubmenuEventos2.Hide();
             panelSubmenuActividades.Hide();
             interfazCrearGrupo1.Hide();
-            
+
             cargarGruposEnPanelGrupos();
 
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(
-                MaterialSkin.Primary.Grey400,
                 MaterialSkin.Primary.Red600,
-                MaterialSkin.Primary.Grey400,
+                MaterialSkin.Primary.Red700,
+                MaterialSkin.Primary.Red200,
                 MaterialSkin.Accent.Green400,
-                MaterialSkin.TextShade.WHITE
+                MaterialSkin.TextShade.BLACK
                 );
-            
         }
         public void appWindowLoad()
         {
-            panelIzquierdoMain.BackColor = Color.LightGray;
+            //panelIzquierdoMain.BackColor = Color.LightGray;
             obtenerInfoCuentaDesdeApi(id_cuenta);
-            pictureBoxImagenPerfil.Load(imagen_perfil);
+            pictureBoxImagenPerfil.Load(ImagenPerfil);
             txtUsernamePanelIzquierdo.Text = this.nombre_usuario;
             mainPage1.mainpageLoad();
         }

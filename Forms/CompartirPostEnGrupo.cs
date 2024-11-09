@@ -26,7 +26,7 @@ namespace CapaVisual
             AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
 
             RestClient client = new RestClient("http://localhost:57063/");
-            RestRequest request = new RestRequest($"ApiGrupos/conforma_grupos/{app.id_cuenta}", Method.Get);
+            RestRequest request = new RestRequest($"ApiGrupos/conforma_grupos/{app.IdCuenta}", Method.Get);
             request.AddHeader("Accept", "application/json");
 
             try

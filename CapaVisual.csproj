@@ -113,6 +113,7 @@
     <Compile Include="Forms\CompartirPostEnGrupo.Designer.cs">
       <DependentUpon>CompartirPostEnGrupo.cs</DependentUpon>
     </Compile>
+    <Compile Include="richTxtBoxCircularcs.cs" />
     <Compile Include="UserControls\InterfazCrearGrupo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -302,6 +303,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\grupo3be.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send Email by iconSvg.co.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

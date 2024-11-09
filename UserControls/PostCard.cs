@@ -69,7 +69,7 @@ namespace CapaVisual
         private void btnComentarios_Click(object sender, EventArgs e)
         {
             ComentarioDialog comentarios = new ComentarioDialog();
-
+            comentarios.ComentarioDialog_load();
             PostCard postAComentar = new PostCard();
             postAComentar = this.Clone();
 

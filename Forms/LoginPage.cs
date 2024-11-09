@@ -158,8 +158,7 @@ namespace CapaVisual
                 if (response.IsSuccessful)
                 {
                     this.Hide();
-                    AppWindow app = new AppWindow();
-                    app.id_cuenta = Int32.Parse(idCuenta);
+                    AppWindow app = new AppWindow(Int32.Parse(idCuenta));
                     app.appWindowLoad();
                     app.Show();
                     app.Activate();
