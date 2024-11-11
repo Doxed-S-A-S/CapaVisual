@@ -21,7 +21,6 @@ namespace CapaVisual
         public mainPage1()
         {
             InitializeComponent();
-            mostrarPostsIniciales();
         }
         
         public void mainpageLoad()
@@ -29,6 +28,7 @@ namespace CapaVisual
             flowLayoutCrearPosts.BackColor = Color.LightGray;
             flowLayoutPanelPosts.BackColor = Color.LightGray;
             panelDerecho.BackColor = Color.LightGray;
+            mostrarPostsIniciales();
         }
         private static List<PostDesdeAPI> obtenerPostDesdeAPI()
         {
@@ -73,6 +73,8 @@ namespace CapaVisual
                     postCard.PostContent = post.contenido;
                     postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
                     postCard.id_post = post.id_post;
+                    //postCard.Height = 276;
+                    postCard.Width = 523;
                     postCard.Height = 276;
 
                     HttpClient client = new HttpClient();

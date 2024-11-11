@@ -53,12 +53,12 @@ namespace CapaVisual
             this.materialCard1.Controls.Add(this.pictureBoxImagenPost);
             this.materialCard1.Controls.Add(this.txtContenidoPost);
             this.materialCard1.Depth = 0;
+            this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(0, 0);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(10, 4, 10, 11);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(0);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(8);
             this.materialCard1.Size = new System.Drawing.Size(523, 326);
             this.materialCard1.TabIndex = 0;
             // 
@@ -99,7 +99,7 @@ namespace CapaVisual
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Miriam CLM", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblUsername.Location = new System.Drawing.Point(22, 86);
+            this.lblUsername.Location = new System.Drawing.Point(14, 78);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(66, 16);

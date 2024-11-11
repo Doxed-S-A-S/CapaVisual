@@ -39,7 +39,6 @@ namespace CapaVisual
             InitializeComponent();
             pboxCircular pbox = new pboxCircular();
             pbox.MakeCircularPictureBox(pboxPerfilCrearComentario);
-            
         }
 
         public void ComentarioDialog_load()
