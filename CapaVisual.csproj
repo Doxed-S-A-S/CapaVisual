@@ -92,6 +92,7 @@
       <DependentUpon>.cs</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DTO\ComentarioDTO.cs" />
     <Compile Include="DTO\CuentaDesdeAPI.cs" />
     <Compile Include="DTO\GrupoConformadoDesdeAPI.cs" />
     <Compile Include="Forms\ComentarioDialog.cs">
@@ -114,6 +115,12 @@
       <DependentUpon>CompartirPostEnGrupo.cs</DependentUpon>
     </Compile>
     <Compile Include="richTxtBoxCircularcs.cs" />
+    <Compile Include="UserControls\Comentario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Comentario.Designer.cs">
+      <DependentUpon>Comentario.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\InterfazCrearGrupo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CompartirPostEnGrupo.resx">
       <DependentUpon>CompartirPostEnGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Comentario.resx">
+      <DependentUpon>Comentario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CrearEvento.resx">
       <DependentUpon>CrearEvento.cs</DependentUpon>
@@ -306,6 +316,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Send Email by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart Attack by iconSvg.co%284%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

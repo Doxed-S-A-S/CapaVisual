@@ -44,7 +44,7 @@ namespace CapaVisual
             this.panelDerecho.Location = new System.Drawing.Point(1037, 2);
             this.panelDerecho.Margin = new System.Windows.Forms.Padding(2);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(214, 1009);
+            this.panelDerecho.Size = new System.Drawing.Size(214, 980);
             this.panelDerecho.TabIndex = 10;
             // 
             // divisorDerecho
@@ -55,7 +55,7 @@ namespace CapaVisual
             this.divisorDerecho.Margin = new System.Windows.Forms.Padding(2);
             this.divisorDerecho.MouseState = MaterialSkin.MouseState.HOVER;
             this.divisorDerecho.Name = "divisorDerecho";
-            this.divisorDerecho.Size = new System.Drawing.Size(10, 1011);
+            this.divisorDerecho.Size = new System.Drawing.Size(10, 982);
             this.divisorDerecho.TabIndex = 7;
             this.divisorDerecho.Text = "materialDivider1";
             // 
@@ -67,11 +67,11 @@ namespace CapaVisual
             this.flowLayoutPanelPosts.ForeColor = System.Drawing.Color.Black;
             this.flowLayoutPanelPosts.Location = new System.Drawing.Point(16, 159);
             this.flowLayoutPanelPosts.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelPosts.MaximumSize = new System.Drawing.Size(1017, 852);
             this.flowLayoutPanelPosts.Name = "flowLayoutPanelPosts";
             this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(235, 0, 50, 0);
-            this.flowLayoutPanelPosts.Size = new System.Drawing.Size(1017, 852);
+            this.flowLayoutPanelPosts.Size = new System.Drawing.Size(1017, 823);
             this.flowLayoutPanelPosts.TabIndex = 8;
-            
             // 
             // flowLayoutCrearPosts
             // 
@@ -106,7 +106,7 @@ namespace CapaVisual
             this.Controls.Add(this.flowLayoutPanelPosts);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "mainPage1";
-            this.Size = new System.Drawing.Size(1254, 1013);
+            this.Size = new System.Drawing.Size(1254, 986);
             this.flowLayoutCrearPosts.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

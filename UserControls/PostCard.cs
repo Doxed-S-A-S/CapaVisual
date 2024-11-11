@@ -41,7 +41,13 @@ namespace CapaVisual
             set { pictureBoxImagenPost.Image = value; }
         }
 
-        public int id_post { get; set; }
+        private int idPost;
+
+        public int id_post
+        {
+            get { return idPost; }
+            set { idPost = value; }
+        }
         public PostCard Clone()
         {
             PostCard clone = new PostCard();
@@ -78,8 +84,8 @@ namespace CapaVisual
             comentarios.Activate();
             comentarios.BringToFront();
             comentarios.PanelContendorDePost.Controls.Add(postAComentar);
-
-
+            comentarios.idPost = this.idPost;
+            comentarios.cargarComentarios();
         }
     }
 }

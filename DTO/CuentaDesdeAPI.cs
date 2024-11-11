@@ -13,5 +13,6 @@ namespace CapaVisual.DTO
         public string rol_cuenta;
         public int id_muro;
         public int id_preferencia;
+        public int id_cuenta;
     }
 }

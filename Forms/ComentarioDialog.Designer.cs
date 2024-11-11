@@ -32,12 +32,12 @@ namespace CapaVisual
             this.panelContendorDePost = new System.Windows.Forms.Panel();
             this.panelContenedorDeComentarios = new System.Windows.Forms.Panel();
             this.panelCrearComentario = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pboxPerfilComentario = new System.Windows.Forms.PictureBox();
+            this.btnCompartirComentario = new System.Windows.Forms.Button();
+            this.pboxPerfilCrearComentario = new System.Windows.Forms.PictureBox();
             this.txtCrearComentario = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelCrearComentario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxPerfilComentario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxPerfilCrearComentario)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContendorDePost
@@ -61,45 +61,49 @@ namespace CapaVisual
             // panelCrearComentario
             // 
             this.panelCrearComentario.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelCrearComentario.Controls.Add(this.button1);
-            this.panelCrearComentario.Controls.Add(this.pboxPerfilComentario);
+            this.panelCrearComentario.Controls.Add(this.btnCompartirComentario);
+            this.panelCrearComentario.Controls.Add(this.pboxPerfilCrearComentario);
             this.panelCrearComentario.Controls.Add(this.txtCrearComentario);
             this.panelCrearComentario.Location = new System.Drawing.Point(0, 374);
             this.panelCrearComentario.Name = "panelCrearComentario";
             this.panelCrearComentario.Size = new System.Drawing.Size(697, 100);
             this.panelCrearComentario.TabIndex = 2;
             // 
-            // button1
+            // btnCompartirComentario
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Image = global::CapaVisual.Properties.Resources.Send_Email_by_iconSvg_co;
-            this.button1.Location = new System.Drawing.Point(603, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 31);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCompartirComentario.BackColor = System.Drawing.Color.White;
+            this.btnCompartirComentario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCompartirComentario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCompartirComentario.Image = global::CapaVisual.Properties.Resources.Send_Email_by_iconSvg_co;
+            this.btnCompartirComentario.Location = new System.Drawing.Point(543, 56);
+            this.btnCompartirComentario.Name = "btnCompartirComentario";
+            this.btnCompartirComentario.Size = new System.Drawing.Size(36, 31);
+            this.btnCompartirComentario.TabIndex = 2;
+            this.btnCompartirComentario.UseVisualStyleBackColor = false;
+            this.btnCompartirComentario.Click += new System.EventHandler(this.btnCompartirComentario_Click);
             // 
-            // pboxPerfilComentario
+            // pboxPerfilCrearComentario
             // 
-            this.pboxPerfilComentario.Location = new System.Drawing.Point(74, 9);
-            this.pboxPerfilComentario.Name = "pboxPerfilComentario";
-            this.pboxPerfilComentario.Size = new System.Drawing.Size(62, 59);
-            this.pboxPerfilComentario.TabIndex = 1;
-            this.pboxPerfilComentario.TabStop = false;
+            this.pboxPerfilCrearComentario.Location = new System.Drawing.Point(14, 11);
+            this.pboxPerfilCrearComentario.Name = "pboxPerfilCrearComentario";
+            this.pboxPerfilCrearComentario.Size = new System.Drawing.Size(62, 59);
+            this.pboxPerfilCrearComentario.TabIndex = 1;
+            this.pboxPerfilCrearComentario.TabStop = false;
+            this.pboxPerfilCrearComentario.Click += new System.EventHandler(this.pboxPerfilCrearComentario_Click);
             // 
             // txtCrearComentario
             // 
             this.txtCrearComentario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCrearComentario.Location = new System.Drawing.Point(162, 9);
+            this.txtCrearComentario.Location = new System.Drawing.Point(102, 11);
             this.txtCrearComentario.Name = "txtCrearComentario";
             this.txtCrearComentario.Size = new System.Drawing.Size(426, 76);
             this.txtCrearComentario.TabIndex = 0;
             this.txtCrearComentario.Text = "";
+            this.txtCrearComentario.TextChanged += new System.EventHandler(this.txtCrearComentario_TextChanged);
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Silver;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 494);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -120,7 +124,7 @@ namespace CapaVisual
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comentarios";
             this.panelCrearComentario.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pboxPerfilComentario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxPerfilCrearComentario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,8 +135,8 @@ namespace CapaVisual
         private System.Windows.Forms.Panel panelContenedorDeComentarios;
         private System.Windows.Forms.Panel panelCrearComentario;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pboxPerfilComentario;
+        private System.Windows.Forms.Button btnCompartirComentario;
+        private System.Windows.Forms.PictureBox pboxPerfilCrearComentario;
         private System.Windows.Forms.RichTextBox txtCrearComentario;
     }
 }

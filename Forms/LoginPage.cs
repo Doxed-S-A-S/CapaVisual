@@ -140,7 +140,7 @@ namespace CapaVisual
         private void loginUsuario()
         {
             RestClient client = new RestClient("http://localhost:44395/");
-            RestRequest request = new RestRequest("ApiAut/login", Method.Post); http://localhost:44395/ApiAut/login
+            RestRequest request = new RestRequest("ApiAut/login", Method.Post); 
             RestResponse response;
 
             try

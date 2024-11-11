@@ -296,7 +296,7 @@ namespace CapaVisual
             this.mainPage1.Location = new System.Drawing.Point(243, 64);
             this.mainPage1.Margin = new System.Windows.Forms.Padding(2);
             this.mainPage1.Name = "mainPage1";
-            this.mainPage1.Size = new System.Drawing.Size(1672, 1013);
+            this.mainPage1.Size = new System.Drawing.Size(1672, 1009);
             this.mainPage1.TabIndex = 18;
             // 
             // interfazCrearGrupo1
