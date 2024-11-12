@@ -24,9 +24,13 @@ namespace CapaVisual
             InitializeComponent();
 
             panelCargarImagenRegistro.Hide();
+            panelCrearMuro.Hide();
+            panelCrearMuro.BackColor = Color.White;
+
 
             pboxCircular pbox = new pboxCircular();
             pbox.MakeCircularPictureBox(pboxImagenPerfilRegistro);
+            pbox.MakeCircularPictureBox(pboxCrearPortadaMuro);
 
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
@@ -63,7 +67,25 @@ namespace CapaVisual
         }
         
 
-        private void btnRegistrarse_Click(object sender, EventArgs e)
+        
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            if (chequeoIngresoEnCampos())
+            {
+                panelDatosRegistro.Hide();
+                panelCargarImagenRegistro.Show();
+                panelCargarImagenRegistro.BringToFront();
+            }
+        }
+
+        private void btnSiguiente2_Click(object sender, EventArgs e)
+        {
+            panelCargarImagenRegistro.Hide();
+            panelCrearMuro.Show();
+            panelCrearMuro.BringToFront();
+        }
+        private void btnFinalizarRegistro_Click_1(object sender, EventArgs e)
         {
             RestClient client = new RestClient("http://localhost:57065/");
             RestRequest request = new RestRequest("ApiUsuarios/CrearCuenta/", Method.Post);
@@ -100,16 +122,62 @@ namespace CapaVisual
                 if (response.IsSuccessful)
                 {
                     MessageBox.Show($"su nommbre de usuario sera: {username}", "Registro Exitoso", MessageBoxButtons.OK);
+                    LoginPage Login = new LoginPage();
+                    Login.Activate();
+                    Login.Show();
                 }
                 else
                 {
-                    throw new Exception($"Error: {response.ErrorException.Message} - {response.Content}");
+                    throw new Exception($"{response.Content}");
                 }
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.Write(ex.Message);
+                if (ex.Message == "La cuenta ya existe") ;
+                {
+                    MessageBox.Show("Esta cuenta ya existe");
+                    this.Close();
+                    LoginPage Login = new LoginPage();
+                    Login.Activate();
+                    Login.Show();
+                }
+            }
+        }
+        private void btnVolverRegister_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginPage login = Application.OpenForms.OfType<LoginPage>().FirstOrDefault();
+            login.Activate();
+            login.Show();
+        }
+
+        private void btnVolverRegistroImg_Click(object sender, EventArgs e)
+        {
+            panelDatosRegistro.Show();
+            panelCargarImagenRegistro.Hide();
+            panelCargarImagenRegistro.BringToFront();
+        }
+
+        private void btnVolver2_Click(object sender, EventArgs e)
+        {
+            panelCrearMuro.Hide();
+            panelCargarImagenRegistro.Show();
+            panelCargarImagenRegistro.BringToFront();
+        }
+
+        private void btnAgregarPortadaMuro_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                pboxCrearPortadaMuro.Image = Image.FromFile(dialog.FileName);
+                pboxCrearPortadaMuro.ImageLocation = dialog.FileName;
+
+                MessageBox.Show("Imagen subida exitosamente y guardada en: " + dialog.FileName);
             }
         }
         private void comboBoxPaises_DropDown(object sender, EventArgs e)
@@ -317,49 +385,50 @@ namespace CapaVisual
                 txtConfirmPssword.Password = true;
             }
         }
-        public void chequeoIngresoEnCampos()
+        public bool chequeoIngresoEnCampos()
         {
             if (txtNombre.Text == "Nombre" || txtNombre.Text.Trim() == "")
             {
                 MessageBox.Show("Por favor, ingrese su nombre.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombre.Focus();
-                return;
+                return false;
             }
 
             if (txtApellido.Text == "Apellido" || txtApellido.Text.Trim() == "")
             {
                 MessageBox.Show("Por favor, ingrese su apellido.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtApellido.Focus();
-                return;
+                return false;
             }
 
             if (txtEmail.Text == "Correo" || txtEmail.Text.Trim() == "")
             {
                 MessageBox.Show("Por favor, ingrese un correo electrónico válido.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
-                return;
+                return false; 
             }
 
             if (txtPassword.Text == "Contraseña" || txtPassword.Text.Trim() == "")
             {
                 MessageBox.Show("Por favor, ingrese una contraseña.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPassword.Focus();
-                return;
+                return false;
             }
 
             if (txtConfirmPssword.Text == "Confirmar Contraseña" || txtConfirmPssword.Text.Trim() == "")
             {
                 MessageBox.Show("Por favor, confirme su contraseña.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtConfirmPssword.Focus();
-                return;
+                return false;
             }
 
             if (txtPassword.Text != txtConfirmPssword.Text)
             {
                 MessageBox.Show("Las contraseñas tienen que ser iguales", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtConfirmPssword.Focus();
-                return;
+                return false;
             }
+            return true;
         }
 
         Dictionary<string, string> paisesICAO = new Dictionary<string, string>
@@ -452,13 +521,7 @@ namespace CapaVisual
             }
         }
 
-        private void btnSiguiente_Click(object sender, EventArgs e)
-        {
-            chequeoIngresoEnCampos();
-            panelDatosRegistro.Hide();
-            panelCargarImagenRegistro.Show();
-            panelCargarImagenRegistro.BringToFront();
-        }
+        
     }
 
 }

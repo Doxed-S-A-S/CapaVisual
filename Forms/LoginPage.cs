@@ -109,6 +109,8 @@ namespace CapaVisual
         {
             RegisterPage registerPage = new RegisterPage();
             registerPage.Show();
+            registerPage.Activate();
+            this.Hide();
 
         }
         private void btnIniciar_Clic(object sender, EventArgs e)

@@ -61,7 +61,7 @@ namespace CapaVisual
             // txtBarraBusqueda
             // 
             this.txtBarraBusqueda.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBarraBusqueda.Location = new System.Drawing.Point(428, 33);
+            this.txtBarraBusqueda.Location = new System.Drawing.Point(494, 34);
             this.txtBarraBusqueda.Name = "txtBarraBusqueda";
             this.txtBarraBusqueda.Size = new System.Drawing.Size(459, 20);
             this.txtBarraBusqueda.TabIndex = 7;
@@ -69,7 +69,7 @@ namespace CapaVisual
             // panelIzquierdoMain
             // 
             this.panelIzquierdoMain.AutoScroll = true;
-            this.panelIzquierdoMain.BackColor = System.Drawing.Color.LightGray;
+            this.panelIzquierdoMain.BackColor = System.Drawing.Color.Silver;
             this.panelIzquierdoMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelIzquierdoMain.Controls.Add(this.txtUsernamePanelIzquierdo);
             this.panelIzquierdoMain.Controls.Add(this.pictureBoxImagenPerfil);
@@ -89,7 +89,7 @@ namespace CapaVisual
             this.txtUsernamePanelIzquierdo.AutoSize = true;
             this.txtUsernamePanelIzquierdo.Depth = 0;
             this.txtUsernamePanelIzquierdo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtUsernamePanelIzquierdo.Location = new System.Drawing.Point(67, 169);
+            this.txtUsernamePanelIzquierdo.Location = new System.Drawing.Point(89, 169);
             this.txtUsernamePanelIzquierdo.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUsernamePanelIzquierdo.Name = "txtUsernamePanelIzquierdo";
             this.txtUsernamePanelIzquierdo.Size = new System.Drawing.Size(1, 0);

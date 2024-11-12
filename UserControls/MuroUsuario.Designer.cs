@@ -30,8 +30,8 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pboxImagenPerfilMuro = new System.Windows.Forms.PictureBox();
+            this.pboxImagenPortadaMuro = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,9 +42,10 @@ namespace CapaVisual
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxDescripcionGrupo = new System.Windows.Forms.RichTextBox();
+            this.txtNomyApeMuro = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenPerfilMuro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenPortadaMuro)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,32 +58,33 @@ namespace CapaVisual
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.txtNomyApeMuro);
+            this.panel1.Controls.Add(this.pboxImagenPerfilMuro);
+            this.panel1.Controls.Add(this.pboxImagenPortadaMuro);
             this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1667, 182);
             this.panel1.TabIndex = 11;
             // 
-            // pictureBox1
+            // pboxImagenPerfilMuro
             // 
-            this.pictureBox1.Image = global::CapaVisual.Properties.Resources.mati;
-            this.pictureBox1.Location = new System.Drawing.Point(68, 61);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.pboxImagenPerfilMuro.Image = global::CapaVisual.Properties.Resources.mati;
+            this.pboxImagenPerfilMuro.Location = new System.Drawing.Point(66, 25);
+            this.pboxImagenPerfilMuro.Name = "pboxImagenPerfilMuro";
+            this.pboxImagenPerfilMuro.Size = new System.Drawing.Size(100, 100);
+            this.pboxImagenPerfilMuro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxImagenPerfilMuro.TabIndex = 18;
+            this.pboxImagenPerfilMuro.TabStop = false;
             // 
-            // pictureBox3
+            // pboxImagenPortadaMuro
             // 
-            this.pictureBox3.Image = global::CapaVisual.Properties.Resources.mati;
-            this.pictureBox3.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1248, 178);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 19;
-            this.pictureBox3.TabStop = false;
+            this.pboxImagenPortadaMuro.Image = global::CapaVisual.Properties.Resources.mati;
+            this.pboxImagenPortadaMuro.Location = new System.Drawing.Point(-1, -1);
+            this.pboxImagenPortadaMuro.Name = "pboxImagenPortadaMuro";
+            this.pboxImagenPortadaMuro.Size = new System.Drawing.Size(1248, 178);
+            this.pboxImagenPortadaMuro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxImagenPortadaMuro.TabIndex = 19;
+            this.pboxImagenPortadaMuro.TabStop = false;
             // 
             // tabControl1
             // 
@@ -102,7 +104,7 @@ namespace CapaVisual
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(997, 799);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Publicaciones";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel2
@@ -129,9 +131,9 @@ namespace CapaVisual
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1417, 799);
+            this.tabPage2.Size = new System.Drawing.Size(997, 799);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Otros?";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel3
@@ -148,7 +150,7 @@ namespace CapaVisual
             // dataGridIntegrantesGrupo
             // 
             this.dataGridIntegrantesGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridIntegrantesGrupo.Location = new System.Drawing.Point(45, 194);
+            this.dataGridIntegrantesGrupo.Location = new System.Drawing.Point(47, 194);
             this.dataGridIntegrantesGrupo.Name = "dataGridIntegrantesGrupo";
             this.dataGridIntegrantesGrupo.Size = new System.Drawing.Size(143, 150);
             this.dataGridIntegrantesGrupo.TabIndex = 7;
@@ -180,6 +182,15 @@ namespace CapaVisual
             this.txtBoxDescripcionGrupo.TabIndex = 4;
             this.txtBoxDescripcionGrupo.Text = "";
             // 
+            // txtNomyApeMuro
+            // 
+            this.txtNomyApeMuro.AutoSize = true;
+            this.txtNomyApeMuro.Location = new System.Drawing.Point(66, 132);
+            this.txtNomyApeMuro.Name = "txtNomyApeMuro";
+            this.txtNomyApeMuro.Size = new System.Drawing.Size(35, 13);
+            this.txtNomyApeMuro.TabIndex = 20;
+            this.txtNomyApeMuro.Text = "label3";
+            // 
             // MuroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,8 +201,9 @@ namespace CapaVisual
             this.Name = "MuroUsuario";
             this.Size = new System.Drawing.Size(1254, 1013);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenPerfilMuro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxImagenPortadaMuro)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -210,12 +222,13 @@ namespace CapaVisual
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pboxImagenPerfilMuro;
+        private System.Windows.Forms.PictureBox pboxImagenPortadaMuro;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridIntegrantesGrupo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox txtBoxDescripcionGrupo;
+        private System.Windows.Forms.Label txtNomyApeMuro;
     }
 }

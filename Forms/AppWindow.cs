@@ -99,7 +99,7 @@ namespace CapaVisual
         }
         public void appWindowLoad()
         {
-            //panelIzquierdoMain.BackColor = Color.LightGray;
+            panelIzquierdoMain.BackColor = Color.Silver;
             obtenerInfoCuentaDesdeApi(id_cuenta);
             pictureBoxImagenPerfil.Load(ImagenPerfil);
             txtUsernamePanelIzquierdo.Text = this.nombre_usuario;
