@@ -73,7 +73,6 @@ namespace CapaVisual
         }
         private static string obtenerCreadorDePost(int id_cuenta)
         {
-
             RestClient client = new RestClient("http://localhost:44331/");
             RestRequest request = new RestRequest($"ApiPost/post/obtener-creador/{id_cuenta}", Method.Get);
             request.AddHeader("Accept", "application/json");
@@ -95,7 +94,7 @@ namespace CapaVisual
                         PostCard postCard = new PostCard();
                         postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
                         postCard.PostContent = post.contenido;
-                        postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
+                        //postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
 
                         HttpClient client = new HttpClient();
                         byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
@@ -112,6 +111,53 @@ namespace CapaVisual
                 }
 
             }
+
+            
         }
+        public void ObtenerIntegrantesGrupo()
+        {
+            AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+
+            RestClient client = new RestClient("http://localhost:57063/");
+            RestRequest request = new RestRequest($"ApiGrupos/grupo/{this.IdGrupo}/integrantes", Method.Get);
+            request.AddHeader("Accept", "application/json");
+
+            try
+            {
+                RestResponse response = client.Execute(request);
+
+                if (response.IsSuccessful)
+                {
+                    List<GetIntegrantesDTO> integrantes = JsonConvert.DeserializeObject<List<GetIntegrantesDTO>>(response.Content);
+
+                    dataGridIntegrantesGrupo.Rows.Clear();
+                    dataGridIntegrantesGrupo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridIntegrantesGrupo.AutoGenerateColumns = false;
+
+                    if (dataGridIntegrantesGrupo.Columns.Count == 0)
+                    {
+                        dataGridIntegrantesGrupo.Columns.Add("nombre_usuario", "Nombre Usuario");
+                        dataGridIntegrantesGrupo.Columns.Add("rol", "Rol");
+                    }
+
+                    int indice = 0;
+                    foreach (GetIntegrantesDTO integrante in integrantes)
+                    {
+                        dataGridIntegrantesGrupo.Rows.Add(integrante.nombre_usuario, integrante.rol);
+                        dataGridIntegrantesGrupo.Rows[indice].Tag = integrante; // Guardar el objeto completo en Tag si es necesario
+                        indice += 1;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error al obtener los integrantes del grupo: " + response.ErrorMessage);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Excepción: " + ex.Message);
+            }
+        }
+
     }
 }

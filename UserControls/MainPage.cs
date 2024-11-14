@@ -70,10 +70,12 @@ namespace CapaVisual
                 {
                     PostCard postCard = new PostCard();
                     postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
+                    postCard.ProfileImage = postCard.obtenerFotoPerfilDelCreador(post.id_cuenta);
                     postCard.PostContent = post.contenido;
-                    postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
                     postCard.id_post = post.id_post;
-                    //postCard.Height = 276;
+                    postCard.likes = post.likes;
+                    postCard.id_cuenta_creador_post = post.id_cuenta;
+
                     postCard.Width = 523;
                     postCard.Height = 276;
 

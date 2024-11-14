@@ -224,6 +224,8 @@ namespace CapaVisual
         {
             hideAllUsercontrols();
             hideAllSubpanels();
+            muroUsuario1.CargarMuroDelUsuarioLogeado();
+            muroUsuario1.mostrarPostsDelMuro();
             muroUsuario1.Visible = true;
         }
         private void btnPrincipal_Click(object sender, EventArgs e)
@@ -349,6 +351,7 @@ namespace CapaVisual
                 groupPage1.Visible = true;
                 hideAllSubpanels();
                 groupPage1.mostrarPostsDelGrupo();
+                groupPage1.ObtenerIntegrantesGrupo();
             }
             catch(Exception xe)
             {

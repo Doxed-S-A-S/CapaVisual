@@ -52,7 +52,6 @@ namespace CapaVisual
             }
             else
             {
-
                 MessageBox.Show($"Error al crear el post: {response.StatusCode} - {response.ErrorMessage}");
             }
         }
@@ -106,7 +105,8 @@ namespace CapaVisual
 
         private void botonPostear_Click_1(object sender, EventArgs e)
         {
-            crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text, pboxImagenVideo.ImageLocation, 1);
+            AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+            crearPost(txtLinkCrearPost.Text, ObtenerTipoContenidoSeleccionado(btnTipoContenido), txtContenidoPost.Text, pboxImagenVideo.ImageLocation, app.IdCuenta);
         }
 
         private void txtLinkCrearPost_Leave_1(object sender, EventArgs e)

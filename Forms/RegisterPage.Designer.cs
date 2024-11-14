@@ -54,7 +54,7 @@ namespace CapaVisual
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelCrearMuro = new MaterialSkin.Controls.MaterialCard();
             this.btnAgregarPortadaMuro = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtBiografia = new System.Windows.Forms.RichTextBox();
             this.pboxCrearPortadaMuro = new System.Windows.Forms.PictureBox();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
@@ -473,7 +473,7 @@ namespace CapaVisual
             // 
             this.panelCrearMuro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panelCrearMuro.Controls.Add(this.btnAgregarPortadaMuro);
-            this.panelCrearMuro.Controls.Add(this.richTextBox1);
+            this.panelCrearMuro.Controls.Add(this.txtBiografia);
             this.panelCrearMuro.Controls.Add(this.pboxCrearPortadaMuro);
             this.panelCrearMuro.Controls.Add(this.materialDivider2);
             this.panelCrearMuro.Controls.Add(this.materialLabel7);
@@ -503,13 +503,13 @@ namespace CapaVisual
             this.btnAgregarPortadaMuro.UseVisualStyleBackColor = true;
             this.btnAgregarPortadaMuro.Click += new System.EventHandler(this.btnAgregarPortadaMuro_Click);
             // 
-            // richTextBox1
+            // txtBiografia
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(548, 75);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(424, 88);
-            this.richTextBox1.TabIndex = 35;
-            this.richTextBox1.Text = "";
+            this.txtBiografia.Location = new System.Drawing.Point(548, 75);
+            this.txtBiografia.Name = "txtBiografia";
+            this.txtBiografia.Size = new System.Drawing.Size(424, 88);
+            this.txtBiografia.TabIndex = 35;
+            this.txtBiografia.Text = "";
             // 
             // pboxCrearPortadaMuro
             // 
@@ -688,7 +688,7 @@ namespace CapaVisual
         private MaterialSkin.Controls.MaterialDivider materialDivider3;
         private MaterialSkin.Controls.MaterialCard panelCrearMuro;
         private System.Windows.Forms.Button btnAgregarPortadaMuro;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtBiografia;
         private System.Windows.Forms.PictureBox pboxCrearPortadaMuro;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;

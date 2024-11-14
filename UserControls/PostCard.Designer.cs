@@ -30,8 +30,9 @@ namespace CapaVisual
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.txtLikesPost = new MaterialSkin.Controls.MaterialLabel();
             this.btnCompartir = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLikePost = new System.Windows.Forms.Button();
             this.btnComentarios = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pictureBoxFotoPerfilPost = new System.Windows.Forms.PictureBox();
@@ -45,8 +46,9 @@ namespace CapaVisual
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.txtLikesPost);
             this.materialCard1.Controls.Add(this.btnCompartir);
-            this.materialCard1.Controls.Add(this.button2);
+            this.materialCard1.Controls.Add(this.btnLikePost);
             this.materialCard1.Controls.Add(this.btnComentarios);
             this.materialCard1.Controls.Add(this.lblUsername);
             this.materialCard1.Controls.Add(this.pictureBoxFotoPerfilPost);
@@ -59,13 +61,25 @@ namespace CapaVisual
             this.materialCard1.Margin = new System.Windows.Forms.Padding(0);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(523, 326);
             this.materialCard1.TabIndex = 0;
+            // 
+            // txtLikesPost
+            // 
+            this.txtLikesPost.AutoSize = true;
+            this.txtLikesPost.Depth = 0;
+            this.txtLikesPost.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLikesPost.Location = new System.Drawing.Point(104, 238);
+            this.txtLikesPost.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtLikesPost.Name = "txtLikesPost";
+            this.txtLikesPost.Size = new System.Drawing.Size(1, 0);
+            this.txtLikesPost.TabIndex = 8;
             // 
             // btnCompartir
             // 
             this.btnCompartir.Image = global::CapaVisual.Properties.Resources.Share_by_iconSvg_co_2_;
-            this.btnCompartir.Location = new System.Drawing.Point(173, 232);
+            this.btnCompartir.Location = new System.Drawing.Point(201, 232);
             this.btnCompartir.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompartir.Name = "btnCompartir";
             this.btnCompartir.Size = new System.Drawing.Size(32, 28);
@@ -73,21 +87,22 @@ namespace CapaVisual
             this.btnCompartir.UseVisualStyleBackColor = true;
             this.btnCompartir.Click += new System.EventHandler(this.btnCompartir_Click);
             // 
-            // button2
+            // btnLikePost
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Image = global::CapaVisual.Properties.Resources.Be_Like_by_iconSvg_co_2_;
-            this.button2.Location = new System.Drawing.Point(100, 232);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 28);
-            this.button2.TabIndex = 5;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLikePost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLikePost.Image = global::CapaVisual.Properties.Resources.Be_Like_by_iconSvg_co_2_;
+            this.btnLikePost.Location = new System.Drawing.Point(128, 232);
+            this.btnLikePost.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLikePost.Name = "btnLikePost";
+            this.btnLikePost.Size = new System.Drawing.Size(32, 28);
+            this.btnLikePost.TabIndex = 5;
+            this.btnLikePost.UseVisualStyleBackColor = true;
+            this.btnLikePost.Click += new System.EventHandler(this.btnLikePost_Click);
             // 
             // btnComentarios
             // 
             this.btnComentarios.Image = global::CapaVisual.Properties.Resources.Messaging_by_iconSvg_co;
-            this.btnComentarios.Location = new System.Drawing.Point(136, 232);
+            this.btnComentarios.Location = new System.Drawing.Point(164, 232);
             this.btnComentarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnComentarios.Name = "btnComentarios";
             this.btnComentarios.Size = new System.Drawing.Size(32, 28);
@@ -99,7 +114,7 @@ namespace CapaVisual
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Miriam CLM", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblUsername.Location = new System.Drawing.Point(14, 78);
+            this.lblUsername.Location = new System.Drawing.Point(30, 78);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(66, 16);
@@ -166,7 +181,8 @@ namespace CapaVisual
         private System.Windows.Forms.PictureBox pictureBoxFotoPerfilPost;
         private System.Windows.Forms.PictureBox pictureBoxImagenPost;
         private System.Windows.Forms.RichTextBox txtContenidoPost;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLikePost;
         private System.Windows.Forms.Button btnCompartir;
+        private MaterialSkin.Controls.MaterialLabel txtLikesPost;
     }
 }

@@ -68,7 +68,7 @@ namespace CapaVisual
             this.flowLayoutPanelPosts.Location = new System.Drawing.Point(16, 220);
             this.flowLayoutPanelPosts.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelPosts.Name = "flowLayoutPanelPosts";
-            this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(300, 0, 100, 0);
+            this.flowLayoutPanelPosts.Padding = new System.Windows.Forms.Padding(230, 0, 100, 0);
             this.flowLayoutPanelPosts.Size = new System.Drawing.Size(1436, 778);
             this.flowLayoutPanelPosts.TabIndex = 8;
             // 

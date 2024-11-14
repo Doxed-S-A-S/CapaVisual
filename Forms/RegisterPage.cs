@@ -43,9 +43,6 @@ namespace CapaVisual
                 MaterialSkin.TextShade.BLACK
                 );
         }
-
-        
-
         private string crearUsername()
         {
             string username;
@@ -91,6 +88,7 @@ namespace CapaVisual
             RestRequest request = new RestRequest("ApiUsuarios/CrearCuenta/", Method.Post);
             string username = crearUsername();
             request.AddFile("imagen_perfil", pboxImagenPerfilRegistro.ImageLocation);
+            request.AddFile("imagen_banner", pboxCrearPortadaMuro.ImageLocation);
             string idiomaHablado = idiomasHablados();
             try
             {
@@ -105,6 +103,8 @@ namespace CapaVisual
                     request.AddParameter("idiomaHablado", idiomaHablado);
                     request.AddParameter("email", txtEmail.Text);
                     request.AddParameter("contrasena", txtPassword.Text);
+                    //request.AddParameter("detalles", txt.Text);
+                    request.AddParameter("biografia", txtBiografia.Text);
                 }
                 else
                 {
@@ -116,6 +116,7 @@ namespace CapaVisual
                     request.AddParameter("idiomas_hablados", idiomasHablados());
                     request.AddParameter("email", txtEmail.Text);
                     request.AddParameter("contraseña", txtPassword.Text);
+                    request.AddParameter("biografia", txtBiografia.Text);
                 }
                 RestResponse response = client.Execute(request);
 
