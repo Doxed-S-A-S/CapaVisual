@@ -20,11 +20,61 @@ namespace CapaVisual
 {
     public partial class AppWindow : MaterialForm
     {
+        private int id_cuenta;
+        private int id_muro;
+        private int id_preferencia;
+        private string nombre_usuario;
+        private string imagen_perfil;
+        private string rol_cuenta;
+
+        public int IdCuenta
+        {
+            get { return id_cuenta; }
+            private set { id_cuenta = value; }
+        }
+        public int IdMuro
+        {
+            get { return id_muro; }
+            set { id_muro = value; }
+        }
+        public int IdPreferencia
+        {
+            get { return id_preferencia; }
+            private set { id_preferencia = value; }
+        }
+        public string NombreUsuario
+        {
+            get { return nombre_usuario; }
+            set { nombre_usuario = value; }
+        }
+        public string ImagenPerfil
+        {
+            get { return imagen_perfil; }
+            set { imagen_perfil = value; }
+        }
+        public string RolCuenta
+        {
+            get { return rol_cuenta; }
+            set { rol_cuenta = value; }
+        }
+        public AppWindow(int idCuenta)
+        {
+            IdCuenta = idCuenta;
+
+            InitializeComponent();
+            ConfigurarInterfaz();
+        }
         public AppWindow()
         {
             InitializeComponent();
-            hideAllUsercontrols();
+            ConfigurarInterfaz();
+        }
 
+        private void ConfigurarInterfaz()
+        {
+            hideAllUsercontrols();
+            pboxCircular pbox = new pboxCircular();
+            pbox.MakeCircularPictureBox(pictureBoxImagenPerfil);
             mainPage1.Visible = true;
 
             panelSubmenuGrupos1.Hide();
@@ -33,9 +83,6 @@ namespace CapaVisual
             panelSubmenuEventos2.Hide();
             panelSubmenuActividades.Hide();
             interfazCrearGrupo1.Hide();
-
-
-            cargarGruposEnPanelGrupos();
 
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
@@ -47,23 +94,26 @@ namespace CapaVisual
                 MaterialSkin.Accent.Green400,
                 MaterialSkin.TextShade.BLACK
                 );
-
         }
-
+        public void appWindowLoad()
+        {
+            panelIzquierdoMain.BackColor = Color.Silver;
+            obtenerInfoCuentaDesdeApi(id_cuenta);
+            pictureBoxImagenPerfil.Load(ImagenPerfil);
+            txtUsernamePanelIzquierdo.Text = this.nombre_usuario;
+            mainPage1.mainpageLoad();
+            mainPage1.ListarRelacionados();
+        }
         public void ShowGroupPage()
         {
             mainPage1.Hide();
             groupPage1.Show();
         }
-
-
         public void ShowMainPage()
         {
             mainPage1.Show();
             groupPage1.Hide();
         }
-
-
         private void hideAllSubpanels()
         {
             panelSubmenuGrupos1.Visible = false;
@@ -72,7 +122,6 @@ namespace CapaVisual
             panelSubmenuEventos2.Visible = false;
             panelSubmenuActividades.Visible = false;
         }
-
         private void hideAllUsercontrols()
         {
             mainPage1.Visible = false;
@@ -81,8 +130,10 @@ namespace CapaVisual
         }
         private void btnGrupos_Click(object sender, EventArgs e)
         {
+
             if (panelSubmenuGrupos1.Visible == true)
             {
+
                 panelSubmenuGrupos1.BringToFront();
                 panelSubmenuGrupos1.Visible = false;
                 panelSubmenuGrupos2.Visible = false;
@@ -107,15 +158,14 @@ namespace CapaVisual
                 hideAllSubpanels();
                 panelSubmenuEventos1.Visible = true;
                 panelSubmenuEventos1.BringToFront();
-                
+
             }
         }
-
         private void btnActividades_Click(object sender, EventArgs e)
         {
             if (panelSubmenuActividades.Visible == true)
             {
-                panelSubmenuActividades.BringToFront(); 
+                panelSubmenuActividades.BringToFront();
                 panelSubmenuActividades.Visible = false;
             }
             else
@@ -125,9 +175,120 @@ namespace CapaVisual
                 panelSubmenuGrupos1.BringToFront();
             }
         }
+        private void btnVerMisGrupos_Click(object sender, EventArgs e)
+        {
+            panelSubmenuGrupos2.Controls.Clear();
+            cargarGruposEnPanelGrupos();
+            if (panelSubmenuGrupos2.Visible == true)
+            {
 
+                panelSubmenuGrupos2.BringToFront();
+                panelSubmenuGrupos2.Visible = false;
+                panelSubmenuGrupos1.Visible = false;
+            }
+            else
+            {
+                hideAllSubpanels();
+                panelSubmenuGrupos2.Visible = true;
+                panelSubmenuGrupos2.BringToFront();
+
+            }
+        }
+
+        private void btnVerMasGrupos_Click(object sender, EventArgs e)
+        {
+            panelSubmenuGrupos2.Controls.Clear();
+            cargarGruposEnPanelGruposAll();
+            if (panelSubmenuGrupos2.Visible == true)
+            {
+
+                panelSubmenuGrupos2.BringToFront();
+                panelSubmenuGrupos2.Visible = false;
+                panelSubmenuGrupos1.Visible = false;
+            }
+            else
+            {
+                hideAllSubpanels();
+                panelSubmenuGrupos2.Visible = true;
+                panelSubmenuGrupos2.BringToFront();
+
+            }
+        }
+        private void btnVerMisEventos_Click(object sender, EventArgs e)
+        {
+            if (panelSubmenuEventos2.Visible == true)
+            {
+                panelSubmenuEventos2.Visible = false;
+                panelSubmenuEventos1.Visible = false;
+            }
+            else
+            {
+                hideAllSubpanels();
+                panelSubmenuEventos2.Visible = true;
+
+            }
+        }
+        private void btnCrearEvento_Click(object sender, EventArgs e)
+        {
+            panelSubmenuEventos2.Visible = false;
+            panelSubmenuEventos1.Visible = false;
+            if (mainPage1.Visible)
+            {
+                mainPage1.EliminarCrearPost();
+                mainPage1.AgregarCrearEvento();
+            }
+            if (groupPage1.Visible)
+            {
+                mainPage1.EliminarCrearPost();
+                mainPage1.AgregarCrearEvento();
+            }
+
+        }
+        private void pictureBoxImagenPerfil_Click(object sender, EventArgs e)
+        {
+            hideAllUsercontrols();
+            hideAllSubpanels();
+            muroUsuario1.CargarMuroDelUsuarioLogeado();
+            muroUsuario1.limpiarPostDelMuro();
+            muroUsuario1.mostrarPostsDelMuro();
+            muroUsuario1.ListarRelacionados();
+            muroUsuario1.Visible = true;
+        }
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            hideAllUsercontrols();
+            hideAllSubpanels();
+            mainPage1.Visible = true;
+        }
+        private void AppWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+        private void btnCrearGrupo_Click(object sender, EventArgs e)
+        {
+            hideAllSubpanels();
+            interfazCrearGrupo1.Show();
+            interfazCrearGrupo1.BringToFront();
+            interfazCrearGrupo1.InterfazCrearGrupoLoad();
+        }
+
+        private static List<GrupoDesdeAPI> obtenerGruposQueConformaDesdeAPI()
+        {
+            AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+
+            RestClient client = new RestClient("http://localhost:57063/");
+            RestRequest request = new RestRequest($"ApiGrupos/conforma_grupos/{app.id_cuenta}", Method.Get);
+            request.AddHeader("Accept", "application/json");
+            RestResponse response = client.Execute(request);
+
+            List<GrupoDesdeAPI> grupos;
+            grupos = JsonConvert.DeserializeObject<List<GrupoDesdeAPI>>(response.Content);
+            return grupos;
+        }
         private static List<GrupoDesdeAPI> obtenerGruposDesdeAPI()
         {
+            AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+
             RestClient client = new RestClient("http://localhost:57063/");
             RestRequest request = new RestRequest("ApiGrupos/grupos", Method.Get);
             request.AddHeader("Accept", "application/json");
@@ -148,15 +309,40 @@ namespace CapaVisual
 
             if (response.IsSuccessful)
             {
-                Console.WriteLine(response.Content); 
-                                                     
+                Console.WriteLine(response.Content);
+
                 GrupoDesdeAPI grupo = JsonConvert.DeserializeObject<GrupoDesdeAPI>(response.Content);
                 return grupo;
             }
             else
             {
                 Console.WriteLine($"Error: {response.StatusCode} - {response.StatusDescription}");
-                return null; 
+                return null;
+            }
+        }
+
+        public void obtenerInfoCuentaDesdeApi(int id_cuenta)
+        {
+            RestClient client = new RestClient("http://localhost:57065/");
+            RestRequest request = new RestRequest($"ApiUsuarios/cuenta/ObtenerInformacion/{id_cuenta}", Method.Get);
+            request.AddHeader("Accept", "application/json");
+
+            RestResponse response = client.Execute(request);
+
+            if (response.IsSuccessful)
+            {
+                Console.WriteLine(response.Content);
+
+                CuentaDesdeAPI cuenta = JsonConvert.DeserializeObject<CuentaDesdeAPI>(response.Content);
+                this.nombre_usuario = cuenta.nombre_usuario;
+                this.id_preferencia = cuenta.id_preferencia;
+                this.id_muro = cuenta.id_muro;
+                this.rol_cuenta = cuenta.rol_cuenta;
+                this.imagen_perfil = cuenta.imagen_perfil;
+            }
+            else
+            {
+                Console.WriteLine($"Error: {response.StatusCode} - {response.StatusDescription}");
             }
         }
 
@@ -173,109 +359,54 @@ namespace CapaVisual
         }
         public void cargarGruposEnPanelGrupos()
         {
+            List<GrupoDesdeAPI> grupos = obtenerGruposQueConformaDesdeAPI();
+            foreach (GrupoDesdeAPI grupo in grupos)
+            {
+                generarBotonSubmenuGrupos(grupo.nombre_grupo, grupo.id_grupo);
+            }
+        }
+
+        public void cargarGruposEnPanelGruposAll()
+        {
             List<GrupoDesdeAPI> grupos = obtenerGruposDesdeAPI();
             foreach (GrupoDesdeAPI grupo in grupos)
             {
                 generarBotonSubmenuGrupos(grupo.nombre_grupo, grupo.id_grupo);
-               
             }
         }
-        
         private void Button_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             int id_grupo = (int)btn.Tag;
 
-            GrupoDesdeAPI g = obtenerGrupoDesdeAPI(id_grupo);
-
-            HttpClient client = new HttpClient();
-            byte[] imagenGrupo = client.GetByteArrayAsync(g.url_imagen).Result;
-            byte[] BannerGrupo = client.GetByteArrayAsync(g.imagen_banner).Result;
-            MemoryStream imagenGrupo_ms = new MemoryStream(imagenGrupo);
-            MemoryStream BannerGrupo_ms = new MemoryStream(BannerGrupo);
-
-            groupPage1.NombreGrupo = g.nombre_grupo;
-            groupPage1.ImagenGrupo = Image.FromStream(imagenGrupo_ms); // Asumiendo que tienes un método para manejar imágenes
-            groupPage1.BannerGrupo = Image.FromStream(BannerGrupo_ms);
-            groupPage1.DescripcionGrupo = g.descripcion;
-            groupPage1.IdGrupo = id_grupo;
-
-            hideAllUsercontrols();
-            groupPage1.Visible = true;
-            groupPage1.mostrarPostsDelGrupo();
-            hideAllSubpanels();
-            
-        }
-
-        private void btnVerMisGrupos_Click(object sender, EventArgs e)
-        {
-            if (panelSubmenuGrupos2.Visible == true)
+            try
             {
-                panelSubmenuGrupos2.Visible = false;
-                panelSubmenuGrupos1.Visible = false;
-            }
-            else
-            {
+                GrupoDesdeAPI g = obtenerGrupoDesdeAPI(id_grupo);
+
+                HttpClient client = new HttpClient();
+                byte[] imagenGrupo = client.GetByteArrayAsync(g.url_imagen).Result;
+                byte[] BannerGrupo = client.GetByteArrayAsync(g.imagen_banner).Result;
+                MemoryStream imagenGrupo_ms = new MemoryStream(imagenGrupo);
+                MemoryStream BannerGrupo_ms = new MemoryStream(BannerGrupo);
+
+                groupPage1.NombreGrupo = g.nombre_grupo;
+                groupPage1.ImagenGrupo = Image.FromStream(imagenGrupo_ms); // Asumiendo que tienes un método para manejar imágenes
+                groupPage1.BannerGrupo = Image.FromStream(BannerGrupo_ms);
+                groupPage1.DescripcionGrupo = g.descripcion;
+                groupPage1.IdGrupo = id_grupo;
+
+                hideAllUsercontrols();
+                groupPage1.Visible = true;
                 hideAllSubpanels();
-                panelSubmenuGrupos2.Visible = true;
-                
+                groupPage1.mostrarPostsDelGrupo();
+                groupPage1.ObtenerIntegrantesGrupo();
             }
-        }
-
-        private void btnVerMisEventos_Click(object sender, EventArgs e)
-        {
-            if (panelSubmenuEventos2.Visible == true)
+            catch (Exception xe)
             {
-                panelSubmenuEventos2.Visible = false;
-                panelSubmenuEventos1.Visible = false;
-            }
-            else
-            {
-                hideAllSubpanels();
-                panelSubmenuEventos2.Visible = true;
-                
+                MessageBox.Show("Error" + xe.Message);
             }
         }
 
-        private void btnCrearEvento_Click(object sender, EventArgs e)
-        {
-            panelSubmenuEventos2.Visible = false;
-            panelSubmenuEventos1.Visible = false;
-            if (mainPage1.Visible) {
-                mainPage1.EliminarCrearPost();
-                mainPage1.AgregarCrearEvento();
-            }
-            if (groupPage1.Visible)
-            {
-                mainPage1.EliminarCrearPost();
-                mainPage1.AgregarCrearEvento();
-            }
 
-        }
-
-        private void pictureBoxImagenPerfil_Click(object sender, EventArgs e)
-        {
-            hideAllUsercontrols();
-            hideAllSubpanels();
-            muroUsuario1.Visible = true;
-        }
-
-        private void btnPrincipal_Click(object sender, EventArgs e)
-        {
-            hideAllUsercontrols();
-            hideAllSubpanels();
-            mainPage1.Visible = true;
-        }
-
-        private void AppWindow_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnCrearGrupo_Click(object sender, EventArgs e)
-        {
-            interfazCrearGrupo1.Show();
-            interfazCrearGrupo1.BringToFront();
-        }
     }
 }

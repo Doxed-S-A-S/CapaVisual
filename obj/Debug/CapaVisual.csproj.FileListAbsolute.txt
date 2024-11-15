@@ -70,10 +70,14 @@ C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\CapaVisual.pdb
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\System.Buffers.dll
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\System.ValueTuple.dll
-C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CompartirEnGrupoDialog.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.ComentarioDialog.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.SeleccionDeCompartida.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CompartirPostDialog.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.UserControls.Comentario.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CrearEvento.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.LoginPage.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.AppWindow.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.InterfazCrearGrupo.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.MuroUsuario.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.PostCard.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.Properties.Resources.resources
@@ -81,10 +85,9 @@ C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.RegisterPage.res
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.mainPage1.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.GroupPage.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.CrearPost.resources
-C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.LoginPage2.resources
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.GenerateResource.cache
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.CoreCompileInputs.cache
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.CopyComplete
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.exe
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.pdb
-C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.InterfazCrearGrupo.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.AssemblyReference.cache

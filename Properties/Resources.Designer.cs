@@ -93,6 +93,16 @@ namespace CapaVisual.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bannernahuel {
+            get {
+                object obj = ResourceManager.GetObject("bannernahuel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Be_Like_by_iconSvg_co_1_ {
             get {
                 object obj = ResourceManager.GetObject("Be Like by iconSvg.co(1)", resourceCulture);
@@ -173,6 +183,16 @@ namespace CapaVisual.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Heart_Attack_by_iconSvg1 {
+            get {
+                object obj = ResourceManager.GetObject("Heart Attack by iconSvg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LiguaLinkWite {
             get {
                 object obj = ResourceManager.GetObject("LiguaLinkWite", resourceCulture);
@@ -226,6 +246,16 @@ namespace CapaVisual.Properties {
         internal static System.Drawing.Bitmap Profile_Picture_by_iconSvg_co {
             get {
                 object obj = ResourceManager.GetObject("Profile Picture by iconSvg.co", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Send_Email_by_iconSvg_co {
+            get {
+                object obj = ResourceManager.GetObject("Send Email by iconSvg.co", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,7 +31,7 @@ namespace CapaVisual
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtEmail = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtUsername = new MaterialSkin.Controls.MaterialTextBox();
             this.btnRegistrarse = new MaterialSkin.Controls.MaterialButton();
             this.btnInicio = new MaterialSkin.Controls.MaterialButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,12 +43,12 @@ namespace CapaVisual
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard1.Controls.Add(this.txtPassword);
-            this.materialCard1.Controls.Add(this.txtEmail);
+            this.materialCard1.Controls.Add(this.txtUsername);
             this.materialCard1.Controls.Add(this.btnRegistrarse);
             this.materialCard1.Controls.Add(this.btnInicio);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(716, 452);
+            this.materialCard1.Location = new System.Drawing.Point(716, 372);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
@@ -76,25 +76,25 @@ namespace CapaVisual
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
-            // txtEmail
+            // txtUsername
             // 
-            this.txtEmail.AnimateReadOnly = false;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Depth = 0;
-            this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtEmail.LeadingIcon = null;
-            this.txtEmail.Location = new System.Drawing.Point(62, 56);
-            this.txtEmail.MaxLength = 50;
-            this.txtEmail.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(388, 50);
-            this.txtEmail.TabIndex = 2;
-            this.txtEmail.Text = "";
-            this.txtEmail.TrailingIcon = null;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
-            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
-            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
+            this.txtUsername.AnimateReadOnly = false;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Depth = 0;
+            this.txtUsername.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsername.LeadingIcon = null;
+            this.txtUsername.Location = new System.Drawing.Point(62, 56);
+            this.txtUsername.MaxLength = 50;
+            this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtUsername.Multiline = false;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(388, 50);
+            this.txtUsername.TabIndex = 2;
+            this.txtUsername.Text = "";
+            this.txtUsername.TrailingIcon = null;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtUsername.Enter += new System.EventHandler(this.txtEmail_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // btnRegistrarse
             // 
@@ -139,7 +139,7 @@ namespace CapaVisual
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaVisual.Properties.Resources.LiguaLinkWite;
-            this.pictureBox1.Location = new System.Drawing.Point(799, 239);
+            this.pictureBox1.Location = new System.Drawing.Point(799, 159);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(326, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -174,6 +174,6 @@ namespace CapaVisual
         private MaterialSkin.Controls.MaterialButton btnInicio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialTextBox txtPassword;
-        private MaterialSkin.Controls.MaterialTextBox txtEmail;
+        private MaterialSkin.Controls.MaterialTextBox txtUsername;
     }
 }
