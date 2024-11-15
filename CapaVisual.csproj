@@ -85,17 +85,138 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\PostDesdeAPI.cs" />
-    <Compile Include="MainPage.cs">
+    <Compile Include=".cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>.cs</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DTO\ComentarioDTO.cs" />
+    <Compile Include="DTO\CuentaDesdeAPI.cs" />
+    <Compile Include="DTO\GetIntegrantesDTO.cs" />
+    <Compile Include="DTO\GrupoConformadoDesdeAPI.cs" />
+    <Compile Include="DTO\MuroDesdeAPI.cs" />
+    <Compile Include="DTO\VinculadoDTO.cs" />
+    <Compile Include="Forms\ComentarioDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <Compile Include="Forms\ComentarioDialog.Designer.cs">
+      <DependentUpon>ComentarioDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pboxCircular.cs" />
+    <Compile Include="Forms\SeleccionDeCompartida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeleccionDeCompartida.Designer.cs">
+      <DependentUpon>SeleccionDeCompartida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CompartirPostEnGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CompartirPostEnGrupo.Designer.cs">
+      <DependentUpon>CompartirPostEnGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="richTxtBoxCircularcs.cs" />
+    <Compile Include="UserControls\Comentario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Comentario.Designer.cs">
+      <DependentUpon>Comentario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InterfazCrearGrupo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\InterfazCrearGrupo.Designer.cs">
+      <DependentUpon>InterfazCrearGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\GrupoDesdeAPI.cs" />
+    <Compile Include="DTO\PostDesdeAPI.cs" />
+    <Compile Include="Forms\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AppWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AppWindow.Designer.cs">
+      <DependentUpon>AppWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainPage.resx">
+    <Compile Include="Forms\RegisterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterPage.Designer.cs">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PostCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PostCard.Designer.cs">
+      <DependentUpon>PostCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GroupPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GroupPage.Designer.cs">
+      <DependentUpon>GroupPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CrearPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CrearPost.Designer.cs">
+      <DependentUpon>CrearPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CrearEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CrearEvento.Designer.cs">
+      <DependentUpon>CrearEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MuroUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MuroUsuario.Designer.cs">
+      <DependentUpon>MuroUsuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\ComentarioDialog.resx">
+      <DependentUpon>ComentarioDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SeleccionDeCompartida.resx">
+      <DependentUpon>SeleccionDeCompartida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CompartirPostEnGrupo.resx">
+      <DependentUpon>CompartirPostEnGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Comentario.resx">
+      <DependentUpon>Comentario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CrearEvento.resx">
+      <DependentUpon>CrearEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AppWindow.resx">
+      <DependentUpon>AppWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\InterfazCrearGrupo.resx">
+      <DependentUpon>InterfazCrearGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MuroUsuario.resx">
+      <DependentUpon>MuroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PostCard.resx">
+      <DependentUpon>PostCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +228,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Forms\RegisterPage.resx">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GroupPage.resx">
+      <DependentUpon>GroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CrearPost.resx">
+      <DependentUpon>CrearPost.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,6 +274,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Attach by iconSvg.co%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mati.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiguaLinkWite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LinguaLinkDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Be Like by iconSvg.co%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Be Like by iconSvg.co%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dislike by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Messaging by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Share by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Share by iconSvg.co%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downytfytload.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6627adbbce5ee45e48d0b31d35a67932.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo3be.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send Email by iconSvg.co.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart Attack by iconSvg.co%284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bannernahuel.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
