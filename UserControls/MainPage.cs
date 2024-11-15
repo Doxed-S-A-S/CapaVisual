@@ -29,6 +29,7 @@ namespace CapaVisual
             flowLayoutPanelPosts.BackColor = Color.LightGray;
             panelDerecho.BackColor = Color.LightGray;
             mostrarPostsIniciales();
+            ListarUsuariosEnAñadirAmigos();
         }
         private static List<PostDesdeAPI> obtenerPostDesdeAPI()
         {
@@ -118,5 +119,55 @@ namespace CapaVisual
             CrearEvento crearEvento = new CrearEvento();
             flowLayoutCrearPosts.Controls.Add(crearEvento);
         }
+
+        private void txtContactos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void ListarUsuariosEnAñadirAmigos()
+        {
+            string baseUrl = "http://localhost:57065/"; 
+            string endpoint = "ApiUsuarios/ListarUsuarios";
+
+            RestClient client = new RestClient(baseUrl);
+            RestRequest request = new RestRequest(endpoint, Method.Get);
+            request.AddHeader("Accept", "application/json");
+
+            try
+            {
+                RestResponse response = client.Execute(request);
+
+                if (response.IsSuccessful)
+                {
+                    List<CuentaDesdeAPI> usuarios = JsonConvert.DeserializeObject<List<CuentaDesdeAPI>>(response.Content);
+
+                    dataGridAñadirAmigos.Rows.Clear();
+
+                    if (dataGridAñadirAmigos.Columns.Count == 0)
+                    {
+                        dataGridAñadirAmigos.Columns.Add("nombre_usuario", "Nombre de Usuario");
+                        dataGridAñadirAmigos.Columns.Add("rol_cuenta", "Rol");
+                    }
+                    
+                    foreach (var usuario in usuarios)
+                    {
+                        dataGridAñadirAmigos.Rows.Add(
+                            usuario.nombre_usuario,
+                            usuario.rol_cuenta
+                        );
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error al obtener los datos: " + response.ErrorMessage);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
     }
 }

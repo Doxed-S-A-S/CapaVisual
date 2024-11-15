@@ -147,12 +147,13 @@ namespace CapaVisual
                 else
                 {
                     throw new Exception($"{response.Content}");
+                    app.mainPage1.mainpageLoad();
                 }
             }
             catch (Exception ex)
             {
-                Console.Write(ex.Message);
                 MessageBox.Show(ex.Message);
+                app.mainPage1.mainpageLoad();
             }
         }
     }
