@@ -249,7 +249,9 @@ namespace CapaVisual
             hideAllUsercontrols();
             hideAllSubpanels();
             muroUsuario1.CargarMuroDelUsuarioLogeado();
+            muroUsuario1.limpiarPostDelMuro();
             muroUsuario1.mostrarPostsDelMuro();
+            muroUsuario1.ListarRelacionados();
             muroUsuario1.Visible = true;
         }
         private void btnPrincipal_Click(object sender, EventArgs e)

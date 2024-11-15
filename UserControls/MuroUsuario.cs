@@ -27,6 +27,7 @@ namespace CapaVisual
             pboxCircular pbox = new pboxCircular();
             pbox.MakeCircularPictureBox(pboxImagenPerfilMuro);
             txtBoxDescripcionGrupo.BackColor = Color.White;
+            
 
         }
         public string UserName
@@ -52,7 +53,7 @@ namespace CapaVisual
             {
                 Console.WriteLine(response.Content);
                 MuroDesdeAPI muro = JsonConvert.DeserializeObject<MuroDesdeAPI>(response.Content);
-                pboxImagenPortadaMuro.Load(muro.imagen_banner);
+                //pboxImagenPortadaMuro.Load(muro.imagen_banner);
                 this.Descripcion = muro.biografia;
                 this.UserName = app.NombreUsuario;
                 pboxImagenPerfilMuro.Load(app.ImagenPerfil);
@@ -63,6 +64,68 @@ namespace CapaVisual
             }
         }
 
+        public void ListarRelacionados()
+        {
+            AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+
+            if (app == null)
+            {
+                MessageBox.Show("No se encontró la ventana principal.");
+                return;
+            }
+
+            string baseUrl = "http://localhost:57065/";
+            string endpoint = $"ApiUsuarios/cuenta/GetRelacionados/{app.IdCuenta}";
+
+            RestClient client = new RestClient(baseUrl);
+            RestRequest request = new RestRequest(endpoint, Method.Get);
+            request.AddHeader("Accept", "application/json");
+
+            try
+            {
+                RestResponse response = client.Execute(request);
+
+                if (response.IsSuccessful)
+                {
+                    List<VinculadoDTO> usuarios = JsonConvert.DeserializeObject<List<VinculadoDTO>>(response.Content);
+
+                    dataGridAmigosMuro.Rows.Clear();
+
+                    if (dataGridAmigosMuro.Columns.Count == 0)
+                    {
+                        dataGridAmigosMuro.Columns.Add("nombre_usuario2", "Nombre de Usuario");
+                        dataGridAmigosMuro.Columns.Add("vinculo", "Vínculo");
+                    }
+
+                    if (usuarios != null && usuarios.Count > 0)
+                    {
+                        foreach (var usuario in usuarios)
+                        {
+                            dataGridAmigosMuro.Rows.Add(
+                                usuario.nombre_usuario2,
+                                usuario.vinculo
+                            );
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron usuarios relacionados.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Error al obtener los datos: {response.ErrorMessage}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+        public void limpiarPostDelMuro()
+        {
+            panelPostsMuroUsuario.Controls.Clear();
+        }
         private static List<PostDesdeAPI> obtenerPostDesdeAPI(int id_muro)
         {
             RestClient client = new RestClient("http://localhost:44331/");

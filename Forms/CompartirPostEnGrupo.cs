@@ -72,13 +72,13 @@ namespace CapaVisual
                     RestResponse response = client.Execute(request);
                     if (response.IsSuccessful)
                     {
-                        MessageBox.Show("Se compartio todo bien parcero");
+                        MessageBox.Show("Su post ha sido compartido correctamente");
                         this.Close();
                         selec.Close();
                     }
                     else
                     {
-                        MessageBox.Show("no se compartio bien mi rey");
+                        MessageBox.Show("Su post ya existe en este grupo");
                     }
                 }
                 catch (Exception ex)
