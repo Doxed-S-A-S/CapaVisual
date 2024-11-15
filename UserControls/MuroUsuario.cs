@@ -17,8 +17,6 @@ namespace CapaVisual
 {
     public partial class MuroUsuario : UserControl
     {
-        private bool postsMostrados;
-
         public MuroUsuario()
         {
             InitializeComponent();
@@ -29,22 +27,12 @@ namespace CapaVisual
             pboxCircular pbox = new pboxCircular();
             pbox.MakeCircularPictureBox(pboxImagenPerfilMuro);
             txtBoxDescripcionGrupo.BackColor = Color.White;
-            
+
         }
         public string UserName
         {
             get { return txtNomyApeMuro.Text; }
             set { txtNomyApeMuro.Text = value; }
-        }
-        public string Portada
-        {
-            get { return pboxImagenPortadaMuro.ImageLocation; }
-            set { pboxImagenPortadaMuro.Load(value); }
-        }
-        public string ProfileImage
-        {
-            get { return pboxImagenPerfilMuro.ImageLocation; }
-            set { pboxImagenPerfilMuro.Load(value); }
         }
         public string Descripcion
         {
@@ -101,31 +89,29 @@ namespace CapaVisual
         {
             AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
             List<PostDesdeAPI> posts = obtenerPostDesdeAPI(app.IdMuro);
-            if (postsMostrados == false)
+
+            try
             {
-                try
+                foreach (PostDesdeAPI post in posts)
                 {
-                    foreach (PostDesdeAPI post in posts)
-                    {
-                        PostCard postCard = new PostCard();
-                        postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
-                        postCard.PostContent = post.contenido;
-                        postCard.likes = post.likes;
-                        HttpClient client = new HttpClient();
-                        byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
-                        MemoryStream stream = new MemoryStream(imageData);
+                    PostCard postCard = new PostCard();
+                    postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
+                    postCard.PostContent = post.contenido;
+                    postCard.likes = post.likes;
+                    HttpClient client = new HttpClient();
+                    byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
+                    MemoryStream stream = new MemoryStream(imageData);
 
-                        postCard.PostImage = Image.FromStream(stream);
-                        panelPostsMuroUsuario.Controls.Add(postCard);
-                    }
-                    postsMostrados = true;
+                    postCard.PostImage = Image.FromStream(stream);
+                    panelPostsMuroUsuario.Controls.Add(postCard);
                 }
-                catch (Exception e)
-                {
-                    MessageBox.Show(e.Message);
-                }
-
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+
         }
 
 

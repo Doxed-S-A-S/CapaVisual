@@ -66,7 +66,8 @@ namespace CapaVisual
         {
             if (ValidarCamposGrupo())
             {
-                crearGrupo(1, txtNombreGrupo.Text, txtDescripcionGrupo.Text, chkBoxPrivacidadGrupoNO.Checked, pboxImagenPerfilGrupo.ImageLocation, pboxImagenBannerGrupo.ImageLocation);
+                AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+                crearGrupo(app.IdCuenta, txtNombreGrupo.Text, txtDescripcionGrupo.Text, chkBoxPrivacidadGrupoNO.Checked, pboxImagenPerfilGrupo.ImageLocation, pboxImagenBannerGrupo.ImageLocation);
                 this.Hide();
                 limpiarCampos();
             }

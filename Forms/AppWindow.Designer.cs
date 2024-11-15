@@ -52,6 +52,7 @@ namespace CapaVisual
             this.interfazCrearGrupo1 = new CapaVisual.InterfazCrearGrupo();
             this.muroUsuario1 = new CapaVisual.MuroUsuario();
             this.groupPage1 = new CapaVisual.GroupPage();
+            this.btnVerMasGrupos = new System.Windows.Forms.Button();
             this.panelIzquierdoMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.panelSubmenuGrupos1.SuspendLayout();
@@ -206,6 +207,7 @@ namespace CapaVisual
             this.panelSubmenuGrupos1.AutoScroll = true;
             this.panelSubmenuGrupos1.AutoSize = true;
             this.panelSubmenuGrupos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSubmenuGrupos1.Controls.Add(this.btnVerMasGrupos);
             this.panelSubmenuGrupos1.Controls.Add(this.btnEliminarGrupo);
             this.panelSubmenuGrupos1.Controls.Add(this.btnVerMisGrupos);
             this.panelSubmenuGrupos1.Controls.Add(this.btnCrearGrupo);
@@ -217,7 +219,7 @@ namespace CapaVisual
             // btnEliminarGrupo
             // 
             this.btnEliminarGrupo.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarGrupo.Location = new System.Drawing.Point(1, 73);
+            this.btnEliminarGrupo.Location = new System.Drawing.Point(1, 112);
             this.btnEliminarGrupo.Name = "btnEliminarGrupo";
             this.btnEliminarGrupo.Size = new System.Drawing.Size(164, 32);
             this.btnEliminarGrupo.TabIndex = 2;
@@ -309,11 +311,13 @@ namespace CapaVisual
             // muroUsuario1
             // 
             this.muroUsuario1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.muroUsuario1.Descripcion = "";
             this.muroUsuario1.Location = new System.Drawing.Point(243, 64);
             this.muroUsuario1.Margin = new System.Windows.Forms.Padding(4);
             this.muroUsuario1.Name = "muroUsuario1";
             this.muroUsuario1.Size = new System.Drawing.Size(1672, 1009);
             this.muroUsuario1.TabIndex = 16;
+            this.muroUsuario1.UserName = "label3";
             // 
             // groupPage1
             // 
@@ -329,15 +333,26 @@ namespace CapaVisual
             this.groupPage1.Size = new System.Drawing.Size(1672, 1013);
             this.groupPage1.TabIndex = 11;
             // 
+            // btnVerMasGrupos
+            // 
+            this.btnVerMasGrupos.ForeColor = System.Drawing.Color.Black;
+            this.btnVerMasGrupos.Location = new System.Drawing.Point(1, 74);
+            this.btnVerMasGrupos.Name = "btnVerMasGrupos";
+            this.btnVerMasGrupos.Size = new System.Drawing.Size(164, 32);
+            this.btnVerMasGrupos.TabIndex = 3;
+            this.btnVerMasGrupos.Text = "Explorar Grupos";
+            this.btnVerMasGrupos.UseVisualStyleBackColor = true;
+            this.btnVerMasGrupos.Click += new System.EventHandler(this.btnVerMasGrupos_Click);
+            // 
             // AppWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panelSubmenuGrupos1);
             this.Controls.Add(this.mainPage1);
             this.Controls.Add(this.interfazCrearGrupo1);
             this.Controls.Add(this.panelSubmenuEventos1);
-            this.Controls.Add(this.panelSubmenuGrupos1);
             this.Controls.Add(this.panelSubmenuActividades);
             this.Controls.Add(this.panelSubmenuEventos2);
             this.Controls.Add(this.panelSubmenuGrupos2);
@@ -386,6 +401,7 @@ namespace CapaVisual
         private InterfazCrearGrupo interfazCrearGrupo1;
         private MaterialSkin.Controls.MaterialLabel txtUsernamePanelIzquierdo;
         public mainPage1 mainPage1;
+        private System.Windows.Forms.Button btnVerMasGrupos;
     }
 }
 

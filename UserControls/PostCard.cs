@@ -30,11 +30,14 @@ namespace CapaVisual
             set { txtContenidoPost.Text = value; }
         }
 
+        private string _profileImage;
+
         public string ProfileImage
         {
-            get { return ProfileImage; }
-            set { pictureBoxFotoPerfilPost.Load(value); }
+            get { return _profileImage; }
+            set { _profileImage = value; pictureBoxFotoPerfilPost.Load(value); }
         }
+
 
         public Image PostImage
         {

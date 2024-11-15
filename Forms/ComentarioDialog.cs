@@ -130,10 +130,8 @@ namespace CapaVisual
 
             if (comentarios != null && comentarios.Count > 0)
             {
-                // Obtiene el último comentario de la lista
                 ComentarioDTO ultimoComentario = comentarios.Last();
 
-                // Llama al método que devuelve la información del creador del comentario
                 CuentaDesdeAPI datosDelComentador = obtenerCreadorComentarioYSuFoto(ultimoComentario.id_comentario);
 
                 if (datosDelComentador != null) // Verifica que no sea nulo
@@ -168,7 +166,7 @@ namespace CapaVisual
                         fechayhora = comentario.fecha,
                         ProfileImage = datosDelComentador.imagen_perfil,
                         likeCount = comentario.likes,
-                        Contenido = comentario.contenido,
+                        Contenido = comentario.comentario,
                         //id_cuenta_comentador = datosDelComentador.id_cuenta
                     };
 

@@ -30,12 +30,12 @@ namespace CapaVisual
         public int IdCuenta
         {
             get { return id_cuenta; }
-            private set { id_cuenta = value; } 
+            private set { id_cuenta = value; }
         }
         public int IdMuro
         {
             get { return id_muro; }
-            set { id_muro = value; } 
+            set { id_muro = value; }
         }
         public int IdPreferencia
         {
@@ -84,8 +84,6 @@ namespace CapaVisual
             panelSubmenuActividades.Hide();
             interfazCrearGrupo1.Hide();
 
-            cargarGruposEnPanelGrupos();
-
             var skinManager = MaterialSkin.MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
@@ -131,8 +129,10 @@ namespace CapaVisual
         }
         private void btnGrupos_Click(object sender, EventArgs e)
         {
+
             if (panelSubmenuGrupos1.Visible == true)
             {
+
                 panelSubmenuGrupos1.BringToFront();
                 panelSubmenuGrupos1.Visible = false;
                 panelSubmenuGrupos2.Visible = false;
@@ -157,14 +157,14 @@ namespace CapaVisual
                 hideAllSubpanels();
                 panelSubmenuEventos1.Visible = true;
                 panelSubmenuEventos1.BringToFront();
-                
+
             }
         }
         private void btnActividades_Click(object sender, EventArgs e)
         {
             if (panelSubmenuActividades.Visible == true)
             {
-                panelSubmenuActividades.BringToFront(); 
+                panelSubmenuActividades.BringToFront();
                 panelSubmenuActividades.Visible = false;
             }
             else
@@ -176,8 +176,31 @@ namespace CapaVisual
         }
         private void btnVerMisGrupos_Click(object sender, EventArgs e)
         {
+            panelSubmenuGrupos2.Controls.Clear();
+            cargarGruposEnPanelGrupos();
             if (panelSubmenuGrupos2.Visible == true)
             {
+
+                panelSubmenuGrupos2.BringToFront();
+                panelSubmenuGrupos2.Visible = false;
+                panelSubmenuGrupos1.Visible = false;
+            }
+            else
+            {
+                hideAllSubpanels();
+                panelSubmenuGrupos2.Visible = true;
+                panelSubmenuGrupos2.BringToFront();
+
+            }
+        }
+
+        private void btnVerMasGrupos_Click(object sender, EventArgs e)
+        {
+            panelSubmenuGrupos2.Controls.Clear();
+            cargarGruposEnPanelGruposAll();
+            if (panelSubmenuGrupos2.Visible == true)
+            {
+
                 panelSubmenuGrupos2.BringToFront();
                 panelSubmenuGrupos2.Visible = false;
                 panelSubmenuGrupos1.Visible = false;
@@ -246,8 +269,23 @@ namespace CapaVisual
             interfazCrearGrupo1.InterfazCrearGrupoLoad();
         }
 
+        private static List<GrupoDesdeAPI> obtenerGruposQueConformaDesdeAPI()
+        {
+            AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+
+            RestClient client = new RestClient("http://localhost:57063/");
+            RestRequest request = new RestRequest($"ApiGrupos/conforma_grupos/{app.id_cuenta}", Method.Get);
+            request.AddHeader("Accept", "application/json");
+            RestResponse response = client.Execute(request);
+
+            List<GrupoDesdeAPI> grupos;
+            grupos = JsonConvert.DeserializeObject<List<GrupoDesdeAPI>>(response.Content);
+            return grupos;
+        }
         private static List<GrupoDesdeAPI> obtenerGruposDesdeAPI()
         {
+            AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+
             RestClient client = new RestClient("http://localhost:57063/");
             RestRequest request = new RestRequest("ApiGrupos/grupos", Method.Get);
             request.AddHeader("Accept", "application/json");
@@ -268,8 +306,8 @@ namespace CapaVisual
 
             if (response.IsSuccessful)
             {
-                Console.WriteLine(response.Content); 
-                                                     
+                Console.WriteLine(response.Content);
+
                 GrupoDesdeAPI grupo = JsonConvert.DeserializeObject<GrupoDesdeAPI>(response.Content);
                 return grupo;
             }
@@ -285,9 +323,9 @@ namespace CapaVisual
             RestClient client = new RestClient("http://localhost:57065/");
             RestRequest request = new RestRequest($"ApiUsuarios/cuenta/ObtenerInformacion/{id_cuenta}", Method.Get);
             request.AddHeader("Accept", "application/json");
-            
+
             RestResponse response = client.Execute(request);
-            
+
             if (response.IsSuccessful)
             {
                 Console.WriteLine(response.Content);
@@ -318,14 +356,21 @@ namespace CapaVisual
         }
         public void cargarGruposEnPanelGrupos()
         {
+            List<GrupoDesdeAPI> grupos = obtenerGruposQueConformaDesdeAPI();
+            foreach (GrupoDesdeAPI grupo in grupos)
+            {
+                generarBotonSubmenuGrupos(grupo.nombre_grupo, grupo.id_grupo);
+            }
+        }
+
+        public void cargarGruposEnPanelGruposAll()
+        {
             List<GrupoDesdeAPI> grupos = obtenerGruposDesdeAPI();
             foreach (GrupoDesdeAPI grupo in grupos)
             {
                 generarBotonSubmenuGrupos(grupo.nombre_grupo, grupo.id_grupo);
-               
             }
         }
-        
         private void Button_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -353,12 +398,12 @@ namespace CapaVisual
                 groupPage1.mostrarPostsDelGrupo();
                 groupPage1.ObtenerIntegrantesGrupo();
             }
-            catch(Exception xe)
+            catch (Exception xe)
             {
                 MessageBox.Show("Error" + xe.Message);
             }
         }
 
-        
+
     }
 }
