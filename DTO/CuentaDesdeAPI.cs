@@ -11,6 +11,7 @@ namespace CapaVisual.DTO
         public string nombre_usuario;
         public string imagen_perfil;
         public string rol_cuenta;
+        public string vinculo;
         public int id_muro;
         public int id_preferencia;
         public int id_cuenta;

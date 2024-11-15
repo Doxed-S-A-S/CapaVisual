@@ -97,6 +97,7 @@
     <Compile Include="DTO\GetIntegrantesDTO.cs" />
     <Compile Include="DTO\GrupoConformadoDesdeAPI.cs" />
     <Compile Include="DTO\MuroDesdeAPI.cs" />
+    <Compile Include="DTO\VinculadoDTO.cs" />
     <Compile Include="Forms\ComentarioDialog.cs">
       <SubType>Form</SubType>
     </Compile>

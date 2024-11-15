@@ -161,10 +161,10 @@ namespace CapaVisual
                 {
                     this.Hide();
                     AppWindow app = new AppWindow(Int32.Parse(idCuenta));
-                    app.appWindowLoad();
                     app.Show();
                     app.Activate();
-                    
+                    app.appWindowLoad();
+
                 }
                 else
                 {

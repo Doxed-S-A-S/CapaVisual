@@ -22,7 +22,7 @@ namespace CapaVisual
         {
             InitializeComponent();
         }
-        
+
         public void mainpageLoad()
         {
             flowLayoutCrearPosts.BackColor = Color.LightGray;
@@ -30,6 +30,7 @@ namespace CapaVisual
             panelDerecho.BackColor = Color.LightGray;
             mostrarPostsIniciales();
             ListarUsuariosEnAñadirAmigos();
+
         }
         private static List<PostDesdeAPI> obtenerPostDesdeAPI()
         {
@@ -43,7 +44,7 @@ namespace CapaVisual
                 posts = JsonConvert.DeserializeObject<List<PostDesdeAPI>>(response.Content);
                 return posts;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
@@ -59,7 +60,7 @@ namespace CapaVisual
             string content = response.Content.Trim('"');
             return content;
         }
-        
+
         private void mostrarPostsIniciales()
         {
             List<PostDesdeAPI> posts = obtenerPostDesdeAPI();
@@ -89,7 +90,7 @@ namespace CapaVisual
                     flowLayoutPanelPosts.Controls.Add(postCard);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
@@ -127,7 +128,7 @@ namespace CapaVisual
 
         public void ListarUsuariosEnAñadirAmigos()
         {
-            string baseUrl = "http://localhost:57065/"; 
+            string baseUrl = "http://localhost:57065/";
             string endpoint = "ApiUsuarios/ListarUsuarios";
 
             RestClient client = new RestClient(baseUrl);
@@ -149,13 +150,18 @@ namespace CapaVisual
                         dataGridAñadirAmigos.Columns.Add("nombre_usuario", "Nombre de Usuario");
                         dataGridAñadirAmigos.Columns.Add("rol_cuenta", "Rol");
                     }
-                    
+                    int indice = 0;
                     foreach (var usuario in usuarios)
                     {
                         dataGridAñadirAmigos.Rows.Add(
                             usuario.nombre_usuario,
                             usuario.rol_cuenta
+
                         );
+                        //dataGridAñadirAmigos.Rows[indice].Tag = usuario.id_cuenta;
+                        dataGridAñadirAmigos.Rows[indice].Cells[0].Tag = usuario.id_cuenta;
+                        indice += 1;
+                        
                     }
                 }
                 else
@@ -169,5 +175,122 @@ namespace CapaVisual
             }
         }
 
+        
+
+        private void dataGridAñadirAmigos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
+
+        public void ListarRelacionados()
+        {
+            AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+
+            if (app == null)
+            {
+                MessageBox.Show("No se encontró la ventana principal.");
+                return;
+            }
+
+            string baseUrl = "http://localhost:57065/";
+            string endpoint = $"ApiUsuarios/cuenta/GetRelacionados/{app.IdCuenta}";
+
+            RestClient client = new RestClient(baseUrl);
+            RestRequest request = new RestRequest(endpoint, Method.Get);
+            request.AddHeader("Accept", "application/json");
+
+            try
+            {
+                RestResponse response = client.Execute(request);
+
+                if (response.IsSuccessful)
+                {
+                    List<VinculadoDTO> usuarios = JsonConvert.DeserializeObject<List<VinculadoDTO>>(response.Content);
+
+                    dataGridContactos.Rows.Clear();
+
+                    if (dataGridContactos.Columns.Count == 0)
+                    {
+                        dataGridContactos.Columns.Add("nombre_usuario2", "Nombre de Usuario");
+                        dataGridContactos.Columns.Add("vinculo", "Vínculo");
+                    }
+
+                    if (usuarios != null && usuarios.Count > 0)
+                    {
+                        foreach (var usuario in usuarios)
+                        {
+                            dataGridContactos.Rows.Add(
+                                usuario.nombre_usuario2,
+                                usuario.vinculo
+                            );
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron usuarios relacionados.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Error al obtener los datos: {response.ErrorMessage}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
+
+        private void btnAñadirAmigo_Click(object sender, EventArgs e)
+        {
+
+            AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
+            try
+            {
+                string vinculo = "amigo";
+                RestClient client = new RestClient("http://localhost:57065/"); http://localhost:44331/
+                RestRequest request = new RestRequest($"ApiUsuarios/AnadirAmigoo/{app.IdCuenta}/{this.idAmigoSeleccionado}/{vinculo}", Method.Post);
+                RestResponse response = client.Execute(request);
+
+                if (response.IsSuccessful)
+                {
+                    MessageBox.Show("Amigo agregado");
+                    app.mainPage1.mainpageLoad();
+                    ListarRelacionados();
+                }
+                else
+                {
+                    throw new Exception($"{response.Content}");
+                    app.mainPage1.mainpageLoad();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                app.mainPage1.mainpageLoad();
+            }
+        }
+        public int idAmigoSeleccionado = -1; // Variable para guardar el ID seleccionado
+        private void dataGridAñadirAmigos_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) 
+            {
+                var cell = dataGridAñadirAmigos.Rows[e.RowIndex].Cells[0];
+
+                // Validar que el Tag no sea nulo
+                if (cell.Tag != null)
+                {
+                    idAmigoSeleccionado = Convert.ToInt32(cell.Tag); // Guardar el ID seleccionado
+                    MessageBox.Show($"Amigo seleccionado con ID: {idAmigoSeleccionado}");
+                }
+                else
+                {
+                    MessageBox.Show("La celda seleccionada no tiene un amigo asociado.");
+                }
+            }
+        }
     }
 }
+

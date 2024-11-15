@@ -102,6 +102,7 @@ namespace CapaVisual
             pictureBoxImagenPerfil.Load(ImagenPerfil);
             txtUsernamePanelIzquierdo.Text = this.nombre_usuario;
             mainPage1.mainpageLoad();
+            mainPage1.ListarRelacionados();
         }
         public void ShowGroupPage()
         {
