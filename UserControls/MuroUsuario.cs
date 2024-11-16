@@ -53,7 +53,7 @@ namespace CapaVisual
             {
                 Console.WriteLine(response.Content);
                 MuroDesdeAPI muro = JsonConvert.DeserializeObject<MuroDesdeAPI>(response.Content);
-                //pboxImagenPortadaMuro.Load(muro.imagen_banner);
+                pboxImagenPortadaMuro.Load(muro.imagen_banner);
                 this.Descripcion = muro.biografia;
                 this.UserName = app.NombreUsuario;
                 pboxImagenPerfilMuro.Load(app.ImagenPerfil);
@@ -174,12 +174,6 @@ namespace CapaVisual
                 MessageBox.Show(e.Message);
             }
 
-
         }
-
-
-
-
-
     }
 }

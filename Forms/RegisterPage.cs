@@ -62,10 +62,6 @@ namespace CapaVisual
             }
             return username;
         }
-        
-
-        
-
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             if (chequeoIngresoEnCampos())
@@ -503,13 +499,12 @@ namespace CapaVisual
             };
         private void CargarPaises()
         {
-            comboBoxPaises.Items.Clear(); // Limpia los elementos existentes en el ComboBox
+            comboBoxPaises.Items.Clear(); 
             foreach (string pais in paisesICAO.Keys)
             {
-                comboBoxPaises.Items.Add(pais); // Agrega solo el nombre del país
+                comboBoxPaises.Items.Add(pais); 
             }
         }
-
         private string ObtenerCodigoICAO(string pais)
         {
             if (paisesICAO.TryGetValue(pais, out string codigoICAO))
@@ -521,8 +516,6 @@ namespace CapaVisual
                 return "Código no encontrado";
             }
         }
-
-        
     }
 
 }

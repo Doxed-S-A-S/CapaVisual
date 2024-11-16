@@ -94,7 +94,6 @@ namespace CapaVisual
                         PostCard postCard = new PostCard();
                         postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
                         postCard.PostContent = post.contenido;
-                        //postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
 
                         HttpClient client = new HttpClient();
                         byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
@@ -144,7 +143,7 @@ namespace CapaVisual
                     foreach (GetIntegrantesDTO integrante in integrantes)
                     {
                         dataGridIntegrantesGrupo.Rows.Add(integrante.nombre_usuario, integrante.rol);
-                        dataGridIntegrantesGrupo.Rows[indice].Tag = integrante; // Guardar el objeto completo en Tag si es necesario
+                        dataGridIntegrantesGrupo.Rows[indice].Tag = integrante; 
                         indice += 1;
                     }
                 }
