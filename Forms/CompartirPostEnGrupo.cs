@@ -83,7 +83,7 @@ namespace CapaVisual
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se compartio bien mi rey");
+                    MessageBox.Show("no se compartio bien");
                 }
             }
         }

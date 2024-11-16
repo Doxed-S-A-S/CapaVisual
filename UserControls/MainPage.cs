@@ -100,7 +100,7 @@ namespace CapaVisual
             var parentForm = this.Parent as AppWindow;
             if (parentForm != null)
             {
-                parentForm.ShowGroupPage(); // Call the method on the form to switch
+                parentForm.ShowGroupPage(); 
             }
         }
 
@@ -272,17 +272,17 @@ namespace CapaVisual
                 app.mainPage1.mainpageLoad();
             }
         }
-        public int idAmigoSeleccionado = -1; // Variable para guardar el ID seleccionado
+        public int idAmigoSeleccionado = -1; 
         private void dataGridAñadirAmigos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0) 
             {
                 var cell = dataGridAñadirAmigos.Rows[e.RowIndex].Cells[0];
 
-                // Validar que el Tag no sea nulo
+                
                 if (cell.Tag != null)
                 {
-                    idAmigoSeleccionado = Convert.ToInt32(cell.Tag); // Guardar el ID seleccionado
+                    idAmigoSeleccionado = Convert.ToInt32(cell.Tag); 
                     MessageBox.Show($"Amigo seleccionado con ID: {idAmigoSeleccionado}");
                 }
                 else
