@@ -12,11 +12,19 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using Newtonsoft.Json;
 using RestSharp;
+using CapaVisual.Idioma;
+using System.Threading;
 
 namespace CapaVisual
 {
     public partial class LoginPage : MaterialForm
     {
+
+        public void Cargaridioma()
+        {
+            btnInicio.Text = Strings.btnInicio;
+            btnRegistrarse.Text = Strings.btnRegistrarse;
+        }
         public LoginPage()
         {
             InitializeComponent();

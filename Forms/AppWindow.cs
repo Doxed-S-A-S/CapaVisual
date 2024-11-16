@@ -14,7 +14,8 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using Newtonsoft.Json;
 using RestSharp;
-
+using CapaVisual.Idioma;
+using System.Threading;
 
 namespace CapaVisual
 {
@@ -26,6 +27,20 @@ namespace CapaVisual
         private string nombre_usuario;
         private string imagen_perfil;
         private string rol_cuenta;
+
+        public void Cargaridioma()
+        {
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("es-UY");
+            btnActividades.Text = Strings.btnActividades;
+            btnCrearEvento.Text = Strings.btnCrearEvento;
+            btnCrearGrupo.Text = Strings.btnCrearGrupo;
+            btnEliminarGrupo.Text = Strings.btnEliminarGrupo;
+            btnEventos.Text = Strings.btnEventos;
+            btnGrupos.Text = Strings.btnGrupos;
+            btnVerMasGrupos.Text = Strings.btnVerMasGrupos;
+            btnVerMisEventos.Text = Strings.btnVerMisEventos;
+            btnVerMisGrupos.Text = Strings.btnVerMisGrupos;
+        }
 
         public int IdCuenta
         {

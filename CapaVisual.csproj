@@ -104,6 +104,21 @@
     <Compile Include="Forms\ComentarioDialog.Designer.cs">
       <DependentUpon>ComentarioDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Idioma\Strings.en-US.Designer.cs">
+      <DependentUpon>Strings.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Idioma\Strings.es-UY.Designer.cs">
+      <DependentUpon>Strings.es-UY.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Idioma\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
     <Compile Include="pboxCircular.cs" />
     <Compile Include="Forms\SeleccionDeCompartida.cs">
       <SubType>Form</SubType>
@@ -196,6 +211,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CompartirPostEnGrupo.resx">
       <DependentUpon>CompartirPostEnGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\Strings.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\Strings.es-UY.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.es-UY.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Comentario.resx">
       <DependentUpon>Comentario.cs</DependentUpon>
