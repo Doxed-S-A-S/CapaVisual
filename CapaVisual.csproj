@@ -353,5 +353,29 @@
   <ItemGroup>
     <None Include="Resources\bannernahuel.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-11-16 005137.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-11-16 005124.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-11-16 0051371.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8603600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\197374.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-11-16 0051241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-11-16 0051242.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-11-16 0051372.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -91,3 +91,10 @@ C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.CopyCompl
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.exe
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.pdb
 C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.csproj.AssemblyReference.cache
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\en-US\CapaVisual.resources.dll
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\bin\Debug\es-UY\CapaVisual.resources.dll
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.Idioma.Strings.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.Idioma.Strings.en-US.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\CapaVisual.Idioma.Strings.es-UY.resources
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\en-US\CapaVisual.resources.dll
+C:\Users\nahue\ProyectosUTU2024\CapaVisual\obj\Debug\es-UY\CapaVisual.resources.dll

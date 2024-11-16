@@ -422,6 +422,15 @@ namespace CapaVisual
             }
         }
 
+        private void btnEnglish_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+        }
+
+        private void btnSpanish_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("es-UY");
+        }
 
     }
 }
