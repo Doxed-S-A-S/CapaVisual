@@ -390,7 +390,7 @@ namespace CapaVisual
                 MemoryStream BannerGrupo_ms = new MemoryStream(BannerGrupo);
 
                 groupPage1.NombreGrupo = g.nombre_grupo;
-                groupPage1.ImagenGrupo = Image.FromStream(imagenGrupo_ms); // Asumiendo que tienes un método para manejar imágenes
+                groupPage1.ImagenGrupo = Image.FromStream(imagenGrupo_ms); 
                 groupPage1.BannerGrupo = Image.FromStream(BannerGrupo_ms);
                 groupPage1.DescripcionGrupo = g.descripcion;
                 groupPage1.IdGrupo = id_grupo;
