@@ -34,12 +34,15 @@ namespace CapaVisual
                     MessageBox.Show("se compartio todo bien parcero");
                     this.Close();
                 }
-
-
+                else
+                {
+                    MessageBox.Show("este post ya existe en tu muro");
+                    this.Close();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("no se compartio bien mi rey");
+                MessageBox.Show("no se compartio bien");
             }
         }
         private void btnCompartirGrupo_Click_1(object sender, EventArgs e)

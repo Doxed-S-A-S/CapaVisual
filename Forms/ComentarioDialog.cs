@@ -48,9 +48,7 @@ namespace CapaVisual
             txtCrearComentario.SelectionIndent = 10;
             pboxCircular pbox = new pboxCircular();
             pbox.MakeCircularPictureBox(pboxPerfilCrearComentario);
-
             AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
-
             pboxPerfilCrearComentario.Load(app.ImagenPerfil);
             
         }
@@ -98,6 +96,7 @@ namespace CapaVisual
         {
             CrearComentario();
             cargarUltimoComentario();
+            ComentarioDialog_load();
         }
 
         private List<ComentarioDTO> obtenerComentariosDelPost()
@@ -119,7 +118,7 @@ namespace CapaVisual
             request.AddHeader("Accept", "application/json");
             RestResponse response = client.Execute(request);
 
-            // Deserializar directamente a un objeto de tipo CuentaDesdeAPI
+            
             CuentaDesdeAPI datosDelComentador = JsonConvert.DeserializeObject<CuentaDesdeAPI>(response.Content);
             return datosDelComentador;
         }
@@ -134,7 +133,7 @@ namespace CapaVisual
 
                 CuentaDesdeAPI datosDelComentador = obtenerCreadorComentarioYSuFoto(ultimoComentario.id_comentario);
 
-                if (datosDelComentador != null) // Verifica que no sea nulo
+                if (datosDelComentador != null) 
                 {
                     Comentario comment = new Comentario
                     {
@@ -142,10 +141,11 @@ namespace CapaVisual
                         fechayhora = ultimoComentario.fecha,
                         ProfileImage = datosDelComentador.imagen_perfil,
                         likeCount = ultimoComentario.likes,
-                        Contenido = ultimoComentario.contenido,
+                        Contenido = ultimoComentario.comentario,
                     };
 
                     flowLayoutPanel1.Controls.Add(comment);
+                    txtCrearComentario.Clear();
                 }
             }
         }
@@ -155,10 +155,10 @@ namespace CapaVisual
             List<ComentarioDTO> comentarios = obtenerComentariosDelPost();
             foreach (ComentarioDTO comentario in comentarios)
             {
-                // Llama al método actualizado que ahora devuelve un solo objeto
+                
                 CuentaDesdeAPI datosDelComentador = obtenerCreadorComentarioYSuFoto(comentario.id_comentario);
 
-                if (datosDelComentador != null) // Verifica que no sea nulo
+                if (datosDelComentador != null) 
                 {
                     Comentario comment = new Comentario
                     {

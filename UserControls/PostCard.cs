@@ -39,10 +39,10 @@ namespace CapaVisual
         }
 
 
-        public Image PostImage
+        public string PostImage
         {
-            get { return pictureBoxImagenPost.Image; }
-            set { pictureBoxImagenPost.Image = value; }
+            get { return pictureBoxImagenPost.ImageLocation; }
+            set { pictureBoxImagenPost.Load(value); }
         }
 
         public int likes
@@ -152,7 +152,6 @@ namespace CapaVisual
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 app.mainPage1.mainpageLoad();
             }
         }

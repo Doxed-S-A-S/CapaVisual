@@ -66,7 +66,7 @@ namespace CapaVisual.UserControls
             // txtFechaComentario
             // 
             this.txtFechaComentario.AutoSize = true;
-            this.txtFechaComentario.Location = new System.Drawing.Point(491, 98);
+            this.txtFechaComentario.Location = new System.Drawing.Point(460, 98);
             this.txtFechaComentario.Name = "txtFechaComentario";
             this.txtFechaComentario.Size = new System.Drawing.Size(0, 13);
             this.txtFechaComentario.TabIndex = 7;

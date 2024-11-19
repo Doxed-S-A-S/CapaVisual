@@ -81,11 +81,11 @@ namespace CapaVisual
                     postCard.Width = 523;
                     postCard.Height = 276;
 
-                    HttpClient client = new HttpClient();
-                    byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
-                    MemoryStream stream = new MemoryStream(imageData);
+                    //HttpClient client = new HttpClient();
+                    //byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
+                    //MemoryStream stream = new MemoryStream(imageData);
 
-                    postCard.PostImage = Image.FromStream(stream);
+                    postCard.PostImage = post.url_imagen;
 
                     flowLayoutPanelPosts.Controls.Add(postCard);
                 }
@@ -272,7 +272,7 @@ namespace CapaVisual
                 app.mainPage1.mainpageLoad();
             }
         }
-        public int idAmigoSeleccionado = -1; // Variable para guardar el ID seleccionado
+        public int idAmigoSeleccionado = -1; 
         private void dataGridAñadirAmigos_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0) 
@@ -282,8 +282,7 @@ namespace CapaVisual
                 // Validar que el Tag no sea nulo
                 if (cell.Tag != null)
                 {
-                    idAmigoSeleccionado = Convert.ToInt32(cell.Tag); // Guardar el ID seleccionado
-                    MessageBox.Show($"Amigo seleccionado con ID: {idAmigoSeleccionado}");
+                    idAmigoSeleccionado = Convert.ToInt32(cell.Tag); 
                 }
                 else
                 {

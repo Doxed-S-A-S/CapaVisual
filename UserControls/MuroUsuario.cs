@@ -161,11 +161,11 @@ namespace CapaVisual
                     postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
                     postCard.PostContent = post.contenido;
                     postCard.likes = post.likes;
-                    HttpClient client = new HttpClient();
-                    byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
-                    MemoryStream stream = new MemoryStream(imageData);
+                    //HttpClient client = new HttpClient();
+                    //byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
+                    //MemoryStream stream = new MemoryStream(imageData);
 
-                    postCard.PostImage = Image.FromStream(stream);
+                    postCard.PostImage = post.url_imagen;
                     panelPostsMuroUsuario.Controls.Add(postCard);
                 }
             }

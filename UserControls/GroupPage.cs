@@ -62,7 +62,7 @@ namespace CapaVisual
 
         private static List<PostDesdeAPI> obtenerPostDesdeAPI(int id_grupo)
         {
-            RestClient client = new RestClient("http://localhost:44331/");
+            RestClient client = new RestClient("http://localhost:44331/"); 
             RestRequest request = new RestRequest($"ApiPost/post/obtener-posts-grupo/{id_grupo}", Method.Get);
             request.AddHeader("Accept", "application/json");
             RestResponse response = client.Execute(request);
@@ -94,13 +94,11 @@ namespace CapaVisual
                         PostCard postCard = new PostCard();
                         postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
                         postCard.PostContent = post.contenido;
-                        //postCard.ProfileImage = CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-
-                        HttpClient client = new HttpClient();
-                        byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
-                        MemoryStream stream = new MemoryStream(imageData);
-
-                        postCard.PostImage = Image.FromStream(stream);
+                        //HttpClient client = new HttpClient();
+                        //byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
+                        //MemoryStream stream = new MemoryStream(imageData);
+                        postCard.PostImage = post.url_imagen;
+                        postCard.likes = post.likes;
                         flowLayoutPanelPostsGrupo.Controls.Add(postCard);
                     }
                     postsMostrados = true;
@@ -112,9 +110,9 @@ namespace CapaVisual
 
             }
 
-            
         }
-        public void ObtenerIntegrantesGrupo()
+
+            public void ObtenerIntegrantesGrupo()
         {
             AppWindow app = Application.OpenForms.OfType<AppWindow>().FirstOrDefault();
 
