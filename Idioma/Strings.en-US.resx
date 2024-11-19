@@ -159,11 +159,11 @@
   <data name="btnLink" xml:space="preserve">
     <value>Link</value>
   </data>
-  <data name="btnPincipal" xml:space="preserve">
-    <value>Main</value>
-  </data>
   <data name="btnPostear" xml:space="preserve">
     <value>Post</value>
+  </data>
+  <data name="btnPrincipal" xml:space="preserve">
+    <value>Main</value>
   </data>
   <data name="btnRegistrarse" xml:space="preserve">
     <value>Register</value>

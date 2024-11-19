@@ -31,8 +31,11 @@ namespace CapaVisual
         {
             this.txtBarraBusqueda = new System.Windows.Forms.TextBox();
             this.panelIzquierdoMain = new System.Windows.Forms.Panel();
+            this.btnSpanish = new System.Windows.Forms.Button();
+            this.btnEnglish = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsernamePanelIzquierdo = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBoxImagenPerfil = new System.Windows.Forms.PictureBox();
             this.btnActividades = new System.Windows.Forms.Button();
             this.btnEventos = new System.Windows.Forms.Button();
             this.btnGrupos = new System.Windows.Forms.Button();
@@ -49,17 +52,14 @@ namespace CapaVisual
             this.btnEliminarMisEvento = new System.Windows.Forms.Button();
             this.btnVerMisEventos = new System.Windows.Forms.Button();
             this.btnCrearEvento = new System.Windows.Forms.Button();
-            this.btnSpanish = new System.Windows.Forms.Button();
-            this.btnEnglish = new System.Windows.Forms.Button();
-            this.pictureBoxImagenPerfil = new System.Windows.Forms.PictureBox();
             this.mainPage1 = new CapaVisual.mainPage1();
             this.interfazCrearGrupo1 = new CapaVisual.InterfazCrearGrupo();
             this.muroUsuario1 = new CapaVisual.MuroUsuario();
             this.groupPage1 = new CapaVisual.GroupPage();
             this.panelIzquierdoMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.panelSubmenuGrupos1.SuspendLayout();
             this.panelSubmenuEventos1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBarraBusqueda
@@ -91,6 +91,26 @@ namespace CapaVisual
             this.panelIzquierdoMain.Size = new System.Drawing.Size(240, 1013);
             this.panelIzquierdoMain.TabIndex = 10;
             // 
+            // btnSpanish
+            // 
+            this.btnSpanish.Image = global::CapaVisual.Properties.Resources.Screenshot_2024_11_16_0051242;
+            this.btnSpanish.Location = new System.Drawing.Point(127, 859);
+            this.btnSpanish.Name = "btnSpanish";
+            this.btnSpanish.Size = new System.Drawing.Size(74, 67);
+            this.btnSpanish.TabIndex = 10;
+            this.btnSpanish.UseVisualStyleBackColor = true;
+            this.btnSpanish.Click += new System.EventHandler(this.btnSpanish_Click);
+            // 
+            // btnEnglish
+            // 
+            this.btnEnglish.Image = global::CapaVisual.Properties.Resources.Screenshot_2024_11_16_0051372;
+            this.btnEnglish.Location = new System.Drawing.Point(33, 859);
+            this.btnEnglish.Name = "btnEnglish";
+            this.btnEnglish.Size = new System.Drawing.Size(74, 67);
+            this.btnEnglish.TabIndex = 9;
+            this.btnEnglish.UseVisualStyleBackColor = true;
+            this.btnEnglish.Click += new System.EventHandler(this.btnEnglish_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -101,7 +121,6 @@ namespace CapaVisual
             this.label1.Size = new System.Drawing.Size(145, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "Language / Idioma";
-            
             // 
             // txtUsernamePanelIzquierdo
             // 
@@ -113,6 +132,19 @@ namespace CapaVisual
             this.txtUsernamePanelIzquierdo.Name = "txtUsernamePanelIzquierdo";
             this.txtUsernamePanelIzquierdo.Size = new System.Drawing.Size(1, 0);
             this.txtUsernamePanelIzquierdo.TabIndex = 5;
+            // 
+            // pictureBoxImagenPerfil
+            // 
+            this.pictureBoxImagenPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxImagenPerfil.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
+            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(62, 33);
+            this.pictureBoxImagenPerfil.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
+            this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(120, 120);
+            this.pictureBoxImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxImagenPerfil.TabIndex = 4;
+            this.pictureBoxImagenPerfil.TabStop = false;
+            this.pictureBoxImagenPerfil.Click += new System.EventHandler(this.pictureBoxImagenPerfil_Click);
             // 
             // btnActividades
             // 
@@ -309,39 +341,6 @@ namespace CapaVisual
             this.btnCrearEvento.UseVisualStyleBackColor = true;
             this.btnCrearEvento.Click += new System.EventHandler(this.btnCrearEvento_Click);
             // 
-            // btnSpanish
-            // 
-            this.btnSpanish.Image = global::CapaVisual.Properties.Resources.Screenshot_2024_11_16_0051242;
-            this.btnSpanish.Location = new System.Drawing.Point(127, 859);
-            this.btnSpanish.Name = "btnSpanish";
-            this.btnSpanish.Size = new System.Drawing.Size(74, 67);
-            this.btnSpanish.TabIndex = 10;
-            this.btnSpanish.UseVisualStyleBackColor = true;
-            this.btnSpanish.Click += new System.EventHandler(this.btnSpanish_Click);
-            // 
-            // btnEnglish
-            // 
-            this.btnEnglish.Image = global::CapaVisual.Properties.Resources.Screenshot_2024_11_16_0051372;
-            this.btnEnglish.Location = new System.Drawing.Point(33, 859);
-            this.btnEnglish.Name = "btnEnglish";
-            this.btnEnglish.Size = new System.Drawing.Size(74, 67);
-            this.btnEnglish.TabIndex = 9;
-            this.btnEnglish.UseVisualStyleBackColor = true;
-            this.btnEnglish.Click += new System.EventHandler(this.btnEnglish_Click);
-            // 
-            // pictureBoxImagenPerfil
-            // 
-            this.pictureBoxImagenPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxImagenPerfil.Image = global::CapaVisual.Properties.Resources.Profile_Picture_by_iconSvg_co;
-            this.pictureBoxImagenPerfil.Location = new System.Drawing.Point(62, 33);
-            this.pictureBoxImagenPerfil.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxImagenPerfil.Name = "pictureBoxImagenPerfil";
-            this.pictureBoxImagenPerfil.Size = new System.Drawing.Size(120, 120);
-            this.pictureBoxImagenPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxImagenPerfil.TabIndex = 4;
-            this.pictureBoxImagenPerfil.TabStop = false;
-            this.pictureBoxImagenPerfil.Click += new System.EventHandler(this.pictureBoxImagenPerfil_Click);
-            // 
             // mainPage1
             // 
             this.mainPage1.Location = new System.Drawing.Point(243, 64);
@@ -405,11 +404,12 @@ namespace CapaVisual
             this.Text = "LinguaLink";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppWindow_FormClosed);
+            this.Load += new System.EventHandler(this.AppWindow_Load);
             this.panelIzquierdoMain.ResumeLayout(false);
             this.panelIzquierdoMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).EndInit();
             this.panelSubmenuGrupos1.ResumeLayout(false);
             this.panelSubmenuEventos1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

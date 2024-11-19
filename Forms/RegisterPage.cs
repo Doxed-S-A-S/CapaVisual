@@ -224,6 +224,8 @@ namespace CapaVisual
 
             txtConfirmPssword.Text = "Confirmar Contraseña";
             txtConfirmPssword.ForeColor = Color.Gray;
+
+
         }
 
         private void txtNombre_Enter(object sender, EventArgs e)
