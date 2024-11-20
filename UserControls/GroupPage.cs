@@ -94,11 +94,9 @@ namespace CapaVisual
                         PostCard postCard = new PostCard();
                         postCard.UserName = obtenerCreadorDePost(post.id_cuenta);
                         postCard.PostContent = post.contenido;
-                        //HttpClient client = new HttpClient();
-                        //byte[] imageData = client.GetByteArrayAsync(post.url_imagen).Result;
-                        //MemoryStream stream = new MemoryStream(imageData);
                         postCard.PostImage = post.url_imagen;
                         postCard.likes = post.likes;
+
                         flowLayoutPanelPostsGrupo.Controls.Add(postCard);
                     }
                     postsMostrados = true;
@@ -110,6 +108,10 @@ namespace CapaVisual
 
             }
 
+        }
+        public void recargarPosts()
+        {
+            flowLayoutPanelPostsGrupo.Controls.Clear();
         }
 
             public void ObtenerIntegrantesGrupo()

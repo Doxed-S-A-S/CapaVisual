@@ -413,8 +413,10 @@ namespace CapaVisual
                 hideAllUsercontrols();
                 groupPage1.Visible = true;
                 hideAllSubpanels();
+                groupPage1.recargarPosts();
                 groupPage1.mostrarPostsDelGrupo();
                 groupPage1.ObtenerIntegrantesGrupo();
+
             }
             catch (Exception xe)
             {
@@ -437,18 +439,17 @@ namespace CapaVisual
             btnPrincipal.Text = Strings.btnPrincipal;
             btnActividades.Text = Strings.btnActividades;
             //btnCompartirGrupo.Text = Strings.btnCompartirGrupo;
-           // btnCompartirMuro.Text = Strings.btnCompartirMuro;
+            // btnCompartirMuro.Text = Strings.btnCompartirMuro;
             btnCrearEvento.Text = Strings.btnCrearEvento;
             btnCrearGrupo.Text = Strings.btnCrearGrupo;
             btnEliminarGrupo.Text = Strings.btnEliminarGrupo;
-          //  btnEliminarMisEventos.Text = Strings.btnEliminarMisEventos;
+            //  btnEliminarMisEventos.Text = Strings.btnEliminarMisEventos;
             btnEventos.Text = Strings.btnEventos;
-          //  btnFinalizarRegistro.Text = Strings.btnFinalizarRegistro;
+            //  btnFinalizarRegistro.Text = Strings.btnFinalizarRegistro;
             btnGrupos.Text = Strings.btnGrupos;
-           //btnImagenVideo.Text = Strings.btnImagenVideo;
-           //btnInicio.Text = Strings.btnInicio;
-           //btnLink.Text = Strings.btnLink;
-            
+            //btnImagenVideo.Text = Strings.btnImagenVideo;
+            //btnInicio.Text = Strings.btnInicio;
+            //btnLink.Text = Strings.btnLink;
             //btnPostear.Text = Strings.btnPostear;
             //btnRegistrarse.Text = Strings.btnRegistrarse;
             //btnSiguiente2.Text = Strings.btnSiguiente2;
@@ -456,14 +457,13 @@ namespace CapaVisual
             btnVerMasGrupos.Text = Strings.btnVerMasGrupos;
             btnVerMisEventos.Text = Strings.btnVerMisEventos;
             btnVerMisGrupos.Text = Strings.btnVerMisGrupos;
-            
-           // materialLabel1.Text = Strings.materialLabel1;
+            // materialLabel1.Text = Strings.materialLabel1;
             //materialLabel2.Text = Strings.materialLabel2;
-//materialLabel4.Text = Strings.materialLabel4;
-           // materialLabel5.Text = Strings.materialLabel5;
-           // materialLabel6.Text = Strings.materialLabel6;
-           // materialLabel7.Text = Strings.materialLabel7;
-           // txtPassword.Text = Strings.txtPassword;
+            //materialLabel4.Text = Strings.materialLabel4;
+            // materialLabel5.Text = Strings.materialLabel5;
+            // materialLabel6.Text = Strings.materialLabel6;
+            // materialLabel7.Text = Strings.materialLabel7;
+            // txtPassword.Text = Strings.txtPassword;
             //txtUsername.Text = Strings.txtUsername;
         }
 

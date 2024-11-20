@@ -61,10 +61,10 @@ namespace CapaVisual
             this.divisorDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.divisorDerecho.Depth = 0;
             this.divisorDerecho.Location = new System.Drawing.Point(1, 0);
-            this.divisorDerecho.Margin = new System.Windows.Forms.Padding(2);
+            this.divisorDerecho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.divisorDerecho.MouseState = MaterialSkin.MouseState.HOVER;
             this.divisorDerecho.Name = "divisorDerecho";
-            this.divisorDerecho.Size = new System.Drawing.Size(10, 1011);
+            this.divisorDerecho.Size = new System.Drawing.Size(13, 1244);
             this.divisorDerecho.TabIndex = 12;
             this.divisorDerecho.Text = "materialDivider1";
             // 
@@ -76,44 +76,49 @@ namespace CapaVisual
             this.panelDerecho.Controls.Add(this.label2);
             this.panelDerecho.Controls.Add(this.label1);
             this.panelDerecho.Controls.Add(this.txtBoxDescripcionGrupo);
-            this.panelDerecho.Location = new System.Drawing.Point(1046, 188);
-            this.panelDerecho.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDerecho.Location = new System.Drawing.Point(1395, 231);
+            this.panelDerecho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(206, 821);
+            this.panelDerecho.Size = new System.Drawing.Size(274, 1010);
             this.panelDerecho.TabIndex = 15;
             // 
             // dataGridIntegrantesGrupo
             // 
             this.dataGridIntegrantesGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridIntegrantesGrupo.Location = new System.Drawing.Point(31, 163);
+            this.dataGridIntegrantesGrupo.Location = new System.Drawing.Point(41, 201);
+            this.dataGridIntegrantesGrupo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridIntegrantesGrupo.Name = "dataGridIntegrantesGrupo";
-            this.dataGridIntegrantesGrupo.Size = new System.Drawing.Size(143, 150);
+            this.dataGridIntegrantesGrupo.RowHeadersWidth = 51;
+            this.dataGridIntegrantesGrupo.Size = new System.Drawing.Size(191, 185);
             this.dataGridIntegrantesGrupo.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 133);
+            this.label2.Location = new System.Drawing.Point(71, 164);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.Size = new System.Drawing.Size(120, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Integrantes grupo";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 25);
+            this.label1.Location = new System.Drawing.Point(67, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(126, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Descripcion Grupo";
             // 
             // txtBoxDescripcionGrupo
             // 
             this.txtBoxDescripcionGrupo.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtBoxDescripcionGrupo.Location = new System.Drawing.Point(30, 41);
+            this.txtBoxDescripcionGrupo.Location = new System.Drawing.Point(40, 50);
+            this.txtBoxDescripcionGrupo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxDescripcionGrupo.Name = "txtBoxDescripcionGrupo";
-            this.txtBoxDescripcionGrupo.Size = new System.Drawing.Size(144, 72);
+            this.txtBoxDescripcionGrupo.Size = new System.Drawing.Size(191, 88);
             this.txtBoxDescripcionGrupo.TabIndex = 0;
             this.txtBoxDescripcionGrupo.Text = "";
             // 
@@ -123,11 +128,11 @@ namespace CapaVisual
             this.flowLayoutPanelPostsGrupo.BackColor = System.Drawing.Color.LightGray;
             this.flowLayoutPanelPostsGrupo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanelPostsGrupo.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutPanelPostsGrupo.Location = new System.Drawing.Point(2, 2);
-            this.flowLayoutPanelPostsGrupo.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanelPostsGrupo.Location = new System.Drawing.Point(3, 2);
+            this.flowLayoutPanelPostsGrupo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanelPostsGrupo.Name = "flowLayoutPanelPostsGrupo";
-            this.flowLayoutPanelPostsGrupo.Padding = new System.Windows.Forms.Padding(230, 0, 52, 0);
-            this.flowLayoutPanelPostsGrupo.Size = new System.Drawing.Size(1029, 821);
+            this.flowLayoutPanelPostsGrupo.Padding = new System.Windows.Forms.Padding(307, 0, 69, 0);
+            this.flowLayoutPanelPostsGrupo.Size = new System.Drawing.Size(1371, 1010);
             this.flowLayoutPanelPostsGrupo.TabIndex = 13;
             // 
             // panel1
@@ -137,10 +142,10 @@ namespace CapaVisual
             this.panel1.Controls.Add(this.lblNombreGrupo);
             this.panel1.Controls.Add(this.pboxImagenGrupo);
             this.panel1.Controls.Add(this.pboxBannerGrupo);
-            this.panel1.Location = new System.Drawing.Point(13, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(17, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1622, 184);
+            this.panel1.Size = new System.Drawing.Size(2162, 226);
             this.panel1.TabIndex = 16;
             // 
             // lblNombreGrupo
@@ -148,7 +153,8 @@ namespace CapaVisual
             this.lblNombreGrupo.AutoSize = true;
             this.lblNombreGrupo.Depth = 0;
             this.lblNombreGrupo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblNombreGrupo.Location = new System.Drawing.Point(29, 147);
+            this.lblNombreGrupo.Location = new System.Drawing.Point(39, 181);
+            this.lblNombreGrupo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreGrupo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNombreGrupo.Name = "lblNombreGrupo";
             this.lblNombreGrupo.Size = new System.Drawing.Size(1, 0);
@@ -156,10 +162,10 @@ namespace CapaVisual
             // 
             // pboxImagenGrupo
             // 
-            this.pboxImagenGrupo.Location = new System.Drawing.Point(32, 22);
-            this.pboxImagenGrupo.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxImagenGrupo.Location = new System.Drawing.Point(43, 27);
+            this.pboxImagenGrupo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pboxImagenGrupo.Name = "pboxImagenGrupo";
-            this.pboxImagenGrupo.Size = new System.Drawing.Size(134, 134);
+            this.pboxImagenGrupo.Size = new System.Drawing.Size(179, 165);
             this.pboxImagenGrupo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pboxImagenGrupo.TabIndex = 1;
             this.pboxImagenGrupo.TabStop = false;
@@ -167,9 +173,9 @@ namespace CapaVisual
             // pboxBannerGrupo
             // 
             this.pboxBannerGrupo.Location = new System.Drawing.Point(-1, -1);
-            this.pboxBannerGrupo.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxBannerGrupo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pboxBannerGrupo.Name = "pboxBannerGrupo";
-            this.pboxBannerGrupo.Size = new System.Drawing.Size(1239, 182);
+            this.pboxBannerGrupo.Size = new System.Drawing.Size(1652, 224);
             this.pboxBannerGrupo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxBannerGrupo.TabIndex = 0;
             this.pboxBannerGrupo.TabStop = false;
@@ -178,19 +184,21 @@ namespace CapaVisual
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(13, 189);
+            this.tabControl1.Location = new System.Drawing.Point(17, 233);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1028, 824);
+            this.tabControl1.Size = new System.Drawing.Size(1371, 1014);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.flowLayoutPanelPostsGrupo);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1020, 798);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1363, 985);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Posts Del Grupo";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -198,10 +206,11 @@ namespace CapaVisual
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1020, 798);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1363, 985);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "CrearEvento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -209,30 +218,31 @@ namespace CapaVisual
             // panel2
             // 
             this.panel2.Controls.Add(this.crearEvento1);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(250, 0, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(1017, 795);
+            this.panel2.Padding = new System.Windows.Forms.Padding(333, 0, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(1356, 978);
             this.panel2.TabIndex = 0;
             // 
             // crearEvento1
             // 
-            this.crearEvento1.Location = new System.Drawing.Point(3, 3);
+            this.crearEvento1.Location = new System.Drawing.Point(4, 4);
+            this.crearEvento1.Margin = new System.Windows.Forms.Padding(5);
             this.crearEvento1.Name = "crearEvento1";
-            this.crearEvento1.Size = new System.Drawing.Size(694, 146);
+            this.crearEvento1.Size = new System.Drawing.Size(925, 180);
             this.crearEvento1.TabIndex = 0;
             // 
             // GroupPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.divisorDerecho);
             this.Controls.Add(this.panelDerecho);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GroupPage";
-            this.Size = new System.Drawing.Size(1254, 1013);
+            this.Size = new System.Drawing.Size(1672, 1247);
             this.panelDerecho.ResumeLayout(false);
             this.panelDerecho.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIntegrantesGrupo)).EndInit();
